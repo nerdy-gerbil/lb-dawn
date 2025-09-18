@@ -1,0 +1,32 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "{{ collection.title }}",
+    "description": "{{ collection.description | strip_html | strip_newlines | escape }}",
+    "url": "http://www.lilyblanche.com{{ collection.url }}",
+    "image": "{{ collection.image | image_url }}",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Lily Blanche",
+      "url": "https://www.lilyblanche.com/"
+    },
+    "relatedLink": [
+      "https://www.lilyblanche.com/pages/about-us",
+      "https://www.lilyblanche.com/pages/contact-us"
+    ],
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {% for collection_product in collection.products %}
+          {
+            {% render 'custom-schema-product-item',
+               product: collection_product,
+               part_of: 'collection'
+            %}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  }
+</script>

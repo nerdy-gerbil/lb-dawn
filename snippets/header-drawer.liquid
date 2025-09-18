@@ -166,6 +166,7 @@
                 -%}
               </a>
             {%- endif -%}
+            {% comment %}
             {%- if localization.available_countries or localization.available_languages -%}
               <div class="menu-drawer__localization header-localization">
                 {%- if localization.available_countries and localization.available_countries.size > 1 -%}
@@ -195,6 +196,7 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
+            {% endcomment %}
             <ul class="list list-social list-unstyled" role="list">
               {%- if settings.social_twitter_link != blank -%}
                 <li class="list-social__item">

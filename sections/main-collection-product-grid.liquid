@@ -172,6 +172,7 @@
                     show_secondary_image: section.settings.show_secondary_image,
                     show_vendor: section.settings.show_vendor,
                     show_rating: section.settings.show_rating,
+                    show_metal: section.settings.show_metal,
                     lazy_load: lazy_load,
                     skip_styles: skip_card_product_styles,
                     quick_add: section.settings.quick_add,
@@ -194,6 +195,8 @@
     {{ 'mask-arch.svg' | inline_asset_content }}
   {%- endif -%}
 </div>
+
+{% render 'custom-schema-collection' %}
 
 {% schema %}
 {
@@ -323,6 +326,13 @@
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
       "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_metal",
+      "default": false,
+      "label": "Show metal",
+      "info": "Display metal description below the product price"
     },
     {
       "type": "select",

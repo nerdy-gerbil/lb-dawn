@@ -1,10 +1,1 @@
-{
-  "sections": {
-    "main": {
-      "type": "main-account"
-    }
-  },
-  "order": [
-    "main"
-  ]
-}
+{"sections":{"8a4ae949-a664-4563-9f25-18cf45b8a148":{"type":"rich-text","blocks":{"template--19394088173886__8a4ae949-a664-4563-9f25-18cf45b8a148-1688386846be123d0a-2":{"type":"button","settings":{"button_label":"Request a return","button_link":"https:\/\/account.lilyblanche.com","button_style_secondary":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["template--19394088173886__8a4ae949-a664-4563-9f25-18cf45b8a148-1688386846be123d0a-2"],"disabled":true,"custom_css":[".isolate {position: absolute; right: 0;}",".rich-text__wrapper {margin-right: 0;}",".button.button--secondary {font-size: smaller; text-wrap: nowrap; word-wrap: nowrap;}"],"settings":{"desktop_content_position":"right","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":0}},"main":{"type":"main-account","custom_css":[],"settings":{"padding_top":36,"padding_bottom":36}}},"order":["8a4ae949-a664-4563-9f25-18cf45b8a148","main"]}

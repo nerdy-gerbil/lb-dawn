@@ -15,6 +15,7 @@
   - media_fit: {String} Method ("contain" or "cover") to fit image into container
   - media_width: {Float} The width percentage that the media column occupies on desktop.
   - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+  - high_priority: {Boolean} Force the image to load with high priority
 
   Usage:
   {% render 'product-thumbnail',
@@ -43,6 +44,11 @@
   if media.media_type == 'image'
     assign image_class = 'image-magnify-' | append: section.settings.image_zoom
   endif
+
+  assign fetch_priority = 'auto'
+  if high_priority
+    assign fetch_priority = 'high'
+  endif
 -%}
 
 {%- capture sizes -%}
@@ -55,10 +61,12 @@
 >
   <modal-opener
     class="product__modal-opener product__modal-opener--{{ media.media_type }}"
-    data-modal="#ProductModal-{{ modal_id }}"
+    {%- if media.media_type != 'video' -%}
+      data-modal="#ProductModal-{{ modal_id }}"
+    {%- endif -%}
   >
     <span
-      class="product__media-icon motion-reduce quick-add-hidden{% if media.media_type == 'image' %} product__media-icon--{{ section.settings.image_zoom }}{% endif %}"
+      class="product__media-icon motion-reduce quick-add-hidden{% if media.media_type != 'model' %} product__media-icon--{{ section.settings.image_zoom }}{% endif %}"
       aria-hidden="true"
     >
       {% case media.media_type %}
@@ -78,32 +86,55 @@
     </span>
     {%- render 'loading-spinner' -%}
     <div class="product__media media media--transparent">
-      {{
-        media.preview_image
-        | image_url: width: 1946
-        | image_tag:
-          class: image_class,
-          loading: lazy,
-          sizes: sizes,
-          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-      }}
+      {%- if media.media_type == 'video' -%}
+        {{ media | media_tag: image_size: '2048x', loop: loop, controls: true, preload: 'none' }}
+      {%- else -%}
+        {{
+          media.preview_image
+          | image_url: width: 1946
+          | image_tag:
+            class: image_class,
+            loading: lazy,
+            sizes: sizes,
+            widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946',
+            fetchpriority: fetch_priority
+        }}
+      {%- endif -%}
     </div>
-    <button
-      class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}"
-      type="button"
-      aria-haspopup="dialog"
-      data-media-id="{{ media.id }}"
-    >
-      <span class="visually-hidden">
-        {{ 'products.product.media.open_media' | t: index: position }}
-      </span>
-    </button>
+    {%- if media.media_type != 'video' -%}
+      <button
+        class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}"
+        type="button"
+        aria-haspopup="dialog"
+        data-media-id="{{ media.id }}"
+      >
+        <span class="visually-hidden">
+          {{ 'products.product.media.open_media' | t: index: position }}
+        </span>
+      </button>
+    {%- endif -%}
   </modal-opener>
 
   {%- if media.media_type != 'image' -%}
     {%- if media.media_type == 'model' -%}
       <product-model class="deferred-media media media--transparent" data-media-id="{{ media.id }}">
     {%- else -%}
+      {% liquid
+         assign video_url = ""
+
+         if media.media_type == 'video'
+           assign video_url = media.sources[0].url
+         else
+           case media.host
+             when 'youtube'
+               assign video_url = 'https://www.youtube.com/watch?v=' | append: media.external_id
+             when 'vimeo'
+               assign video_url = 'https://player.vimeo.com/video/' | append: media.external_id
+           endcase
+         endif
+
+         render 'custom-schema-product-video' video: media, embedUrl: video_url
+      %}
       <deferred-media class="deferred-media media media--transparent" data-media-id="{{ media.id }}">
     {%- endif -%}
     <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">

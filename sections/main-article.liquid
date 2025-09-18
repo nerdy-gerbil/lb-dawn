@@ -287,10 +287,14 @@
     </div>
   {%- endif -%}
 </article>
-
+{% comment %}
 <script type="application/ld+json">
   {{ article | structured_data }}
 </script>
+{% endcomment %}
+
+{% include 'custom-schema-author' %}
+{% include 'custom-schema-blog-post' %}
 
 {% schema %}
 {

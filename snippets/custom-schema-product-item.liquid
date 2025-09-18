@@ -1,0 +1,150 @@
+
+{% assign days = 365 | times: 24 | times: 60 | times: 60 %}
+{% if product.variants.size > 1 and part_of != 'collection' %}
+"@type": "ProductGroup",{% unless part_of == 'breadcrumbs' %}
+"name": {{ product.title | json }},{% endunless %}
+"description": {{ product.description | strip_html | json }},
+"url": "{{ shop.url }}{{ product.url }}",
+"brand": {
+  "@type": "Brand",
+  "name": {{ product.vendor | json }}
+},
+"productGroupID": "{{ product.id }}",
+"variesBy": [
+  {% for option in product.options %}
+    {{ option | json }}{% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+],
+"hasVariant": [
+  {% for variant in product.variants %}
+    {
+      "@type": "Product",
+      "sku": {{ variant.sku | json }},
+      "name": {{ product.title | append: " - " | append: variant.title | json }},
+      "description": {{ product.description | strip_html | json }},
+      "image": [
+        {% if variant.image %}
+          "{{ variant.image.src | image_url }}"
+        {% else %}
+          "{{ product.featured_image | image_url }}"
+        {% endif %}
+      ],{% if product.metafields.global.material %}
+      "material": "{{ product.metafields.global.material }}",{% endif %}
+      "additionalProperty": [
+        {% assign variant_size = "" %}
+        {% for option in variant.options %}
+          {% assign option_name = product.options[forloop.index0] | downcase %}
+          {% if option_name == "size" %}
+            {% assign variant_size = option %}
+          {% else %}
+          {
+            "@type": "PropertyValue",
+            "name": {{ product.options[forloop.index0] | json }},
+            "value": {{ option | json }}
+          }{% unless forloop.last %}, {% endunless %}{% endif %}
+        {% endfor %}
+      ],{% if variant_size != "" %}
+      "size": "{{ variant_size }}",{% endif %}
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "{{ shop.currency }}",
+        "price": "{{ variant.price | money_without_currency | remove: ',' }}",
+        "priceValidUntil": "{{ 'now' | date: "%s" | plus: days | date: "%FT23:59:59Z" }}",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "{% if variant.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
+        "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}"{% comment %},
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingSettingsLink": "https://www.lilyblanche.com/policies/shipping-policy"
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "merchantReturnLink": "https://www.lilyblanche.com/policies/refund-policy"
+        }{% endcomment %}
+      }{% if product.metafields.global.hallmark %},
+      {% liquid
+        comment
+          Silver hallmark is 925, 9ct Gold is 375
+        endcomment
+        assign hallmark = '375'
+        assign words = product.metafields.global.material | downcase | split: 'silver'
+
+        if words.size > 1
+          assign hallmark = '925'
+        endif
+      %}
+      "hasCertification": {
+        "@type": "Certification",
+        "issuedBy": {
+          "@type": "Organization",
+          "name": "Edinburgh Assay Office"
+        },
+        "name": "Full UK Hallmark",
+        "certificationIdentification": "{{ hallmark }}",
+        "certificationRating": {
+          "@type": "Rating",
+          "ratingValue": "{{ hallmark }}"
+        }
+      }{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+{% else %}
+"@type": "Product",
+"name": {{ product.title | json }},
+"description": {{ product.description | strip_html | json }},
+"image": [
+  "{{ product.featured_image | image_url }}"
+],{% if product.metafields.global.material %}
+"material": "{{ product.metafields.global.material }}",{% endif %}
+"url": "{{ shop.url }}{{ product.url }}",
+"sku": {{ product.variants.first.sku | json }},
+"offers": {
+  "@type": "Offer",
+  "priceCurrency": "{{ shop.currency }}",
+  "price": "{{ product.price | money_without_currency | remove: ',' }}",
+  "priceValidUntil": "{{ 'now' | date: "%s" | plus: days | date: "%FT23:59:59Z" }}",
+  "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
+  "url": "{{ shop.url }}{{ product.url }}"{% comment %},
+  "shippingDetails": {
+    "@type": "OfferShippingDetails",
+    "shippingSettingsLink": "https://www.lilyblanche.com/policies/shipping-policy"
+  },
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "merchantReturnLink": "https://www.lilyblanche.com/policies/refund-policy"
+  }{% endcomment %}
+}{% if product.metafields.global.hallmark %},
+{% liquid
+  comment
+    Silver hallmark is 925, Solid Gold is 375
+  endcomment
+  assign hallmark = '375'
+  assign words = product.metafields.global.material | downcase | split: 'silver'
+
+  if words.size > 1
+    assign hallmark = '925'
+  endif
+%}
+"hasCertification": {
+  "@type": "Certification",
+  "issuedBy": {
+    "@type": "Organization",
+    "name": "Edinburgh Assay Office"
+  },
+  "name": "Full UK Hallmark",
+  "certificationIdentification": "{{ hallmark }}",
+  "certificationRating": {
+    "@type": "Rating",
+    "ratingValue": "{{ hallmark }}"
+  }
+}{% endif %}
+{% endif %}{% if product.metafields.reviews.rating_count > 0 and part_of != 'breadcrumbs' %},
+"aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": {{ product.metafields.reviews.rating.value }},
+  "ratingCount": {{ product.metafields.reviews.rating_count }},
+  "bestRating": 5,
+  "worstRating": 1
+}{% endif %},
+"award": "Google Top Quality Store"

@@ -105,8 +105,15 @@
         {%- endunless -%}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
         <span class="price-item price-item--sale price-item--last">
-          {{ money_price }}
+          <span class="money" data-product-id="{{ product.id }}">
+            {{ money_price }}
+          </span>
         </span>
+        {%- unless price_varies == false and compare_at_price_varies %}
+          <span class="savings">
+            {{ compare_at_price | minus: price | times: -100.0 | divided_by: compare_at_price | round }}%
+          </span>
+        {%- endunless -%}
       </div>
       {%- if product.selected_or_first_available_variant.unit_price_measurement -%}
         {% render 'unit-price', price: product.selected_or_first_available_variant.unit_price, measurement: product.selected_or_first_available_variant.unit_price_measurement %}

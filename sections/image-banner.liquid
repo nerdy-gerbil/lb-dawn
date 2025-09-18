@@ -46,14 +46,14 @@
     assign stacked_sizes = '(min-width: 750px) 50vw, 100vw'
   endif
   assign fetch_priority = 'auto'
-  if section.index == 1
+  if section.index == 1 or section.settings.fetch_priority
     assign fetch_priority = 'high'
   endif
 -%}
 
 <div
   id="Banner-{{ section.id }}"
-  class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  class="{{ section.settings.show_on_device }} banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -175,6 +175,33 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+  {
+    "type": "select",
+    "id": "show_on_device",
+    "options": [
+      {
+        "value": "mobile",
+        "label": "Mobile and Tablet"
+      },
+      {
+        "value": "desktop",
+        "label": "Desktop only"
+      },
+      {
+        "value": "all-devices",
+        "label": "All Devices"
+      }
+    ],
+    "default": "all-devices",
+    "label": "Show this banner on:",
+    "info": "Choose on which device(s) you want this banner to show"
+  },
+    {
+      "type": "checkbox",
+      "id": "fetch_priority",
+      "default": false,
+      "label": "Ensure LCP image is loaded with high priority (be careful)"
+    },
     {
       "type": "image_picker",
       "id": "image",

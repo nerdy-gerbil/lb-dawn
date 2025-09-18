@@ -81,7 +81,8 @@
             media_width: media_width,
             media_fit: section.settings.media_fit,
             constrain_to_viewport: section.settings.constrain_to_viewport,
-            lazy_load: false
+            lazy_load: false,
+            high_priority: true
           %}
         </li>
       {%- endif -%}
@@ -103,8 +104,10 @@
             {%- liquid
               assign media_position = media_position | default: 0 | plus: 1
               assign lazy_load = false
+              assign high = true
               if media_position > 1
                 assign lazy_load = true
+                assign high = false
               endif
             -%}
             {% render 'product-thumbnail',
@@ -119,7 +122,8 @@
               media_width: media_width,
               media_fit: section.settings.media_fit,
               constrain_to_viewport: section.settings.constrain_to_viewport,
-              lazy_load: lazy_load
+              lazy_load: lazy_load,
+              high_priority: high
             %}
           </li>
         {%- endunless -%}

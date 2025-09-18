@@ -1,14 +1,1 @@
-{
-  "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    }
-  },
-  "order": [
-    "main"
-  ]
-}
+{"sections":{"c6cfd15d-cf95-4ed8-b5ff-7025230e9c77":{"type":"image-banner","blocks":{"template--18473594880318__c6cfd15d-cf95-4ed8-b5ff-7025230e9c77-1684233844019a459f-0":{"type":"heading","settings":{"heading":"{{ page.title }}","heading_size":"h1"}}},"block_order":["template--18473594880318__c6cfd15d-cf95-4ed8-b5ff-7025230e9c77-1684233844019a459f-0"],"custom_css":["@media screen and (max-width: 749px) {.banner, .banner__content {min-height: 10vh; max-height: 20vh; }}","@media screen and (min-width: 750px) {.banner {min-height: 10vh; }}"],"settings":{"show_on_device":"all-devices","fetch_priority":false,"image":"shopify:\/\/shop_images\/General_Category_Banner.png","image_overlay_opacity":40,"image_height":"small","desktop_content_position":"bottom-left","show_text_box":false,"desktop_content_alignment":"left","color_scheme":"accent-1","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":false}},"main":{"type":"main-page","custom_css":["h1.h0 {display: none;}"],"settings":{"padding_top":24,"padding_bottom":0}},"138c49d2-7ccc-466a-a9a9-18275e1ed23b":{"type":"newsletter","blocks":{"template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-0":{"type":"heading","settings":{"heading":"FROM INBOX TO JEWELLERY BOX","heading_size":"h2"}},"template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-1":{"type":"paragraph","settings":{"text":"<p>Sign up for exclusive sales, private events, style tips and much more! <\/p><p>You can unsubscribe at any time. Please read our <a href=\"\/policies\/privacy-policy\" title=\"Privacy Policy\">privacy policy<\/a>.<\/p>"}},"template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-2":{"type":"email_form","settings":{}}},"block_order":["template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-0","template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-1","template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-2"],"custom_css":[".field__input,.select__select,.customer .field input,.customer select {background-color: #fff; color: #121212;}",".field__label,.field__button {color: #bbb;}",".field__input::-moz-selection {background: #d0d0d0;}",".field__input::selection {background: #d0d0d0;}"],"settings":{"color_scheme":"accent-1","full_width":true,"padding_top":40,"padding_bottom":52}},"a6a19d7e-1890-4758-b926-ca82274ab64b":{"type":"rich-text","settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":24,"padding_bottom":0}}},"order":["c6cfd15d-cf95-4ed8-b5ff-7025230e9c77","main","138c49d2-7ccc-466a-a9a9-18275e1ed23b","a6a19d7e-1890-4758-b926-ca82274ab64b"]}

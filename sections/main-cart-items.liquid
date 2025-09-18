@@ -146,14 +146,21 @@
                           {%- endif -%}
 
                           {%- for property in item.properties -%}
-                            {%- assign property_first_char = property.first | slice: 0 -%}
+                            {%- if property.first == '_customily-preview' -%}
+                            {%- assign property_title = 'Personalisation' -%}
+                            {%- assign property_value = 'Preview' -%}
+                          {%- else -%}
+                            {%- assign property_title = property.first -%}
+                            {%- assign property_value = property.last -%}
+                          {%- endif -%}
+                          {%- assign property_first_char = property_title | slice: 0 -%}
                             {%- if property.last != blank and property_first_char != '_' -%}
                               <div class="product-option">
-                                <dt>{{ property.first }}:</dt>
+                                <dt>{{ property_title }}:</dt>
                                 <dd>
-                                  {%- if property.last contains '/uploads/' -%}
+                                  {%- if property.last contains '/uploads/' or property.last contains '/previews/' -%}
                                     <a href="{{ property.last }}" class="link" target="_blank">
-                                      {{ property.last | split: '/' | last }}
+                                      {{ property_value | split: '/' | last }}
                                     </a>
                                   {%- else -%}
                                     {{ property.last }}

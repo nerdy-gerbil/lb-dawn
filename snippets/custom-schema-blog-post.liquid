@@ -1,0 +1,60 @@
+{%- assign words = article.content | strip_html | escape | split: ' ' -%}
+
+<script type="application/ld+json">
+      {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ article.title | escape }}",
+    "description": "{{ article.excerpt | strip_html | escape }}",
+    {% if article.image %}"image": {
+        "@type": "ImageObject",
+        "url": "{{ article.image | image_url }}"
+      },{% endif %}
+    "datePublished": "{{ article.published_at | date: '%FT%H:%M:%SZ' }}",
+    "dateCreated": "{{ article.created_at | date: '%FT%H:%M:%SZ' }}",
+    "dateModified": "{{ article.updated_at | date: '%FT%H:%M:%SZ' }}",
+    "author": {
+      "@type": "Person",
+      "name": "Gillian Crawford",
+      "url": "https://www.linkedin.com/in/gillianrcrawford/",
+      "jobTitle": "Founder and Creative Director",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Lily Blanche"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lily Blanche",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.lilyblanche.com/cdn/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c.gif"
+      },
+      "url": "https://www.lilyblanche.com",
+      "sameAs": [
+        "https://www.facebook.com/lilyblanchejewellery/",
+        "https://www.instagram.com/lilyblanchejewellery/",
+        "https://www.youtube.com/channel/UCFj3VFS7HQYXD5n4LwCIcMQ",
+        "https://www.tiktok.com/@lily_blanche_jewellery/",
+        "https://twitter.com/lilyblanche_/",
+        "https://www.pinterest.co.uk/lilyblanche/"
+      ]
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.lilyblanche.com{{ article.url }}"
+    },
+    "about": [
+    {% for tag in article.tags %}
+      {
+        "@type": "Thing",
+        "name": "{{ tag }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    ],
+    "keywords": "{% for tag in article.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}",
+    "wordCount": {{ words.size }},
+    "articleSection": "Lily Blanche's Blog",
+    "inLanguage": "en-GB"
+  }
+</script>

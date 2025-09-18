@@ -1,0 +1,12 @@
+<script type="application/ld+json">
+  {
+      "@context": "https://schema.org/",
+      "@type": "VideoObject",
+      "name": "{{ video.alt }}",
+      "description": "{{ video.alt }}",
+      "thumbnailUrl": "{{ video.preview_image.src | image_url }}",
+      "uploadDate": "{{ product.created_at | date: '%FT%H:%M:%SZ' }}",{% if video.media_type == 'video' %}
+      "duration": "PT{{ video.duration | divided_by: 1000 }}S",{% endif %}
+      "embedUrl": "{{ embedUrl }}"
+  }
+</script>

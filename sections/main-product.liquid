@@ -732,9 +732,21 @@
       endif
     -%}
 
+    {% comment %}
+    {% if product.has_only_default_variant %}
     <script type="application/ld+json">
       {{ product | structured_data }}
     </script>
+    {% else %}
+      {% assign product_description = product.description | strip_html | json %}
+      {% assign variant_description = '"description":' | append: product_description | append: ',"offers"'  %}
+    <script type="application/ld+json">
+      {{ product | structured_data | replace: '"offers"', variant_description }}
+    </script>
+    {% endif %}
+    {% endcomment %}
+
+    {% render 'custom-schema-product' %}
   </div>
 </product-info>
 

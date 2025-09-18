@@ -1,0 +1,79 @@
+{% comment %}
+{% assign schemas = [ metaobjects.schema_markup_localbusiness.jewelry-store, metaobjects.schema_markup_localbusiness.local-business ] %}
+{{ schemas }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "{{ jewelryStore._type }}",
+    "name": "{{ jewelryStore.name }}",
+    "address": {{ jewelryStore.address }},{% if jewelryStore.email %}
+    "email": "{{ jewelryStore.email }}",{% endif %}{% if jewelryStore.telephone %}
+    "telephone": {{ jewelryStore.telephone }},{% endif %}{% if jewelryStore.geo %}
+    "geo": {{ jewelryStore.geo }},{% endif %}{% if jewelryStore.url %}
+    "url": {{ jewelryStore.url }},{% endif %}{% if jewelryStore.image %}
+    "image": [{% for image in jewelryStore.image.value %}
+      "https:{{ image | image_url }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+    ],{% endif %}{% if jewelryStore.pricerange %}
+    "priceRange": {{ jewelryStore.pricerange }},{% endif %}{% if jewelryStore.openinghoursspecification %}
+    "openingHoursSpecification": {{ jewelryStore.openinghoursspecification }},{% endif %}{% if jewelryStore.currenciesaccepted %}
+    "currenciesAccepted": "{% for currency in jewelryStore.currenciesaccepted.value %}{{ currency }}{% unless forloop.last %},{% endunless %}{% endfor %}",{% endif %}{% if jewelryStore.paymentaccepted %}
+    "paymentAccepted": "{% for payment in jewelryStore.paymentaccepted.value %}{{ payment }}{% unless forloop.last %}, {% endunless %}{% endfor %}",{% endif %}
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "{{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.rating_value }}",
+      "reviewCount": "{{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.review_count }}"
+    }
+  }
+</script>
+{% endcomment %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OnlineStore",
+    "additionalType": "JewelryStore",
+    "url": "https://www.lilyblanche.com",
+    "name": "Lily Blanche",
+    "logo": "https://tapita.io/pb/pub/media/spb/usr/8739/wysiwyg/72617427262/LB-logo-primary-black-margin_1.jpg",
+    "image": "https://tapita.io/pb/pub/media/spb/usr/8739/wysiwyg/72617427262/LB-logo-primary-black-margin_1.jpg",
+    "legalName": "WOW (SCOTLAND) LIMITED",
+    "foundingDate": "2016",
+    "founder": {
+      "@type": "Person",
+      "name": "Gillian Crawford"
+    },
+    "numberOfEmployees": 6,
+    "description": "UK's Leading Personalised Jewellery Experts, specialising in handcrafted memory lockets and personalized jewelry",
+    "email": "hello@lilyblanche.com",
+    "telephone": "+441786271376",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "25 Clarendon Place",
+      "addressLocality": "Stirling",
+      "addressRegion": "Scotland",
+      "postalCode": "FK8 2QW",
+      "addressCountry": "GB"
+    },
+    "sameAs": [
+      "https://www.facebook.com/lilyblanchejewellery",
+      "https://www.instagram.com/lilyblanchejewellery",
+      "https://twitter.com/lilyblanche_",
+      "https://www.youtube.com/channel/UCFj3VFS7HQYXD5n4LwCIcMQ",
+      "https://www.tiktok.com/@lily_blanche_jewellery",
+      "https://www.pinterest.co.uk/lilyblanche/"
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+44 1786 271376",
+        "contactType": "Customer Service"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "{{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.rating_value }}",
+      "reviewCount": "{{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.review_count }}"
+    },
+    "award": "Google Top Quality Store"
+  }
+</script>

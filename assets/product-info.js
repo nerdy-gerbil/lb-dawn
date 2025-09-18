@@ -77,6 +77,16 @@ if (!customElements.get('product-info')) {
             ? this.handleSwapProduct(productUrl, shouldFetchFullPage)
             : this.handleUpdateProductInfo(productUrl),
         });
+
+        const evt = new CustomEvent('variant-change', {
+          bubbles: true,
+          detail: {
+            price: {
+              price: window.priceDifference || 0
+            }
+          }
+        });
+        window.dispatchEvent(evt);
       }
 
       resetProductFormState() {

@@ -1,3 +1,27 @@
+<script>
+// Get the current path from the window location
+const currentPath = window.location.pathname;
+
+// Get the current URL path
+const fullUrl = window.location.href;
+
+// Check if this is a CDN image URL with the old pattern
+if (currentPath.includes('cdn/shop/articles')) {
+  // Replace '/cdn/shop/articles/' with '/cdn/shop/files/'
+  window.location.pathname = window.location.pathname.replace('cdn/shop/articles','cdn/shop/files');
+}
+
+// Use a regular expression to match the pattern and extract the suffix
+const match = currentPath.match(/^\/blog\/tag(?:\/(.*))?$/);
+
+// If there's a match and the suffix is available, redirect to the extracted suffix
+// Otherwise, if there's a match but no suffix, redirect to the homepage
+if (match) {
+    // window.location.pathname = match[2] ? `/${match[2]}` : '/';
+    window.location.pathname = '/blogs/default-blog';
+}
+</script>
+
 <style type="text/css">
   .template-404 .title + * {
     margin-top: 1rem;

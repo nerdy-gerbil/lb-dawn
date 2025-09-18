@@ -1,3 +1,4 @@
+{%- if section.settings.padding_top > 0 or section.settings.padding_bottom > 0 -%}
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: calc({{ section.settings.padding_top }}px * 0.75);
@@ -11,6 +12,7 @@
     }
   }
 {%- endstyle -%}
+{%- endif -%}
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="section-{{ section.id }}-padding">
     {{ section.settings.custom_liquid }}

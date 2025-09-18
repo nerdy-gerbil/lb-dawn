@@ -1,0 +1,196 @@
+{% style %}
+
+	.nav-header {
+		margin:1rem 2rem;
+		text-align:center;
+		color: {{section.settings.title-color }};
+		font-size: {{ section.settings.list-title-font-size }}px;
+	}
+
+
+	.container {
+		display: grid;
+        grid-template-columns: repeat(7, 1fr);
+		gap: 1rem;
+        padding: 0 2rem;
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+	
+	.list-no-bullet
+	{
+		list-style-type: none;
+	}
+  
+	.list-no-bullet, .nav-heading
+	{
+		color: {{section.settings.list-title-color }};
+		font-size: {{ section.settings.list-title-font-size }}px;
+	}
+  
+	.nav-heading, .link-item
+	{
+		line-height: 1;
+	}
+
+	.link-item {
+		text-decoration: none;
+		color: {{section.settings.link-color}};
+		font-size: {{ section.settings.link-font-size }}px;
+	}
+
+	.li-item { line-height: {{section.settings.link-line-height}}; padding-left: 1.25rem; }
+
+    label.link-item, label.nav-heading { cursor: pointer; display: inline-block; width: 100%; position: relative;}
+  
+    label.link-item:after, label.nav-heading:after { content: "▸"; font-size: large; padding-left: 1.5rem; }
+  
+    input.parent-item:checked + .collapsible label.nav-heading:after, input.child-item:checked + .collapsible label.link-item:after { content: "▾"; }
+    
+    .collapsible { max-height: 25px; overflow: hidden; padding-inline-start: 0;}
+
+    .parent-nav { padding-inline-end: 2rem; }
+
+    input.collapse-item { display: none; }
+  
+    input.collapse-item:checked + .collapsible {
+      max-height: unset;
+    }
+  
+    @media (max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr !important;
+            max-height: 0;
+        }
+		.list-no-bullet {
+			flex: 1 1 50%;
+		}
+        .parent-nav {
+            padding-inline-start: 2rem;
+        }
+        input.collapse-item:checked ~ .container {
+          max-height: unset;
+        }
+        label.nav-header h2 { margin-block-start: 0; margin-block-end: 0; text-align: left; padding-left: 4rem;}
+        label.nav-header h2:after { content: "▸"; padding-left: 1.5rem; }
+        input.container-item:checked ~ label.nav-header h2:after { content: "▾"; }
+    }
+
+{% endstyle %}
+
+<div style="padding:1rem 0;background-color:{{ section.settings.background-color }}">
+    <input type="checkbox" class="collapse-item container-item" id="{{ section.settings.navigation_title }}">
+    <label for="{{ section.settings.navigation_title }}" class="nav-header medium-hide large-up-hide"><h2>{{ section.settings.navigation_title }}</h2></label>
+	<div class="container">
+    {%- for block in section.blocks -%}
+        <input type="checkbox" class="collapse-item parent-item" id="nav-{{ block.settings.link_id.title }}">
+      	<ul class="list-no-bullet parent-nav collapsible">
+          <label for="nav-{{ block.settings.link_id.title }}" class="nav-heading">{{ block.settings.link_id.title }}</label>
+          {% for link in linklists[block.settings.link_id].links %}
+          	<li class="li-item">
+              {% if link.links.size > 0 %}
+                <input type="checkbox" class="collapse-item child-item" id="{{ link.title }}">
+                <ul class="list-no-bullet child-nav collapsible">
+                  <label for="{{ link.title }}" class="link-item">{{ link.title }}</label>
+                  {% for sublink in link.links %}
+                	<li class="li-item sub-item">
+                    <a class="link-item sub-item" href="{{ sublink.url }}">{{ sublink.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              {% else %}
+                <a class="link-item" href="{{ link.url }}">{{ link.title }}</a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+    {%- endfor -%}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Navigation #1",
+	"tag": "section",
+	"class": "navigation-type1",
+    "settings": [
+		{
+		  "type": "text",
+          "id": "navigation_title",
+          "label": "Navigation title",
+          "default": "Menu"
+		},
+		{
+          "type":"color",
+          "id": "title-color",
+          "label": "Header color",
+          "default": "#121212"
+		},
+		{
+          "type":"color",
+          "id": "list-title-color",
+          "label": "List title color",
+          "default": "#121212"
+		},
+        {
+          "type":"color",
+          "id": "background-color",
+          "label": "Background color"
+		},
+		{
+          "type":"range",
+          "id": "list-title-font-size",
+          "label": "List title font-size",
+		  "min": 8,
+		  "max": 30,
+          "default": 16
+		},
+		{
+          "type":"color",
+          "id": "link-color",
+          "label": "Link color",
+          "default": "#06c"
+		},
+		{
+          "type":"range",
+          "id": "link-font-size",
+          "label": "Link font-size",
+		  "min": 8,
+		  "max": 30,
+          "default": 16
+		},
+		{
+          "type":"range",
+          "id": "link-line-height",
+          "label": "Link line-height",
+		  "step": 0.2,
+		  "min": 1,
+		  "max": 3,
+          "default": 1.6
+		}
+
+	],
+	"blocks": [
+	  {
+		"name":"Navigation item",
+		"type":"navigation",
+		"settings": [
+          {
+              "type": "link_list",
+              "id": "link_id",
+              "label": "Navigation list"
+          }
+		]
+	  }
+	],
+	"presets": [
+    {
+        "name": "Navigation #1"
+	}
+	]
+  }
+{% endschema %}
+
+
+
+{% javascript %}
+{% endjavascript %}
