@@ -1,1 +1,996 @@
-{"sections":{"ss_parallax_banner_cyETpC":{"type":"ss-parallax-banner","blocks":{"heading_BRbmXE":{"type":"heading","settings":{"heading":"<p><strong>Signature Jewellery<\/strong><\/p>","heading_custom":false,"heading_font":"system_ui_n4","heading_size":36,"heading_size_mobile":28,"heading_height":100,"heading_mt":86,"heading_color":"#ffffff"}},"text_fzB4Wt":{"type":"text","settings":{"text":"<p><em>Define your style!<\/em><\/p>","text_custom":false,"text_font":"system_ui_n4","text_size":20,"text_size_mobile":16,"text_height":150,"text_mt":14,"text_color":"#ffffff"}},"button_pPck3J":{"type":"button","settings":{"button":"Shop Now","button_url":"shopify:\/\/collections\/september-birthstone","button_custom":true,"button_font":"system_ui_n4","button_size":22,"button_size_mobile":14,"button_height":100,"button_padding_vertical":14,"button_padding_vertical_mobile":16,"button_padding_horizontal":20,"button_padding_horizontal_mobile":50,"button_radius":0,"button_border_thickness":1,"button_mt":16,"button_gap":14,"button_ellipse":false,"button_shadow":false,"button_style":"non_outline","button_color":"#121212","button_hover_color":"#ffffff","button_bg_color":"#ffffff","button_bg_hover_color":"#dddddd","button_border_color":"#dddddd","button_border_hover_color":"#121212","button_shadow_color":"#121212"}}},"block_order":["heading_BRbmXE","text_fzB4Wt","button_pPck3J"],"custom_css":[],"settings":{"fetch_priority":true,"parallax":false,"parallax_mobile":false,"banner_height":"adapt_first","banner_fixed_height":500,"banner_fixed_height_mobile":330,"image":"shopify:\/\/shop_images\/Woman_wearing_layered_gold_necklaces_including_a_heart_pendant_and_key_charm_with_gemstone_rings_and_stacked_bracelets.webp","image_mobile":"shopify:\/\/shop_images\/Untitled_design_-_2025-10-05T160245.361.webp","overlay":0.2,"content_maxwidth":58,"content_maxwidth_mobile":95,"content_horizontal_position":"start","content_horizontal_position_mobile":"center","content_vertical_position":"center","content_vertical_position_mobile":"start","content_padding_vertical":0,"content_padding_vertical_mobile":0,"content_padding_horizontal":62,"content_padding_horizontal_mobile":14,"overlay_color":"#875053","background_color":"#ffffff","background_gradient":"","border_color":"#000000","margin_top":0,"margin_bottom":20,"padding_top":48,"padding_bottom":28,"padding_horizontal":5,"padding_horizontal_mobile":2,"full_width":true,"content_width":90,"border_thickness":0,"lazy":false}},"f7d8c553-77be-4f43-8945-88a9f4e1bdcc":{"type":"collection-list","blocks":{"e7a0e892-5a5f-4834-8069-3d5e2e680dac":{"type":"featured_collection","settings":{"collection":"lockets"}},"8f663915-89bc-472b-a710-9074c2df8687":{"type":"featured_collection","settings":{"collection":"gemstone-jewellery"}},"4772eeb6-29f6-4349-8576-1cff3db14f93":{"type":"featured_collection","settings":{"collection":"mens-jewellery"}},"9791312b-9d4b-4465-9339-17231d9b7212":{"type":"featured_collection","settings":{"collection":"gifts"}}},"block_order":["e7a0e892-5a5f-4834-8069-3d5e2e680dac","8f663915-89bc-472b-a710-9074c2df8687","4772eeb6-29f6-4349-8576-1cff3db14f93","9791312b-9d4b-4465-9339-17231d9b7212"],"custom_css":[],"name":"Collection List","settings":{"title":"Explore Collections","heading_size":"h2","image_ratio":"portrait","columns_desktop":4,"color_scheme":"background-1","show_view_all":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":0,"padding_bottom":16}},"1739454871862fbb10":{"type":"apps","blocks":{"shopbox_recommender_8AxhK3":{"type":"shopify:\/\/apps\/shopbox\/blocks\/recommender\/8413d591-09e9-4e10-8ff1-c0374d8dd64a","settings":{"fallback_collection":"top_viewed","title":"Handpicked For You","heading_font":"muli_n4","heading_font_size":14,"carousel_title_alignment":"left","heading_color":"#121212","body_font":"muli_n4","body_font_size":16,"product_text_alignemnt":"left","product_card_background":"","text_color":"#121212","sale_banner_color":"#e50914","sale_color":"#e50914","image_aspect_ratio":"1\/1","show_secondary_image":true,"show_brand":false,"show_add_to_cart":false,"add_to_cart_text":"Add to Cart","add_to_cart_text_color":"#ffffff","add_to_cart_background_color":"#000000","add_to_cart_font_size":16,"arrow_style":"circle","products_per_row":4,"show_arrows":true,"padding_top":40,"padding_bottom":40,"section_background":"none"}}},"block_order":["shopbox_recommender_8AxhK3"],"settings":{"include_margins":true}},"ss_multicolumns_KPVjRm":{"type":"ss-multicolumns","blocks":{"block_C3J3Tf":{"type":"block","settings":{"image":"shopify:\/\/shop_images\/memory_keeper_gold_block_05c8b09e-417d-47a1-9bf3-93a2f4312b14.webp","heading":"","text":"","link":"SHOP MEMORY KEEPERS","link_url":"\/collections\/memory-keeper-lockets"}},"block_xYNTeP":{"type":"block","settings":{"image":"shopify:\/\/shop_images\/locket_graphic_3.webp","heading":"","text":"","link":"SHOP LOCKETS","link_url":"\/collections\/lockets"}}},"block_order":["block_C3J3Tf","block_xYNTeP"],"settings":{"heading":"","heading_custom":false,"heading_font":"muli_n4","heading_size":50,"heading_letter":0,"heading_height":130,"heading_align":"center","heading_mt":4,"heading_mb":4,"text":"","text_custom":false,"text_font":"muli_n4","text_size":26,"text_letter":0,"text_height":130,"text_align":"center","column_mt":0,"column_direction":"center","column_gap":20,"column_gap_mobile":20,"column_style":"columns","column_style_mobile":"columns","column_row":"2","column_row_mobile":"1","column_radius":0,"column_padding_horizontal":0,"column_padding_top":0,"column_padding_bottom":0,"numbers":false,"enable_slider":false,"autoplay":false,"autoplay_speed":3,"nav_size":40,"nav_size_mobile":30,"hide_nav":false,"column_number_custom":false,"column_number_font":"muli_n4","column_number_size":36,"column_heading_custom":false,"column_heading_font":"muli_n4","column_heading_size":24,"column_heading_letter":0,"column_heading_height":110,"column_heading_mt":4,"column_text_custom":false,"column_text_font":"muli_n4","column_text_size":18,"column_text_letter":0,"column_text_height":130,"column_text_mt":8,"column_link_width":"regular","column_link_max":260,"column_link_padding_horizontal":24,"column_link_padding_vertical":16,"column_link_radius":0,"column_link_custom":false,"column_link_font":"muli_n4","column_link_size":16,"column_link_letter":0,"column_link_height":130,"column_link_mt":12,"column_link_style":"button","column_image_max":800,"column_image_max_mobile":800,"column_image_radius":0,"heading_color":"#121212","column_heading_color":"#121212","text_color":"#121212","column_text_color":"#121212","column_link_color":"#ffffff","column_link_hover_color":"#ffffff","column_link_bg_color":"#121212","column_link_bg_hover_color":"#515151","column_number_color":"#ffffff","column_number_bg_color":"#ffffff","column_bg_color":"#ffffff","nav_btn_bg":"#ffffff","nav_btn_hover_bg":"#caaba1","nav_border":"#caaba1","nav_border_hover":"#caaba1","nav_icon":"#caaba1","nav_hover_icon":"#ffffff","background_color":"#ffffff","background_gradient":"","border_color":"#121212","padding_top":36,"padding_bottom":36,"padding_horizontal":0,"padding_horizontal_mobile":1.5,"margin_top":0,"margin_bottom":0,"full_width":true,"content_width":400,"border_thickness":0,"lazy":true}},"85f49b1d-65dd-4033-998f-6695023dd15d":{"type":"multicolumn","blocks":{"template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-0":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/locket-transparent-1-_400.gif","title":"","text":"","link_label":"","link":""}},"template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/locket-transparent-5_c9f98a70-9392-4421-9f71-4998963dfd6a.gif","title":"","text":"","link_label":"","link":""}},"template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/locket-transparent-6.gif","title":"","text":"","link_label":"","link":""}},"a7a6b6ef-57d2-47fc-9b37-b1dd6322749d":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/locket-transparent-4-_400.gif","title":"","text":"","link_label":"","link":""}}},"block_order":["template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-0","template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-1","template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-2","a7a6b6ef-57d2-47fc-9b37-b1dd6322749d"],"settings":{"title":"Create Your Locket","heading_size":"h2","image_width":"full","image_ratio":"square","columns_desktop":4,"column_alignment":"left","background_style":"primary","button_label":"CREATE YOURS","button_link":"shopify:\/\/collections\/personalised","color_scheme":"scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5","columns_mobile":"2","swipe_on_mobile":false,"padding_top":12,"padding_bottom":12}},"ddfe2653-5686-4887-bf42-389b8aae2fe8":{"type":"rich-text","blocks":{"template--19394087682366__ddfe2653-5686-4887-bf42-389b8aae2fe8-heading-1":{"type":"heading","settings":{"heading":"Trusted by Many, Created for You","heading_size":"h2"}},"template--19394087682366__ddfe2653-5686-4887-bf42-389b8aae2fe8-text-1":{"type":"text","settings":{"text":"<p>Read our reviews<\/p>"}}},"block_order":["template--19394087682366__ddfe2653-5686-4887-bf42-389b8aae2fe8-heading-1","template--19394087682366__ddfe2653-5686-4887-bf42-389b8aae2fe8-text-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":24,"padding_bottom":0}},"1690298509406a3091":{"type":"apps","blocks":{"klaviyo_reviews_featured_reviews_carousel_AjexH9":{"type":"shopify:\/\/apps\/klaviyo-reviews\/blocks\/featured-reviews-carousel\/db20e365-d984-4ac4-9655-e1588d951ca9","settings":{}}},"block_order":["klaviyo_reviews_featured_reviews_carousel_AjexH9"],"custom_css":[],"settings":{"include_margins":true}},"6d7efc50-e686-48cb-9a63-568ca725fef0":{"type":"rich-text","blocks":{"template--19394087682366__6d7efc50-e686-48cb-9a63-568ca725fef0-1687252410a24b3e34-0":{"type":"heading","settings":{"heading":"Why Shop With Us","heading_size":"h2"}}},"block_order":["template--19394087682366__6d7efc50-e686-48cb-9a63-568ca725fef0-1687252410a24b3e34-0"],"settings":{"desktop_content_position":"left","content_alignment":"left","color_scheme":"","full_width":true,"padding_top":24,"padding_bottom":4}},"26e994ac-6679-4cf0-b3d2-a430f185d048":{"type":"collapsible-content","blocks":{"template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-2":{"type":"collapsible_row","settings":{"heading":"Free Jewellery Care Kit Gift Worth £20 With All Orders","icon":"box","row_content":"<p>Our gift to you is a free jewellery care kit comprising a velvet storage pouch made for us in the USA and incorporating revolutionary anti-tarnish Intercept®technology in the form of patented polymars woven into the lining of the pouch. <br\/><\/p><p>You will also receive a polish cloth made by Town Talk, the UK’s leading silver and goldware cleaning company, and a handy ring sizer to keep in your jewellery box as your ring size changes with time.<\/p>","page":""}},"template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-3":{"type":"collapsible_row","settings":{"heading":"Complimentary Luxury Gift Wrap On All Orders","icon":"heart","row_content":"<p>Add a rope-handled giftbag tied with grosgrain ribbon to create a luxurious gift made with love. <\/p><p>Add a gift message to your order. We’ll print it on a little card and can send direct to the recipient for hassle-free gifting. <\/p><p>Available free of charge with all orders.<\/p>","page":""}},"5fdf3d4b-66ed-4795-a0b2-7e7f38ff7102":{"type":"collapsible_row","settings":{"heading":"Free Photo Service for Lockets","icon":"dryer","row_content":"<p>Bring your locket to life with our personalisation service. Add photos to your locket and engraving if applicable. Our photo service is <strong>free <\/strong>today. Normally from £15 to £25. Time-limited offer.<\/p>","page":""}},"template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-0":{"type":"collapsible_row","settings":{"heading":" Free UK Delivery On Orders Over £95","icon":"truck","row_content":"<p>Get it fully tracked straight to your door with our secure free-shipping option. <\/p><p>We’ll send you tracking details so you can see where it is on its journey. Available free of charge on orders over £95<\/p>","page":""}}},"block_order":["template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-2","template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-3","5fdf3d4b-66ed-4795-a0b2-7e7f38ff7102","template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-0"],"settings":{"caption":"","heading":"","heading_size":"h0","heading_alignment":"left","layout":"none","color_scheme":"background-2","container_color_scheme":"background-1","open_first_collapsible_row":false,"image":"shopify:\/\/shop_images\/spring_packaging_block-2.webp","image_ratio":"adapt","desktop_layout":"image_second","padding_top":32,"padding_bottom":24}},"featured_collection":{"type":"featured-collection","custom_css":[],"settings":{"title":"Bestsellers","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"featured","products_to_show":10,"columns_desktop":4,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":true,"padding_top":48,"padding_bottom":0}},"49f8009c-a647-4171-ac7a-1b586a3b2fae":{"type":"image-banner","blocks":{"heading_nGbaGW":{"type":"heading","settings":{"heading":"<strong>Spark a Chain Reaction<\/strong>","heading_size":"h2"}},"buttons_zMHCAC":{"type":"buttons","settings":{"button_label_1":"Shop Chains","button_link_1":"shopify:\/\/collections\/chains","button_style_secondary_1":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_nGbaGW","buttons_zMHCAC"],"custom_css":[],"settings":{"show_on_device":"mobile","fetch_priority":false,"image":"shopify:\/\/shop_images\/chain_graphic_mobile.jpg","image_overlay_opacity":10,"image_height":"medium","desktop_content_position":"middle-left","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"inverse","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":false}},"image_banner_NPHADJ":{"type":"image-banner","blocks":{"heading_kfKm8K":{"type":"heading","settings":{"heading":"Spark a Chain Reaction","heading_size":"h1"}},"buttons_kh9HiP":{"type":"buttons","settings":{"button_label_1":"Shop Chains","button_link_1":"shopify:\/\/collections\/chains","button_style_secondary_1":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_kfKm8K","buttons_kh9HiP"],"custom_css":[],"settings":{"show_on_device":"desktop","fetch_priority":false,"image":"shopify:\/\/shop_images\/chain_graphic_2.jpg","image_overlay_opacity":10,"image_height":"medium","desktop_content_position":"top-left","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"inverse","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":false}},"d173040d-019a-4fee-a0b2-c75f220663af":{"type":"multicolumn","blocks":{"template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-0":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/katie_piper_f90a10a5-6b32-4407-8a5c-93bd35bf78c6.png","title":"","text":"<p><em>\"<\/em>❤️ <em>Thanks so much!\"<\/em><\/p><p><em><strong>Katie Piper O.B.E (Television Presenter, Writer & Activist) <\/strong><\/em><\/p>","link_label":"Shop Katie's Look","link":"shopify:\/\/collections\/katie-piper-wears-lily-blanche"}},"column_DTR3mK":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/judy_murray.png","title":"","text":"<p><em>\"It's my absolute fave piece of jewellery.\"<\/em><\/p><p><em><strong>Judy Murray (Tennis Coach & Strictly Come Dancing Star<\/strong><\/em><\/p>","link_label":"","link":"shopify:\/\/products\/memory-keeper-locket-silver"}},"template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/tessa_hartman.png","title":"","text":"<p><em>“It’s the most fabulous thing I have ever found in my life. It’s a beautiful gift full of whatever memories you want to treasure.\"<\/em><\/p><p><strong>Tessa Hartmann C.B.E.<\/strong><\/p><h5><\/h5>","link_label":"","link":"shopify:\/\/products\/memory-keeper-locket-gold"}},"template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/gabrielle.png","title":"","text":"<p><em>“It feels as though I’m wearing the Golden Snitch from the Harry Potter books.\"<\/em><\/p><p><strong>Gabriella Bennet (The Times)<\/strong><\/p><h4><\/h4><h5><\/h5>","link_label":"","link":"shopify:\/\/products\/blue-topaz-vintage-heart-locket-gold"}}},"block_order":["template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-0","column_DTR3mK","template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-2","template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-1"],"settings":{"title":"As Loved By","heading_size":"h2","image_width":"half","image_ratio":"circle","columns_desktop":4,"column_alignment":"center","background_style":"primary","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":true,"padding_top":8,"padding_bottom":8}},"3fc6e174-a973-4a85-8606-935279997831":{"type":"multicolumn","blocks":{"b9daff02-29f4-46a8-972b-c1beccd567b2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/sundaytimes_2.jpg","title":"","text":"","link_label":"","link":""}},"1f55de94-7547-4731-8898-0324a2785987":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/vogue_2.jpg","title":"","text":"","link_label":"","link":""}},"9d939bb4-7f72-47af-aa82-50b70a76050b":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/dailymail_2_8a67947e-65d1-469e-923f-8cc8e03fc7c9.jpg","title":"","text":"","link_label":"","link":""}},"5e6a16bb-3c09-4445-967d-81c470f586b7":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/SheerLuxe.jpg","title":"","text":"","link_label":"","link":"https:\/\/sheerluxe.com\/"}}},"block_order":["b9daff02-29f4-46a8-972b-c1beccd567b2","1f55de94-7547-4731-8898-0324a2785987","9d939bb4-7f72-47af-aa82-50b70a76050b","5e6a16bb-3c09-4445-967d-81c470f586b7"],"settings":{"title":"As Seen In","heading_size":"h2","image_width":"full","image_ratio":"adapt","columns_desktop":4,"column_alignment":"center","background_style":"none","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"2","swipe_on_mobile":true,"padding_top":24,"padding_bottom":16}},"1694424446e267c8af":{"type":"apps","blocks":{"bd130e58-2e89-4e00-9471-981e389cd6cf":{"type":"shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507","settings":{"formId":"RSNG4W"}}},"block_order":["bd130e58-2e89-4e00-9471-981e389cd6cf"],"custom_css":[".shopify-block.shopify-app-block {background-color: #875053; padding: 0 2rem 2rem;}"],"settings":{"include_margins":false}},"390458c5-7230-4057-b85c-8eec987d93db":{"type":"collapsible-content","blocks":{"template--18473594650942__390458c5-7230-4057-b85c-8eec987d93db-168624099076923a53-0":{"type":"collapsible_row","settings":{"heading":"Inspired by the discovery of a pearl washed ashore on the Hebridean Island of Skye, Lily Blanche jewellery recreates the evocative sense of childhood wonder in every handcrafted piece.","icon":"none","row_content":"<p>Mark the magical moments on life’s journey with this beautifully crafted collection of personalised jewellery and designer lockets. Cherish your precious memories by choosing your noble metal, gemstone, photos & engraving and create a meaningful treasure to wear or to gift.<\/p>","page":""}}},"block_order":["template--18473594650942__390458c5-7230-4057-b85c-8eec987d93db-168624099076923a53-0"],"custom_css":[],"settings":{"caption":"","heading":"Capture Precious Memories with personalised jewellery by Lily Blanche","heading_size":"h2","heading_alignment":"left","layout":"none","color_scheme":"background-1","container_color_scheme":"background-2","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":20,"padding_bottom":12}},"cff380dd-9c61-496d-b1d9-d18053d48170":{"type":"rich-text","blocks":{"template--18473594650942__cff380dd-9c61-496d-b1d9-d18053d48170-168623697617ca0b1f-0":{"type":"heading","settings":{"heading":"Follow us Instagram <a href=\"https:\/\/www.instagram.com\/lilyblanchejewellery\/\" target=\"_blank\">@lilyblanchejewellery<\/a>","heading_size":"h2"}}},"block_order":["template--18473594650942__cff380dd-9c61-496d-b1d9-d18053d48170-168623697617ca0b1f-0"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"background-1","full_width":true,"padding_top":4,"padding_bottom":0}},"3f2050a7-92c5-4b27-84b8-f74501a14584":{"type":"custom-liquid","custom_css":[],"name":"Instagram Feed","settings":{"custom_liquid":"<!-- LightWidget WIDGET --><script src=\"https:\/\/cdn.lightwidget.com\/widgets\/lightwidget.js\"><\/script><style>[class^=\"lightwidget__lightbox\"] {\n    font-size: 1.4rem !important;\n}<\/style><iframe src=\"https:\/\/cdn.lightwidget.com\/widgets\/a005b94e0af156e6ab9dac63c7be86d9.html\" title=\"Instagram Feed\" scrolling=\"no\" allowtransparency=\"true\" class=\"lightwidget-widget\" style=\"width:100%;border:0;overflow:hidden;\" width=\"100%\" loading=\"lazy\"><\/iframe>","color_scheme":"background-1","padding_top":20,"padding_bottom":0}},"navigation_1_r6QW6H":{"type":"navigation-1","blocks":{"navigation_G9yCTV":{"type":"navigation","settings":{"link_id":"featured"}},"navigation_fVY89t":{"type":"navigation","settings":{"link_id":"lockets"}},"navigation_46MwyL":{"type":"navigation","settings":{"link_id":"necklaces"}},"navigation_RNXkie":{"type":"navigation","settings":{"link_id":"earrings"}},"navigation_UVBNBM":{"type":"navigation","settings":{"link_id":"bracelets"}},"navigation_BzzCnN":{"type":"navigation","settings":{"link_id":"rings"}},"navigation_4pgBMN":{"type":"navigation","settings":{"link_id":"gemstones"}},"navigation_9Wbgwi":{"type":"navigation","settings":{"link_id":"jewellery"}},"navigation_rytz9B":{"type":"navigation","settings":{"link_id":"collections"}},"navigation_zjEMzn":{"type":"navigation","settings":{"link_id":"mens-jewellery"}},"navigation_UBX663":{"type":"navigation","settings":{"link_id":"personalised"}},"navigation_rMHDwQ":{"type":"navigation","settings":{"link_id":"gifts"}},"navigation_fTepmr":{"type":"navigation","settings":{"link_id":"blog"}}},"block_order":["navigation_G9yCTV","navigation_fVY89t","navigation_46MwyL","navigation_RNXkie","navigation_UVBNBM","navigation_BzzCnN","navigation_4pgBMN","navigation_9Wbgwi","navigation_rytz9B","navigation_zjEMzn","navigation_UBX663","navigation_rMHDwQ","navigation_fTepmr"],"custom_css":[],"settings":{"navigation_title":"Our Products","title-color":"#121212","list-title-color":"#121212","background-color":"","list-title-font-size":14,"link-color":"#121212","link-font-size":10,"link-line-height":1.6}}},"order":["ss_parallax_banner_cyETpC","f7d8c553-77be-4f43-8945-88a9f4e1bdcc","1739454871862fbb10","ss_multicolumns_KPVjRm","85f49b1d-65dd-4033-998f-6695023dd15d","ddfe2653-5686-4887-bf42-389b8aae2fe8","1690298509406a3091","6d7efc50-e686-48cb-9a63-568ca725fef0","26e994ac-6679-4cf0-b3d2-a430f185d048","featured_collection","49f8009c-a647-4171-ac7a-1b586a3b2fae","image_banner_NPHADJ","d173040d-019a-4fee-a0b2-c75f220663af","3fc6e174-a973-4a85-8606-935279997831","1694424446e267c8af","390458c5-7230-4057-b85c-8eec987d93db","cff380dd-9c61-496d-b1d9-d18053d48170","3f2050a7-92c5-4b27-84b8-f74501a14584","navigation_1_r6QW6H"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ss_parallax_banner_cyETpC": {
+      "type": "ss-parallax-banner",
+      "blocks": {
+        "heading_BRbmXE": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>Signature Jewellery</strong></p>",
+            "heading_custom": false,
+            "heading_font": "system_ui_n4",
+            "heading_size": 36,
+            "heading_size_mobile": 28,
+            "heading_height": 100,
+            "heading_mt": 86,
+            "heading_color": "#ffffff"
+          }
+        },
+        "text_fzB4Wt": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Define your style!</em></p>",
+            "text_custom": false,
+            "text_font": "system_ui_n4",
+            "text_size": 20,
+            "text_size_mobile": 16,
+            "text_height": 150,
+            "text_mt": 14,
+            "text_color": "#ffffff"
+          }
+        },
+        "button_pPck3J": {
+          "type": "button",
+          "settings": {
+            "button": "Shop Now",
+            "button_url": "shopify://collections/september-birthstone",
+            "button_custom": true,
+            "button_font": "system_ui_n4",
+            "button_size": 22,
+            "button_size_mobile": 14,
+            "button_height": 100,
+            "button_padding_vertical": 14,
+            "button_padding_vertical_mobile": 16,
+            "button_padding_horizontal": 20,
+            "button_padding_horizontal_mobile": 50,
+            "button_radius": 0,
+            "button_border_thickness": 1,
+            "button_mt": 16,
+            "button_gap": 14,
+            "button_ellipse": false,
+            "button_shadow": false,
+            "button_style": "non_outline",
+            "button_color": "#121212",
+            "button_hover_color": "#ffffff",
+            "button_bg_color": "#ffffff",
+            "button_bg_hover_color": "#dddddd",
+            "button_border_color": "#dddddd",
+            "button_border_hover_color": "#121212",
+            "button_shadow_color": "#121212"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BRbmXE",
+        "text_fzB4Wt",
+        "button_pPck3J"
+      ],
+      "custom_css": [],
+      "settings": {
+        "fetch_priority": true,
+        "parallax": false,
+        "parallax_mobile": false,
+        "banner_height": "adapt_first",
+        "banner_fixed_height": 500,
+        "banner_fixed_height_mobile": 330,
+        "image": "shopify://shop_images/Woman_wearing_layered_gold_necklaces_including_a_heart_pendant_and_key_charm_with_gemstone_rings_and_stacked_bracelets.webp",
+        "image_mobile": "shopify://shop_images/Untitled_design_-_2025-10-05T160245.361.webp",
+        "overlay": 0.2,
+        "content_maxwidth": 58,
+        "content_maxwidth_mobile": 95,
+        "content_horizontal_position": "start",
+        "content_horizontal_position_mobile": "center",
+        "content_vertical_position": "center",
+        "content_vertical_position_mobile": "start",
+        "content_padding_vertical": 0,
+        "content_padding_vertical_mobile": 0,
+        "content_padding_horizontal": 62,
+        "content_padding_horizontal_mobile": 14,
+        "overlay_color": "#875053",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 20,
+        "padding_top": 48,
+        "padding_bottom": 28,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 2,
+        "full_width": true,
+        "content_width": 90,
+        "border_thickness": 0,
+        "lazy": false
+      }
+    },
+    "f7d8c553-77be-4f43-8945-88a9f4e1bdcc": {
+      "type": "collection-list",
+      "blocks": {
+        "e7a0e892-5a5f-4834-8069-3d5e2e680dac": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "lockets"
+          }
+        },
+        "8f663915-89bc-472b-a710-9074c2df8687": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gemstone-jewellery"
+          }
+        },
+        "4772eeb6-29f6-4349-8576-1cff3db14f93": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mens-jewellery"
+          }
+        },
+        "9791312b-9d4b-4465-9339-17231d9b7212": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gifts"
+          }
+        }
+      },
+      "block_order": [
+        "e7a0e892-5a5f-4834-8069-3d5e2e680dac",
+        "8f663915-89bc-472b-a710-9074c2df8687",
+        "4772eeb6-29f6-4349-8576-1cff3db14f93",
+        "9791312b-9d4b-4465-9339-17231d9b7212"
+      ],
+      "custom_css": [],
+      "name": "Collection List",
+      "settings": {
+        "title": "Explore Collections",
+        "heading_size": "h2",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "1739454871862fbb10": {
+      "type": "apps",
+      "blocks": {
+        "shopbox_recommender_8AxhK3": {
+          "type": "shopify://apps/shopbox/blocks/recommender/8413d591-09e9-4e10-8ff1-c0374d8dd64a",
+          "settings": {
+            "fallback_collection": "top_viewed",
+            "title": "Handpicked For You",
+            "heading_font": "muli_n4",
+            "heading_font_size": 14,
+            "carousel_title_alignment": "left",
+            "heading_color": "#121212",
+            "body_font": "muli_n4",
+            "body_font_size": 16,
+            "product_text_alignemnt": "left",
+            "product_card_background": "",
+            "text_color": "#121212",
+            "sale_banner_color": "#e50914",
+            "sale_color": "#e50914",
+            "image_aspect_ratio": "1/1",
+            "show_secondary_image": true,
+            "show_brand": false,
+            "show_add_to_cart": false,
+            "add_to_cart_text": "Add to Cart",
+            "add_to_cart_text_color": "#ffffff",
+            "add_to_cart_background_color": "#000000",
+            "add_to_cart_font_size": 16,
+            "arrow_style": "circle",
+            "products_per_row": 4,
+            "show_arrows": true,
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "section_background": "none"
+          }
+        }
+      },
+      "block_order": [
+        "shopbox_recommender_8AxhK3"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "ss_multicolumns_KPVjRm": {
+      "type": "ss-multicolumns",
+      "blocks": {
+        "block_C3J3Tf": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/memory_keeper_gold_block_05c8b09e-417d-47a1-9bf3-93a2f4312b14.webp",
+            "heading": "",
+            "text": "",
+            "link": "SHOP MEMORY KEEPERS",
+            "link_url": "/collections/memory-keeper-lockets"
+          }
+        },
+        "block_xYNTeP": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/locket_graphic_3.webp",
+            "heading": "",
+            "text": "",
+            "link": "SHOP LOCKETS",
+            "link_url": "/collections/lockets"
+          }
+        }
+      },
+      "block_order": [
+        "block_C3J3Tf",
+        "block_xYNTeP"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "muli_n4",
+        "heading_size": 50,
+        "heading_letter": 0,
+        "heading_height": 130,
+        "heading_align": "center",
+        "heading_mt": 4,
+        "heading_mb": 4,
+        "text": "",
+        "text_custom": false,
+        "text_font": "muli_n4",
+        "text_size": 26,
+        "text_letter": 0,
+        "text_height": 130,
+        "text_align": "center",
+        "column_mt": 0,
+        "column_direction": "center",
+        "column_gap": 20,
+        "column_gap_mobile": 20,
+        "column_style": "columns",
+        "column_style_mobile": "columns",
+        "column_row": "2",
+        "column_row_mobile": "1",
+        "column_radius": 0,
+        "column_padding_horizontal": 0,
+        "column_padding_top": 0,
+        "column_padding_bottom": 0,
+        "numbers": false,
+        "enable_slider": false,
+        "autoplay": false,
+        "autoplay_speed": 3,
+        "nav_size": 40,
+        "nav_size_mobile": 30,
+        "hide_nav": false,
+        "column_number_custom": false,
+        "column_number_font": "muli_n4",
+        "column_number_size": 36,
+        "column_heading_custom": false,
+        "column_heading_font": "muli_n4",
+        "column_heading_size": 24,
+        "column_heading_letter": 0,
+        "column_heading_height": 110,
+        "column_heading_mt": 4,
+        "column_text_custom": false,
+        "column_text_font": "muli_n4",
+        "column_text_size": 18,
+        "column_text_letter": 0,
+        "column_text_height": 130,
+        "column_text_mt": 8,
+        "column_link_width": "regular",
+        "column_link_max": 260,
+        "column_link_padding_horizontal": 24,
+        "column_link_padding_vertical": 16,
+        "column_link_radius": 0,
+        "column_link_custom": false,
+        "column_link_font": "muli_n4",
+        "column_link_size": 16,
+        "column_link_letter": 0,
+        "column_link_height": 130,
+        "column_link_mt": 12,
+        "column_link_style": "button",
+        "column_image_max": 800,
+        "column_image_max_mobile": 800,
+        "column_image_radius": 0,
+        "heading_color": "#121212",
+        "column_heading_color": "#121212",
+        "text_color": "#121212",
+        "column_text_color": "#121212",
+        "column_link_color": "#ffffff",
+        "column_link_hover_color": "#ffffff",
+        "column_link_bg_color": "#121212",
+        "column_link_bg_hover_color": "#515151",
+        "column_number_color": "#ffffff",
+        "column_number_bg_color": "#ffffff",
+        "column_bg_color": "#ffffff",
+        "nav_btn_bg": "#ffffff",
+        "nav_btn_hover_bg": "#caaba1",
+        "nav_border": "#caaba1",
+        "nav_border_hover": "#caaba1",
+        "nav_icon": "#caaba1",
+        "nav_hover_icon": "#ffffff",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 1.5,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "full_width": true,
+        "content_width": 400,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "85f49b1d-65dd-4033-998f-6695023dd15d": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/locket-transparent-1-_400.gif",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/locket-transparent-5_c9f98a70-9392-4421-9f71-4998963dfd6a.gif",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/locket-transparent-6.gif",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "a7a6b6ef-57d2-47fc-9b37-b1dd6322749d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/locket-transparent-4-_400.gif",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-0",
+        "template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-1",
+        "template--18077560832318__85f49b1d-65dd-4033-998f-6695023dd15d-1677756929045307a6-2",
+        "a7a6b6ef-57d2-47fc-9b37-b1dd6322749d"
+      ],
+      "settings": {
+        "title": "Create Your Locket",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "CREATE YOURS",
+        "button_link": "shopify://collections/personalised",
+        "color_scheme": "scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "ddfe2653-5686-4887-bf42-389b8aae2fe8": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19394087682366__ddfe2653-5686-4887-bf42-389b8aae2fe8-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Trusted by Many, Created for You",
+            "heading_size": "h2"
+          }
+        },
+        "template--19394087682366__ddfe2653-5686-4887-bf42-389b8aae2fe8-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Read our reviews</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19394087682366__ddfe2653-5686-4887-bf42-389b8aae2fe8-heading-1",
+        "template--19394087682366__ddfe2653-5686-4887-bf42-389b8aae2fe8-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "1690298509406a3091": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_AjexH9": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/featured-reviews-carousel/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_AjexH9"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "6d7efc50-e686-48cb-9a63-568ca725fef0": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19394087682366__6d7efc50-e686-48cb-9a63-568ca725fef0-1687252410a24b3e34-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Shop With Us",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "template--19394087682366__6d7efc50-e686-48cb-9a63-568ca725fef0-1687252410a24b3e34-0"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 4
+      }
+    },
+    "26e994ac-6679-4cf0-b3d2-a430f185d048": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Free Jewellery Care Kit Gift Worth £20 With All Orders",
+            "icon": "box",
+            "row_content": "<p>Our gift to you is a free jewellery care kit comprising a velvet storage pouch made for us in the USA and incorporating revolutionary anti-tarnish Intercept®technology in the form of patented polymars woven into the lining of the pouch. <br/></p><p>You will also receive a polish cloth made by Town Talk, the UK’s leading silver and goldware cleaning company, and a handy ring sizer to keep in your jewellery box as your ring size changes with time.</p>",
+            "page": ""
+          }
+        },
+        "template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Complimentary Luxury Gift Wrap On All Orders",
+            "icon": "heart",
+            "row_content": "<p>Add a rope-handled giftbag tied with grosgrain ribbon to create a luxurious gift made with love. </p><p>Add a gift message to your order. We’ll print it on a little card and can send direct to the recipient for hassle-free gifting. </p><p>Available free of charge with all orders.</p>",
+            "page": ""
+          }
+        },
+        "5fdf3d4b-66ed-4795-a0b2-7e7f38ff7102": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Free Photo Service for Lockets",
+            "icon": "dryer",
+            "row_content": "<p>Bring your locket to life with our personalisation service. Add photos to your locket and engraving if applicable. Our photo service is <strong>free </strong>today. Normally from £15 to £25. Time-limited offer.</p>",
+            "page": ""
+          }
+        },
+        "template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": " Free UK Delivery On Orders Over £95",
+            "icon": "truck",
+            "row_content": "<p>Get it fully tracked straight to your door with our secure free-shipping option. </p><p>We’ll send you tracking details so you can see where it is on its journey. Available free of charge on orders over £95</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-2",
+        "template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-3",
+        "5fdf3d4b-66ed-4795-a0b2-7e7f38ff7102",
+        "template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-0"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h0",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "background-2",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": false,
+        "image": "shopify://shop_images/spring_packaging_block-2.webp",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 32,
+        "padding_bottom": 24
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "title": "Bestsellers",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "featured",
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 48,
+        "padding_bottom": 0
+      }
+    },
+    "49f8009c-a647-4171-ac7a-1b586a3b2fae": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_nGbaGW": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Spark a Chain Reaction</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "buttons_zMHCAC": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Chains",
+            "button_link_1": "shopify://collections/chains",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nGbaGW",
+        "buttons_zMHCAC"
+      ],
+      "custom_css": [],
+      "settings": {
+        "show_on_device": "mobile",
+        "fetch_priority": false,
+        "image": "shopify://shop_images/chain_graphic_mobile.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "image_banner_NPHADJ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_kfKm8K": {
+          "type": "heading",
+          "settings": {
+            "heading": "Spark a Chain Reaction",
+            "heading_size": "h1"
+          }
+        },
+        "buttons_kh9HiP": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Chains",
+            "button_link_1": "shopify://collections/chains",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kfKm8K",
+        "buttons_kh9HiP"
+      ],
+      "custom_css": [],
+      "settings": {
+        "show_on_device": "desktop",
+        "fetch_priority": false,
+        "image": "shopify://shop_images/chain_graphic_2.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "medium",
+        "desktop_content_position": "top-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "d173040d-019a-4fee-a0b2-c75f220663af": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/katie_piper_f90a10a5-6b32-4407-8a5c-93bd35bf78c6.png",
+            "title": "",
+            "text": "<p><em>\"</em>❤️ <em>Thanks so much!\"</em></p><p><em><strong>Katie Piper O.B.E (Television Presenter, Writer & Activist) </strong></em></p>",
+            "link_label": "Shop Katie's Look",
+            "link": "shopify://collections/katie-piper-wears-lily-blanche"
+          }
+        },
+        "column_DTR3mK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/judy_murray.png",
+            "title": "",
+            "text": "<p><em>\"It's my absolute fave piece of jewellery.\"</em></p><p><em><strong>Judy Murray (Tennis Coach & Strictly Come Dancing Star</strong></em></p>",
+            "link_label": "",
+            "link": "shopify://products/memory-keeper-locket-silver"
+          }
+        },
+        "template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/tessa_hartman.png",
+            "title": "",
+            "text": "<p><em>“It’s the most fabulous thing I have ever found in my life. It’s a beautiful gift full of whatever memories you want to treasure.\"</em></p><p><strong>Tessa Hartmann C.B.E.</strong></p><h5></h5>",
+            "link_label": "",
+            "link": "shopify://products/memory-keeper-locket-gold"
+          }
+        },
+        "template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gabrielle.png",
+            "title": "",
+            "text": "<p><em>“It feels as though I’m wearing the Golden Snitch from the Harry Potter books.\"</em></p><p><strong>Gabriella Bennet (The Times)</strong></p><h4></h4><h5></h5>",
+            "link_label": "",
+            "link": "shopify://products/blue-topaz-vintage-heart-locket-gold"
+          }
+        }
+      },
+      "block_order": [
+        "template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-0",
+        "column_DTR3mK",
+        "template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-2",
+        "template--18473594650942__d173040d-019a-4fee-a0b2-c75f220663af-168631773028947f1a-1"
+      ],
+      "settings": {
+        "title": "As Loved By",
+        "heading_size": "h2",
+        "image_width": "half",
+        "image_ratio": "circle",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "3fc6e174-a973-4a85-8606-935279997831": {
+      "type": "multicolumn",
+      "blocks": {
+        "b9daff02-29f4-46a8-972b-c1beccd567b2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/sundaytimes_2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "1f55de94-7547-4731-8898-0324a2785987": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/vogue_2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "9d939bb4-7f72-47af-aa82-50b70a76050b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/dailymail_2_8a67947e-65d1-469e-923f-8cc8e03fc7c9.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "5e6a16bb-3c09-4445-967d-81c470f586b7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/SheerLuxe.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "https://sheerluxe.com/"
+          }
+        }
+      },
+      "block_order": [
+        "b9daff02-29f4-46a8-972b-c1beccd567b2",
+        "1f55de94-7547-4731-8898-0324a2785987",
+        "9d939bb4-7f72-47af-aa82-50b70a76050b",
+        "5e6a16bb-3c09-4445-967d-81c470f586b7"
+      ],
+      "settings": {
+        "title": "As Seen In",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 16
+      }
+    },
+    "1694424446e267c8af": {
+      "type": "apps",
+      "blocks": {
+        "bd130e58-2e89-4e00-9471-981e389cd6cf": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "RSNG4W"
+          }
+        }
+      },
+      "block_order": [
+        "bd130e58-2e89-4e00-9471-981e389cd6cf"
+      ],
+      "custom_css": [
+        ".shopify-block.shopify-app-block {background-color: #875053; padding: 0 2rem 2rem;}"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "390458c5-7230-4057-b85c-8eec987d93db": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18473594650942__390458c5-7230-4057-b85c-8eec987d93db-168624099076923a53-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Inspired by the discovery of a pearl washed ashore on the Hebridean Island of Skye, Lily Blanche jewellery recreates the evocative sense of childhood wonder in every handcrafted piece.",
+            "icon": "none",
+            "row_content": "<p>Mark the magical moments on life’s journey with this beautifully crafted collection of personalised jewellery and designer lockets. Cherish your precious memories by choosing your noble metal, gemstone, photos & engraving and create a meaningful treasure to wear or to gift.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18473594650942__390458c5-7230-4057-b85c-8eec987d93db-168624099076923a53-0"
+      ],
+      "custom_css": [],
+      "settings": {
+        "caption": "",
+        "heading": "Capture Precious Memories with personalised jewellery by Lily Blanche",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 20,
+        "padding_bottom": 12
+      }
+    },
+    "cff380dd-9c61-496d-b1d9-d18053d48170": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18473594650942__cff380dd-9c61-496d-b1d9-d18053d48170-168623697617ca0b1f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Follow us Instagram <a href=\"https://www.instagram.com/lilyblanchejewellery/\" target=\"_blank\">@lilyblanchejewellery</a>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "template--18473594650942__cff380dd-9c61-496d-b1d9-d18053d48170-168623697617ca0b1f-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 0
+      }
+    },
+    "3f2050a7-92c5-4b27-84b8-f74501a14584": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "name": "Instagram Feed",
+      "settings": {
+        "custom_liquid": "<!-- LightWidget WIDGET --><script src=\"https://cdn.lightwidget.com/widgets/lightwidget.js\"></script><style>[class^=\"lightwidget__lightbox\"] {\n    font-size: 1.4rem !important;\n}</style><iframe src=\"https://cdn.lightwidget.com/widgets/a005b94e0af156e6ab9dac63c7be86d9.html\" title=\"Instagram Feed\" scrolling=\"no\" allowtransparency=\"true\" class=\"lightwidget-widget\" style=\"width:100%;border:0;overflow:hidden;\" width=\"100%\" loading=\"lazy\"></iframe>",
+        "color_scheme": "background-1",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "navigation_1_r6QW6H": {
+      "type": "navigation-1",
+      "blocks": {
+        "navigation_G9yCTV": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "featured"
+          }
+        },
+        "navigation_fVY89t": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "lockets"
+          }
+        },
+        "navigation_46MwyL": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "necklaces"
+          }
+        },
+        "navigation_RNXkie": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "earrings"
+          }
+        },
+        "navigation_UVBNBM": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "bracelets"
+          }
+        },
+        "navigation_BzzCnN": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "rings"
+          }
+        },
+        "navigation_4pgBMN": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "gemstones"
+          }
+        },
+        "navigation_9Wbgwi": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "jewellery"
+          }
+        },
+        "navigation_rytz9B": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "collections"
+          }
+        },
+        "navigation_zjEMzn": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "mens-jewellery"
+          }
+        },
+        "navigation_UBX663": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "personalised"
+          }
+        },
+        "navigation_rMHDwQ": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "gifts"
+          }
+        },
+        "navigation_fTepmr": {
+          "type": "navigation",
+          "settings": {
+            "link_id": "blog"
+          }
+        }
+      },
+      "block_order": [
+        "navigation_G9yCTV",
+        "navigation_fVY89t",
+        "navigation_46MwyL",
+        "navigation_RNXkie",
+        "navigation_UVBNBM",
+        "navigation_BzzCnN",
+        "navigation_4pgBMN",
+        "navigation_9Wbgwi",
+        "navigation_rytz9B",
+        "navigation_zjEMzn",
+        "navigation_UBX663",
+        "navigation_rMHDwQ",
+        "navigation_fTepmr"
+      ],
+      "custom_css": [],
+      "settings": {
+        "navigation_title": "Our Products",
+        "title-color": "#121212",
+        "list-title-color": "#121212",
+        "background-color": "",
+        "list-title-font-size": 14,
+        "link-color": "#121212",
+        "link-font-size": 10,
+        "link-line-height": 1.6
+      }
+    }
+  },
+  "order": [
+    "ss_parallax_banner_cyETpC",
+    "f7d8c553-77be-4f43-8945-88a9f4e1bdcc",
+    "1739454871862fbb10",
+    "ss_multicolumns_KPVjRm",
+    "85f49b1d-65dd-4033-998f-6695023dd15d",
+    "ddfe2653-5686-4887-bf42-389b8aae2fe8",
+    "1690298509406a3091",
+    "6d7efc50-e686-48cb-9a63-568ca725fef0",
+    "26e994ac-6679-4cf0-b3d2-a430f185d048",
+    "featured_collection",
+    "49f8009c-a647-4171-ac7a-1b586a3b2fae",
+    "image_banner_NPHADJ",
+    "d173040d-019a-4fee-a0b2-c75f220663af",
+    "3fc6e174-a973-4a85-8606-935279997831",
+    "1694424446e267c8af",
+    "390458c5-7230-4057-b85c-8eec987d93db",
+    "cff380dd-9c61-496d-b1d9-d18053d48170",
+    "3f2050a7-92c5-4b27-84b8-f74501a14584",
+    "navigation_1_r6QW6H"
+  ]
+}

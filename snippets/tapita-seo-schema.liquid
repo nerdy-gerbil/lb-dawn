@@ -84,11 +84,11 @@
             {%-  assign new_page_description = new_page_description | replace: variableMapper[i], variableValueItem -%}
         {%- endfor %}
         
-        {%-  assign page_title = new_page_title | strip_html | url_decode -%}
+        {%-  assign page_title = new_page_title | strip_html | url_decode | replace: '&quot;', '"' -%}
         {%-  assign page_description = new_page_description | strip_html | url_decode -%}
         {%-  assign page_description = new_page_description | replace: '"', "'" -%}
         <script>
-        var tapita_meta_page_title =  `{{  page_title }}`;
+        var tapita_meta_page_title =  `{{  page_title | replace: '&quot;', '"' }}`;
         var tapita_meta_page_description = `{{  page_description }}`;
         </script>
         {%- break -%}
@@ -115,7 +115,8 @@
       {%- assign handle_decoded = aicustom_tcontent.handle | url_decode | url_decode -%}
       {%- assign handle_with_language = handle_decoded | prepend: aicustom_tcontent.language -%}
       {%- assign handle_with_language = handle_with_language | prepend: "/" -%}
-      {%- assign request_path_with_slash = request.path | append: "/" -%}
+      {%- assign request_path = request.path | url_decode -%}
+      {%- assign request_path_with_slash = request_path | append: "/" -%}
       {%- assign tptmetamatched = false -%}
       {%- if handle_decoded == current_product_handle and request.page_type == "product" -%}
         {%- assign tptmetamatched = true -%}
@@ -123,9 +124,18 @@
         {%- assign tptmetamatched = true -%}
       {%- elsif handle_decoded == current_page_handle -%}
         {%- assign tptmetamatched = true -%}
-      {%- elsif handle_decoded == request.path or handle_with_language == request.path or handle_with_language == request_path_with_slash -%}
+      {%- elsif handle_decoded == request_path or handle_with_language == request_path or handle_with_language == request_path_with_slash -%}
         {%- assign tptmetamatched = true -%}
       {%- endif -%}
+      {%- unless tptmetamatched -%}
+        {%- if template == 'article' and handle_decoded contains '/blogs/' -%}
+          {%- assign url_parts = request_path | split: '/' -%}
+          {%- assign template_parts = handle_decoded | split: '/' -%}
+          {%- if template_parts[3] == url_parts.last -%}
+            {%- assign tptmetamatched = true -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endunless -%}
       {%- if tptmetamatched -%}
         {%- if aicustom_tcontent.title and aicustom_tcontent.title != "" -%}
           {%-  assign page_title = aicustom_tcontent.title | strip_html | url_decode -%}
@@ -144,3 +154,6 @@
     {%- endfor -%}
 {%- endif -%}
 {%- comment -%} End of Tapita Meta Data {%- endcomment -%}
+{%- comment -%} Start of assets preloading {%- endcomment -%}
+
+{%- comment -%} End of of assets preloading {%- endcomment -%}
