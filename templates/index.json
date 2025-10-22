@@ -15,7 +15,7 @@
         "heading_BRbmXE": {
           "type": "heading",
           "settings": {
-            "heading": "<p><strong>Signature Jewellery</strong></p>",
+            "heading": "<p><strong>Ignite Your Spark!</strong></p>",
             "heading_custom": false,
             "heading_font": "system_ui_n4",
             "heading_size": 36,
@@ -28,7 +28,7 @@
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "<p><em>Define your style!</em></p>",
+            "text": "<p><em>Jewellery to shine in</em></p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
             "text_size": 20,
@@ -42,7 +42,7 @@
           "type": "button",
           "settings": {
             "button": "Shop Now",
-            "button_url": "shopify://collections/jewellery",
+            "button_url": "shopify://pages/the-christmas-gift-guide-2025-personalised-jewellery-for-men-and-women",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
