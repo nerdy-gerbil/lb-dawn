@@ -4,6 +4,7 @@ body{grid-template-rows:auto auto auto 1fr auto}.product__media-wrapper{width:10
 a#HeaderMenu-christmas-gifts {
   font-weight: 600;
   color: #FF0000;
+  padding-right: 1rem !important;
 }
 
 /* Product Page CLS fixes */
