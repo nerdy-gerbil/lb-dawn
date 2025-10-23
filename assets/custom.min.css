@@ -226,7 +226,7 @@ variant-selects {
 }
 
 html:not(.hydrated) {
-  section:has([id^='MainProduct-template--']) ~ .shopify-section:not(:has(class=*='sb-product-carousel-')),
+  section:has([id^='MainProduct-template--']) ~ .shopify-section:not(:has([class*='sb-product-carousel-'])),
   .customily-personalize-button,
   .pl-swatches,
   klarna-placement,
