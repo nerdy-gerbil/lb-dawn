@@ -74,9 +74,7 @@
         "text_fzB4Wt",
         "button_pPck3J"
       ],
-      "custom_css": [
-        "img {object-position: bottom;}"
-      ],
+      "custom_css": [],
       "settings": {
         "fetch_priority": true,
         "parallax": false,
