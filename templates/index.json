@@ -74,7 +74,9 @@
         "text_fzB4Wt",
         "button_pPck3J"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "img {object-position: bottom;}"
+      ],
       "settings": {
         "fetch_priority": true,
         "parallax": false,
@@ -82,7 +84,7 @@
         "banner_height": "adapt_first",
         "banner_fixed_height": 500,
         "banner_fixed_height_mobile": 330,
-        "image": "shopify://shop_images/Lily_Blanche_winter_jewellery_banner.tny_jpg.jpg",
+        "image": "shopify://shop_images/Lily_Blanche_Jewellery_Banner_Ignite_Your_Spark_1920_x_800_px.webp",
         "image_mobile": "shopify://shop_images/Lily_Blanche_winter_jewellery_banner_tny_800_x_800_px.png",
         "overlay": 0.2,
         "content_maxwidth": 58,
