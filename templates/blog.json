@@ -1,1 +1,123 @@
-{"sections":{"ss_circle_menu_CfiV6f":{"type":"ss-circle-menu","blocks":{"image_jgFYNY":{"type":"Image","settings":{"bubble_text":"The Hottest Jewellery Trends For 2025 For Women","bubble_link":"shopify:\/\/blogs\/default-blog\/the-hottest-jewellery-trend-for-2025"}},"image_PLagGJ":{"type":"Image","settings":{"bubble_text":"How To Engrave Your Jewellery","bubble_link":"shopify:\/\/blogs\/default-blog\/how-to-engrave-your-jewellery-a-complete-guide-to-the-best-engraving-quotes-2022"}},"image_xf7Pce":{"type":"Image","settings":{"bubble_text":"Ethically-Sourced Diamond Jewellery","bubble_link":"shopify:\/\/blogs\/default-blog\/ethicallysourced-diamond-jewellery-what-does-it-mean"}},"image_3AM7cn":{"type":"Image","settings":{"bubble_text":"Why Choose To Buy From Lily Blanche.","bubble_link":"shopify:\/\/blogs\/default-blog\/why-choose-to-buy-from-lily-blanche"}},"image_xYHB3H":{"type":"Image","settings":{"bubble_text":"What Are Baroque Pearls?","bubble_link":"shopify:\/\/blogs\/default-blog\/what-are-baroque-pearls-and-how-should-i-style-them"}},"image_nJJzG4":{"type":"Image","settings":{"bubble_text":"How To Clean Gold Jewellery","bubble_link":"shopify:\/\/blogs\/default-blog\/how-to-clean-gold-jewellery"}}},"block_order":["image_jgFYNY","image_PLagGJ","image_xf7Pce","image_3AM7cn","image_xYHB3H","image_nJJzG4"],"disabled":true,"name":"SS - Circle Menu","settings":{"slider_width":100,"slider_gap":80,"slider_gap_mobile":26,"icon_size":122,"icon_size_mobile":102,"icon_space":4,"icon_space_mobile":2,"icon_border_thickness":1,"icon_square":true,"use_hover":true,"text_custom":false,"text_font":"josefin_sans_n4","text_size":12,"text_size_mobile":10,"text_height":130,"text_mt":8,"icon_border_color":"#121212","icon_border_gradient":"","text_color":"#121212","background_color":"#ffffff","background_gradient":"","border_color":"#121212","border_gradient":"","margin_top":0,"margin_bottom":0,"padding_top":36,"padding_bottom":0,"padding_horizontal":5,"padding_horizontal_mobile":1.5,"full_width":true,"content_width":1500,"border_thickness":0,"lazy":true,"hide_mobile":false,"hide_desktop":false}},"main":{"type":"main-blog","settings":{"layout":"collage","show_image":true,"image_height":"medium","show_date":true,"show_author":false,"padding_top":0,"padding_bottom":36}}},"order":["ss_circle_menu_CfiV6f","main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ss_circle_menu_CfiV6f": {
+      "type": "ss-circle-menu",
+      "blocks": {
+        "image_jgFYNY": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "The Hottest Jewellery Trends For 2025 For Women",
+            "bubble_link": "shopify://blogs/default-blog/the-hottest-jewellery-trend-for-2025"
+          }
+        },
+        "image_PLagGJ": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "How To Engrave Your Jewellery",
+            "bubble_link": "shopify://blogs/default-blog/how-to-engrave-your-jewellery-a-complete-guide-to-the-best-engraving-quotes-2022"
+          }
+        },
+        "image_xf7Pce": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Ethically-Sourced Diamond Jewellery",
+            "bubble_link": "shopify://blogs/default-blog/ethicallysourced-diamond-jewellery-what-does-it-mean"
+          }
+        },
+        "image_3AM7cn": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "Why Choose To Buy From Lily Blanche.",
+            "bubble_link": "shopify://blogs/default-blog/why-choose-to-buy-from-lily-blanche"
+          }
+        },
+        "image_xYHB3H": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "What Are Baroque Pearls?",
+            "bubble_link": "shopify://blogs/default-blog/what-are-baroque-pearls-and-how-should-i-style-them"
+          }
+        },
+        "image_nJJzG4": {
+          "type": "Image",
+          "settings": {
+            "bubble_text": "How To Clean Gold Jewellery",
+            "bubble_link": "shopify://blogs/default-blog/how-to-clean-gold-jewellery"
+          }
+        }
+      },
+      "block_order": [
+        "image_jgFYNY",
+        "image_PLagGJ",
+        "image_xf7Pce",
+        "image_3AM7cn",
+        "image_xYHB3H",
+        "image_nJJzG4"
+      ],
+      "disabled": true,
+      "name": "SS - Circle Menu",
+      "settings": {
+        "slider_width": 100,
+        "slider_gap": 80,
+        "slider_gap_mobile": 26,
+        "icon_size": 120,
+        "icon_size_mobile": 100,
+        "icon_space": 4,
+        "icon_space_mobile": 2,
+        "icon_border_thickness": 1,
+        "icon_square": true,
+        "use_hover": true,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 12,
+        "text_size_mobile": 10,
+        "text_height": 130,
+        "text_mt": 8,
+        "icon_border_color": "#121212",
+        "icon_border_gradient": "",
+        "text_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "border_gradient": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 0,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1500,
+        "border_thickness": 0,
+        "lazy": true,
+        "hide_mobile": false,
+        "hide_desktop": false
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "layout": "collage",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "ss_circle_menu_CfiV6f",
+    "main"
+  ]
+}
