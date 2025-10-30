@@ -638,7 +638,7 @@
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "top-right",
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "right",
         "show_text_box": false,
         "color_scheme": "inverse",
         "stack_images_on_mobile": true,
