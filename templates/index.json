@@ -609,15 +609,15 @@
         "heading_kfKm8K": {
           "type": "heading",
           "settings": {
-            "heading": "Spark a Chain Reaction",
+            "heading": "Christmas Shop",
             "heading_size": "h1"
           }
         },
         "buttons_kh9HiP": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Chains",
-            "button_link_1": "shopify://collections/chains",
+            "button_label_1": "Shop Gifts",
+            "button_link_1": "shopify://pages/the-christmas-gift-guide-2025-personalised-jewellery-for-men-and-women",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -633,11 +633,11 @@
       "settings": {
         "show_on_device": "desktop",
         "fetch_priority": false,
-        "image": "shopify://shop_images/chain_graphic_2.jpg",
+        "image": "shopify://shop_images/LilY_BLANCHE_Christmas_Banner_tny_1.png",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
-        "desktop_content_position": "top-left",
+        "desktop_content_position": "top-right",
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "inverse",
