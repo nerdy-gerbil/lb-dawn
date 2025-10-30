@@ -1,1 +1,123 @@
-{"sections":{"cart-items":{"type":"main-cart-items","custom_css":[".cart-item__details > .product-option {display: none;}","tr {background-color: transparent;}"],"settings":{"color_scheme":"scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5","padding_top":36,"padding_bottom":36}},"custom_liquid_98dgrd":{"type":"custom-liquid","name":"Trustpilot Score","settings":{"custom_liquid":"<style>\n  .rating__custom {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 0.3em;\n    padding: 5px;\n    overflow: hidden;\n    box-shadow: 0 0 2px #b3acac;\n  }\n  .rating__stars {\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    gap: 0.3em;\n    padding: 5px;\n    overflow: hidden;\n  }\n\n  .rating__star {\n    font-size: 1.3em;\n    cursor: pointer;\n    transition: filter linear 0.3s;\n    width: 18px;\n    height: 18px;\n  }\n\n  .rating__star.hollow {\n    background: url('https:\/\/api.iconify.design\/simple-icons\/trustpilot.svg?color=%23ddd') no-repeat left center \/ cover;\n  }\n\n  .rating__star.filled {\n    background: url('https:\/\/api.iconify.design\/simple-icons\/trustpilot.svg?color=%2300b67a') no-repeat left center \/\n      cover;\n  }\n\n  .rating__result {\n    font-size: small;\n    font-weight: bold;\n    margin-left: 0.5em;\n    text-align: center;\n  }\n\n  .profileUrl {\n    color: #121212;\n    text-decoration: none;\n    text-wrap-mode: nowrap;\n  }\n\n  @media screen and (min-width: 750px) {\n    .rating__custom {\n      flex-direction: row;\n      align-items: flex-start;\n    }\n    \n    .rating__star {\n      width: 24px;\n      height: 24px;\n    }\n\n    .rating__result {\n      font-size: large;\n      margin-left: 0.5em;\n    }\n  }\n<\/style>\n\n<div class=\"page-width rating__custom\">\n  <div class=\"rating__stars\">\n    <i class=\"rating__star filled\"><\/i>\n    <i class=\"rating__star filled\"><\/i>\n    <i class=\"rating__star filled\"><\/i>\n    <i class=\"rating__star filled\"><\/i>\n    <i class=\"rating__star filled\"><\/i>\n  <\/div>\n  <span class=\"rating__result\">Rated {{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.rating_value }}\/5 by {{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.review_count}} happy customers on <a class=\"profileUrl\" target=\"_blank\" href=\"https:\/\/uk.trustpilot.com\/review\/lilyblanche.com?utm_medium=trustbox&amp;utm_source=TrustBoxReviewCollector\"><svg role=\"img\" aria-labelledby=\"trustpilotLogo-r0lmhelpjg\" viewBox=\"0 0 32 32\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" style=\"height: 18px; width: 18px\"><path class=\"tp-logo__star\" fill=\"#00B67A\" d=\"M30.141707 11.07005H18.63164L15.076408.177071l-3.566342 10.892977L0 11.059002l9.321376 6.739063-3.566343 10.88193 9.321375-6.728016 9.310266 6.728016-3.555233-10.88193 9.310266-6.728016z\"><\/path><path class=\"tp-logo__star-notch\" fill=\"#005128\" d=\"M21.631369 20.26169l-.799928-2.463625-5.755033 4.153914z\"><\/path><\/svg><span class=\"reviewus\"> Trustpilot<\/span><\/a>\n<\/div>","color_scheme":"","padding_top":0,"padding_bottom":0}},"cart-footer":{"type":"main-cart-footer","blocks":{"subtotal":{"type":"subtotal","settings":{}},"buttons":{"type":"buttons","settings":{}}},"block_order":["subtotal","buttons"],"custom_css":["#checkout {text-transform: uppercase;}"],"settings":{"color_scheme":"scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5","padding_top":40,"padding_bottom":40}},"00286c90-31ab-4351-8910-e18caf1eba4e":{"type":"rich-text","blocks":{"heading_EEtYiw":{"type":"heading","settings":{"heading":"Why Our Customers Love Us","heading_size":"h2"}},"text_k8RHcT":{"type":"text","settings":{"text":"<p>Real reviews from real customers<\/p>"}}},"block_order":["heading_EEtYiw","text_k8RHcT"],"settings":{"desktop_content_position":"left","content_alignment":"left","color_scheme":"","full_width":true,"padding_top":20,"padding_bottom":0}},"custom_liquid_LJiqJn":{"type":"custom-liquid","name":"Klaviyo Reviews","settings":{"custom_liquid":"<div id=\"klaviyo-featured-reviews-carousel\"><\/div>","color_scheme":"","padding_top":0,"padding_bottom":0}}},"order":["cart-items","custom_liquid_98dgrd","cart-footer","00286c90-31ab-4351-8910-e18caf1eba4e","custom_liquid_LJiqJn"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "custom_css": [
+        ".cart-item__details > .product-option {display: none;}",
+        "tr {background-color: transparent;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_98dgrd": {
+      "type": "custom-liquid",
+      "name": "Trustpilot Score",
+      "settings": {
+        "custom_liquid": "<style>\n  .rating__custom {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    gap: 0.3em;\n    padding: 5px;\n    overflow: hidden;\n    box-shadow: 0 0 2px #b3acac;\n  }\n  .rating__stars {\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n    gap: 0.3em;\n    padding: 5px;\n    overflow: hidden;\n  }\n\n  .rating__star {\n    font-size: 1.3em;\n    cursor: pointer;\n    transition: filter linear 0.3s;\n    width: 18px;\n    height: 18px;\n  }\n\n  .rating__star.hollow {\n    background: url('https://api.iconify.design/simple-icons/trustpilot.svg?color=%23ddd') no-repeat left center / cover;\n  }\n\n  .rating__star.filled {\n    background: url('https://api.iconify.design/simple-icons/trustpilot.svg?color=%2300b67a') no-repeat left center /\n      cover;\n  }\n\n  .rating__result {\n    font-size: small;\n    font-weight: bold;\n    margin-left: 0.5em;\n    text-align: center;\n  }\n\n  .profileUrl {\n    color: #121212;\n    text-decoration: none;\n    text-wrap-mode: nowrap;\n  }\n\n  @media screen and (min-width: 750px) {\n    .rating__custom {\n      flex-direction: row;\n      align-items: flex-start;\n    }\n    \n    .rating__star {\n      width: 24px;\n      height: 24px;\n    }\n\n    .rating__result {\n      font-size: large;\n      margin-left: 0.5em;\n    }\n  }\n</style>\n\n<div class=\"page-width rating__custom\">\n  <div class=\"rating__stars\">\n    <i class=\"rating__star filled\"></i>\n    <i class=\"rating__star filled\"></i>\n    <i class=\"rating__star filled\"></i>\n    <i class=\"rating__star filled\"></i>\n    <i class=\"rating__star filled\"></i>\n  </div>\n  <span class=\"rating__result\">Rated {{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.rating_value }}/5 by {{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.review_count}} happy customers on <a class=\"profileUrl\" target=\"_blank\" href=\"https://uk.trustpilot.com/review/lilyblanche.com?utm_medium=trustbox&amp;utm_source=TrustBoxReviewCollector\"><svg role=\"img\" aria-labelledby=\"trustpilotLogo-r0lmhelpjg\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" style=\"height: 18px; width: 18px\"><path class=\"tp-logo__star\" fill=\"#00B67A\" d=\"M30.141707 11.07005H18.63164L15.076408.177071l-3.566342 10.892977L0 11.059002l9.321376 6.739063-3.566343 10.88193 9.321375-6.728016 9.310266 6.728016-3.555233-10.88193 9.310266-6.728016z\"></path><path class=\"tp-logo__star-notch\" fill=\"#005128\" d=\"M21.631369 20.26169l-.799928-2.463625-5.755033 4.153914z\"></path></svg><span class=\"reviewus\"> Trustpilot</span></a>\n</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "custom_css": [
+        "#checkout {text-transform: uppercase;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "00286c90-31ab-4351-8910-e18caf1eba4e": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EEtYiw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Our Customers Love Us",
+            "heading_size": "h2"
+          }
+        },
+        "text_k8RHcT": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Real reviews from real customers</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EEtYiw",
+        "text_k8RHcT"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_LJiqJn": {
+      "type": "custom-liquid",
+      "name": "Klaviyo Reviews",
+      "settings": {
+        "custom_liquid": "<div id=\"klaviyo-featured-reviews-carousel\"></div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "17618334121af300b1": {
+      "type": "apps",
+      "blocks": {
+        "customily_product_personalizer_main_ED9tL4": {
+          "type": "shopify://apps/customily-product-personalizer/blocks/main/38e5281a-51b4-4383-badc-af97d3fb7e7b",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "customily_product_personalizer_main_ED9tL4"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "custom_liquid_98dgrd",
+    "cart-footer",
+    "00286c90-31ab-4351-8910-e18caf1eba4e",
+    "custom_liquid_LJiqJn",
+    "17618334121af300b1"
+  ]
+}
