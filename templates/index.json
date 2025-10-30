@@ -642,7 +642,7 @@
         "show_text_box": false,
         "color_scheme": "inverse",
         "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "right",
         "show_text_below": false
       }
     },
