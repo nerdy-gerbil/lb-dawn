@@ -95,21 +95,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "17618334121af300b1": {
-      "type": "apps",
-      "blocks": {
-        "customily_product_personalizer_main_ED9tL4": {
-          "type": "shopify://apps/customily-product-personalizer/blocks/main/38e5281a-51b4-4383-badc-af97d3fb7e7b",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "customily_product_personalizer_main_ED9tL4"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -117,7 +102,6 @@
     "custom_liquid_98dgrd",
     "cart-footer",
     "00286c90-31ab-4351-8910-e18caf1eba4e",
-    "custom_liquid_LJiqJn",
-    "17618334121af300b1"
+    "custom_liquid_LJiqJn"
   ]
 }
