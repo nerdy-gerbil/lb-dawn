@@ -573,8 +573,8 @@
         "buttons_zMHCAC": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Chains",
-            "button_link_1": "shopify://collections/chains",
+            "button_label_1": "Shop Gifts",
+            "button_link_1": "shopify://pages/the-christmas-gift-guide-2025-personalised-jewellery-for-men-and-women",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
