@@ -143,11 +143,6 @@
     },
     "content_for_index": [],
     "blocks": {
-      "18228966181090706294": {
-        "type": "shopify://apps/upsell-cross-sell-selleasy/blocks/app-embed/790c1a03-a71f-4bc1-9869-00dad526d3c2",
-        "disabled": false,
-        "settings": {}
-      },
       "14327677521557774844": {
         "type": "shopify://apps/simprosys-google-shopping-feed/blocks/core_settings_block/1f0b859e-9fa6-4007-97e8-4513aff5ff3b",
         "disabled": false,
@@ -213,11 +208,6 @@
           "custom_style": ""
         }
       },
-      "14952540001915115444": {
-        "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
-        "disabled": false,
-        "settings": {}
-      },
       "15683396631634586217": {
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
@@ -231,6 +221,11 @@
           "button_vertical_position": "lowest",
           "greeting_message": "👋 Hi, please message us with any questions. We're happy to help!"
         }
+      },
+      "14952540001915115444": {
+        "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {
