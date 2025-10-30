@@ -493,6 +493,13 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+    {% comment %} BEGIN: Additional Checkout buttons for Upcart Cart Drawer {% endcomment %}
+    {% if additional_checkout_buttons %}
+    <div style="display: none !important">
+        {{ content_for_additional_checkout_buttons }}
+    </div>
+    {% endif %}
+    {% comment %} END: Additional Checkout buttons for Upcart Cart Drawer {% endcomment %}
     {% if content_for_header contains 'tapita-seo-script-tags' %}
       {%- capture tapita-seo-snippets -%}
     {% include 'tapita-page-speed-status' %}
