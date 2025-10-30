@@ -631,7 +631,7 @@
       ],
       "custom_css": [],
       "settings": {
-        "show_on_device": "desktop",
+        "show_on_device": "all-devices",
         "fetch_priority": false,
         "image": "shopify://shop_images/LilY_BLANCHE_Christmas_Banner_tny_1.png",
         "image_overlay_opacity": 10,
