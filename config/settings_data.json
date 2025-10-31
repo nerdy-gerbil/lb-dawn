@@ -123,7 +123,7 @@
     "predictive_search_show_price": false,
     "currency_code_enabled": false,
     "cart_type": "drawer",
-    "show_vendor": false,
+    "show_vendor": true,
     "show_cart_note": true,
     "cart_drawer_collection": "bestsellers",
     "cart_color_scheme": "scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5",
