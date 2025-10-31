@@ -633,11 +633,11 @@
       "settings": {
         "show_on_device": "desktop",
         "fetch_priority": false,
-        "image": "shopify://shop_images/Christmas_shop_Now_Open_tny_9.png",
+        "image": "shopify://shop_images/Christmas_bestsellers_banner_tny_2_10.png",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
-        "desktop_content_position": "top-center",
+        "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "inverse",
