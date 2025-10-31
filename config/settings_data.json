@@ -226,6 +226,13 @@
           "button_vertical_position": "lowest",
           "greeting_message": "👋 Hi, please message us with any questions. We're happy to help!"
         }
+      },
+      "18228966181090706294": {
+        "type": "shopify://apps/selleasy/blocks/app-embed/790c1a03-a71f-4bc1-9869-00dad526d3c2",
+        "disabled": false,
+        "settings": {
+          "storefrontAccessToken": ""
+        }
       }
     },
     "color_schemes": {
