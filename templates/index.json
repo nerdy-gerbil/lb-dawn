@@ -609,14 +609,14 @@
         "heading_kfKm8K": {
           "type": "heading",
           "settings": {
-            "heading": "Christmas Shop",
+            "heading": "",
             "heading_size": "h1"
           }
         },
         "buttons_kh9HiP": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop Gifts",
+            "button_label_1": "SHOP GIFTS",
             "button_link_1": "shopify://pages/the-christmas-gift-guide-2025-personalised-jewellery-for-men-and-women",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -637,8 +637,8 @@
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
-        "desktop_content_position": "top-right",
-        "desktop_content_alignment": "right",
+        "desktop_content_position": "top-center",
+        "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "inverse",
         "stack_images_on_mobile": true,
