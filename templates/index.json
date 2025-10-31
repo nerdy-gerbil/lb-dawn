@@ -609,7 +609,7 @@
         "heading_kfKm8K": {
           "type": "heading",
           "settings": {
-            "heading": "",
+            "heading": "CHRISTMAS SHOP",
             "heading_size": "h1"
           }
         },
@@ -633,7 +633,7 @@
       "settings": {
         "show_on_device": "desktop",
         "fetch_priority": false,
-        "image": "shopify://shop_images/Christmas_bestsellers_banner_tny_2_10.png",
+        "image": "shopify://shop_images/LILY_BLANCHE_Christmas_Shop_Now_Open_12.png",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
