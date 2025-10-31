@@ -208,9 +208,14 @@
           "custom_style": ""
         }
       },
+      "14952540001915115444": {
+        "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
+        "disabled": false,
+        "settings": {}
+      },
       "15683396631634586217": {
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "button_color": "#875053",
           "secondary_color": "#ffffff",
@@ -221,11 +226,6 @@
           "button_vertical_position": "lowest",
           "greeting_message": "👋 Hi, please message us with any questions. We're happy to help!"
         }
-      },
-      "14952540001915115444": {
-        "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
-        "disabled": false,
-        "settings": {}
       }
     },
     "color_schemes": {
