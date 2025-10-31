@@ -590,7 +590,7 @@
       "settings": {
         "show_on_device": "mobile",
         "fetch_priority": false,
-        "image": "shopify://shop_images/Bestsellers_Christmas_2025_tny2_500_x_500_px_1.png",
+        "image": "shopify://shop_images/TNY_3_Bestsellers_Christmas_2025_500_x_500_px_1.png",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
