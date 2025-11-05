@@ -1,0 +1,434 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page-readmore",
+      "custom_css": [
+        "h1.h0 {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_Ky7MrJ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MwhwBT": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Christmas Gift Shop",
+            "heading_size": "h2"
+          }
+        },
+        "text_6nrYUW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Make this Christmas unforgettable with timeless, personalised jewellery that tells your story.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MwhwBT",
+        "text_6nrYUW"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_BpAETR": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_BfApLY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/four_photo_heart_gold_sqaure.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Christmas Gifts for Mum",
+            "link": "shopify://collections/christmas-gifts-for-mum"
+          }
+        },
+        "column_UawhaY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gold_dog_tag_necklace_XL_square.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Christmas Gift For Dad",
+            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-dad"
+          }
+        },
+        "column_CGy7Fp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/silver_memory_keeper_locket_b9e7be05-378c-4ce5-8781-f250c1cad87c.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Christmas Gift For Wife",
+            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-wife"
+          }
+        },
+        "column_jFcqDF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/round_photo_locket_gold_1_square.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Christmas Gift For Son",
+            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-son"
+          }
+        },
+        "column_iiVmgq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/silver_engraveable_heart_necklace_1.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Stocking Fillers",
+            "link": "https://www.lilyblanche.com/collections/stocking-fillers"
+          }
+        },
+        "column_wnEVgz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gold_heart_necklace_square.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Christmas Gifts For Friends",
+            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-friend"
+          }
+        },
+        "column_hBebXU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gemstone_ring_ruby_gold_stack.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Christmas Gifts For Daughter",
+            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-daughter"
+          }
+        },
+        "column_bTi9Hw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mens_st_christopher_gold_necklace1_1080.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "Christmas Gifts For Husband",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_BfApLY",
+        "column_UawhaY",
+        "column_CGy7Fp",
+        "column_jFcqDF",
+        "column_iiVmgq",
+        "column_wnEVgz",
+        "column_hBebXU",
+        "column_bTi9Hw"
+      ],
+      "settings": {
+        "title": "Shop Gift Guides",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "background-2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_4JwYAL": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "christmas-gifts",
+        "products_to_show": 12,
+        "title": "Bestselling Gifts",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_KCpheM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_d7jAtd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/diamond_letter_necklace_gold_mobile.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Ethical Diamond Jewellery",
+            "link": "https://www.lilyblanche.com/collections/ethical-diamond-jewellery-collections"
+          }
+        },
+        "column_4qDgxj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blue_topaz_locket_gold_sqaure.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Personalised Lockets",
+            "link": "https://www.lilyblanche.com/collections/personalised-lockets"
+          }
+        },
+        "column_rnUPqM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/st_christopher_silver_necklace_1.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Men's Jewellery",
+            "link": "https://www.lilyblanche.com/collections/mens-jewellery"
+          }
+        },
+        "column_eFij3w": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gemstone_sapphire_ring_gold_2.webp",
+            "title": "",
+            "text": "",
+            "link_label": "Gemstone Jewellery",
+            "link": "https://www.lilyblanche.com/collections/gemstones"
+          }
+        }
+      },
+      "block_order": [
+        "column_d7jAtd",
+        "column_4qDgxj",
+        "column_rnUPqM",
+        "column_eFij3w"
+      ],
+      "settings": {
+        "title": "Shop By Category",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "background-2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_egtwHG": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_7yxiTV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blocks_for_Christmas_page_4.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "https://www.lilyblanche.com/collections/christmas-gifts"
+          }
+        },
+        "column_3r8TC3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blocks_for_Christmas_page_5_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "https://www.lilyblanche.com/collections/photo-lockets"
+          }
+        },
+        "column_aa3K9U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blocks_for_Christmas_page_2_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "https://www.lilyblanche.com/policies/refund-policy"
+          }
+        },
+        "column_zaYNx9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blocks_for_Christmas_page_1_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_7yxiTV",
+        "column_3r8TC3",
+        "column_aa3K9U",
+        "column_zaYNx9"
+      ],
+      "settings": {
+        "title": "Our Gifts To You",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_cG8kJW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_MJrUK7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ready To Gift",
+            "heading_size": "h2"
+          }
+        },
+        "text_aXcmmG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each Lily Blanche order is lovingly prepared with care, arriving in a ribbon-tied gift box, a luxurious gift bag, and scented tissue paper— perfectly ready to place under the tree.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_NnHBG6": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find Your Perfect Gift",
+            "button_link": "https://www.lilyblanche.com/collections/christmas-gifts",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MJrUK7",
+        "text_aXcmmG",
+        "button_NnHBG6"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Giftwrapped_lilyblanche_1.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "138c49d2-7ccc-466a-a9a9-18275e1ed23b": {
+      "type": "newsletter",
+      "blocks": {
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "FROM INBOX TO JEWELLERY BOX",
+            "heading_size": "h2"
+          }
+        },
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up for exclusive sales, private events, style tips and much more! </p><p>You can unsubscribe at any time. Please read our <a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">privacy policy</a>.</p>"
+          }
+        },
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-2": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-0",
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-1",
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-2"
+      ],
+      "custom_css": [
+        ".field__input,.select__select,.customer .field input,.customer select {background-color: #fff; color: #121212;}",
+        ".field__label,.field__button {color: #bbb;}",
+        ".field__input::-moz-selection {background: #d0d0d0;}",
+        ".field__input::selection {background: #d0d0d0;}"
+      ],
+      "settings": {
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "a6a19d7e-1890-4758-b926-ca82274ab64b": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "rich_text_Ky7MrJ",
+    "multicolumn_BpAETR",
+    "main",
+    "featured_collection_4JwYAL",
+    "multicolumn_KCpheM",
+    "multicolumn_egtwHG",
+    "image_with_text_cG8kJW",
+    "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
+    "a6a19d7e-1890-4758-b926-ca82274ab64b"
+  ]
+}
