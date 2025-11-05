@@ -566,8 +566,8 @@
         "heading_nGbaGW": {
           "type": "heading",
           "settings": {
-            "heading": "",
-            "heading_size": "h2"
+            "heading": "Christmas  Shop",
+            "heading_size": "h1"
           }
         },
         "buttons_zMHCAC": {
@@ -590,17 +590,17 @@
       "settings": {
         "show_on_device": "mobile",
         "fetch_priority": false,
-        "image": "shopify://shop_images/LILY_BLANCHE__Christmas_Shop_2025_500_x_500_px_5.png",
+        "image": "shopify://shop_images/Christmasshop-mobile.webp",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
-        "color_scheme": "inverse",
+        "color_scheme": "accent-1",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "image_banner_NPHADJ": {
@@ -633,11 +633,11 @@
       "settings": {
         "show_on_device": "desktop",
         "fetch_priority": false,
-        "image": "shopify://shop_images/LILY_BLANCHE_Christmas_Shop_Now_Open_12.png",
+        "image": "shopify://shop_images/Christmasshop.webp",
         "image_overlay_opacity": 10,
-        "image_height": "medium",
+        "image_height": "adapt",
         "image_behavior": "none",
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "top-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "inverse",
