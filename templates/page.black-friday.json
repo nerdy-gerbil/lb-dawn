@@ -39,6 +39,33 @@
         "padding_bottom": 52
       }
     },
+    "176234504503185e3e": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_aM3AYx": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "VTsPxY"
+          }
+        },
+        "klaviyo_email_marketing_sms_form_embed_block_zjKkJc": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "RDyZKS"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_aM3AYx",
+        "klaviyo_email_marketing_sms_form_embed_block_zjKkJc"
+      ],
+      "custom_css": [
+        ".klaviyo-form {padding-bottom: 2rem;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "multicolumn_BpAETR": {
       "type": "multicolumn",
       "blocks": {
@@ -368,55 +395,16 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "138c49d2-7ccc-466a-a9a9-18275e1ed23b": {
-      "type": "newsletter",
-      "blocks": {
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "FROM INBOX TO JEWELLERY BOX",
-            "heading_size": "h2"
-          }
-        },
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-1": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Sign up for exclusive sales, private events, style tips and much more! </p><p>You can unsubscribe at any time. Please read our <a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">privacy policy</a>.</p>"
-          }
-        },
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-2": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-0",
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-1",
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-2"
-      ],
-      "custom_css": [
-        ".field__input,.select__select,.customer .field input,.customer select {background-color: #fff; color: #121212;}",
-        ".field__label,.field__button {color: #bbb;}",
-        ".field__input::-moz-selection {background: #d0d0d0;}",
-        ".field__input::selection {background: #d0d0d0;}"
-      ],
-      "settings": {
-        "color_scheme": "accent-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "rich_text_Ky7MrJ",
+    "176234504503185e3e",
     "multicolumn_BpAETR",
     "main",
     "featured_collection_4JwYAL",
     "multicolumn_KCpheM",
     "multicolumn_egtwHG",
-    "image_with_text_cG8kJW",
-    "138c49d2-7ccc-466a-a9a9-18275e1ed23b"
+    "image_with_text_cG8kJW"
   ]
 }
