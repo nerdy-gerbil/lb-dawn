@@ -244,3 +244,12 @@ html:not(.hydrated) {
     display: none !important;
   }
 }
+
+/* Cookie Consent Banner */
+.shopify-pc__banner__dialog {
+    background-color: #E3DBD8 !important;
+}
+
+.shopify-pc__banner__dialog p {
+    text-align: justify;
+}
