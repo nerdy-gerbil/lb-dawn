@@ -93,7 +93,7 @@
         "content_maxwidth_mobile": 95,
         "content_horizontal_position": "start",
         "content_horizontal_position_mobile": "start",
-        "content_vertical_position": "center",
+        "content_vertical_position": "start",
         "content_vertical_position_mobile": "start",
         "content_padding_vertical": 0,
         "content_padding_vertical_mobile": 0,
@@ -566,7 +566,7 @@
         "heading_nGbaGW": {
           "type": "heading",
           "settings": {
-            "heading": "Christmas Shop",
+            "heading": "",
             "heading_size": "h2"
           }
         },
