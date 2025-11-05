@@ -15,14 +15,14 @@
         "heading_MwhwBT": {
           "type": "heading",
           "settings": {
-            "heading": "The Christmas Gift Shop",
+            "heading": "<strong>Black Friday 2025</strong>",
             "heading_size": "h2"
           }
         },
         "text_6nrYUW": {
           "type": "text",
           "settings": {
-            "text": "<p>Make this Christmas unforgettable with timeless, personalised jewellery that tells your story.</p>"
+            "text": "<p><strong>Black Friday 2025 </strong>is just around the corner, and we’re here to bring you the most dazzling jewellery deals! Sign up below to get exclusive early access to our biggest discounts and offers. Be first in line for Black Friday savings and discover the perfect pieces at unbeatable prices. Don’t miss out!<br/></p>"
           }
         }
       },
@@ -66,16 +66,20 @@
         "include_margins": true
       }
     },
+    "1762357868ae63e931": {
+      "type": "_blocks",
+      "settings": {}
+    },
     "multicolumn_BpAETR": {
       "type": "multicolumn",
       "blocks": {
         "column_BfApLY": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/four_photo_heart_gold_sqaure.webp",
+            "image": "shopify://shop_images/bfSALE_BLOCK_1.png",
             "title": "",
             "text": "",
-            "link_label": "Christmas Gifts for Mum",
+            "link_label": "",
             "link": "shopify://collections/christmas-gifts-for-mum"
           }
         },
@@ -161,7 +165,7 @@
         "column_bTi9Hw"
       ],
       "settings": {
-        "title": "Shop Gift Guides",
+        "title": "Shop Black Friday Deals",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -175,6 +179,25 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_banner_DD7aND": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "show_on_device": "all-devices",
+        "fetch_priority": false,
+        "image": "shopify://shop_images/BLACK_FRIDAY-_BANNER2.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
       }
     },
     "main": {
@@ -400,7 +423,9 @@
   "order": [
     "rich_text_Ky7MrJ",
     "176234504503185e3e",
+    "1762357868ae63e931",
     "multicolumn_BpAETR",
+    "image_banner_DD7aND",
     "main",
     "featured_collection_4JwYAL",
     "multicolumn_KCpheM",
