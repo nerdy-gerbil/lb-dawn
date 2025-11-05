@@ -70,117 +70,6 @@
       "type": "_blocks",
       "settings": {}
     },
-    "multicolumn_BpAETR": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_BfApLY": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/bfSALE_BLOCK_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "shopify://collections/christmas-gifts-for-mum"
-          }
-        },
-        "column_UawhaY": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/gold_dog_tag_necklace_XL_square.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Christmas Gift For Dad",
-            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-dad"
-          }
-        },
-        "column_CGy7Fp": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/silver_memory_keeper_locket_b9e7be05-378c-4ce5-8781-f250c1cad87c.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Christmas Gift For Wife",
-            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-wife"
-          }
-        },
-        "column_jFcqDF": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/round_photo_locket_gold_1_square.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Christmas Gift For Son",
-            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-son"
-          }
-        },
-        "column_iiVmgq": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/silver_engraveable_heart_necklace_1.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Stocking Fillers",
-            "link": "https://www.lilyblanche.com/collections/stocking-fillers"
-          }
-        },
-        "column_wnEVgz": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/gold_heart_necklace_square.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Christmas Gifts For Friends",
-            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-friend"
-          }
-        },
-        "column_hBebXU": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/gemstone_ring_ruby_gold_stack.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Christmas Gifts For Daughter",
-            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-daughter"
-          }
-        },
-        "column_bTi9Hw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/mens_st_christopher_gold_necklace1_1080.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Christmas Gifts For Husband",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_BfApLY",
-        "column_UawhaY",
-        "column_CGy7Fp",
-        "column_jFcqDF",
-        "column_iiVmgq",
-        "column_wnEVgz",
-        "column_hBebXU",
-        "column_bTi9Hw"
-      ],
-      "settings": {
-        "title": "Shop Black Friday Deals",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "background-2",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_banner_DD7aND": {
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
@@ -424,7 +313,6 @@
     "rich_text_Ky7MrJ",
     "176234504503185e3e",
     "1762357868ae63e931",
-    "multicolumn_BpAETR",
     "image_banner_DD7aND",
     "main",
     "featured_collection_4JwYAL",
