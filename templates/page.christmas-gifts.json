@@ -9,16 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page-readmore",
-      "custom_css": [
-        "h1.h0 {display: none;}"
-      ],
-      "settings": {
-        "padding_top": 24,
-        "padding_bottom": 0
-      }
-    },
     "rich_text_Ky7MrJ": {
       "type": "rich-text",
       "blocks": {
@@ -129,7 +119,7 @@
             "title": "",
             "text": "",
             "link_label": "Christmas Gifts For Husband",
-            "link": ""
+            "link": "shopify://collections/christmas-gifts-for-husband"
           }
         }
       },
@@ -158,6 +148,16 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page-readmore",
+      "custom_css": [
+        "h1.h0 {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 0
       }
     },
     "featured_collection_4JwYAL": {
