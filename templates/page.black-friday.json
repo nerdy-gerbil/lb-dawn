@@ -74,7 +74,7 @@
       "type": "image-banner",
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "show_on_device": "all-devices",
+        "show_on_device": "desktop",
         "fetch_priority": false,
         "image": "shopify://shop_images/BLACK_FRIDAY-_BANNER2.png",
         "image_overlay_opacity": 0,
@@ -163,7 +163,7 @@
         "column_Mxbkfx": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Black_Friday_BLOCKS_5.png",
+            "image": "shopify://shop_images/Black_Friday_BLOCKS_1500_x_1500_px_4.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -173,7 +173,7 @@
         "column_bwghgC": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Black_Friday_BLOCKS_1_1.png",
+            "image": "shopify://shop_images/Black_Friday_BLOCKS_1500_x_1500_px_1_1.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -183,7 +183,7 @@
         "column_PDMYp3": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Black_Friday_BLOCKS_3_1.png",
+            "image": "shopify://shop_images/Black_Friday_BLOCKS_1500_x_1500_px_2_1.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -193,7 +193,7 @@
         "column_qDAdn7": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Black_Friday_BLOCKS_4_1.png",
+            "image": "shopify://shop_images/Black_Friday_BLOCKS_1500_x_1500_px_3_1.png",
             "title": "",
             "text": "",
             "link_label": "",
