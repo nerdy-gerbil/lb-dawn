@@ -282,7 +282,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Shop All Jewellery",
+        "button_label": "SHOP ALL JEWELLERY",
         "button_link": "",
         "columns_desktop": 4,
         "column_alignment": "left",
@@ -294,13 +294,56 @@
         "padding_bottom": 36
       }
     },
+    "17628630074e7fa026": {
+      "type": "apps",
+      "blocks": {
+        "shopbox_recommender_tzrpfn": {
+          "type": "shopify://apps/shopbox/blocks/recommender/8413d591-09e9-4e10-8ff1-c0374d8dd64a",
+          "settings": {
+            "fallback_collection": "top_viewed",
+            "title": "Recommendations",
+            "heading_font": "sans_serif_n4",
+            "heading_font_size": 24,
+            "carousel_title_alignment": "left",
+            "heading_color": "#000000",
+            "body_font": "sans_serif_n4",
+            "body_font_size": 16,
+            "product_text_alignemnt": "left",
+            "product_card_background": "",
+            "text_color": "#000000",
+            "sale_banner_color": "#e50914",
+            "sale_color": "#e50914",
+            "image_aspect_ratio": "3/4",
+            "show_secondary_image": false,
+            "show_brand": false,
+            "show_add_to_cart": false,
+            "add_to_cart_text": "Add to Cart",
+            "add_to_cart_text_color": "#ffffff",
+            "add_to_cart_background_color": "#000000",
+            "add_to_cart_font_size": 16,
+            "arrow_style": "circle",
+            "products_per_row": 4,
+            "show_arrows": true,
+            "padding_top": 40,
+            "padding_bottom": 40,
+            "section_background": "none"
+          }
+        }
+      },
+      "block_order": [
+        "shopbox_recommender_tzrpfn"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "multicolumn_egtwHG": {
       "type": "multicolumn",
       "blocks": {
         "column_7yxiTV": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/blocks_for_Christmas_page_4.png",
+            "image": "shopify://shop_images/blocks_for_BF_page_4.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -310,7 +353,7 @@
         "column_3r8TC3": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/blocks_for_Christmas_page_5_1.png",
+            "image": "shopify://shop_images/blocks_for_BF_page_3_1.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -320,7 +363,7 @@
         "column_aa3K9U": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/blocks_for_Christmas_page_2_1.png",
+            "image": "shopify://shop_images/blocks_for_BF_page_2_1.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -330,7 +373,7 @@
         "column_zaYNx9": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/blocks_for_Christmas_page_1_1.png",
+            "image": "shopify://shop_images/blocks_for_BF_page_1_1.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -345,7 +388,7 @@
         "column_zaYNx9"
       ],
       "settings": {
-        "title": "Our Offers",
+        "title": "Our Additional Offers",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -374,7 +417,7 @@
         "text_aXcmmG": {
           "type": "text",
           "settings": {
-            "text": "<p>Each Lily Blanche order is lovingly prepared with care, arriving in a ribbon-tied gift box, a luxurious gift bag, and scented tissue paper— perfectly ready to place under the tree.</p>",
+            "text": "<p>Each Lily Blanche order is lovingly prepared with care, arriving in a ribbon-tied gift box, a luxurious gift bag, and scented tissue paper— perfectly ready to gift to someone special or to treat yourself.</p>",
             "text_style": "body"
           }
         },
@@ -393,7 +436,7 @@
         "button_NnHBG6"
       ],
       "settings": {
-        "image": "shopify://shop_images/Giftwrapped_lilyblanche_1.png",
+        "image": "shopify://shop_images/black_friday_page_2_1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -431,6 +474,7 @@
     "17628616520c2bcde0",
     "main",
     "multicolumn_PTyt4n",
+    "17628630074e7fa026",
     "multicolumn_egtwHG",
     "image_with_text_cG8kJW",
     "1762862827b991e0e1",
