@@ -157,6 +157,74 @@
         "padding_bottom": 36
       }
     },
+    "multicolumn_PTyt4n": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Mxbkfx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Black_Friday_BLOCKS_5.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bwghgC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Black_Friday_BLOCKS_1_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_PDMYp3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Black_Friday_BLOCKS_3_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qDAdn7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Black_Friday_BLOCKS_4_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Mxbkfx",
+        "column_bwghgC",
+        "column_PDMYp3",
+        "column_qDAdn7"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Shop By Category",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "SHOP ALL JEWELLERY",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_r7nYEa": {
       "type": "rich-text",
       "blocks": {
@@ -224,74 +292,6 @@
       "settings": {
         "padding_top": 24,
         "padding_bottom": 0
-      }
-    },
-    "multicolumn_PTyt4n": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_Mxbkfx": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Black_Friday_BLOCKS_5.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_bwghgC": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Black_Friday_BLOCKS_1_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_PDMYp3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Black_Friday_BLOCKS_3_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_qDAdn7": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Black_Friday_BLOCKS_4_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_Mxbkfx",
-        "column_bwghgC",
-        "column_PDMYp3",
-        "column_qDAdn7"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Shop By Category",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "SHOP ALL JEWELLERY",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "17628630074e7fa026": {
@@ -470,10 +470,10 @@
     "1762357868ae63e931",
     "image_banner_DD7aND",
     "multicolumn_F74gnK",
+    "multicolumn_PTyt4n",
     "rich_text_r7nYEa",
     "17628616520c2bcde0",
     "main",
-    "multicolumn_PTyt4n",
     "17628630074e7fa026",
     "multicolumn_egtwHG",
     "image_with_text_cG8kJW",
