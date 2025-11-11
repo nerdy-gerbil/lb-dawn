@@ -225,6 +225,73 @@
         "padding_bottom": 36
       }
     },
+    "multicolumn_egtwHG": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_7yxiTV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blocks_for_BF_page_red_4.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "https://www.lilyblanche.com/collections/black-friday-sale"
+          }
+        },
+        "column_3r8TC3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blocks_for_BF_page_red_5_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "https://www.lilyblanche.com/collections/black-friday-sale"
+          }
+        },
+        "column_aa3K9U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blocks_for_BF_page_red_2_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "https://www.lilyblanche.com/collections/black-friday-sale"
+          }
+        },
+        "column_zaYNx9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blocks_for_BF_page_red_1_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": "https://www.lilyblanche.com/collections/black-friday-sale"
+          }
+        }
+      },
+      "block_order": [
+        "column_7yxiTV",
+        "column_3r8TC3",
+        "column_aa3K9U",
+        "column_zaYNx9"
+      ],
+      "settings": {
+        "title": "Our Additional Offers",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_r7nYEa": {
       "type": "rich-text",
       "blocks": {
@@ -337,73 +404,6 @@
         "include_margins": true
       }
     },
-    "multicolumn_egtwHG": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_7yxiTV": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/blocks_for_BF_page_red_4.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "https://www.lilyblanche.com/collections/black-friday-sale"
-          }
-        },
-        "column_3r8TC3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/blocks_for_BF_page_red_5_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "https://www.lilyblanche.com/collections/black-friday-sale"
-          }
-        },
-        "column_aa3K9U": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/blocks_for_BF_page_red_2_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "https://www.lilyblanche.com/collections/black-friday-sale"
-          }
-        },
-        "column_zaYNx9": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/blocks_for_BF_page_red_1_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "https://www.lilyblanche.com/collections/black-friday-sale"
-          }
-        }
-      },
-      "block_order": [
-        "column_7yxiTV",
-        "column_3r8TC3",
-        "column_aa3K9U",
-        "column_zaYNx9"
-      ],
-      "settings": {
-        "title": "Our Additional Offers",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "image_with_text_cG8kJW": {
       "type": "image-with-text",
       "blocks": {
@@ -471,10 +471,10 @@
     "image_banner_DD7aND",
     "multicolumn_F74gnK",
     "multicolumn_PTyt4n",
+    "multicolumn_egtwHG",
     "rich_text_r7nYEa",
     "17628616520c2bcde0",
     "main",
-    "multicolumn_egtwHG",
     "17628630074e7fa026",
     "image_with_text_cG8kJW",
     "1762862827b991e0e1",
