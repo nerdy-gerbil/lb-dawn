@@ -89,81 +89,141 @@
         "show_text_below": true
       }
     },
+    "multicolumn_F74gnK": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_V8w48w": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Black_Friday_Discounts_4.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jyqUWt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Black_Friday_Discounts_1_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_64bVJe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Black_Friday_Discounts_2_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NzRDAp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Black_Friday_Discounts_3_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_V8w48w",
+        "column_jyqUWt",
+        "column_64bVJe",
+        "column_NzRDAp"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Shop By Discount",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "SHOP THE SALE",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_r7nYEa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Kqwfi8": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Our Customers Think Of Us",
+            "heading_size": "h1"
+          }
+        },
+        "text_w73t9A": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you’re searching for the perfect personalised locket, a genuine gemstone piece or a dazzling diamond necklace, we’re here to make your Black Friday 2025 just as memorable as every other shopping moment with us. But don’t just take our word for it—read what our delighted customers have to say in their reviews and testimonials below.<br/><br/></p>"
+          }
+        },
+        "button_LVdzKB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read Our Trustpilot Reviews",
+            "button_link": "https://www.trustpilot.com/review/lilyblanche.com",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Kqwfi8",
+        "text_w73t9A",
+        "button_LVdzKB"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "17628616520c2bcde0": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_rPHCtw": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/featured-reviews-carousel/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_rPHCtw"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "main": {
       "type": "main-page-readmore",
+      "disabled": true,
       "custom_css": [
         "h1.h0 {display: none;}"
       ],
       "settings": {
         "padding_top": 24,
         "padding_bottom": 0
-      }
-    },
-    "multicolumn_KCpheM": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_d7jAtd": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/diamond_letter_necklace_gold_mobile.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Ethical Diamond Jewellery",
-            "link": "https://www.lilyblanche.com/collections/ethical-diamond-jewellery-collections"
-          }
-        },
-        "column_4qDgxj": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/blue_topaz_locket_gold_sqaure.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Personalised Lockets",
-            "link": "https://www.lilyblanche.com/collections/personalised-lockets"
-          }
-        },
-        "column_rnUPqM": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/st_christopher_silver_necklace_1.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Men's Jewellery",
-            "link": "https://www.lilyblanche.com/collections/mens-jewellery"
-          }
-        },
-        "column_eFij3w": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/gemstone_sapphire_ring_gold_2.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Gemstone Jewellery",
-            "link": "https://www.lilyblanche.com/collections/gemstones"
-          }
-        }
-      },
-      "block_order": [
-        "column_d7jAtd",
-        "column_4qDgxj",
-        "column_rnUPqM",
-        "column_eFij3w"
-      ],
-      "settings": {
-        "title": "Shop By Category",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "background-2",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn_egtwHG": {
@@ -217,7 +277,7 @@
         "column_zaYNx9"
       ],
       "settings": {
-        "title": "Our Gifts To You",
+        "title": "Our Offers",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -279,6 +339,18 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "1762862827b991e0e1": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17628629797db0117d": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -286,9 +358,13 @@
     "176234504503185e3e",
     "1762357868ae63e931",
     "image_banner_DD7aND",
+    "multicolumn_F74gnK",
+    "rich_text_r7nYEa",
+    "17628616520c2bcde0",
     "main",
-    "multicolumn_KCpheM",
     "multicolumn_egtwHG",
-    "image_with_text_cG8kJW"
+    "image_with_text_cG8kJW",
+    "1762862827b991e0e1",
+    "17628629797db0117d"
   ]
 }
