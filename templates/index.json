@@ -94,7 +94,7 @@
         "content_horizontal_position": "start",
         "content_horizontal_position_mobile": "start",
         "content_vertical_position": "start",
-        "content_vertical_position_mobile": "end",
+        "content_vertical_position_mobile": "center",
         "content_padding_vertical": 0,
         "content_padding_vertical_mobile": 0,
         "content_padding_horizontal": 62,
