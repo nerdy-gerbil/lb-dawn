@@ -411,8 +411,8 @@
         "heading_MJrUK7": {
           "type": "heading",
           "settings": {
-            "heading": "Ready To Gift",
-            "heading_size": "h2"
+            "heading": "<strong>Ready to Gift</strong>",
+            "heading_size": "h1"
           }
         },
         "text_aXcmmG": {
