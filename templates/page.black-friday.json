@@ -311,8 +311,8 @@
         "button_LVdzKB": {
           "type": "button",
           "settings": {
-            "button_label": "Read Our Trustpilot Reviews",
-            "button_link": "https://www.trustpilot.com/review/lilyblanche.com",
+            "button_label": "",
+            "button_link": "",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -366,6 +366,7 @@
       "blocks": {
         "shopbox_recommender_tzrpfn": {
           "type": "shopify://apps/shopbox/blocks/recommender/8413d591-09e9-4e10-8ff1-c0374d8dd64a",
+          "disabled": true,
           "settings": {
             "fallback_collection": "top_viewed",
             "title": "Recommendations",
