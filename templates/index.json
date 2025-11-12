@@ -15,7 +15,7 @@
         "heading_BRbmXE": {
           "type": "heading",
           "settings": {
-            "heading": "<p><strong>Ignite Your Spark</strong></p>",
+            "heading": "<p><strong>Get Early Access</strong></p>",
             "heading_custom": false,
             "heading_font": "system_ui_n4",
             "heading_size": 34,
@@ -28,7 +28,7 @@
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "<p><em>Jewellery to shine in</em></p>",
+            "text": "<p><em>SIGN UP NOW</em></p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
             "text_size": 20,
@@ -41,8 +41,8 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "Shop Now",
-            "button_url": "shopify://pages/the-christmas-gift-guide-2025-personalised-jewellery-for-men-and-women",
+            "button": "UNLOCK THE DEALS",
+            "button_url": "shopify://pages/black-friday-2025",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
@@ -86,7 +86,7 @@
         "banner_height": "adapt_first",
         "banner_fixed_height": 500,
         "banner_fixed_height_mobile": 330,
-        "image": "shopify://shop_images/0978Lilyblanche-Edit-Desktop.webp",
+        "image": "shopify://shop_images/BLACK_FRIDAY_IS_COMING_copy_1.webp",
         "image_mobile": "shopify://shop_images/0978Lilyblanche-Edit-Mobile.webp",
         "overlay": 0.2,
         "content_maxwidth": 58,
