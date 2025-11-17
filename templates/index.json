@@ -41,8 +41,8 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "UNLOCK THE DEALS",
-            "button_url": "shopify://pages/black-friday-2025",
+            "button": "SHOP NOW",
+            "button_url": "shopify://collections/black-friday-sale",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
