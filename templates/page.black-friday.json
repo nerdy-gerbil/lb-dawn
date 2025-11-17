@@ -22,7 +22,7 @@
         "text_6nrYUW": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Black Friday 2025 </strong>is just around the corner, and we’re here to bring you the most dazzling jewellery deals! Sign up below to get exclusive early access to our biggest discounts and offers. Be first in line for Black Friday savings and discover the perfect pieces at unbeatable prices. Don’t miss out!<br/></p>"
+            "text": "<p><strong>Black Friday 2025 </strong>is here, and we’re bringing you the most dazzling jewellery deals! Sign up below to get access to our biggest discounts and offers. Be first in line for Black Friday savings and discover the perfect pieces at unbeatable prices. Don’t miss out!<br/></p>"
           }
         }
       },
@@ -69,25 +69,6 @@
     "1762357868ae63e931": {
       "type": "_blocks",
       "settings": {}
-    },
-    "image_banner_DD7aND": {
-      "type": "image-banner",
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "show_on_device": "desktop",
-        "fetch_priority": false,
-        "image": "shopify://shop_images/BLACK_FRIDAY-_BANNER2.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": true,
-        "color_scheme": "",
-        "stack_images_on_mobile": true,
-        "mobile_content_alignment": "center",
-        "show_text_below": true
-      }
     },
     "multicolumn_f7yYxe": {
       "type": "multicolumn",
@@ -139,9 +120,8 @@
         "column_rR37UR",
         "column_GWYUUW"
       ],
-      "disabled": true,
       "settings": {
-        "title": "Our Additional Offers",
+        "title": "<strong>Shop By Collection</strong>",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -207,9 +187,8 @@
         "column_YhAEyK",
         "column_WyHTEE"
       ],
-      "disabled": true,
       "settings": {
-        "title": "Our Additional Offers",
+        "title": "<strong>Shop By Discount</strong>",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -469,9 +448,8 @@
     "rich_text_Ky7MrJ",
     "176234504503185e3e",
     "1762357868ae63e931",
-    "image_banner_DD7aND",
-    "multicolumn_f7yYxe",
     "multicolumn_LKBbCW",
+    "multicolumn_f7yYxe",
     "multicolumn_egtwHG",
     "rich_text_r7nYEa",
     "17628616520c2bcde0",
