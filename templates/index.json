@@ -28,11 +28,11 @@
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "<p><em>Up To 60% Off</em></p>",
+            "text": "<p><em><strong>Up To 60% Off</strong></em></p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
-            "text_size": 20,
-            "text_size_mobile": 16,
+            "text_size": 50,
+            "text_size_mobile": 36,
             "text_height": 150,
             "text_mt": 14,
             "text_color": "#ffffff"
