@@ -346,6 +346,19 @@
     "ss_shoppable_video_mYD4w3": {
       "type": "ss-shoppable-video",
       "blocks": {
+        "item_WJUzzi": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/campaigns_campaign-13852_clip_creator_10526_957e7586-048e-4b8f-a9e1-b402ca6f90d3.mov",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "poster": "shopify://shop_images/vlcsnap-2025-11-20-13h08m26s972.png",
+            "autoplay": true,
+            "product": "large-gold-2-photo-diamond-heart-locket-photos",
+            "use_variants": true,
+            "modal_heading": "<h4>Large Gold Diamond Heart Locket + Photos</h4>",
+            "modal_text": "<ul><li>Features a real diamond</li><li>Can be engraved on the back</li><li>Free Photos included</li><li>Choice of chain styles and lengths</li><li>Hallmarked by the Assay Office</li></ul>"
+          }
+        },
         "item_z4P6AX": {
           "type": "item",
           "settings": {
@@ -370,19 +383,6 @@
             "use_variants": true,
             "modal_heading": "<h4>2 Photo Diamond Heart Locket</h4>",
             "modal_text": "<ul><li>Features a real diamond</li><li>Free Photos included</li><li>Choice of chain styles and lengths</li><li>Hallmarked by the Assay Office</li></ul>"
-          }
-        },
-        "item_WJUzzi": {
-          "type": "item",
-          "settings": {
-            "video": "shopify://files/videos/paperclip chain gold pearl necklace .mp4",
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "poster": "shopify://shop_images/pearl_necklace_on_gold_chain.jpg",
-            "autoplay": true,
-            "product": "ivory-baroque-pearl-paperclip-chain-necklace-gold",
-            "use_variants": true,
-            "modal_heading": "<h4>Ivory Baroque Pearl Necklace</h4>",
-            "modal_text": "<ul><li>Chain Crafted in 18 Carat Gold Vermeil</li><li>Featuring a Real Detachable Pearl</li><li>Free Luxury Gift Wrap Included</li></ul>"
           }
         },
         "item_6nbAne": {
@@ -413,9 +413,9 @@
         }
       },
       "block_order": [
+        "item_WJUzzi",
         "item_z4P6AX",
         "item_rT4TDr",
-        "item_WJUzzi",
         "item_6nbAne",
         "item_gpbwHb"
       ],
