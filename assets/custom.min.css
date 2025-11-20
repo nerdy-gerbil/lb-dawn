@@ -232,8 +232,8 @@ variant-selects {
 /* Homepage CLS Fix */
 @media screen and (max-width: 749px) {
   #shopify-section-template--25564293235074__f7d8c553-77be-4f43-8945-88a9f4e1bdcc {
-    min-height: 160vh;
-    max-height: 160vh;
+    min-height: 160vw;
+    max-height: 160vw;
   }
 }
 
