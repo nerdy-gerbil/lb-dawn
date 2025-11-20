@@ -452,6 +452,7 @@
     {% comment %} AHrefs User Monitoring {% endcomment %}
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="U49XC6ZS6FOUC+HMnEpk+Q" async></script>
     {% comment %} BEGIN MerchantWidget Code {% endcomment %}
+    {% if template contains 'product' %}
     <script
       id="merchantWidgetScript"
       src="https://www.gstatic.com/shopping/merchant/merchantwidget.js"
@@ -470,6 +471,7 @@
         document.getElementById("google-merchantwidget-iframe-wrapper").style.zIndex = 1999999;
       });
     </script>
+    {% endif %}
     {% comment %} END MerchantWidget Code {% endcomment %}
 
     {% comment %} Preload Homepage Banner {% endcomment %}
