@@ -88,7 +88,7 @@
         "banner_fixed_height_mobile": 330,
         "image": "shopify://shop_images/Carlo_Paloni_black_friday_image_resized_Lilyblanche.webp",
         "image_mobile": "shopify://shop_images/0836Lilyblanche.webp",
-        "overlay": 0.4,
+        "overlay": 0,
         "content_maxwidth": 58,
         "content_maxwidth_mobile": 95,
         "content_horizontal_position": "start",
