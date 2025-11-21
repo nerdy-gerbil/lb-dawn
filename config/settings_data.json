@@ -271,7 +271,7 @@
       },
       "accent-1": {
         "settings": {
-          "background": "#875053",
+          "background": "rgba(0,0,0,0)",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
