@@ -1,1 +1,69 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","blocks":{"footer-0":{"type":"link_list","settings":{"heading":"Our Company","menu":"footer"}},"footer-1":{"type":"link_list","settings":{"heading":"Customer Service","menu":"footer-menu-2"}},"d40beeba-a8a9-4c1e-ae8a-b6a226a69bd8":{"type":"link_list","settings":{"heading":"Knowledge Hub","menu":"footer-menu-3"}},"image_tUXGKe":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Sample-0001.jpg","image_width":550,"alignment":"center"}},"image_Y94tC4":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Sample-0002.jpg","image_width":550,"alignment":"center"}},"image_FEeAqd":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Sample-0003.jpg","image_width":550,"alignment":"center"}},"image_iBkazn":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Sample-0004.jpg","image_width":550,"alignment":"center"}},"image_EBV8PQ":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Sample-0005_46ec5c8f-ddea-46ae-baac-7016070994d4.jpg","image_width":550,"alignment":"center"}},"image_tBkdRy":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Sample-0006.jpg","image_width":550,"alignment":"center"}},"nitro_lookbook_lookbook_block_dmwFNj":{"type":"shopify:\/\/apps\/nitro-lookbook\/blocks\/lookbook-block\/cc1f7d0a-9bac-40f1-a181-859d84a3417f","disabled":true,"settings":{"lookbook_id":"4fe4d813-5097-4921-957d-dbaa50713f7b","heading":"","sub_heading":"","heading_font_size":"1.2","heading_alignment":"center","padding_top":0,"padding_bottom":0}}},"block_order":["footer-0","footer-1","d40beeba-a8a9-4c1e-ae8a-b6a226a69bd8","image_tUXGKe","image_Y94tC4","image_FEeAqd","image_iBkazn","image_EBV8PQ","image_tBkdRy","nitro_lookbook_lookbook_block_dmwFNj"],"custom_css":[".copyright__content a[href*=\"shopify\"] {display: none;}",".footer-block.grid__item:has( #shopify-block-nitro_lookbook_lookbook_block_iUYRUd ) {width: 100% !important;}"],"settings":{"color_scheme":"background-2","newsletter_enable":false,"newsletter_heading":"Sign up for exclusive sales & much more! You can unsubscribe at any time.","enable_follow_on_shop":true,"show_social":true,"enable_country_selector":true,"enable_language_selector":true,"payment_enable":true,"show_policy":true,"margin_top":0,"padding_top":16,"padding_bottom":16}}},"order":["footer"]}
+{
+    "name": "t:sections.footer.name",
+    "type": "footer",
+    "sections": {
+        "footer-menu": {
+            "type": "footer-menu",
+            "blocks": {
+                "footer-0": {
+                    "type": "link_list",
+                    "settings": {
+                        "heading": "Our Company",
+                        "menu": "footer"
+                    }
+                },
+                "footer-1": {
+                    "type": "link_list",
+                    "settings": {
+                        "heading": "Customer Service",
+                        "menu": "footer-menu-2"
+                    }
+                },
+                "d40beeba-a8a9-4c1e-ae8a-b6a226a69bd8": {
+                    "type": "link_list",
+                    "settings": {
+                        "heading": "Knowledge Hub",
+                        "menu": "footer-menu-3"
+                    }
+                }
+            },
+            "block_order": [
+                "footer-0",
+                "footer-1",
+                "d40beeba-a8a9-4c1e-ae8a-b6a226a69bd8"
+            ],
+            "settings": {
+                "color_scheme": "background-2",
+                "margin_top": 0,
+                "padding_top": 16,
+                "padding_bottom": 16
+            }
+        },
+        "footer": {
+            "type": "footer",
+            "blocks": {},
+            "block_order": [],
+            "custom_css": [
+                ".copyright__content a[href*=\"shopify\"] {display: none;}"
+            ],
+            "settings": {
+                "color_scheme": "background-2",
+                "newsletter_enable": false,
+                "newsletter_heading": "Sign up for exclusive sales & much more! You can unsubscribe at any time.",
+                "enable_follow_on_shop": true,
+                "show_social": true,
+                "enable_country_selector": true,
+                "enable_language_selector": true,
+                "payment_enable": true,
+                "show_policy": true,
+                "margin_top": 0,
+                "padding_top": 16,
+                "padding_bottom": 16
+            }
+        }
+    },
+    "order": [
+        "footer-menu",
+        "footer"
+    ]
+}
