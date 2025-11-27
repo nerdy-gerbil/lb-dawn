@@ -127,6 +127,7 @@
     "show_cart_note": true,
     "cart_drawer_collection": "bestsellers",
     "cart_color_scheme": "scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5",
+    "enable-wishlist": false,
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
