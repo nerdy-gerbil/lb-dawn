@@ -794,7 +794,7 @@
         "bd130e58-2e89-4e00-9471-981e389cd6cf"
       ],
       "custom_css": [
-        ".shopify-block.shopify-app-block {background-color: #AB061A; padding: 0 2rem 2rem;}"
+        ".shopify-block.shopify-app-block {background-color: #ab061a; padding: 0 2rem 2rem;}"
       ],
       "settings": {
         "include_margins": false
@@ -828,8 +828,8 @@
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 20,
-        "padding_bottom": 12
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "cff380dd-9c61-496d-b1d9-d18053d48170": {
