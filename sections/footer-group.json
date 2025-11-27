@@ -173,7 +173,7 @@
         "full_width": true,
         "content_width": 120,
         "border_thickness": 0,
-        "lazy": false
+        "lazy": true
       }
     },
     "footer": {
