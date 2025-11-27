@@ -3,7 +3,7 @@ body{grid-template-rows:auto auto auto 1fr auto}.product__media-wrapper{width:10
 /* Header menu link customisation */
 a#HeaderMenu-black-friday-sale {
   font-weight: 600;
-  color: #FF0000;
+  color: #AB061A;
   padding-right: 1rem !important;
 }
 
