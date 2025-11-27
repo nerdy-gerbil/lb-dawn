@@ -114,6 +114,9 @@
         "slide_dnQ3VC",
         "slide_pMVB4H"
       ],
+      "custom_css": [
+        "img {max-height: 240px; }"
+      ],
       "name": "SS - Instafeed #2",
       "settings": {
         "top": "",
