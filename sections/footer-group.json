@@ -1,69 +1,201 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "name": "t:sections.footer.name",
-    "type": "footer",
-    "sections": {
-        "footer-menu": {
-            "type": "footer-menu",
-            "blocks": {
-                "footer-0": {
-                    "type": "link_list",
-                    "settings": {
-                        "heading": "Our Company",
-                        "menu": "footer"
-                    }
-                },
-                "footer-1": {
-                    "type": "link_list",
-                    "settings": {
-                        "heading": "Customer Service",
-                        "menu": "footer-menu-2"
-                    }
-                },
-                "d40beeba-a8a9-4c1e-ae8a-b6a226a69bd8": {
-                    "type": "link_list",
-                    "settings": {
-                        "heading": "Knowledge Hub",
-                        "menu": "footer-menu-3"
-                    }
-                }
-            },
-            "block_order": [
-                "footer-0",
-                "footer-1",
-                "d40beeba-a8a9-4c1e-ae8a-b6a226a69bd8"
-            ],
-            "settings": {
-                "color_scheme": "background-2",
-                "margin_top": 0,
-                "padding_top": 16,
-                "padding_bottom": 16
-            }
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer-menu": {
+      "type": "footer-menu",
+      "blocks": {
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Our Company",
+            "menu": "footer"
+          }
         },
-        "footer": {
-            "type": "footer",
-            "blocks": {},
-            "block_order": [],
-            "custom_css": [
-                ".copyright__content a[href*=\"shopify\"] {display: none;}"
-            ],
-            "settings": {
-                "color_scheme": "background-2",
-                "newsletter_enable": false,
-                "newsletter_heading": "Sign up for exclusive sales & much more! You can unsubscribe at any time.",
-                "enable_follow_on_shop": true,
-                "show_social": true,
-                "enable_country_selector": true,
-                "enable_language_selector": true,
-                "payment_enable": true,
-                "show_policy": true,
-                "margin_top": 0,
-                "padding_top": 16,
-                "padding_bottom": 16
-            }
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Service",
+            "menu": "footer-menu-2"
+          }
+        },
+        "d40beeba-a8a9-4c1e-ae8a-b6a226a69bd8": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Knowledge Hub",
+            "menu": "footer-menu-3"
+          }
         }
+      },
+      "block_order": [
+        "footer-0",
+        "footer-1",
+        "d40beeba-a8a9-4c1e-ae8a-b6a226a69bd8"
+      ],
+      "custom_css": [
+        ".footer__content-top {padding-bottom: 0;}"
+      ],
+      "name": "Footer Menu",
+      "settings": {
+        "color_scheme": "background-2",
+        "margin_top": 0,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
     },
-    "order": [
-        "footer-menu",
-        "footer"
-    ]
+    "ss_instafeed_2_zirfHp": {
+      "type": "ss-instafeed-2",
+      "blocks": {
+        "slide_gcJaCq": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Sample-0001.jpg",
+            "url": ""
+          }
+        },
+        "slide_WJiHjR": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Sample-0002.jpg",
+            "url": ""
+          }
+        },
+        "slide_yVQ6Af": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Sample-0003.jpg",
+            "url": ""
+          }
+        },
+        "slide_VGbwPt": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Sample-0004.jpg",
+            "url": ""
+          }
+        },
+        "slide_d4eXQA": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Sample-0005_46ec5c8f-ddea-46ae-baac-7016070994d4.jpg",
+            "url": ""
+          }
+        },
+        "slide_dnQ3VC": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Sample-0006.jpg",
+            "url": ""
+          }
+        },
+        "slide_pMVB4H": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/WES_Awards_finalist_2025_240_x_240_px.png",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_gcJaCq",
+        "slide_WJiHjR",
+        "slide_yVQ6Af",
+        "slide_VGbwPt",
+        "slide_d4eXQA",
+        "slide_dnQ3VC",
+        "slide_pMVB4H"
+      ],
+      "name": "SS - Instafeed #2",
+      "settings": {
+        "top": "",
+        "top_custom": false,
+        "top_font": "josefin_sans_n4",
+        "top_size": 13,
+        "top_height": 130,
+        "top_align": "center",
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 40,
+        "heading_height": 130,
+        "heading_align": "center",
+        "heading_mt": 12,
+        "subheading": "",
+        "subheading_custom": false,
+        "subheading_font": "josefin_sans_n4",
+        "subheading_size": 16,
+        "subheading_height": 130,
+        "subheading_align": "center",
+        "subheading_mt": 12,
+        "slider_mt": 60,
+        "slider_row": "6",
+        "slider_row_mobile": "2",
+        "slider_gap": 20,
+        "slider_gap_mobile": 32,
+        "autoplay": false,
+        "autoplay_speed": 3,
+        "nav_size": 40,
+        "nav_size_mobile": 30,
+        "hide_nav": false,
+        "hide_nav_mobile": false,
+        "image_radius": 0,
+        "top_color": "#e69e6c",
+        "heading_color": "#746661",
+        "subheading_color": "#aba49d",
+        "nav_btn_bg": "#FFFFFF",
+        "nav_btn_hover_bg": "#e69e6c",
+        "nav_border": "#e69e6c",
+        "nav_border_hover": "#e69e6c",
+        "nav_icon": "#e69e6c",
+        "nav_hover_icon": "#FFFFFF",
+        "background_color": "#e6dfd7",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 4,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "custom_css": [
+        ".copyright__content a[href*=\"shopify\"] {display: none;}"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "newsletter_enable": false,
+        "newsletter_heading": "Sign up for exclusive sales & much more! You can unsubscribe at any time.",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "footer-menu",
+    "ss_instafeed_2_zirfHp",
+    "footer"
+  ]
 }
