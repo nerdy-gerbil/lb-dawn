@@ -271,6 +271,18 @@
       </div>
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
+      {%- if settings.wishlist-nav-button -%}
+        <a
+          href="/wishlist"
+          class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
+          rel="nofollow"
+        >
+          <account-icon>
+            <span class="svg-wrapper">{{ 'icon-heart.svg' | inline_asset_content }}</span>
+          </account-icon>
+        </a>
+      {%- endif -%}
+
       {%- if shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
