@@ -370,7 +370,7 @@
           {% for block in section.blocks %}
             <a href="{{ block.settings.url }}" class="instafeed-slide-{{ section.id }} swiper-slide">
               {% if block.settings.image != blank %}
-                <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" {% if lazy %}lazy="loading"{% endif %}>
+                <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" width="240" height="240" {% if lazy %}lazy="loading"{% endif %}>
               {% else %}
                 {{ 'image' | placeholder_svg_tag: 'placeholder' }}
               {% endif %}
@@ -438,9 +438,7 @@
     })
   }
 
-  //document.addEventListener('DOMContentLoaded', instafeedSliderInit);
-
-  instafeedSliderInit();
+  document.addEventListener('DOMContentLoaded', instafeedSliderInit);
 
   if (Shopify.designMode) {
      document.addEventListener('shopify:section:unload', instafeedSliderInit);
