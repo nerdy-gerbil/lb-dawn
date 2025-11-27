@@ -149,7 +149,7 @@
         "autoplay_speed": 3,
         "nav_size": 40,
         "nav_size_mobile": 30,
-        "hide_nav": false,
+        "hide_nav": true,
         "hide_nav_mobile": false,
         "image_radius": 0,
         "top_color": "#e69e6c",
