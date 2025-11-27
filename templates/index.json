@@ -40,6 +40,7 @@
         },
         "button_9qHNwJ": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button": "SHOP NOW",
             "button_url": "",
@@ -71,7 +72,7 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "SHOP NOW (no code needed)",
+            "button": "SHOP NOW",
             "button_url": "shopify://collections/black-friday-sale",
             "button_custom": true,
             "button_font": "system_ui_n4",
