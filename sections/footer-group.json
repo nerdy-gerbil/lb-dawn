@@ -115,7 +115,8 @@
         "slide_pMVB4H"
       ],
       "custom_css": [
-        "img {max-height: 240px; }"
+        ".swiper-slide {max-height: 240px !important;}",
+        ".swiper-slide img {max-height: 240px !important; object-fit: contain !important;}"
       ],
       "name": "SS - Instafeed #2",
       "settings": {
@@ -154,12 +155,12 @@
         "top_color": "#e69e6c",
         "heading_color": "#746661",
         "subheading_color": "#aba49d",
-        "nav_btn_bg": "#FFFFFF",
+        "nav_btn_bg": "#ffffff",
         "nav_btn_hover_bg": "#e69e6c",
         "nav_border": "#e69e6c",
         "nav_border_hover": "#e69e6c",
         "nav_icon": "#e69e6c",
-        "nav_hover_icon": "#FFFFFF",
+        "nav_hover_icon": "#ffffff",
         "background_color": "#e6dfd7",
         "background_gradient": "",
         "border_color": "#000000",
