@@ -213,11 +213,11 @@
         "block_C3J3Tf": {
           "type": "block",
           "settings": {
-            "image": "shopify://shop_images/memory_keeper_gold_block_05c8b09e-417d-47a1-9bf3-93a2f4312b14.webp",
+            "image": "shopify://shop_images/Heading_17.webp",
             "heading": "",
             "text": "",
-            "link": "SHOP MEMORY KEEPERS",
-            "link_url": "/collections/memory-keeper-lockets"
+            "link": "GET IN TOUCH",
+            "link_url": "/pages/contact-us"
           }
         },
         "block_xYNTeP": {
