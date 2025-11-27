@@ -233,6 +233,11 @@
           "button_vertical_position": "lowest",
           "greeting_message": "👋 Hi, please message us with any questions. We're happy to help!"
         }
+      },
+      "1744161739547163668": {
+        "type": "shopify://apps/hextom-timer-bar/blocks/ctb-embeded-block/f7b88b6e-2e87-46bc-87a9-3e3638a24fa9",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
