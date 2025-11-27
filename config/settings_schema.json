@@ -1456,13 +1456,15 @@
     "name":"Wishlist",
     "settings":[
       {
-        "type": "paragraph",
-        "content": "Subscribe our channel [websensepro](https:\/\/youtube.com\/@websensepro?sub_confirmation=1)"
-      },
-      {
         "type":"checkbox",
         "id":"enable-wishlist",
         "label": "Enable Wishlist",
+        "default": false
+      },
+      {
+        "type":"checkbox",
+        "id":"wishlist-nav-button",
+        "label": "Enable Header Navigation Button",
         "default": false
       },
       {
