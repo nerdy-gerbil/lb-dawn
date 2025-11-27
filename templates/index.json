@@ -794,7 +794,7 @@
         "bd130e58-2e89-4e00-9471-981e389cd6cf"
       ],
       "custom_css": [
-        ".shopify-block.shopify-app-block {background-color: #875053; padding: 0 2rem 2rem;}"
+        ".shopify-block.shopify-app-block {background-color: #AB061A; padding: 0 2rem 2rem;}"
       ],
       "settings": {
         "include_margins": false
