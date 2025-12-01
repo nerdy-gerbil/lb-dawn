@@ -72,7 +72,7 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "SHOP BLACK FRIDAY",
+            "button": "SHOP FINAL 24 HOURS",
             "button_url": "shopify://collections/black-friday-sale",
             "button_custom": true,
             "button_font": "system_ui_n4",
