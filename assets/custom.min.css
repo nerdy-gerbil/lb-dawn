@@ -9,7 +9,7 @@ account-icon .icon-heart path {
 summary#HeaderMenu-christmas-gifts {
   font-weight: 600;
   color: #AB061A;
-  padding-right: 1rem !important;
+  /* padding-right: 1rem !important; */
 }
 
 nav.header__inline-menu li:has(#Details-HeaderMenu-13) {
