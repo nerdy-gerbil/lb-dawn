@@ -117,7 +117,7 @@
         "position_y_mobile": "center",
         "banner_height": "adapt_first",
         "banner_fixed_height": 500,
-        "banner_fixed_height_mobile": 330,
+        "banner_fixed_height_mobile": 1000,
         "image": "shopify://shop_images/Christmas_Banner_desktop_Nov_27_Lilyblanche-Edit.webp",
         "image_mobile": "shopify://shop_images/Christmas_banner_mobile_Nov_27_Lilyblanche-Edit.webp",
         "overlay": 0,
