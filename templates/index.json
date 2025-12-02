@@ -15,7 +15,7 @@
         "heading_BRbmXE": {
           "type": "heading",
           "settings": {
-            "heading": "<p><strong>UP TO 60% OFF IN SALE</strong></p>",
+            "heading": "<p><strong>MAKE IT UNFORGETTABLE</strong></p>",
             "heading_custom": false,
             "heading_font": "system_ui_n4",
             "heading_size": 34,
@@ -119,7 +119,7 @@
         "banner_fixed_height": 500,
         "banner_fixed_height_mobile": 330,
         "image": "shopify://shop_images/Christmas_Banner_desktop_Nov_27_Lilyblanche-Edit.webp",
-        "image_mobile": "shopify://shop_images/0836Lilyblanche_3.webp",
+        "image_mobile": "shopify://shop_images/Christmas_banner_mobile_Nov_27_Lilyblanche-Edit.webp",
         "overlay": 0,
         "content_maxwidth": 58,
         "content_maxwidth_mobile": 95,
