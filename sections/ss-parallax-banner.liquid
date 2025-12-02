@@ -527,7 +527,7 @@
               as="image"
               sizes="(max-width: 800px) 100vw, 800px"
               fetchpriority="high"
-              imagesrcset="{{ image | image_url: width: 352 }} 352w, {{ image | image_url: width: 800 }} 800w"
+              imagesrcset="{{ image | image_url: width: 800 }} 800w, {{ image | image_url: width: 1000 }} 1000w"
             >
           {%- endif %}
           {% comment %}
@@ -555,7 +555,7 @@
               as="image"
               sizes="(max-width: 1920px) 100vw, 1920px"
               fetchpriority="high"
-              imagesrcset="{{ image | image_url: width: 352 }} 352w, {{ image | image_url: width: 800 }} 800w, {{ image | image_url: width: 1200 }} 1200w, {{ image | image_url: width: 1920 }} 1920w"
+              imagesrcset="{{ image | image_url: width: 800 }} 800w, {{ image | image_url: width: 1000 }} 1000w, {{ image | image_url: width: 1200 }} 1200w, {{ image | image_url: width: 1920 }} 1920w"
             >
           {%- endif %}
           {% comment %}
