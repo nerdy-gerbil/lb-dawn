@@ -1,1 +1,131 @@
-{"sections":{"c00cefc4-6526-4eba-81bd-9d6ba3b0918c":{"type":"custom-liquid","settings":{"custom_liquid":"<style>\n  .collection-banner {\n    display: flex;\n    width: 100%;\n  }\n\n  .collection-info,\n  .collection-banner {\n    padding: 0 1.5rem;\n  }\n\n  .collection-info {\n    width: 100%;\n  }\n\n  .collection-title {\n    font-size: large;\n  }\n\n  .collection-description {\n    max-height: 5em;\n    line-height: 1.7em;\n    overflow: hidden !important;\n  }\n\n  .collection-description p {\n    margin-top: 0;\n    font-size: smaller;\n  }\n\n  .collection-image {\n    display: none;\n    background: url('{{collection.image | collection_img_url}}') no-repeat right top;\n    margin-bottom: 1.5em;\n  }\n\n  @media (min-width: 750px) {\n    .collection-info,\n    .collection-banner {\n      padding: 0 3em;\n    }\n\n    .collection-info {\n      width: 65%;\n    }\n\n    .collection-image {\n      display: block !important;\n      width: 100%;\n      max-width: 30%;\n      max-height: 15em;\n      aspect-ratio: 1 \/ auto;\n      background-size: contain;\n    }\n\n    .collection-description {\n      max-height: 10em;\n      margin-bottom: 2em;\n    }\n  }\n\n  input.read-more-state,\n  .read-more-trigger {\n    display: none;\n  }\n\n  .read-more-trigger::before {\n    content: 'Show More';\n  }\n\n  .read-more-state:checked ~ .read-more-trigger::before {\n    content: 'Show Less';\n  }\n\n  .read-more-trigger::before,\n  .read-more-state:checked ~ .read-more-trigger::before {\n    font-size: smaller;\n  }\n\n  .read-more-state:checked ~ .collection-description {\n    max-height: 999em;\n  }\n\n  .read-more-trigger {\n    display: inline-block;\n    padding: 0 0.5em;\n    border: 1px solid #ddd;\n    margin: 1.5em 0;\n  }\n<\/style>\n<div class=\"collection-banner\">\n  <div class=\"collection-info\">\n    <h1 class=\"collection-title\">{{ collection.title }}<\/h1>\n    <input id=\"read-more\" class=\"read-more-state\" type=\"checkbox\">\n    <div class=\"collection-description\">{{ collection.description }}<\/div>\n    <label class=\"read-more-trigger\" for=\"read-more\"><\/label>\n  <\/div>\n  <div class=\"collection-image\"><\/div>\n<\/div>","color_scheme":"background-2","padding_top":0,"padding_bottom":0}},"banner":{"type":"main-collection-banner","disabled":true,"settings":{"show_collection_description":true,"show_collection_image":true,"color_scheme":"background-2"}},"product-grid":{"type":"main-collection-product-grid","custom_css":[".rating-star:before {background: linear-gradient( 90deg, #fec602 calc(100%), rgba(18, 18, 18, 0.15) calc(100%) ); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}",".card-information .price {font-size: 12px !important;}"],"settings":{"products_per_page":24,"columns_desktop":3,"color_scheme":"","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":true,"show_metal":true,"quick_add":"none","enable_filtering":true,"filter_type":"vertical","enable_sorting":true,"columns_mobile":"2","padding_top":16,"padding_bottom":16}},"rich_text_RbjLXr":{"type":"rich-text","blocks":{"heading_JTXeVk":{"type":"heading","settings":{"heading":"Trusted by Many, Created for You","heading_size":"h2"}},"text_hhVBWt":{"type":"text","settings":{"text":"<p>Read our reviews<\/p>"}}},"block_order":["heading_JTXeVk","text_hhVBWt"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":8,"padding_bottom":8}},"1739877973bc53cfae":{"type":"apps","blocks":{"klaviyo_reviews_featured_reviews_carousel_p68daV":{"type":"shopify:\/\/apps\/klaviyo-reviews\/blocks\/featured-reviews-carousel\/db20e365-d984-4ac4-9655-e1588d951ca9","settings":{}}},"block_order":["klaviyo_reviews_featured_reviews_carousel_p68daV"],"settings":{"include_margins":true}},"rich_text_FTM63r":{"type":"rich-text","blocks":{"text_M4bqYp":{"type":"text","settings":{"text":"<p>{{ collection.metafields.custom.footer_text | metafield_tag }}<\/p>"}}},"block_order":["text_M4bqYp"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}}},"order":["c00cefc4-6526-4eba-81bd-9d6ba3b0918c","banner","product-grid","rich_text_RbjLXr","1739877973bc53cfae","rich_text_FTM63r"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "c00cefc4-6526-4eba-81bd-9d6ba3b0918c": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  .collection-banner {\n    display: flex;\n    width: 100%;\n    min-height: 24vh;\n  }\n\n  .collection-info,\n  .collection-banner {\n    padding: 0 1.5rem;\n  }\n\n  .collection-info {\n    width: 100%;\n  }\n\n  .collection-title {\n    font-size: large;\n  }\n\n  .collection-description {\n    max-height: 5em;\n    line-height: 1.7em;\n    overflow: hidden !important;\n  }\n\n  .collection-description p {\n    margin-top: 0;\n    font-size: smaller;\n  }\n\n  .collection-image {\n    display: none;\n    background: url('{{collection.image | collection_img_url}}') no-repeat right top;\n    margin-bottom: 1.5em;\n  }\n\n  @media (min-width: 750px) {\n    .collection-banner {\n      min-height: 29vh;\n    }\n\n    .collection-info,\n    .collection-banner {\n      padding: 0 3em;\n    }\n\n    .collection-info {\n      width: 65%;\n    }\n\n    .collection-image {\n      display: block !important;\n      width: 100%;\n      max-width: 30%;\n      max-height: 15em;\n      aspect-ratio: 1 / auto;\n      background-size: contain;\n    }\n\n    .collection-description {\n      max-height: 10em;\n      margin-bottom: 2em;\n    }\n  }\n\n  input.read-more-state,\n  .read-more-trigger {\n    display: none;\n  }\n\n  .read-more-trigger::before {\n    content: 'Show More';\n  }\n\n  .read-more-state:checked ~ .read-more-trigger::before {\n    content: 'Show Less';\n  }\n\n  .read-more-trigger::before,\n  .read-more-state:checked ~ .read-more-trigger::before {\n    font-size: smaller;\n  }\n\n  .read-more-state:checked ~ .collection-description {\n    max-height: 999em;\n  }\n\n  .read-more-trigger {\n    display: inline-block;\n    padding: 0 0.5em;\n    border: 1px solid #ddd;\n    margin: 1.5em 0;\n  }\n</style>\n<div class=\"collection-banner\">\n  <div class=\"collection-info\">\n    <h1 class=\"collection-title\">{{ collection.title }}</h1>\n    <input id=\"read-more\" class=\"read-more-state\" type=\"checkbox\">\n    <div class=\"collection-description\">{{ collection.description }}</div>\n    <label class=\"read-more-trigger\" for=\"read-more\"></label>\n  </div>\n  <div class=\"collection-image\"></div>\n</div>",
+        "color_scheme": "background-2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "color_scheme": "background-2"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [
+        ".rating-star:before {background: linear-gradient( 90deg, #fec602 calc(100%), rgba(18, 18, 18, 0.15) calc(100%) ); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}",
+        ".card-information .price {font-size: 12px !important;}"
+      ],
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "columns_mobile": "2",
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_metal": true,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "rich_text_RbjLXr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JTXeVk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Trusted by Many, Created for You",
+            "heading_size": "h2"
+          }
+        },
+        "text_hhVBWt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Read our reviews</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JTXeVk",
+        "text_hhVBWt"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "1739877973bc53cfae": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_p68daV": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/featured-reviews-carousel/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_p68daV"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "rich_text_FTM63r": {
+      "type": "rich-text",
+      "blocks": {
+        "text_M4bqYp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ collection.metafields.custom.footer_text | metafield_tag }}</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_M4bqYp"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "c00cefc4-6526-4eba-81bd-9d6ba3b0918c",
+    "banner",
+    "product-grid",
+    "rich_text_RbjLXr",
+    "1739877973bc53cfae",
+    "rich_text_FTM63r"
+  ]
+}
