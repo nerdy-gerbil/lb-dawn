@@ -178,7 +178,6 @@
     z-index: 2;
     top: {{ content_y_position_mobile }}%;
     left: {{ content_x_position_mobile }}%;
-    transform: translate(-{{ 100 | minus: content_x_position_mobile }}%, -{{ 100 | minus: content_y_position_mobile }}%);
   }
 
   .banner-content-{{ section.id }} {
@@ -243,7 +242,6 @@
       align-items: {{ content_horizontal_position }};
       top: {{ content_y_position }}%;
       left: {{ content_x_position }}%;
-      transform: translate(-{{ 100 | minus: content_x_position }}%, -{{ 100 | minus: content_y_position }}%);
     }
 
     .banner-content-{{ section.id }} {
@@ -891,41 +889,41 @@
       "type": "range",
       "id": "content_x_position",
       "min": 0,
-      "max": 100,
+      "max": 50,
       "step": 1,
       "unit": "%",
       "label": "Content Horizontal Position (Fine-Tune)",
-      "default": 50
+      "default": 0
     },
     {
       "type": "range",
       "id": "content_x_position_mobile",
       "min": 0,
-      "max": 100,
+      "max": 50,
       "step": 1,
       "unit": "%",
       "label": "Content Horizontal Position - Mobile (Fine-Tune)",
-      "default": 50
+      "default": 0
     },
     {
       "type": "range",
       "id": "content_y_position",
       "min": 0,
-      "max": 100,
+      "max": 50,
       "step": 1,
       "unit": "%",
       "label": "Content Vertical Position (Fine-Tune)",
-      "default": 50
+      "default": 0
     },
     {
       "type": "range",
       "id": "content_y_position_mobile",
       "min": 0,
-      "max": 100,
+      "max": 50,
       "step": 1,
       "unit": "%",
       "label": "Content Vertical Position - Mobile (Fine-Tune)",
-      "default": 50
+      "default": 0
     },
     {
       "type": "range",
