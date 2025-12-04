@@ -135,20 +135,20 @@
   .banner-image-mobile-{{ section.id }} {
     min-height: 70vh;
     max-height: 70vh;
-    object-position: {{ position_y_mobile }} {{ position_x_mobile }};
+    object-position: {{ position_y_mobile }}% {{ position_x_mobile }}%;
   }
 
   .banner-image-desktop-{{ section.id }} {
     display: none;
-    object-position: {{ position_y_desktop }} {{ position_x_desktop }};
+    object-position: {{ position_y_desktop }}% {{ position_x_desktop }}%;
   }
 
   .banner-image-mobile-{{ section.id }} img {
-    object-position: {{ position_y_mobile }} {{ position_x_mobile }};
+    object-position: {{ position_y_mobile }}% {{ position_x_mobile }}%;
   }
 
   .banner-image-desktop-{{ section.id }} img {
-    object-position: {{ position_y_desktop }} {{ position_x_desktop }};
+    object-position: {{ position_y_desktop }}% {{ position_x_desktop }}%;
   }
 
   .banner-image-{{ section.id }}:after {
@@ -671,84 +671,44 @@
       "default": false
     },
     {
-      "type": "select",
+      "type": "range",
       "id": "position_x_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
       "label": "Banner Horizontal Position (Desktop)",
-      "default": "center",
-      "options": [
-        {
-          "label": "Left",
-          "value": "left"
-        },
-        {
-          "label": "Center",
-          "value": "center"
-        },
-        {
-          "label": "Right",
-          "value": "right"
-        }
-      ]
+      "default": 50
     },
     {
-      "type": "select",
+      "type": "range",
       "id": "position_y_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
       "label": "Banner Vertical Position (Desktop)",
-      "default": "center",
-      "options": [
-        {
-          "label": "Top",
-          "value": "top"
-        },
-        {
-          "label": "Center",
-          "value": "center"
-        },
-        {
-          "label": "Bottom",
-          "value": "bottom"
-        }
-      ]
+      "default": 50
     },
     {
-      "type": "select",
+      "type": "range",
       "id": "position_x_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
       "label": "Banner Horizontal Position (Mobile)",
-      "default": "center",
-      "options": [
-        {
-          "label": "Left",
-          "value": "left"
-        },
-        {
-          "label": "Center",
-          "value": "center"
-        },
-        {
-          "label": "Right",
-          "value": "right"
-        }
-      ]
+      "default": 50
     },
     {
-      "type": "select",
+      "type": "range",
       "id": "position_y_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
       "label": "Banner Vertical Position (Mobile)",
-      "default": "center",
-      "options": [
-        {
-          "label": "Top",
-          "value": "top"
-        },
-        {
-          "label": "Center",
-          "value": "center"
-        },
-        {
-          "label": "Bottom",
-          "value": "bottom"
-        }
-      ]
+      "default": 50
     },
     {
       "type": "select",
