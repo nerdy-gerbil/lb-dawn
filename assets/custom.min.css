@@ -258,7 +258,8 @@ html:not(.hydrated) {
   .custom-section.product-video,
   .shopify-section:has([class^='video-slider-template--']),
   .shopify-section-group-footer-group:not(:has([class^='instafeed-slider-sections--'])),
-  #shopify-section-template--25564293628290__product-grid {
+  #shopify-section-template--25564293628290__product-grid,
+  #shopify-section-sections--25564292645250__ss_instafeed_2_zirfHp {
     display: none !important;
   }
 }
