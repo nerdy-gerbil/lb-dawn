@@ -112,7 +112,7 @@
         "parallax": false,
         "parallax_mobile": false,
         "position_x_desktop": 50,
-        "position_y_desktop": 39,
+        "position_y_desktop": 21,
         "position_x_mobile": 25,
         "position_y_mobile": 50,
         "banner_height": "adapt_first",
