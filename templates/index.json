@@ -113,7 +113,7 @@
         "parallax_mobile": false,
         "position_x_desktop": "center",
         "position_y_desktop": "top",
-        "position_x_mobile": "right",
+        "position_x_mobile": "center",
         "position_y_mobile": "center",
         "banner_height": "adapt_first",
         "banner_fixed_height": 500,
