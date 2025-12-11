@@ -262,7 +262,7 @@ html:not(.hydrated) {
     display: none !important;
 
     @media screen and (max-width: 749px) {
-      div[id^='shopify-section-template--'][id$='__product-grid'] {
+      #MainContent:has(div[id^='shopify-section-template--'][id$='__product-grid']) {
         display: none !important;
       }
     }
