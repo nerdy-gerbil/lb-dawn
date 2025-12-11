@@ -260,16 +260,16 @@ html:not(.hydrated) {
   .shopify-section-group-footer-group:not(:has([class^='instafeed-slider-sections--'])),
   #shopify-section-template--25564293628290__product-grid {
     display: none !important;
-
-    @media screen and (max-width: 749px) {
-      #MainContent:has(div[id^='shopify-section-template--'][id$='__product-grid']) {
-        display: none !important;
-      }
-    }
   }
 
   #shopify-section-sections--25564292645250__ss_instafeed_2_zirfHp {
     visibility: hidden !important;
+  }
+
+  @media screen and (max-width: 749px) {
+    #MainContent:has(div[id^='shopify-section-template--'][id$='__product-grid']) {
+      display: none !important;
+    }
   }
 }
 
