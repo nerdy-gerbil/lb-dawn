@@ -4,8 +4,8 @@ body{grid-template-rows:auto auto auto 1fr auto}.product__media-wrapper{width:10
 .collection-banner {
   display: flex;
   width: 100%;
-  min-height: 24vh;
-  max-height: 24vh;
+  min-height: 20rem;
+  max-height: 20rem;
 }
 
 .collection-banner:has(.read-more-state:checked) {
@@ -44,8 +44,8 @@ body{grid-template-rows:auto auto auto 1fr auto}.product__media-wrapper{width:10
 
 @media (min-width: 750px) {
   .collection-banner {
-    min-height: 29vh;
-    max-height: 29vh;
+    min-height: 24rem;
+    max-height: 24rem;
   }
 
   .collection-banner:has(.read-more-state:checked) {
