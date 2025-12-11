@@ -12,12 +12,6 @@ summary#HeaderMenu-christmas-gifts {
   /* padding-right: 1rem !important; */
 }
 
-a#HeaderMenu-christmas-gifts-all-gifts-the-christmas-gift-guide {
-text-decoration: underline;
-  color: #AB061A;
-  /* padding-right: 1rem !important; */
-}
-
 nav.header__inline-menu li:has(#Details-HeaderMenu-13) {
   display: none;
 }
