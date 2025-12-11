@@ -105,6 +105,10 @@ input.read-more-state,
   margin: 1.5em 0;
 }
 
+div[id^='shopify-section-template--'][id$='__product-grid'] {
+  min-height: 100vh;
+}
+
 /* Header menu link customisation */
 account-icon .icon-heart path {
   fill: #121212;
