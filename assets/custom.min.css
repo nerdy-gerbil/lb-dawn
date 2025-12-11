@@ -361,11 +361,11 @@ html:not(.hydrated) {
     visibility: hidden !important;
   }
 
-  @media screen and (max-width: 749px) {
+  /* @media screen and (max-width: 749px) {
     div[id^='shopify-section-template--'][id$='__product-grid'] {
       visibility: hidden !important;
     }
-  }
+  } */
 }
 
 /* Cookie Consent Banner */
