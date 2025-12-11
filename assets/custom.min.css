@@ -6,7 +6,8 @@ account-icon .icon-heart path {
 }
 
 /* a#HeaderMenu-christmas-gifts, */
-summary#HeaderMenu-christmas-gifts {
+summary#HeaderMenu-christmas-gifts,
+summary#HeaderMenu-christmas-gifts span {
   font-weight: 600;
   color: #AB061A !important;
   /* padding-right: 1rem !important; */
