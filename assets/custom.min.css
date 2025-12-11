@@ -6,7 +6,8 @@ account-icon .icon-heart path {
 }
 
 /* a#HeaderMenu-christmas-gifts, */
-summary#HeaderMenu-christmas-gifts {
+summary#HeaderMenu-christmas-gifts,
+a#HeaderMenu-christmas-gifts-all-gifts-the-christmas-gift-guide {
   font-weight: 600;
   color: #AB061A;
   /* padding-right: 1rem !important; */
@@ -266,8 +267,8 @@ html:not(.hydrated) {
   }
 
   @media screen and (max-width: 749px) {
-    #MainContent:has(div[id^='shopify-section-template--'][id$='__product-grid']) {
-      display: none !important;
+    div[id^='shopify-section-template--'][id$='__product-grid'] {
+      visibility: hidden !important;
     }
   }
 }
