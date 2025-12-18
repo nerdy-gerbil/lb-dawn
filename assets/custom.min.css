@@ -376,7 +376,9 @@ html:not(.hydrated) {
   }
 
   div[id^='shopify-section-template--'][id$='__product-grid'] {
-    max-height: 200vh !important;
+    max-height: 100vh !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
   }
 
   /* @media screen and (max-width: 749px) {
