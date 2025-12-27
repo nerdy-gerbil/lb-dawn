@@ -341,7 +341,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "SHOP BLACK FRIDAY",
-            "button_link_1": "shopify://collections/sale-1",
+            "button_link_1": "shopify://collections/wintersale",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
