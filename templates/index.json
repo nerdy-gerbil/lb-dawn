@@ -613,7 +613,7 @@
         "heading_kfKm8K": {
           "type": "heading",
           "settings": {
-            "heading": "Christmas  Shop",
+            "heading": "MEN'S JEWELLERY",
             "heading_size": "h1"
           }
         },
@@ -637,7 +637,7 @@
       "settings": {
         "show_on_device": "desktop",
         "fetch_priority": false,
-        "image": "shopify://shop_images/Christmasshop.webp",
+        "image": "shopify://shop_images/mensnecklace_flatlay_small_downpage_banner.webp",
         "image_overlay_opacity": 10,
         "image_height": "adapt",
         "image_behavior": "none",
