@@ -635,7 +635,7 @@
       ],
       "custom_css": [],
       "settings": {
-        "show_on_device": "all-devices",
+        "show_on_device": "desktop",
         "fetch_priority": false,
         "image": "shopify://shop_images/mensnecklace_flatlay_small_downpage_banner.webp",
         "image_overlay_opacity": 10,
