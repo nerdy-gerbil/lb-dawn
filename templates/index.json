@@ -42,7 +42,7 @@
           "type": "button",
           "settings": {
             "button": "SHOP SALE",
-            "button_url": "shopify://collections/black-friday-sale",
+            "button_url": "shopify://collections/sale-1",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,

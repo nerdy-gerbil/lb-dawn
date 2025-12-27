@@ -1,1 +1,615 @@
-{"sections":{"18de2238-6bfc-4c33-8a7a-f93ae4a96652":{"type":"custom-liquid","settings":{"custom_liquid":"<link rel=\"stylesheet\" href=\"https:\/\/fonts.googleapis.com\/css?family=Dancing+Script\">\n<style>\n  main#MainContent h2 {\n    font-family: 'Dancing Script', Muli, sans-serif !important;\n  }\n  main#MainContent,\n  .breadcrumb,\n  #shopify-section-sections--20490832871742__13349a43-b5ff-4ef8-9113-cd493ede111f > div {\n    background-color: #FAF3F3;\n  }\n<\/style>","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","padding_top":0,"padding_bottom":0}},"e92f50fb-5387-448c-9ab1-f2689ef337da":{"type":"rich-text","blocks":{"template--21352401797438__e92f50fb-5387-448c-9ab1-f2689ef337da-heading-1":{"type":"heading","settings":{"heading":"{{ page.title }}","heading_size":"hxl"}}},"block_order":["template--21352401797438__e92f50fb-5387-448c-9ab1-f2689ef337da-heading-1"],"settings":{"desktop_content_position":"left","content_alignment":"left","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","full_width":true,"padding_top":40,"padding_bottom":52}},"main":{"type":"main-page","custom_css":["h1.h0 {display: none;}"],"settings":{"padding_top":24,"padding_bottom":24}},"284a36e2-0810-4b9d-b736-4499b4f9d19e":{"type":"custom-liquid","settings":{"custom_liquid":"<style>\n  #shopify-section-template--custom-image-banner-1 .media {\n    background-color: #faf3f3;\n  }\n  #shopify-section-template--custom-image-banner-1 img {\n    object-fit: contain;\n  }\n  #shopify-section-template--custom-image-banner-1 h2.banner__heading {\n    font-size: xxx-large !important;\n  }\n  #shopify-section-template--custom-image-banner-1 .button {\n    opacity: 1;\n    margin-top: 3rem;\n    background-color: transparent;\n  }\n  #shopify-section-template--custom-image-banner-1 .banner__text {\n    color: #fff;\n    margin-top: 12rem;\n    font-size: x-large !important;\n  }\n  @media (max-width: 1023px) {\n    #shopify-section-template--custom-image-banner-1 .banner__content--bottom-center {\n      align-items: flex-end;\n    }\n    #shopify-section-template--custom-image-banner-1 .banner__box {\n      margin-bottom: 3rem;\n    }\n    #shopify-section-template--custom-image-banner-1 .banner__media img {\n      object-fit: cover !important;\n    }\n\n    #shopify-section-template--custom-image-banner-1 .button {\n      min-width: unset;\n      max-width: 13rem;\n    }\n    #shopify-section-template--custom-image-banner-1 .banner__text {\n      margin-top: 6rem;\n    }\n  }\n  @media (min-width: 1024px) {\n    #shopify-section-template--custom-image-banner-1 h2.banner__heading {\n      margin-bottom: 7rem;\n      font-size: xx-large;\n    }\n    #shopify-section-template--custom-image-banner-1 .button.button--secondary {\n      font-size: unset;\n    }\n  }\n<\/style>\n\n<div\n  id=\"shopify-section-template--custom-image-banner-1\"\n  class=\"shopify-section section\"\n>\n  <link\n    href=\"\/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/t\/8\/assets\/section-image-banner.css?v=157856879886144226731692104927\"\n    rel=\"stylesheet\"\n    type=\"text\/css\"\n    media=\"all\"\n  >\n  <style>\n    :root {\n    }\n    #Banner-template--custom-image-banner-1::after {\n      opacity: 0;\n    }\n  <\/style>\n  <div\n    id=\"Banner-template--custom-image-banner-1\"\n    class=\"banner banner--content-align-center banner--content-align-mobile-center banner--medium banner--desktop-transparent\"\n  >\n    <div class=\"banner__media media\">\n      <img\n        src=\"\/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/Lily_Blanche_Celebration.png?v=1700479069&amp;width=3840\"\n        alt=\"\"\n        srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/Lily_Blanche_Celebration.png?v=1700479069&amp;width=375 375w, \/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/Lily_Blanche_Celebration.png?v=1700479069&amp;width=550 550w, \/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/Lily_Blanche_Celebration.png?v=1700479069&amp;width=750 750w, \/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/Lily_Blanche_Celebration.png?v=1700479069&amp;width=1100 1100w, \/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/Lily_Blanche_Celebration.png?v=1700479069&amp;width=1500 1500w, \/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/Lily_Blanche_Celebration.png?v=1700479069&amp;width=1780 1780w, \/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/Lily_Blanche_Celebration.png?v=1700479069&amp;width=2000 2000w, \/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/Lily_Blanche_Celebration.png?v=1700479069&amp;width=3000 3000w, \/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/Lily_Blanche_Celebration.png?v=1700479069&amp;width=3840 3840w\"\n        width=\"800\"\n        height=\"600.0\"\n        loading=\"auto\"\n        sizes=\"100vw\"\n      >\n    <\/div>\n    <div class=\"banner__content banner__content--bottom-center page-width\">\n      <div class=\"banner__box content-container content-container--full-width-mobile color-inverse gradient\">\n        <h2 class=\"banner__heading inline-richtext h2\">Spread the cost<\/h2>\n        <div\n          class=\"banner__buttons banner__buttons--multiple\"\n        >\n          <img\n            class=\"button\"\n            src=\"\/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/Klarna_Payment_Badge.svg?v=1700481075\"\n            alt=\"Klarna\"\n            width=\"150\"\n            height=\"80\"\n            loading=\"lazy\"\n          >\n          <img\n            class=\"button\"\n            src=\"\/\/cdn.shopify.com\/s\/files\/1\/0726\/1742\/7262\/files\/clearpay.svg?v=1700481900\"\n            alt=\"Clearpay\"\n            width=\"150\"\n            height=\"80\"\n            loading=\"lazy\"\n          >\n        <\/div>\n        <div class=\"banner__text rte body\">\n          <p>PAY IN INSTALMENTS<\/p>\n        <\/div>\n      <\/div>\n    <\/div>\n  <\/div>\n<\/div>","color_scheme":"inverse","padding_top":0,"padding_bottom":0}},"ff15ae9e-793a-4387-b925-01478d26f2dd":{"type":"image-banner","blocks":{"template--21352401797438__ff15ae9e-793a-4387-b925-01478d26f2dd-heading-1":{"type":"heading","settings":{"heading":"Spread the cost","heading_size":"h2"}},"template--21352401797438__ff15ae9e-793a-4387-b925-01478d26f2dd-buttons-1":{"type":"buttons","settings":{"button_label_1":"asd","button_link_1":"shopify:\/\/collections\/lily-blanche-x-club-l-london","button_style_secondary_1":false,"button_label_2":"asd","button_link_2":"","button_style_secondary_2":false}},"dbaa89fa-9f33-46a0-a0a4-0694a99c1d6d":{"type":"text","settings":{"text":"RETURNS EXTENDED UNTIL JAN 5 2024","text_style":"body"}}},"block_order":["template--21352401797438__ff15ae9e-793a-4387-b925-01478d26f2dd-heading-1","template--21352401797438__ff15ae9e-793a-4387-b925-01478d26f2dd-buttons-1","dbaa89fa-9f33-46a0-a0a4-0694a99c1d6d"],"disabled":true,"custom_css":[".media {background-color: transparent;}","img {object-fit: contain;}","h2.banner__heading {font-size: xxx-large !important;}",".button {opacity: 1; margin-top: 3rem;}",".banner__text {color: #fff; margin-top: 12rem; font-size: x-large !important;}","@media (max-width: 1023px) {.banner__content--bottom-center {align-items: flex-end; } .banner__box {margin-bottom: 3rem; }}","@media (min-width: 1024px) {h2.banner__heading {margin-bottom: 7rem; font-size: xx-large; } .button.button--secondary {font-size: unset; }}"],"settings":{"image":"shopify:\/\/shop_images\/Lily_Blanche_Celebration.png","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"bottom-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"inverse","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":false,"show_text_below":false}},"6cff93f0-7a73-4734-8357-75ae5d849d5e":{"type":"rich-text","blocks":{"template--21352401797438__6cff93f0-7a73-4734-8357-75ae5d849d5e-heading-1":{"type":"heading","settings":{"heading":"Go on, indulge yourself!","heading_size":"h1"}},"template--21352401797438__6cff93f0-7a73-4734-8357-75ae5d849d5e-text-1":{"type":"text","settings":{"text":"<p>Dazzling deals and sparkling savings. Snag the best offers and grab a little something just for you!<\/p>"}}},"block_order":["template--21352401797438__6cff93f0-7a73-4734-8357-75ae5d849d5e-heading-1","template--21352401797438__6cff93f0-7a73-4734-8357-75ae5d849d5e-text-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","full_width":true,"padding_top":40,"padding_bottom":52}},"bc16bfaa-1763-4d38-ac19-f055956e3753":{"type":"image-banner","custom_css":[".media {background-color: transparent;}","img {object-fit: contain;}"],"settings":{"image":"shopify:\/\/shop_images\/offers_page_second_image.png","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"middle-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"5b0e6b42-994b-40da-be20-687428580cf2":{"type":"rich-text","blocks":{"f5f893a4-6be1-4c2e-938a-479901f58fe6":{"type":"heading","settings":{"heading":"Free with all orders","heading_size":"h1"}}},"block_order":["f5f893a4-6be1-4c2e-938a-479901f58fe6"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","full_width":true,"padding_top":40,"padding_bottom":52}},"69218c69-d18d-4e5e-b8ba-9bd7814e11e8":{"type":"image-banner","custom_css":[".media {background-color: transparent;}","img {object-fit: contain;}"],"settings":{"image":"shopify:\/\/shop_images\/Copy_of_offers_page_third_image.png","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"b1add286-1a1b-4a25-9223-42407781414a":{"type":"rich-text","blocks":{"template--21352401797438__b1add286-1a1b-4a25-9223-42407781414a-heading-1":{"type":"heading","settings":{"heading":"Add them at the checkout!","heading_size":"h1"}}},"block_order":["template--21352401797438__b1add286-1a1b-4a25-9223-42407781414a-heading-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","full_width":true,"padding_top":40,"padding_bottom":52}},"38d50eea-cf43-4c1e-84f3-f51547b60a0b":{"type":"image-banner","custom_css":[".media {background-color: transparent;}","img {object-fit: contain;}"],"settings":{"image":"shopify:\/\/shop_images\/Offers_page_fourth_image.png","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"0c2f0736-73b8-42b2-8b4d-255ede306d4b":{"type":"rich-text","blocks":{"template--21352401797438__0c2f0736-73b8-42b2-8b4d-255ede306d4b-heading-1":{"type":"heading","settings":{"heading":"Gift a lifetime of love in a locket","heading_size":"h1"}}},"block_order":["template--21352401797438__0c2f0736-73b8-42b2-8b4d-255ede306d4b-heading-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","full_width":true,"padding_top":40,"padding_bottom":52}},"56220776-5f7a-41cc-bcdb-4e24f7533d6b":{"type":"image-banner","custom_css":[".media {background-color: transparent;}","img {object-fit: contain;}"],"settings":{"image":"shopify:\/\/shop_images\/christmas_wreath_copy.webp","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"fff6b8a2-dfe1-4f2a-b269-4c3efce888da":{"type":"rich-text","blocks":{"67233852-5efd-4b4b-b429-c1b2af05f2e0":{"type":"heading","settings":{"heading":"Fully tracked to your door!","heading_size":"h1"}}},"block_order":["67233852-5efd-4b4b-b429-c1b2af05f2e0"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","full_width":true,"padding_top":40,"padding_bottom":0}},"c7fd3023-58ae-455d-8dd1-f54ca5846749":{"type":"image-banner","blocks":{"a8306b20-3f29-492c-9796-3ca419b9e87d":{"type":"heading","settings":{"heading":"Black Friday Deals","heading_size":"h0"}},"3116e5a6-050b-4de0-b053-0dff95cb085d":{"type":"text","settings":{"text":"<strong>Huge savings!<\/strong>","text_style":"body"}},"546b4704-cd85-4f88-9f4d-af093e441068":{"type":"buttons","settings":{"button_label_1":"SHOP BLACK FRIDAY","button_link_1":"shopify:\/\/collections\/black-friday-sale","button_style_secondary_1":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["a8306b20-3f29-492c-9796-3ca419b9e87d","3116e5a6-050b-4de0-b053-0dff95cb085d","546b4704-cd85-4f88-9f4d-af093e441068"],"disabled":true,"custom_css":[".media {background-color: transparent;}","@media (min-width: 1024px) {img {object-fit: contain; }}",".banner__heading,.banner__text {margin-bottom: 0 !important; color: #fff !important; font-size: xxx-large !important; font-family: \"Dancing Script\", Muli;}",".button {opacity: 1; margin-top: 9rem;}","@media (max-width: 1023px) {.banner__content--bottom-center {align-items: flex-end; } .banner__box {margin-bottom: 3rem; }}","@media (min-width: 1024px) {.banner__heading {margin-bottom: 7rem; font-size: xx-large; } .button--secondary {font-size: unset; }}"],"settings":{"image":"shopify:\/\/shop_images\/Black_Friday_Deals_2_0e726da0-1de3-45fb-81af-cd025be9718b.png","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"bottom-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"inverse","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":false,"show_text_below":false}},"1c55fca9-537f-43db-8d79-1bdabb1a132c":{"type":"rich-text","blocks":{"template--21352401797438__1c55fca9-537f-43db-8d79-1bdabb1a132c-heading-1":{"type":"heading","settings":{"heading":"Style It Your Way!","heading_size":"h1"}}},"block_order":["template--21352401797438__1c55fca9-537f-43db-8d79-1bdabb1a132c-heading-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","full_width":true,"padding_top":0,"padding_bottom":52}},"d671beb5-90f4-45df-8fe5-75c73bf862a1":{"type":"image-banner","custom_css":[".media {background-color: transparent;}","img {object-fit: contain;}","h2.banner__heading {margin-bottom: 7rem; font-family: Muli, sans-serif !important; opacity: 1; font-size: xx-large;}",".button {margin-top: 3rem; opacity: 1;}"],"settings":{"image":"shopify:\/\/shop_images\/Offers_page_seventh_image.png","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"27fd1900-2417-4ff7-8cae-8b42c725885d":{"type":"rich-text","blocks":{"template--21352401797438__27fd1900-2417-4ff7-8cae-8b42c725885d-heading-1":{"type":"heading","settings":{"heading":"Sign up for our best deals & offers!","heading_size":"h1"}}},"block_order":["template--21352401797438__27fd1900-2417-4ff7-8cae-8b42c725885d-heading-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","full_width":true,"padding_top":60,"padding_bottom":28}},"00242e3c-5a69-49d7-a8fb-f44cc5a882cf":{"type":"custom-liquid","settings":{"custom_liquid":"<div class=\"klaviyo-form-RDyZKS\"><\/div><div class=\"klaviyo-form-VTsPxY\"><\/div>","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","padding_top":40,"padding_bottom":52}},"e8069127-5f1c-4244-9f93-89614a6d102f":{"type":"image-banner","custom_css":[".media {background-color: transparent;}","img {object-fit: contain;}","h2.banner__heading {margin-bottom: 7rem; font-family: Muli, sans-serif !important; opacity: 1; font-size: xx-large;}",".button {margin-top: 3rem; opacity: 1;}"],"settings":{"image":"shopify:\/\/shop_images\/Offers_page_image_eight.png","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"676e6fe7-914d-4fb0-b656-4b57489831cd":{"type":"rich-text","blocks":{"template--21352401797438__676e6fe7-914d-4fb0-b656-4b57489831cd-text-1":{"type":"text","settings":{"text":"<p>Don't forget to come back soon for the latest dazzling deals!<\/p>"}}},"block_order":["template--21352401797438__676e6fe7-914d-4fb0-b656-4b57489831cd-text-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","full_width":true,"padding_top":40,"padding_bottom":52}},"f8ef9146-05be-4a8a-a961-2637a079e938":{"type":"rich-text","blocks":{"template--21352401797438__f8ef9146-05be-4a8a-a961-2637a079e938-heading-1":{"type":"heading","settings":{"heading":"Follow us on Instagram, Facebook & TikTok for the latest giveaways & competitions","heading_size":"h1"}}},"block_order":["template--21352401797438__f8ef9146-05be-4a8a-a961-2637a079e938-heading-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","full_width":true,"padding_top":40,"padding_bottom":52}},"693a84e1-5501-4703-aec6-a5ea397f7304":{"type":"image-banner","custom_css":[".media {background-color: transparent;}","img {object-fit: contain;}","h2.banner__heading {margin-bottom: 7rem; font-family: Muli, sans-serif !important; opacity: 1; font-size: xx-large;}",".button {margin-top: 3rem; opacity: 1;}"],"settings":{"image":"shopify:\/\/shop_images\/Offers_page_image_ten_2.png","image_overlay_opacity":0,"image_height":"medium","desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":true}},"5725e814-ff05-4916-8207-f9c9e8f3f1fe":{"type":"rich-text","blocks":{"fe845164-e8c6-4f7b-9b36-7b6f0bb05062":{"type":"caption","settings":{"caption":"Click the buttons","text_style":"caption-with-letter-spacing","text_size":"large"}},"template--21352401797438__5725e814-ff05-4916-8207-f9c9e8f3f1fe-heading-1":{"type":"heading","settings":{"heading":"let's get social!","heading_size":"h1"}}},"block_order":["fe845164-e8c6-4f7b-9b36-7b6f0bb05062","template--21352401797438__5725e814-ff05-4916-8207-f9c9e8f3f1fe-heading-1"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","full_width":true,"padding_top":40,"padding_bottom":52}},"c1227273-78fb-428c-833c-75ea39784f28":{"type":"custom-liquid","settings":{"custom_liquid":"<script src=\"https:\/\/code.iconify.design\/iconify-icon\/1.0.7\/iconify-icon.min.js\"><\/script>\n\n<style>\n  a.social:hover iconify-icon {\n    color: #77574A !important;\n  }\n<\/style>\n\n<div class=\"custom-section page-width social-icons\" style=\"display: flex; justify-content: space-evenly;\">\n  <a class=\"social\" href=\"https:\/\/www.instagram.com\/lilyblanchejewellery\/\">\n    <iconify-icon icon=\"mdi:instagram\" class=\"desktop\" style=\"color: #bba68f;\" width=\"128\" height=\"128\"><\/iconify-icon>\n    <iconify-icon icon=\"mdi:instagram\" class=\"mobile\" style=\"color: #bba68f;\" width=\"64\" height=\"64\"><\/iconify-icon>\n  <\/a>\n  <a class=\"social\" href=\"https:\/\/www.facebook.com\/lilyblanchejewellery\/\">\n    <iconify-icon icon=\"ic:baseline-facebook\" class=\"desktop\" style=\"color: #bba68f;\" width=\"128\"\n      height=\"128\"><\/iconify-icon>\n    <iconify-icon icon=\"ic:baseline-facebook\" class=\"mobile\" style=\"color: #bba68f;\" width=\"64\"\n      height=\"64\"><\/iconify-icon>\n  <\/a>\n  <a class=\"social\" href=\"https:\/\/www.tiktok.com\/@lily_blanche_jewellery\">\n    <iconify-icon icon=\"ic:baseline-tiktok\" class=\"desktop\" style=\"color: #bba68f;\" width=\"128\"\n      height=\"128\"><\/iconify-icon>\n    <iconify-icon icon=\"ic:baseline-tiktok\" class=\"mobile\" style=\"color: #bba68f;\" width=\"64\"\n      height=\"64\"><\/iconify-icon>\n  <\/a>\n<\/div>","color_scheme":"scheme-427325f1-11e9-4cce-b099-dab5577997d6","padding_top":40,"padding_bottom":52}}},"order":["18de2238-6bfc-4c33-8a7a-f93ae4a96652","e92f50fb-5387-448c-9ab1-f2689ef337da","main","284a36e2-0810-4b9d-b736-4499b4f9d19e","ff15ae9e-793a-4387-b925-01478d26f2dd","6cff93f0-7a73-4734-8357-75ae5d849d5e","bc16bfaa-1763-4d38-ac19-f055956e3753","5b0e6b42-994b-40da-be20-687428580cf2","69218c69-d18d-4e5e-b8ba-9bd7814e11e8","b1add286-1a1b-4a25-9223-42407781414a","38d50eea-cf43-4c1e-84f3-f51547b60a0b","0c2f0736-73b8-42b2-8b4d-255ede306d4b","56220776-5f7a-41cc-bcdb-4e24f7533d6b","fff6b8a2-dfe1-4f2a-b269-4c3efce888da","c7fd3023-58ae-455d-8dd1-f54ca5846749","1c55fca9-537f-43db-8d79-1bdabb1a132c","d671beb5-90f4-45df-8fe5-75c73bf862a1","27fd1900-2417-4ff7-8cae-8b42c725885d","00242e3c-5a69-49d7-a8fb-f44cc5a882cf","e8069127-5f1c-4244-9f93-89614a6d102f","676e6fe7-914d-4fb0-b656-4b57489831cd","f8ef9146-05be-4a8a-a961-2637a079e938","693a84e1-5501-4703-aec6-a5ea397f7304","5725e814-ff05-4916-8207-f9c9e8f3f1fe","c1227273-78fb-428c-833c-75ea39784f28"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "18de2238-6bfc-4c33-8a7a-f93ae4a96652": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Dancing+Script\">\n<style>\n  main#MainContent h2 {\n    font-family: 'Dancing Script', Muli, sans-serif !important;\n  }\n  main#MainContent,\n  .breadcrumb,\n  #shopify-section-sections--20490832871742__13349a43-b5ff-4ef8-9113-cd493ede111f > div {\n    background-color: #FAF3F3;\n  }\n</style>",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "e92f50fb-5387-448c-9ab1-f2689ef337da": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21352401797438__e92f50fb-5387-448c-9ab1-f2689ef337da-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "heading_size": "hxl"
+          }
+        }
+      },
+      "block_order": [
+        "template--21352401797438__e92f50fb-5387-448c-9ab1-f2689ef337da-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        "h1.h0 {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "284a36e2-0810-4b9d-b736-4499b4f9d19e": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  #shopify-section-template--custom-image-banner-1 .media {\n    background-color: #faf3f3;\n  }\n  #shopify-section-template--custom-image-banner-1 img {\n    object-fit: contain;\n  }\n  #shopify-section-template--custom-image-banner-1 h2.banner__heading {\n    font-size: xxx-large !important;\n  }\n  #shopify-section-template--custom-image-banner-1 .button {\n    opacity: 1;\n    margin-top: 3rem;\n    background-color: transparent;\n  }\n  #shopify-section-template--custom-image-banner-1 .banner__text {\n    color: #fff;\n    margin-top: 12rem;\n    font-size: x-large !important;\n  }\n  @media (max-width: 1023px) {\n    #shopify-section-template--custom-image-banner-1 .banner__content--bottom-center {\n      align-items: flex-end;\n    }\n    #shopify-section-template--custom-image-banner-1 .banner__box {\n      margin-bottom: 3rem;\n    }\n    #shopify-section-template--custom-image-banner-1 .banner__media img {\n      object-fit: cover !important;\n    }\n\n    #shopify-section-template--custom-image-banner-1 .button {\n      min-width: unset;\n      max-width: 13rem;\n    }\n    #shopify-section-template--custom-image-banner-1 .banner__text {\n      margin-top: 6rem;\n    }\n  }\n  @media (min-width: 1024px) {\n    #shopify-section-template--custom-image-banner-1 h2.banner__heading {\n      margin-bottom: 7rem;\n      font-size: xx-large;\n    }\n    #shopify-section-template--custom-image-banner-1 .button.button--secondary {\n      font-size: unset;\n    }\n  }\n</style>\n\n<div\n  id=\"shopify-section-template--custom-image-banner-1\"\n  class=\"shopify-section section\"\n>\n  <link\n    href=\"//cdn.shopify.com/s/files/1/0726/1742/7262/t/8/assets/section-image-banner.css?v=157856879886144226731692104927\"\n    rel=\"stylesheet\"\n    type=\"text/css\"\n    media=\"all\"\n  >\n  <style>\n    :root {\n    }\n    #Banner-template--custom-image-banner-1::after {\n      opacity: 0;\n    }\n  </style>\n  <div\n    id=\"Banner-template--custom-image-banner-1\"\n    class=\"banner banner--content-align-center banner--content-align-mobile-center banner--medium banner--desktop-transparent\"\n  >\n    <div class=\"banner__media media\">\n      <img\n        src=\"//cdn.shopify.com/s/files/1/0726/1742/7262/files/Lily_Blanche_Celebration.png?v=1700479069&amp;width=3840\"\n        alt=\"\"\n        srcset=\"//cdn.shopify.com/s/files/1/0726/1742/7262/files/Lily_Blanche_Celebration.png?v=1700479069&amp;width=375 375w, //cdn.shopify.com/s/files/1/0726/1742/7262/files/Lily_Blanche_Celebration.png?v=1700479069&amp;width=550 550w, //cdn.shopify.com/s/files/1/0726/1742/7262/files/Lily_Blanche_Celebration.png?v=1700479069&amp;width=750 750w, //cdn.shopify.com/s/files/1/0726/1742/7262/files/Lily_Blanche_Celebration.png?v=1700479069&amp;width=1100 1100w, //cdn.shopify.com/s/files/1/0726/1742/7262/files/Lily_Blanche_Celebration.png?v=1700479069&amp;width=1500 1500w, //cdn.shopify.com/s/files/1/0726/1742/7262/files/Lily_Blanche_Celebration.png?v=1700479069&amp;width=1780 1780w, //cdn.shopify.com/s/files/1/0726/1742/7262/files/Lily_Blanche_Celebration.png?v=1700479069&amp;width=2000 2000w, //cdn.shopify.com/s/files/1/0726/1742/7262/files/Lily_Blanche_Celebration.png?v=1700479069&amp;width=3000 3000w, //cdn.shopify.com/s/files/1/0726/1742/7262/files/Lily_Blanche_Celebration.png?v=1700479069&amp;width=3840 3840w\"\n        width=\"800\"\n        height=\"600.0\"\n        loading=\"auto\"\n        sizes=\"100vw\"\n      >\n    </div>\n    <div class=\"banner__content banner__content--bottom-center page-width\">\n      <div class=\"banner__box content-container content-container--full-width-mobile color-inverse gradient\">\n        <h2 class=\"banner__heading inline-richtext h2\">Spread the cost</h2>\n        <div\n          class=\"banner__buttons banner__buttons--multiple\"\n        >\n          <img\n            class=\"button\"\n            src=\"//cdn.shopify.com/s/files/1/0726/1742/7262/files/Klarna_Payment_Badge.svg?v=1700481075\"\n            alt=\"Klarna\"\n            width=\"150\"\n            height=\"80\"\n            loading=\"lazy\"\n          >\n          <img\n            class=\"button\"\n            src=\"//cdn.shopify.com/s/files/1/0726/1742/7262/files/clearpay.svg?v=1700481900\"\n            alt=\"Clearpay\"\n            width=\"150\"\n            height=\"80\"\n            loading=\"lazy\"\n          >\n        </div>\n        <div class=\"banner__text rte body\">\n          <p>PAY IN INSTALMENTS</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "inverse",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ff15ae9e-793a-4387-b925-01478d26f2dd": {
+      "type": "image-banner",
+      "blocks": {
+        "template--21352401797438__ff15ae9e-793a-4387-b925-01478d26f2dd-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Spread the cost",
+            "heading_size": "h2"
+          }
+        },
+        "template--21352401797438__ff15ae9e-793a-4387-b925-01478d26f2dd-buttons-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "asd",
+            "button_link_1": "shopify://collections/lily-blanche-x-club-l-london",
+            "button_style_secondary_1": false,
+            "button_label_2": "asd",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "dbaa89fa-9f33-46a0-a0a4-0694a99c1d6d": {
+          "type": "text",
+          "settings": {
+            "text": "RETURNS EXTENDED UNTIL JAN 5 2024",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--21352401797438__ff15ae9e-793a-4387-b925-01478d26f2dd-heading-1",
+        "template--21352401797438__ff15ae9e-793a-4387-b925-01478d26f2dd-buttons-1",
+        "dbaa89fa-9f33-46a0-a0a4-0694a99c1d6d"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".media {background-color: transparent;}",
+        "img {object-fit: contain;}",
+        "h2.banner__heading {font-size: xxx-large !important;}",
+        ".button {opacity: 1; margin-top: 3rem;}",
+        ".banner__text {color: #fff; margin-top: 12rem; font-size: x-large !important;}",
+        "@media (max-width: 1023px) {.banner__content--bottom-center {align-items: flex-end; } .banner__box {margin-bottom: 3rem; }}",
+        "@media (min-width: 1024px) {h2.banner__heading {margin-bottom: 7rem; font-size: xx-large; } .button.button--secondary {font-size: unset; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Lily_Blanche_Celebration.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "inverse",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "6cff93f0-7a73-4734-8357-75ae5d849d5e": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21352401797438__6cff93f0-7a73-4734-8357-75ae5d849d5e-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Go on, indulge yourself!",
+            "heading_size": "h1"
+          }
+        },
+        "template--21352401797438__6cff93f0-7a73-4734-8357-75ae5d849d5e-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dazzling deals and sparkling savings. Snag the best offers and grab a little something just for you!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21352401797438__6cff93f0-7a73-4734-8357-75ae5d849d5e-heading-1",
+        "template--21352401797438__6cff93f0-7a73-4734-8357-75ae5d849d5e-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "bc16bfaa-1763-4d38-ac19-f055956e3753": {
+      "type": "image-banner",
+      "custom_css": [
+        ".media {background-color: transparent;}",
+        "img {object-fit: contain;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/offers_page_second_image.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "5b0e6b42-994b-40da-be20-687428580cf2": {
+      "type": "rich-text",
+      "blocks": {
+        "f5f893a4-6be1-4c2e-938a-479901f58fe6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Free with all orders",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "f5f893a4-6be1-4c2e-938a-479901f58fe6"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "69218c69-d18d-4e5e-b8ba-9bd7814e11e8": {
+      "type": "image-banner",
+      "custom_css": [
+        ".media {background-color: transparent;}",
+        "img {object-fit: contain;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Copy_of_offers_page_third_image.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "b1add286-1a1b-4a25-9223-42407781414a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21352401797438__b1add286-1a1b-4a25-9223-42407781414a-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Add them at the checkout!",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--21352401797438__b1add286-1a1b-4a25-9223-42407781414a-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "38d50eea-cf43-4c1e-84f3-f51547b60a0b": {
+      "type": "image-banner",
+      "custom_css": [
+        ".media {background-color: transparent;}",
+        "img {object-fit: contain;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Offers_page_fourth_image.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "0c2f0736-73b8-42b2-8b4d-255ede306d4b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21352401797438__0c2f0736-73b8-42b2-8b4d-255ede306d4b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gift a lifetime of love in a locket",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--21352401797438__0c2f0736-73b8-42b2-8b4d-255ede306d4b-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "56220776-5f7a-41cc-bcdb-4e24f7533d6b": {
+      "type": "image-banner",
+      "custom_css": [
+        ".media {background-color: transparent;}",
+        "img {object-fit: contain;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/christmas_wreath_copy.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "fff6b8a2-dfe1-4f2a-b269-4c3efce888da": {
+      "type": "rich-text",
+      "blocks": {
+        "67233852-5efd-4b4b-b429-c1b2af05f2e0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fully tracked to your door!",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "67233852-5efd-4b4b-b429-c1b2af05f2e0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "c7fd3023-58ae-455d-8dd1-f54ca5846749": {
+      "type": "image-banner",
+      "blocks": {
+        "a8306b20-3f29-492c-9796-3ca419b9e87d": {
+          "type": "heading",
+          "settings": {
+            "heading": "Black Friday Deals",
+            "heading_size": "h0"
+          }
+        },
+        "3116e5a6-050b-4de0-b053-0dff95cb085d": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Huge savings!</strong>",
+            "text_style": "body"
+          }
+        },
+        "546b4704-cd85-4f88-9f4d-af093e441068": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP BLACK FRIDAY",
+            "button_link_1": "shopify://collections/sale-1",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "a8306b20-3f29-492c-9796-3ca419b9e87d",
+        "3116e5a6-050b-4de0-b053-0dff95cb085d",
+        "546b4704-cd85-4f88-9f4d-af093e441068"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".media {background-color: transparent;}",
+        "@media (min-width: 1024px) {img {object-fit: contain; }}",
+        ".banner__heading,.banner__text {margin-bottom: 0 !important; color: #fff !important; font-size: xxx-large !important; font-family: \"Dancing Script\", Muli;}",
+        ".button {opacity: 1; margin-top: 9rem;}",
+        "@media (max-width: 1023px) {.banner__content--bottom-center {align-items: flex-end; } .banner__box {margin-bottom: 3rem; }}",
+        "@media (min-width: 1024px) {.banner__heading {margin-bottom: 7rem; font-size: xx-large; } .button--secondary {font-size: unset; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Black_Friday_Deals_2_0e726da0-1de3-45fb-81af-cd025be9718b.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "inverse",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "1c55fca9-537f-43db-8d79-1bdabb1a132c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21352401797438__1c55fca9-537f-43db-8d79-1bdabb1a132c-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Style It Your Way!",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--21352401797438__1c55fca9-537f-43db-8d79-1bdabb1a132c-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "d671beb5-90f4-45df-8fe5-75c73bf862a1": {
+      "type": "image-banner",
+      "custom_css": [
+        ".media {background-color: transparent;}",
+        "img {object-fit: contain;}",
+        "h2.banner__heading {margin-bottom: 7rem; font-family: Muli, sans-serif !important; opacity: 1; font-size: xx-large;}",
+        ".button {margin-top: 3rem; opacity: 1;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Offers_page_seventh_image.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "27fd1900-2417-4ff7-8cae-8b42c725885d": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21352401797438__27fd1900-2417-4ff7-8cae-8b42c725885d-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign up for our best deals & offers!",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--21352401797438__27fd1900-2417-4ff7-8cae-8b42c725885d-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 28
+      }
+    },
+    "00242e3c-5a69-49d7-a8fb-f44cc5a882cf": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"klaviyo-form-RDyZKS\"></div><div class=\"klaviyo-form-VTsPxY\"></div>",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "e8069127-5f1c-4244-9f93-89614a6d102f": {
+      "type": "image-banner",
+      "custom_css": [
+        ".media {background-color: transparent;}",
+        "img {object-fit: contain;}",
+        "h2.banner__heading {margin-bottom: 7rem; font-family: Muli, sans-serif !important; opacity: 1; font-size: xx-large;}",
+        ".button {margin-top: 3rem; opacity: 1;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Offers_page_image_eight.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "676e6fe7-914d-4fb0-b656-4b57489831cd": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21352401797438__676e6fe7-914d-4fb0-b656-4b57489831cd-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Don't forget to come back soon for the latest dazzling deals!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21352401797438__676e6fe7-914d-4fb0-b656-4b57489831cd-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "f8ef9146-05be-4a8a-a961-2637a079e938": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21352401797438__f8ef9146-05be-4a8a-a961-2637a079e938-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Follow us on Instagram, Facebook & TikTok for the latest giveaways & competitions",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--21352401797438__f8ef9146-05be-4a8a-a961-2637a079e938-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "693a84e1-5501-4703-aec6-a5ea397f7304": {
+      "type": "image-banner",
+      "custom_css": [
+        ".media {background-color: transparent;}",
+        "img {object-fit: contain;}",
+        "h2.banner__heading {margin-bottom: 7rem; font-family: Muli, sans-serif !important; opacity: 1; font-size: xx-large;}",
+        ".button {margin-top: 3rem; opacity: 1;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Offers_page_image_ten_2.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "5725e814-ff05-4916-8207-f9c9e8f3f1fe": {
+      "type": "rich-text",
+      "blocks": {
+        "fe845164-e8c6-4f7b-9b36-7b6f0bb05062": {
+          "type": "caption",
+          "settings": {
+            "caption": "Click the buttons",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "large"
+          }
+        },
+        "template--21352401797438__5725e814-ff05-4916-8207-f9c9e8f3f1fe-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "let's get social!",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "fe845164-e8c6-4f7b-9b36-7b6f0bb05062",
+        "template--21352401797438__5725e814-ff05-4916-8207-f9c9e8f3f1fe-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "c1227273-78fb-428c-833c-75ea39784f28": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script src=\"https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js\"></script>\n\n<style>\n  a.social:hover iconify-icon {\n    color: #77574A !important;\n  }\n</style>\n\n<div class=\"custom-section page-width social-icons\" style=\"display: flex; justify-content: space-evenly;\">\n  <a class=\"social\" href=\"https://www.instagram.com/lilyblanchejewellery/\">\n    <iconify-icon icon=\"mdi:instagram\" class=\"desktop\" style=\"color: #bba68f;\" width=\"128\" height=\"128\"></iconify-icon>\n    <iconify-icon icon=\"mdi:instagram\" class=\"mobile\" style=\"color: #bba68f;\" width=\"64\" height=\"64\"></iconify-icon>\n  </a>\n  <a class=\"social\" href=\"https://www.facebook.com/lilyblanchejewellery/\">\n    <iconify-icon icon=\"ic:baseline-facebook\" class=\"desktop\" style=\"color: #bba68f;\" width=\"128\"\n      height=\"128\"></iconify-icon>\n    <iconify-icon icon=\"ic:baseline-facebook\" class=\"mobile\" style=\"color: #bba68f;\" width=\"64\"\n      height=\"64\"></iconify-icon>\n  </a>\n  <a class=\"social\" href=\"https://www.tiktok.com/@lily_blanche_jewellery\">\n    <iconify-icon icon=\"ic:baseline-tiktok\" class=\"desktop\" style=\"color: #bba68f;\" width=\"128\"\n      height=\"128\"></iconify-icon>\n    <iconify-icon icon=\"ic:baseline-tiktok\" class=\"mobile\" style=\"color: #bba68f;\" width=\"64\"\n      height=\"64\"></iconify-icon>\n  </a>\n</div>",
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "18de2238-6bfc-4c33-8a7a-f93ae4a96652",
+    "e92f50fb-5387-448c-9ab1-f2689ef337da",
+    "main",
+    "284a36e2-0810-4b9d-b736-4499b4f9d19e",
+    "ff15ae9e-793a-4387-b925-01478d26f2dd",
+    "6cff93f0-7a73-4734-8357-75ae5d849d5e",
+    "bc16bfaa-1763-4d38-ac19-f055956e3753",
+    "5b0e6b42-994b-40da-be20-687428580cf2",
+    "69218c69-d18d-4e5e-b8ba-9bd7814e11e8",
+    "b1add286-1a1b-4a25-9223-42407781414a",
+    "38d50eea-cf43-4c1e-84f3-f51547b60a0b",
+    "0c2f0736-73b8-42b2-8b4d-255ede306d4b",
+    "56220776-5f7a-41cc-bcdb-4e24f7533d6b",
+    "fff6b8a2-dfe1-4f2a-b269-4c3efce888da",
+    "c7fd3023-58ae-455d-8dd1-f54ca5846749",
+    "1c55fca9-537f-43db-8d79-1bdabb1a132c",
+    "d671beb5-90f4-45df-8fe5-75c73bf862a1",
+    "27fd1900-2417-4ff7-8cae-8b42c725885d",
+    "00242e3c-5a69-49d7-a8fb-f44cc5a882cf",
+    "e8069127-5f1c-4244-9f93-89614a6d102f",
+    "676e6fe7-914d-4fb0-b656-4b57489831cd",
+    "f8ef9146-05be-4a8a-a961-2637a079e938",
+    "693a84e1-5501-4703-aec6-a5ea397f7304",
+    "5725e814-ff05-4916-8207-f9c9e8f3f1fe",
+    "c1227273-78fb-428c-833c-75ea39784f28"
+  ]
+}
