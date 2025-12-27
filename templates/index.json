@@ -570,7 +570,7 @@
         "heading_nGbaGW": {
           "type": "heading",
           "settings": {
-            "heading": "",
+            "heading": "Men's Jewellery",
             "heading_size": "h1"
           }
         },
@@ -594,7 +594,7 @@
       "settings": {
         "show_on_device": "mobile",
         "fetch_priority": false,
-        "image": "shopify://shop_images/Christmasshop-mobile.webp",
+        "image": "shopify://shop_images/mensnecklace_flatlay_small_downpage_banner.webp",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
