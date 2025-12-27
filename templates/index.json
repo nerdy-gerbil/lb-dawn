@@ -620,8 +620,8 @@
         "buttons_kh9HiP": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "SHOP GIFTS",
-            "button_link_1": "shopify://pages/the-christmas-gift-guide-2025-personalised-jewellery-for-men-and-women",
+            "button_label_1": "SHOP MEN'S",
+            "button_link_1": "shopify://collections/mens-jewellery",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
