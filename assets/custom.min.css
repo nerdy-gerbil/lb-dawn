@@ -114,12 +114,14 @@ account-icon .icon-heart path {
   fill: #121212;
 }
 
-/* a#HeaderMenu-christmas-gifts, */
-summary#HeaderMenu-christmas-gifts,
-summary#HeaderDrawer-christmas-gifts {
+a#HeaderMenu-sale,
+a#HeaderDrawer-sale,
+/* summary#HeaderMenu-christmas-gifts, */
+/* summary#HeaderDrawer-christmas-gifts */
+{
   font-weight: 600;
   color: #AB061A !important;
-  /* padding-right: 1rem !important; */
+  padding-right: 1rem !important;
 }
 
 nav.header__inline-menu li:has(#Details-HeaderMenu-13) {
