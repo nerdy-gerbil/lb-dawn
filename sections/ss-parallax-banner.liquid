@@ -289,7 +289,7 @@
 {% else %}
   <style>
     .banner-{{ section.id }} {
-      height: {{ banner_fixed_height_mobile }}px;
+      height: {{ banner_fixed_height_mobile }}vh;
     }
   </style>
 {% endif %}
@@ -319,7 +319,7 @@
   <style>
     @media(min-width: 750px) {
       .banner-{{ section.id }} {
-        height: {{ banner_fixed_height }}px !important;
+        height: {{ banner_fixed_height }}vh !important;
       }
     }
   </style>
@@ -787,22 +787,22 @@
     {
       "type": "range",
       "id": "banner_fixed_height",
-      "min": 200,
-      "max": 1000,
-      "step": 10,
-      "unit": "px",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "vh",
       "label": "Banner Fixed Height",
-      "default": 600
+      "default": 70
     },
     {
       "type": "range",
       "id": "banner_fixed_height_mobile",
-      "min": 100,
-      "max": 1000,
-      "step": 10,
-      "unit": "px",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "vh",
       "label": "Banner Fixed Height - Mobile",
-      "default": 500
+      "default": 70
     },
     {
       "type": "header",
