@@ -124,9 +124,9 @@ a#HeaderDrawer-sale
   padding-right: 1rem !important;
 }
 
-nav.header__inline-menu li:has(#Details-HeaderMenu-13) {
+/* nav.header__inline-menu li:has(#Details-HeaderMenu-13) {
   display: none;
-}
+} */
 
 /* Product Page CLS fixes */
 .product-media-container {
