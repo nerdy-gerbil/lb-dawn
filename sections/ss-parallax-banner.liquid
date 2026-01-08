@@ -267,13 +267,11 @@
   </style>
 {% endunless %}
 
-{% if banner_height == 'adapt_first' %}
+{% if banner_height == 'adapt_first' or banner_height_mobile == 'adapt_first' %}
   <style>
-    @media(min-width: 750px) {
-      .banner-{{ section.id }} {
-        max-height: 70vh !important;
-        height: 73vh !important;
-      }
+    .banner-{{ section.id }} {
+      max-height: 70vh;
+      height: 73vh;
     }
   </style>
 {% elsif banner_height == 'auto_height' %}
@@ -298,14 +296,7 @@
   </style>
 {% endif %}
 
-{% if banner_height_mobile == 'adapt_first' %}
-  <style>
-    .banner-{{ section.id }} {
-    max-height: 70vh;
-    height: 73vh;
-    }
-  </style>
-{% elsif banner_height_mobile == 'auto_height' %}
+{% if banner_height_mobile == 'auto_height' %}
   <style>
     .banner-{{ section.id }} {
        height: auto;
