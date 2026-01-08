@@ -290,6 +290,7 @@
   <style>
     .banner-{{ section.id }} {
       height: {{ banner_fixed_height_mobile }}vh;
+      max-height: {{ banner_fixed_height_mobile }}vh;
     }
   </style>
 {% endif %}
@@ -320,6 +321,7 @@
     @media(min-width: 750px) {
       .banner-{{ section.id }} {
         height: {{ banner_fixed_height }}vh !important;
+        max-height: {{ banner_fixed_height }}vh !important;
       }
     }
   </style>
