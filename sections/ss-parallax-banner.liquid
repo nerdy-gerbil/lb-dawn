@@ -271,8 +271,8 @@
   <style>
     @media(min-width: 750px) {
       .banner-{{ section.id }} {
-        max-height: 70vh;
-        height: 73vh;
+        max-height: 70vh !important;
+        height: 73vh !important;
       }
     }
   </style>
@@ -280,11 +280,11 @@
   <style>
     @media(min-width: 750px) {
       .banner-{{ section.id }} {
-        height: auto;
+        height: auto !important;
       }
 
       .banner-body-{{ section.id }} {
-        position: relative;
+        position: relative !important;
       }
     }
   </style>
@@ -292,7 +292,7 @@
   <style>
     @media(min-width: 750px) {
       .banner-{{ section.id }} {
-        height: {{ banner_fixed_height }}px;
+        height: {{ banner_fixed_height }}px !important;
       }
     }
   </style>
