@@ -267,6 +267,24 @@
   </style>
 {% endunless %}
 
+{% if banner_height_mobile == 'auto_height' %}
+  <style>
+    .banner-{{ section.id }} {
+       height: auto;
+     }
+
+     .banner-body-{{ section.id }} {
+       position: relative;
+     }
+  </style>
+{% else %}
+  <style>
+    .banner-{{ section.id }} {
+      height: {{ banner_fixed_height_mobile }}px;
+    }
+  </style>
+{% endif %}
+
 {% if banner_height == 'adapt_first' or banner_height_mobile == 'adapt_first' %}
   <style>
     .banner-{{ section.id }} {
@@ -274,7 +292,9 @@
       height: 73vh;
     }
   </style>
-{% elsif banner_height == 'auto_height' %}
+{% endif %}
+
+{% if banner_height == 'auto_height' %}
   <style>
     @media(min-width: 750px) {
       .banner-{{ section.id }} {
@@ -292,24 +312,6 @@
       .banner-{{ section.id }} {
         height: {{ banner_fixed_height }}px !important;
       }
-    }
-  </style>
-{% endif %}
-
-{% if banner_height_mobile == 'auto_height' %}
-  <style>
-    .banner-{{ section.id }} {
-       height: auto;
-     }
-
-     .banner-body-{{ section.id }} {
-       position: relative;
-     }
-  </style>
-{% else %}
-  <style>
-    .banner-{{ section.id }} {
-      height: {{ banner_fixed_height_mobile }}px;
     }
   </style>
 {% endif %}
