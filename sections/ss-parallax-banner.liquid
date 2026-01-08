@@ -273,9 +273,11 @@
        height: auto;
      }
 
-     .banner-body-{{ section.id }} {
-       position: relative;
-     }
+    @media(max-width: 749px) {
+      .banner-body-{{ section.id }} {
+        position: relative;
+      }
+    }
   </style>
 {% else %}
   <style>
@@ -302,7 +304,7 @@
       }
 
       .banner-body-{{ section.id }} {
-        position: unset !important;
+        position: relative !important;
       }
     }
   </style>
