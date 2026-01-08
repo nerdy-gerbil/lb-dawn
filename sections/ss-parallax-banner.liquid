@@ -27,6 +27,7 @@
   assign parallax_mobile = section.settings.parallax_mobile
 
   assign banner_height = section.settings.banner_height
+  assign banner_height_mobile = section.settings.banner_height_mobile
   assign banner_fixed_height = section.settings.banner_fixed_height
   assign banner_fixed_height_mobile = section.settings.banner_fixed_height_mobile
 
@@ -268,12 +269,43 @@
 
 {% if banner_height == 'adapt_first' %}
   <style>
+    @media(min-width: 750x) {
+      .banner-{{ section.id }} {
+        max-height: 70vh;
+        height: 73vh;
+      }
+    }
+  </style>
+{% elsif banner_height == 'auto_height' %}
+  <style>
+    @media(min-width: 750x) {
+      .banner-{{ section.id }} {
+        height: auto;
+      }
+
+      .banner-body-{{ section.id }} {
+        position: relative;
+      }
+    }
+  </style>
+{% else %}
+  <style>
+    @media(min-width: 750px) {
+      .banner-{{ section.id }} {
+        height: {{ banner_fixed_height }}px;
+      }
+    }
+  </style>
+{% endif %}
+
+{% if banner_height_mobile == 'adapt_first' %}
+  <style>
     .banner-{{ section.id }} {
     max-height: 70vh;
     height: 73vh;
     }
   </style>
-{% elsif banner_height == 'auto_height' %}
+{% elsif banner_height_mobile == 'auto_height' %}
   <style>
     .banner-{{ section.id }} {
        height: auto;
@@ -287,12 +319,6 @@
   <style>
     .banner-{{ section.id }} {
       height: {{ banner_fixed_height_mobile }}px;
-    }
-
-    @media(min-width: 768px) {
-      .banner-{{ section.id }} {
-        height: {{ banner_fixed_height }}px;
-      }
     }
   </style>
 {% endif %}
@@ -720,6 +746,26 @@
       "type": "select",
       "id": "banner_height",
       "label": "Banner Height",
+      "default": "adapt_first",
+      "options": [
+        {
+          "label": "Adapt to first",
+          "value": "adapt_first"
+        },
+        {
+          "label": "Fixed Height",
+          "value": "fixed_height"
+        },
+        {
+          "label": "Auto Height",
+          "value": "auto_height"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "banner_height_mobile",
+      "label": "Banner Height (Mobile)",
       "default": "adapt_first",
       "options": [
         {
