@@ -41,7 +41,7 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "SHOP SALE",
+            "button": "SHOP JEWELS",
             "button_url": "shopify://collections/jewellery",
             "button_custom": true,
             "button_font": "system_ui_n4",
