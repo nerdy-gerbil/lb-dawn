@@ -1,6 +1,333 @@
+{% doc %}
+  @prompt
+    curved rectangular buttons that include only text. they will link through to pages on the website. there will be 4 buttons and they will be placed horizontally 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-button-group-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+  }
+
+  .ai-button-group__container-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: {{ block.settings.button_spacing }}px;
+    flex-wrap: wrap;
+    padding: {{ block.settings.section_padding }}px 20px;
+  }
+
+  .ai-button-group__button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_background_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: {{ block.settings.button_font_weight }};
+    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .ai-button-group__button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background_color }};
+    color: {{ block.settings.button_hover_text_color }};
+    border-color: {{ block.settings.button_hover_border_color }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-button-group__container-{{ ai_gen_id }} {
+      gap: {{ block.settings.button_spacing | times: 0.8 }}px;
+    }
+
+    .ai-button-group__button-{{ ai_gen_id }} {
+      font-size: {{ block.settings.button_font_size | times: 0.9 }}px;
+      padding: {{ block.settings.button_padding_vertical | times: 0.8 }}px {{ block.settings.button_padding_horizontal | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<horizontal-button-group-{{ ai_gen_id }} class="ai-button-group-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-button-group__container-{{ ai_gen_id }}">
+    {% if block.settings.button_1_text != blank %}
+      <a
+        href="{{ block.settings.button_1_link }}"
+        class="ai-button-group__button-{{ ai_gen_id }}"
+      >
+        {{ block.settings.button_1_text }}
+      </a>
+    {% endif %}
+
+    {% if block.settings.button_2_text != blank %}
+      <a
+        href="{{ block.settings.button_2_link }}"
+        class="ai-button-group__button-{{ ai_gen_id }}"
+      >
+        {{ block.settings.button_2_text }}
+      </a>
+    {% endif %}
+
+    {% if block.settings.button_3_text != blank %}
+      <a
+        href="{{ block.settings.button_3_link }}"
+        class="ai-button-group__button-{{ ai_gen_id }}"
+      >
+        {{ block.settings.button_3_text }}
+      </a>
+    {% endif %}
+
+    {% if block.settings.button_4_text != blank %}
+      <a
+        href="{{ block.settings.button_4_link }}"
+        class="ai-button-group__button-{{ ai_gen_id }}"
+      >
+        {{ block.settings.button_4_text }}
+      </a>
+    {% endif %}
+  </div>
+</horizontal-button-group-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class HorizontalButtonGroup{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.style.display = 'block';
+      }
+    }
+
+    customElements.define('horizontal-button-group-{{ ai_gen_id }}', HorizontalButtonGroup{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Horizontal button group",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Button 1"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Text",
+      "default": "Shop lockets"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Button 2"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Text",
+      "default": "Engraving"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Button 3"
+    },
+    {
+      "type": "text",
+      "id": "button_3_text",
+      "label": "Text",
+      "default": "Gift guide"
+    },
+    {
+      "type": "url",
+      "id": "button_3_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Button 4"
+    },
+    {
+      "type": "text",
+      "id": "button_4_text",
+      "label": "Text",
+      "default": "About us"
+    },
+    {
+      "type": "url",
+      "id": "button_4_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Background color",
+      "default": "#ab061a"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background_color",
+      "label": "Hover background color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#ab061a"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Hover border color",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "min": 8,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "min": 16,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "button_spacing",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Space between buttons",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Horizontal button group"
+    }
+  ]
+}
 {% endschema %}
