@@ -79,10 +79,10 @@
         "column_alignment": "left",
         "background_style": "primary",
         "color_scheme": "",
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "main": {
@@ -124,56 +124,118 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_bmFdkU": {
-      "type": "multicolumn",
+    "rich_text_rTT9D3": {
+      "type": "rich-text",
       "blocks": {
-        "column_E76EhY": {
-          "type": "column",
+        "heading_qztdCb": {
+          "type": "heading",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "heading": "Shop Gifts By Price",
+            "heading_size": "h1"
           }
         },
-        "column_KRVpqf": {
-          "type": "column",
+        "text_zXetC7": {
+          "type": "text",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_CHedwA": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
+            "text": ""
           }
         }
       },
       "block_order": [
-        "column_E76EhY",
-        "column_KRVpqf",
-        "column_CHedwA"
+        "heading_qztdCb",
+        "text_zXetC7"
       ],
-      "name": "t:sections.multicolumn.presets.name",
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Button label",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "176849077808aabd16": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_4b7bdd4_jbAcAx": {
+          "type": "ai_gen_block_4b7bdd4",
+          "settings": {
+            "button_1_text": "Under £100",
+            "button_1_link": "https://www.lilyblanche.com/collections/valentines-day-gifts?sort_by=manual&filter.v.price.gte=&filter.v.price.lte=100",
+            "button_2_text": "Under £150",
+            "button_2_link": "https://www.lilyblanche.com/collections/valentines-day-gifts?sort_by=manual&filter.v.price.gte=&filter.v.price.lte=150",
+            "button_3_text": "Under £250",
+            "button_3_link": "https://www.lilyblanche.com/collections/valentines-day-gifts?sort_by=manual&filter.v.price.gte=&filter.v.price.lte=250",
+            "button_4_text": "Under £500",
+            "button_4_link": "",
+            "button_background_color": "#ab061a",
+            "button_text_color": "#ffffff",
+            "button_hover_background_color": "#121212",
+            "button_hover_text_color": "#ffffff",
+            "button_border_color": "#ab061a",
+            "button_hover_border_color": "#121212",
+            "button_border_width": 1,
+            "button_border_radius": 25,
+            "button_font_size": 16,
+            "button_font_weight": "500",
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_spacing": 16,
+            "section_padding": 40,
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_4b7bdd4_jbAcAx"
+      ],
+      "settings": {}
+    },
+    "image_with_text_cG8kJW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_MJrUK7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ready To Gift",
+            "heading_size": "h2"
+          }
+        },
+        "text_aXcmmG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each Lily Blanche order is lovingly prepared with care, arriving in a ribbon-tied gift box, a luxurious gift bag, and scented tissue paper.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_NnHBG6": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find Your Perfect Gift",
+            "button_link": "https://www.lilyblanche.com/collections/christmas-gifts",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MJrUK7",
+        "text_aXcmmG",
+        "button_NnHBG6"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_3.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -251,157 +313,56 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_egtwHG": {
-      "type": "multicolumn",
+    "rich_text_i3jy8m": {
+      "type": "rich-text",
       "blocks": {
-        "column_7yxiTV": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/blocks_for_Christmas_page_4.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "https://www.lilyblanche.com/collections/christmas-gifts"
-          }
-        },
-        "column_3r8TC3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/blocks_for_Christmas_page_5_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "https://www.lilyblanche.com/collections/photo-lockets"
-          }
-        },
-        "column_aa3K9U": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/blocks_for_Christmas_page_2_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": "https://www.lilyblanche.com/policies/refund-policy"
-          }
-        },
-        "column_zaYNx9": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/blocks_for_Christmas_page_1_1.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_7yxiTV",
-        "column_3r8TC3",
-        "column_aa3K9U",
-        "column_zaYNx9"
-      ],
-      "settings": {
-        "title": "Our Gifts To You",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_cG8kJW": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_MJrUK7": {
+        "heading_i9WJQQ": {
           "type": "heading",
           "settings": {
-            "heading": "Ready To Gift",
-            "heading_size": "h2"
+            "heading": "Your Purchases. Your Perspective.",
+            "heading_size": "h1"
           }
         },
-        "text_aXcmmG": {
+        "text_ybmimK": {
           "type": "text",
           "settings": {
-            "text": "<p>Each Lily Blanche order is lovingly prepared with care, arriving in a ribbon-tied gift box, a luxurious gift bag, and scented tissue paper— perfectly ready to place under the tree.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_NnHBG6": {
-          "type": "button",
-          "settings": {
-            "button_label": "Find Your Perfect Gift",
-            "button_link": "https://www.lilyblanche.com/collections/christmas-gifts",
-            "button_style_secondary": false
+            "text": "<p>Read our real reviews from our real customers.</p>"
           }
         }
       },
       "block_order": [
-        "heading_MJrUK7",
-        "text_aXcmmG",
-        "button_NnHBG6"
+        "heading_i9WJQQ",
+        "text_ybmimK"
       ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/Giftwrapped_lilyblanche_1.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
       }
     },
-    "138c49d2-7ccc-466a-a9a9-18275e1ed23b": {
-      "type": "newsletter",
+    "17684908123b8fb616": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1768491575052cb8b9": {
+      "type": "apps",
       "blocks": {
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "FROM INBOX TO JEWELLERY BOX",
-            "heading_size": "h2"
-          }
-        },
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-1": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Sign up for exclusive sales, private events, style tips and much more! </p><p>You can unsubscribe at any time. Please read our <a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">privacy policy</a>.</p>"
-          }
-        },
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-2": {
-          "type": "email_form",
+        "klaviyo_reviews_featured_reviews_carousel_gA3axj": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/featured-reviews-carousel/db20e365-d984-4ac4-9655-e1588d951ca9",
           "settings": {}
         }
       },
       "block_order": [
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-0",
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-1",
-        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-2"
-      ],
-      "custom_css": [
-        ".field__input,.select__select,.customer .field input,.customer select {background-color: #fff; color: #121212;}",
-        ".field__label,.field__button {color: #bbb;}",
-        ".field__input::-moz-selection {background: #d0d0d0;}",
-        ".field__input::selection {background: #d0d0d0;}"
+        "klaviyo_reviews_featured_reviews_carousel_gA3axj"
       ],
       "settings": {
-        "color_scheme": "accent-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "include_margins": true
       }
     },
     "a6a19d7e-1890-4758-b926-ca82274ab64b": {
@@ -421,11 +382,13 @@
     "multicolumn_xLqNN4",
     "main",
     "featured_collection_4JwYAL",
-    "multicolumn_bmFdkU",
-    "collapsible_content_Pyy6ct",
-    "multicolumn_egtwHG",
+    "rich_text_rTT9D3",
+    "176849077808aabd16",
     "image_with_text_cG8kJW",
-    "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
+    "collapsible_content_Pyy6ct",
+    "rich_text_i3jy8m",
+    "17684908123b8fb616",
+    "1768491575052cb8b9",
     "a6a19d7e-1890-4758-b926-ca82274ab64b"
   ]
 }
