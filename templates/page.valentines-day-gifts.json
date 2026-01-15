@@ -15,14 +15,14 @@
         "heading_MwhwBT": {
           "type": "heading",
           "settings": {
-            "heading": "The Christmas Gift Shop",
-            "heading_size": "h2"
+            "heading": "<strong>Valentines Day Jewellery Gifts</strong>",
+            "heading_size": "h0"
           }
         },
         "text_6nrYUW": {
           "type": "text",
           "settings": {
-            "text": "<p>Make this Christmas unforgettable with timeless, personalised jewellery that tells your story.</p>"
+            "text": "<p>This Valentine’s Day, choose timeless personalised jewellery that tells your love story. Meaningful, handcrafted pieces designed to be treasured forever.</p>"
           }
         }
       },
@@ -39,112 +39,47 @@
         "padding_bottom": 52
       }
     },
-    "multicolumn_BpAETR": {
+    "multicolumn_xLqNN4": {
       "type": "multicolumn",
       "blocks": {
-        "column_BfApLY": {
+        "column_FNmX3h": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/four_photo_heart_gold_sqaure.webp",
+            "image": "shopify://shop_images/VALENTINESDAY_GIFTS_2.png",
             "title": "",
             "text": "",
-            "link_label": "Christmas Gifts for Mum",
-            "link": "shopify://collections/christmas-gifts-for-mum"
+            "link_label": "",
+            "link": "https://www.lilyblanche.com/collections/valentines-day-gifts"
           }
         },
-        "column_UawhaY": {
+        "column_nQWdXW": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/gold_dog_tag_necklace_XL_square.webp",
+            "image": "shopify://shop_images/VALENTINESDAY_GIFTS_1.jpg",
             "title": "",
             "text": "",
-            "link_label": "Christmas Gift For Dad",
-            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-dad"
-          }
-        },
-        "column_CGy7Fp": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/silver_memory_keeper_locket_b9e7be05-378c-4ce5-8781-f250c1cad87c.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Christmas Gift For Wife",
-            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-wife"
-          }
-        },
-        "column_jFcqDF": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/round_photo_locket_gold_1_square.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Christmas Gift For Son",
-            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-son"
-          }
-        },
-        "column_iiVmgq": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/silver_engraveable_heart_necklace_1.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Stocking Fillers",
-            "link": "https://www.lilyblanche.com/collections/stocking-fillers"
-          }
-        },
-        "column_wnEVgz": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/gold_heart_necklace_square.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Christmas Gifts For Friends",
-            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-friend"
-          }
-        },
-        "column_hBebXU": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/gemstone_ring_ruby_gold_stack.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Christmas Gifts For Daughter",
-            "link": "https://www.lilyblanche.com/collections/christmas-gifts-for-daughter"
-          }
-        },
-        "column_bTi9Hw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/mens_st_christopher_gold_necklace1_1080.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "Christmas Gifts For Husband",
-            "link": "shopify://collections/christmas-gifts-for-husband"
+            "link_label": "",
+            "link": "https://www.lilyblanche.com/collections/mens-jewellery"
           }
         }
       },
       "block_order": [
-        "column_BfApLY",
-        "column_UawhaY",
-        "column_CGy7Fp",
-        "column_jFcqDF",
-        "column_iiVmgq",
-        "column_wnEVgz",
-        "column_hBebXU",
-        "column_bTi9Hw"
+        "column_FNmX3h",
+        "column_nQWdXW"
       ],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Shop Gift Guides",
-        "heading_size": "h2",
+        "title": "Gift Guides",
+        "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
-        "columns_desktop": 4,
+        "columns_desktop": 2,
         "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "background-2",
-        "columns_mobile": "2",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
@@ -152,6 +87,7 @@
     },
     "main": {
       "type": "main-page-readmore",
+      "disabled": true,
       "custom_css": [
         "h1.h0 {display: none;}"
       ],
@@ -188,69 +124,129 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_KCpheM": {
+    "multicolumn_bmFdkU": {
       "type": "multicolumn",
       "blocks": {
-        "column_d7jAtd": {
+        "column_E76EhY": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/diamond_letter_necklace_gold_mobile.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Ethical Diamond Jewellery",
-            "link": "https://www.lilyblanche.com/collections/ethical-diamond-jewellery-collections"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "column_4qDgxj": {
+        "column_KRVpqf": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/blue_topaz_locket_gold_sqaure.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Personalised Lockets",
-            "link": "https://www.lilyblanche.com/collections/personalised-lockets"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "column_rnUPqM": {
+        "column_CHedwA": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/st_christopher_silver_necklace_1.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Men's Jewellery",
-            "link": "https://www.lilyblanche.com/collections/mens-jewellery"
-          }
-        },
-        "column_eFij3w": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/gemstone_sapphire_ring_gold_2.webp",
-            "title": "",
-            "text": "",
-            "link_label": "Gemstone Jewellery",
-            "link": "https://www.lilyblanche.com/collections/gemstones"
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "column_d7jAtd",
-        "column_4qDgxj",
-        "column_rnUPqM",
-        "column_eFij3w"
+        "column_E76EhY",
+        "column_KRVpqf",
+        "column_CHedwA"
       ],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Shop By Category",
-        "heading_size": "h2",
+        "title": "Multicolumn",
+        "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "",
+        "button_label": "Button label",
         "button_link": "",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "column_alignment": "left",
-        "background_style": "none",
-        "color_scheme": "background-2",
-        "columns_mobile": "2",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_Pyy6ct": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_UJX8w7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Free jewellery care kit worth £20 with all orders",
+            "icon": "box",
+            "row_content": "<p>Our gift to you is a free jewellery care kit comprising a velvet storage pouch made for us in the USA and incorporating revolutionary anti-tarnish Intercept®technology in the form of patented polymars woven into the lining of the pouch.<br/></p><p>You will also receive a polish cloth made by Town Talk, the UK’s leading silver and goldware cleaning company, and a handy ring sizer to keep in your jewellery box as your ring size changes with time.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_knHtHN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Complimentary luxury gift wrap with all orders",
+            "icon": "heart",
+            "row_content": "<p>Add a rope-handled giftbag tied with grosgrain ribbon to create a luxurious gift made with love.</p><p>Add a gift message to your order. We’ll print it on a little card and can send direct to the recipient for hassle-free gifting.</p><p>Available free of charge with all orders.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BjR7nE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Free photo service with all lockets",
+            "icon": "price_tag",
+            "row_content": "<p>Bring your locket to life with our personalisation service. Add photos to your locket and engraving if applicable. Our photo service is <strong>free </strong>today. Normally from £15 to £25. Time-limited offer.<br/><br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WLGkBY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Free shipping on all orders over £95",
+            "icon": "truck",
+            "row_content": "<p>Get it fully tracked straight to your door with our secure free-shipping option.</p><p>We’ll send you tracking details so you can see where it is on its journey. Available free of charge on orders over £95</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Nayarw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Easy and hassle free returns",
+            "icon": "return",
+            "row_content": "<p>To access our returns service, we request that all goods are returned within 30 days of ordering, have not been worn, are not engraved, are not in the sale and have not been made bespoke. We cannot refund earrings or items of pierced jewellery for reasons of hygiene. <br/><br/></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_UJX8w7",
+        "collapsible_row_knHtHN",
+        "collapsible_row_BjR7nE",
+        "collapsible_row_WLGkBY",
+        "collapsible_row_Nayarw"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Why choose Lily Blanche",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "background-2",
+        "color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image": "shopify://shop_images/valentinesday_gifts_3.png",
+        "image_ratio": "small",
+        "desktop_layout": "image_second",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -422,10 +418,11 @@
   },
   "order": [
     "rich_text_Ky7MrJ",
-    "multicolumn_BpAETR",
+    "multicolumn_xLqNN4",
     "main",
     "featured_collection_4JwYAL",
-    "multicolumn_KCpheM",
+    "multicolumn_bmFdkU",
+    "collapsible_content_Pyy6ct",
     "multicolumn_egtwHG",
     "image_with_text_cG8kJW",
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
