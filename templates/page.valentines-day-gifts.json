@@ -39,6 +39,78 @@
         "padding_bottom": 52
       }
     },
+    "17688353718b7bbdef": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "multicolumn_zEHQyg": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_MnwLrB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/valentines_hearts.png",
+            "title": "",
+            "text": "",
+            "link_label": "Photo Lockets",
+            "link": "shopify://collections/photo-lockets"
+          }
+        },
+        "column_pmcCet": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/valentines_hearts_5.png",
+            "title": "",
+            "text": "",
+            "link_label": "Birthstone Jewellery",
+            "link": "shopify://collections/gemstone-jewellery"
+          }
+        },
+        "column_XtmKTN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/valentines_hearts_3.png",
+            "title": "",
+            "text": "",
+            "link_label": "Engraved Jewellery",
+            "link": "shopify://collections/emerald-pendants"
+          }
+        },
+        "column_Tf93EC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/valentines_hearts_4.png",
+            "title": "",
+            "text": "",
+            "link_label": "Diamond Jewellery",
+            "link": "shopify://collections/diamond-jewellery"
+          }
+        }
+      },
+      "block_order": [
+        "column_MnwLrB",
+        "column_pmcCet",
+        "column_XtmKTN",
+        "column_Tf93EC"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn_xLqNN4": {
       "type": "multicolumn",
       "blocks": {
@@ -379,6 +451,8 @@
   },
   "order": [
     "rich_text_Ky7MrJ",
+    "17688353718b7bbdef",
+    "multicolumn_zEHQyg",
     "multicolumn_xLqNN4",
     "main",
     "featured_collection_4JwYAL",
