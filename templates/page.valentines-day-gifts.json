@@ -111,6 +111,57 @@
         "padding_bottom": 36
       }
     },
+    "image_banner_qPQU3p": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_kVdAfJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Love For All</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_phEVKx": {
+          "type": "text",
+          "settings": {
+            "text": "Whether you are celebrating Valentines or Galenites we have gifts that your loved one(s) will treasure forever",
+            "text_style": "body"
+          }
+        },
+        "buttons_xVdyU6": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop For Her",
+            "button_link_1": "shopify://collections/valentines-day-gifts",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop For Him",
+            "button_link_2": "https://www.lilyblanche.com/collections/valentines-day-gifts?page=4",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kVdAfJ",
+        "text_phEVKx",
+        "buttons_xVdyU6"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "show_on_device": "all-devices",
+        "fetch_priority": false,
+        "image": "shopify://shop_images/valentines.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-427325f1-11e9-4cce-b099-dab5577997d6",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
     "multicolumn_xLqNN4": {
       "type": "multicolumn",
       "blocks": {
@@ -139,6 +190,7 @@
         "column_FNmX3h",
         "column_nQWdXW"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Gift Guides",
@@ -453,6 +505,7 @@
     "rich_text_Ky7MrJ",
     "17688353718b7bbdef",
     "multicolumn_zEHQyg",
+    "image_banner_qPQU3p",
     "multicolumn_xLqNN4",
     "main",
     "featured_collection_4JwYAL",
