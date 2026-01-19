@@ -1,6 +1,282 @@
+{% doc %}
+  @prompt
+    Create me 4 love heart shaped buttons that can have an image in them. the buttons must be layed out horizontally , make the hearts large so that they can be seen , make the actual size of the heart 10x bigger
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-heart-buttons-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+  }
+
+  .ai-heart-buttons-container-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: {{ block.settings.button_spacing }}px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .ai-heart-button-{{ ai_gen_id }} {
+    position: relative;
+    width: {{ block.settings.button_size }}px;
+    height: {{ block.settings.button_size }}px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .ai-heart-button-{{ ai_gen_id }}:hover {
+    transform: scale(1.1);
+  }
+
+  .ai-heart-button-{{ ai_gen_id }}:focus {
+    outline: 2px solid {{ block.settings.border_color }};
+    outline-offset: 4px;
+  }
+
+  .ai-heart-shape-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: path('M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z');
+    background-color: {{ block.settings.heart_color }};
+    border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+  }
+
+  .ai-heart-image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    clip-path: path('M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z');
+  }
+
+  .ai-heart-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-heart-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .ai-heart-placeholder-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+    opacity: 0.3;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-heart-button-{{ ai_gen_id }} {
+      width: {{ block.settings.button_size | times: 0.8 }}px;
+      height: {{ block.settings.button_size | times: 0.8 }}px;
+    }
+
+    .ai-heart-buttons-container-{{ ai_gen_id }} {
+      gap: {{ block.settings.button_spacing | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<heart-buttons-{{ ai_gen_id }} class="ai-heart-buttons-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-heart-buttons-container-{{ ai_gen_id }}">
+    {% for i in (1..4) %}
+      {% liquid
+        assign image_key = 'heart_image_' | append: i
+        assign link_key = 'heart_link_' | append: i
+        assign heart_image = block.settings[image_key]
+        assign heart_link = block.settings[link_key]
+      %}
+
+      <a
+        href="{{ heart_link }}"
+        class="ai-heart-button-{{ ai_gen_id }}"
+        aria-label="Heart button {{ i }}"
+      >
+        <div class="ai-heart-shape-{{ ai_gen_id }}"></div>
+        <div class="ai-heart-image-{{ ai_gen_id }}">
+          {% if heart_image %}
+            <img
+              src="{{ heart_image | image_url: width: 400 }}"
+              alt="{{ heart_image.alt | escape }}"
+              loading="lazy"
+              width="400"
+              height="400"
+            >
+          {% else %}
+            <div class="ai-heart-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</heart-buttons-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class HeartButtons{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.buttons = this.querySelectorAll('.ai-heart-button-{{ ai_gen_id }}');
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.buttons.forEach((button) => {
+          button.addEventListener('click', (e) => {
+            const href = button.getAttribute('href');
+            if (!href || href === '' || href === '#') {
+              e.preventDefault();
+            }
+          });
+        });
+      }
+    }
+
+    customElements.define('heart-buttons-{{ ai_gen_id }}', HeartButtons{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Heart buttons",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "range",
+      "id": "button_size",
+      "min": 200,
+      "max": 800,
+      "step": 20,
+      "unit": "px",
+      "label": "Button size",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "button_spacing",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Spacing between buttons",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "heart_color",
+      "label": "Heart background color",
+      "default": "#ab061a"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 3
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Heart 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "heart_image_1",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "heart_link_1",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Heart 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "heart_image_2",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "heart_link_2",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Heart 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "heart_image_3",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "heart_link_3",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Heart 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "heart_image_4",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "heart_link_4",
+      "label": "Link"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Heart buttons"
+    }
+  ]
+}
 {% endschema %}
