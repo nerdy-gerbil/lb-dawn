@@ -188,7 +188,7 @@ a#HeaderDrawer-valentines-day
 }
 
 [id^='shopify-section-template--'][id*='__ss_shoppable_video_'] {
-  [class^='video-slider-template--']:not(.swiper.swiper-initialized) {
+  [class^='video-slider-template--']:not(.swiper.swiper-container-initialized) {
     display: none;
   }
 
@@ -368,7 +368,7 @@ html:not(.hydrated) {
   klarna-placement,
   square-placement,
   .custom-section.product-video,
-  /* .shopify-section:has([class^='video-slider-template--']), */
+  .shopify-section:has([class^='video-slider-template--']),
   .shopify-section-group-footer-group:not(:has([class^='instafeed-slider-sections--'])),
   div[id^='shopify-section-template--'][id$='__product-grid'] ~ section {
     display: none !important;
