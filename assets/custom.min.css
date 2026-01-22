@@ -188,7 +188,7 @@ a#HeaderDrawer-valentines-day
 }
 
 [id^='shopify-section-template--'][id*='__ss_shoppable_video_'] {
-  [class^='video-slider-template--']:not(.swiper.swiper-container-initialized) {
+  [class^='video-slider-template--']:not(.swiper.swiper-initialized) {
     display: none;
   }
 
