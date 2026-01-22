@@ -187,7 +187,7 @@ a#HeaderDrawer-valentines-day
   }
 }
 
-/* [id^='shopify-section-template--'][id*='__ss_shoppable_video_'] {
+[id^='shopify-section-template--'][id*='__ss_shoppable_video_'] {
   [class^='video-slider-template--']:not(.swiper.swiper-initialized) {
     display: none;
   }
@@ -205,19 +205,19 @@ a#HeaderDrawer-valentines-day
       height: auto;
     }
   }
-} */
+}
 
 variant-selects {
   min-height: 73px;
 }
 
-/* @media screen and (max-width: 749px) {
+@media screen and (max-width: 749px) {
   [id^='shopify-section-template--'][id*='__ss_shoppable_video_'] {
     [class^='video-slide-template--'] {
       width: unset !important;
     }
   }
-} */
+}
 
 @media screen and (min-width: 750px) {
   .product-media-container {
@@ -243,7 +243,7 @@ variant-selects {
     min-height: 300px;
   }
 
-  /* [id^='shopify-section-template--'][id*='__ss_shoppable_video_'] {
+  [id^='shopify-section-template--'][id*='__ss_shoppable_video_'] {
     [class^='video-slide-template--'] {
       margin: 0 22px 0 0;
 
@@ -255,7 +255,7 @@ variant-selects {
         min-height: 54px;
       }
     }
-  } */
+  }
 }
 
 /* PDP Tabs loading issues fix */
