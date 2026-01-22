@@ -188,7 +188,7 @@ a#HeaderDrawer-valentines-day
 }
 
 [id^='shopify-section-template--'][id*='__ss_shoppable_video_'] {
-  [class^='video-slider-template--']:not(.swiper.swiper-initialized) {
+  [class^='video-slider-template--']:not(.swiper.swiper-container-initialized) {
     display: none;
   }
 
@@ -246,6 +246,7 @@ variant-selects {
   [id^='shopify-section-template--'][id*='__ss_shoppable_video_'] {
     [class^='video-slide-template--'] {
       margin: 0 22px 0 0;
+      width: 18.6% !important;
 
       [class^='video-top-template--'] {
         max-height: 53vw;
