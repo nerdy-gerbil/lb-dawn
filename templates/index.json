@@ -42,7 +42,7 @@
           "type": "button",
           "settings": {
             "button": "SHOP VALENTINE'S",
-            "button_url": "shopify://collections/jewellery",
+            "button_url": "shopify://collections/valentines-day-gifts",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
