@@ -84,6 +84,7 @@
       "blocks": {
         "custom_liquid_TNFQ6a": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "position": 2,
             "custom_liquid": "<div class=\"klaviyo-form-RSNG4W\"></div>",
