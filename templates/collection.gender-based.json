@@ -81,6 +81,19 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "blocks": {
+        "custom_liquid_TNFQ6a": {
+          "type": "custom_liquid",
+          "settings": {
+            "position": 2,
+            "custom_liquid": "<div class=\"klaviyo-form-RSNG4W\"></div>",
+            "background_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_TNFQ6a"
+      ],
       "custom_css": [
         ".rating-star:before {background: linear-gradient( 90deg, #fec602 calc(100%), rgba(18, 18, 18, 0.15) calc(100%) ); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}",
         ".card-information .price {font-size: 12px !important;}"
@@ -101,7 +114,8 @@
         "filter_type": "vertical",
         "enable_sorting": true,
         "padding_top": 16,
-        "padding_bottom": 16
+        "padding_bottom": 16,
+        "app_block_pos": 5
       }
     },
     "rich_text_RbjLXr": {
