@@ -55,13 +55,6 @@
     "ss_instafeed_2_zirfHp": {
       "type": "ss-instafeed-2",
       "blocks": {
-        "slide_mMGngx": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/buy_women_built.png",
-            "url": "https://buywomenbuilt.com/"
-          }
-        },
         "slide_gcJaCq": {
           "type": "slide",
           "settings": {
@@ -90,6 +83,13 @@
             "url": ""
           }
         },
+        "slide_mMGngx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/buy_women_built.png",
+            "url": "https://buywomenbuilt.com/"
+          }
+        },
         "slide_d4eXQA": {
           "type": "slide",
           "settings": {
@@ -113,11 +113,11 @@
         }
       },
       "block_order": [
-        "slide_mMGngx",
         "slide_gcJaCq",
         "slide_WJiHjR",
         "slide_yVQ6Af",
         "slide_VGbwPt",
+        "slide_mMGngx",
         "slide_d4eXQA",
         "slide_dnQ3VC",
         "slide_pMVB4H"
