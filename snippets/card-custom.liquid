@@ -1,0 +1,104 @@
+{% comment %}
+    Renders a custom card with optional image, text, and button.
+    Accepts:
+    - block: {Object} Block object containing settings.
+{% endcomment %}
+
+<div class="card-wrapper product-card-wrapper card-custom-wrapper">
+  <div class="card card--{{ settings.card_style }} 
+    {% if block.settings.image != blank %} card--media{% else %} card--text{% endif %}
+    {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+    "
+    style="background-color: {{ block.settings.background_color }}; --ratio-percent: 100%;"
+  >
+    <div class="card__inner ratio" style="--ratio-percent: 100%;">
+        {%- if block.settings.image != blank -%}
+            <div class="card__media">
+                <div class="media media--transparent media--hover-effect">
+                    <img
+                        srcset="{{ block.settings.image | image_url: width: 165 }} 165w,
+                                {{ block.settings.image | image_url: width: 360 }} 360w,
+                                {{ block.settings.image | image_url: width: 533 }} 533w,
+                                {{ block.settings.image | image_url: width: 720 }} 720w,
+                                {{ block.settings.image | image_url: width: 940 }} 940w"
+                        src="{{ block.settings.image | image_url: width: 533 }}"
+                        sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                        alt="{{ block.settings.image.alt | escape }}"
+                        class="motion-reduce"
+                        loading="lazy"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                    >
+                </div>
+            </div>
+        {%- endif -%}
+        
+        <div class="card__content card__content--custom">
+            <div class="card__information">
+                {%- if block.settings.heading != blank -%}
+                    <h3 class="card__heading h5">{{ block.settings.heading | escape }}</h3>
+                {%- endif -%}
+                
+                {%- if block.settings.text != blank -%}
+                    <div class="rte">{{ block.settings.text }}</div>
+                {%- endif -%}
+
+                <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets">
+                    {%- for i in (1..5) -%}
+                        {%- assign icon_key = 'icon_' | append: i -%}
+                        {%- assign text_key = 'text_' | append: i -%}
+                        {%- assign icon = block.settings[icon_key] -%}
+                        {%- assign text = block.settings[text_key] -%}
+                        
+                        {%- if text != blank -%}
+                        <li class="icon-with-text__item">
+                            {% render 'icon-accordion', icon: icon %}
+                            <span class="h4 inline-richtext">{{ text }}</span>
+                        </li>
+                        {%- endif -%}
+                    {%- endfor -%}
+                </ul>
+
+                {%- if block.settings.button_label != blank -%}
+                    <a href="{{ block.settings.button_link }}" class="button button--primary full-width color-{{ block.settings.button_color_scheme }}">
+                        {{ block.settings.button_label | escape }}
+                    </a>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+    <div class="card__content card__content--custom visible-on-hover">
+         <div class="card__information">
+             {%- if block.settings.heading != blank -%}
+                 <h3 class="card__heading h5">{{ block.settings.heading | escape }}</h3>
+             {%- endif -%}
+                
+                {%- if block.settings.text != blank -%}
+                    <div class="rte">{{ block.settings.text }}</div>
+                {%- endif -%}
+
+                <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets">
+                    {%- for i in (1..5) -%}
+                        {%- assign icon_key = 'icon_' | append: i -%}
+                        {%- assign text_key = 'text_' | append: i -%}
+                        {%- assign icon = block.settings[icon_key] -%}
+                        {%- assign text = block.settings[text_key] -%}
+                        
+                        {%- if text != blank -%}
+                        <li class="icon-with-text__item">
+                            {% render 'icon-accordion', icon: icon %}
+                            <span class="h4 inline-richtext">{{ text }}</span>
+                        </li>
+                        {%- endif -%}
+                    {%- endfor -%}
+                </ul>
+
+                {%- if block.settings.button_label != blank -%}
+                    <a href="{{ block.settings.button_link }}" class="button button--primary full-width color-{{ block.settings.button_color_scheme }}">
+                        {{ block.settings.button_label | escape }}
+                    </a>
+                {%- endif -%}
+         </div>
+    </div>
+  </div>
+</div>

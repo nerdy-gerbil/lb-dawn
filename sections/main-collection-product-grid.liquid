@@ -152,17 +152,77 @@
                 {% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %}
               "
             >
+
               {% assign skip_card_product_styles = false %}
+              {%- assign grid_index = 1 -%}
               {%- for product in collection.products -%}
+              {%- for block in section.blocks -%}
+                  {%- assign block_position = block.settings.position | default: 0 -%}
+                  {%- if block_position == grid_index and block.type != '@app' -%}
+                    <li
+                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ grid_index }};"
+                      {% endif %}
+                    >
+                      {%- if block.type == 'custom_card' -%}
+                        {% render 'card-custom', block: block %}
+                      {%- elsif block.type == 'custom_liquid' -%}
+                         <div class="card-wrapper product-card-wrapper card-custom-wrapper">
+                            <div class="card card--{{ settings.card_style }} card--text
+                                {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}"
+                                style="background-color: {{ block.settings.background_color }}; --ratio-percent: 100%;">
+                                <div class="card__inner ratio" style="--ratio-percent: 100%;">
+                                    <div class="card__content card__content--custom">
+                                        {{ block.settings.custom_liquid }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      {%- endif -%}
+                    </li>
+                    {%- assign grid_index = grid_index | plus: 1 -%}
+                  {%- endif -%}
+                {%- endfor -%}
+
+                {%- if grid_index == section.settings.app_block_pos -%}
+                    {%- for block in section.blocks -%}
+                        {%- if block.type == '@app' -%}
+                            <li
+                                class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                                {% if settings.animations_reveal_on_scroll %}
+                                    data-cascade
+                                    style="--animation-order: {{ grid_index }};"
+                                {% endif %}
+                            >
+                                <div class="card-wrapper product-card-wrapper card-custom-wrapper">
+                                    <div class="card card--{{ settings.card_style }} card--text
+                                        {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}"
+                                        style="--ratio-percent: 100%;">
+                                        <div class="card__inner ratio" style="--ratio-percent: 100%;">
+                                            <div class="card__content card__content--custom">
+                                                {% render block %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            {%- assign grid_index = grid_index | plus: 1 -%}
+                            {%- break -%}
+                        {%- endif -%}
+                    {%- endfor -%}
+                {%- endif -%}
+
                 {% assign lazy_load = false %}
-                {%- if forloop.index > 2 -%}
+                {%- if grid_index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li
                   class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
-                    style="--animation-order: {{ forloop.index }};"
+                    style="--animation-order: {{ grid_index }};"
                   {% endif %}
                 >
                   {% render 'card-product',
@@ -180,7 +240,9 @@
                   %}
                 </li>
                 {%- assign skip_card_product_styles = true -%}
+                {%- assign grid_index = grid_index | plus: 1 -%}
               {%- endfor -%}
+
             </ul>
 
             {%- if paginate.pages > 1 -%}
@@ -414,6 +476,221 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "number",
+      "id": "app_block_pos",
+      "label": "App Block Grid Position",
+      "default": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "custom_card",
+      "name": "Custom Card",
+      "settings": [
+        {
+          "type": "number",
+          "id": "position",
+          "label": "Grid Position (1-based)",
+          "default": 1
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card Image"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Feature"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Bullet Point 1"
+        },
+        {
+          "type": "select",
+          "id": "icon_1",
+          "label": "Icon",
+          "options": [
+            { "value": "checkmark", "label": "Checkmark" },
+            { "value": "star", "label": "Star" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "lock", "label": "Lock" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "price-tag", "label": "Price Tag" },
+            { "value": "question-mark", "label": "Question Mark" },
+            { "value": "none", "label": "None" }
+          ],
+          "default": "checkmark"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_1",
+          "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Bullet Point 2"
+        },
+        {
+          "type": "select",
+          "id": "icon_2",
+          "label": "Icon",
+          "options": [
+            { "value": "checkmark", "label": "Checkmark" },
+            { "value": "star", "label": "Star" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "lock", "label": "Lock" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "price-tag", "label": "Price Tag" },
+            { "value": "question-mark", "label": "Question Mark" },
+            { "value": "none", "label": "None" }
+          ],
+          "default": "checkmark"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_2",
+          "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Bullet Point 3"
+        },
+        {
+          "type": "select",
+          "id": "icon_3",
+          "label": "Icon",
+          "options": [
+            { "value": "checkmark", "label": "Checkmark" },
+            { "value": "star", "label": "Star" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "lock", "label": "Lock" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "price-tag", "label": "Price Tag" },
+            { "value": "question-mark", "label": "Question Mark" },
+            { "value": "none", "label": "None" }
+          ],
+          "default": "checkmark"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_3",
+          "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Bullet Point 4"
+        },
+        {
+          "type": "select",
+          "id": "icon_4",
+          "label": "Icon",
+          "options": [
+            { "value": "checkmark", "label": "Checkmark" },
+            { "value": "star", "label": "Star" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "lock", "label": "Lock" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "price-tag", "label": "Price Tag" },
+            { "value": "question-mark", "label": "Question Mark" },
+            { "value": "none", "label": "None" }
+          ],
+          "default": "checkmark"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_4",
+          "label": "Text"
+        },
+        {
+          "type": "header",
+          "content": "Bullet Point 5"
+        },
+        {
+          "type": "select",
+          "id": "icon_5",
+          "label": "Icon",
+          "options": [
+            { "value": "checkmark", "label": "Checkmark" },
+            { "value": "star", "label": "Star" },
+            { "value": "heart", "label": "Heart" },
+            { "value": "leaf", "label": "Leaf" },
+            { "value": "lock", "label": "Lock" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "price-tag", "label": "Price Tag" },
+            { "value": "question-mark", "label": "Question Mark" },
+            { "value": "none", "label": "None" }
+          ],
+          "default": "checkmark"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text_5",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
+          "type": "color_scheme",
+          "id": "button_color_scheme",
+          "label": "Button Color Scheme",
+          "default": "scheme-1"
+        }
+      ]
+    },
+    {
+      "type": "custom_liquid",
+      "name": "Custom Liquid",
+      "settings": [
+        {
+          "type": "number",
+          "id": "position",
+          "label": "Grid Position (1-based)",
+          "default": 3
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom Liquid",
+          "info": "Add app snippets or other custom code here. The code will be wrapped in a card."
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        }
+      ]
+    },
+    {
+      "type": "@app"
     }
   ]
 }

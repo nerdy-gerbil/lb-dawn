@@ -401,3 +401,67 @@ html:not(.hydrated) {
 .shopify-pc__banner__dialog p {
     text-align: justify;
 }
+
+/* Custom Product Grid Cards */
+.card-custom-wrapper .card--text .card__inner,
+.card-newsletter-wrapper .card--text .card__inner {
+  align-items: center; 
+}
+
+.card__content--custom,
+.card__content--newsletter {
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__content--newsletter {
+  align-items: center;
+  text-align: center;
+}
+
+.custom-card-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.custom-card-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem; 
+}
+
+.custom-card-bullets .icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.card-newsletter-wrapper .newsletter-form {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.card-newsletter-wrapper .field {
+  flex-direction: row; 
+}
+
+.card-newsletter-wrapper .field__input {
+  box-shadow: none;
+  border-bottom: 1px solid currentColor; 
+}
+
+@media screen and (min-width: 750px) {
+  .card__content--custom,
+  .card__content--newsletter {
+     padding: 2rem;
+  }
+}
