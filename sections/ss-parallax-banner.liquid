@@ -144,9 +144,16 @@
     object-position: {{ position_x_mobile }}% {{ position_y_mobile }}%;
   }
 
-  .banner-image-desktop-{{ section.id }},
-  .banner-image-desktop-{{ section.id }} img {
+  .banner-image-desktop-{{ section.id }} {
     display: none;
+  }
+
+  .banner-image-desktop-{{ section.id }},
+  .banner-image-mobile-{{ section.id }} img {
+    object-position: {{ position_x_mobile }}% {{ position_y_mobile }}%;
+  }
+
+  .banner-image-desktop-{{ section.id }} img {
     object-position: {{ position_x_desktop }}% {{ position_y_desktop }}%;
   }
 
