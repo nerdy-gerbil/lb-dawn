@@ -15,7 +15,7 @@
         "heading_BRbmXE": {
           "type": "heading",
           "settings": {
-            "heading": "<p><strong>LUXURY JEWELS<br/><br/></strong></p>",
+            "heading": "<p><strong>VALENTINE'S GIFTS<br/></strong></p>",
             "heading_custom": false,
             "heading_font": "system_ui_n4",
             "heading_size": 34,
@@ -28,7 +28,7 @@
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "<p><em><strong>for everday wear</strong></em></p>",
+            "text": "<p><em><strong>they'll really love</strong></em></p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
             "text_size": 36,
