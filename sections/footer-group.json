@@ -55,6 +55,13 @@
     "ss_instafeed_2_zirfHp": {
       "type": "ss-instafeed-2",
       "blocks": {
+        "slide_mMGngx": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/buy_women_built.png",
+            "url": "https://buywomenbuilt.com/"
+          }
+        },
         "slide_gcJaCq": {
           "type": "slide",
           "settings": {
@@ -106,6 +113,7 @@
         }
       },
       "block_order": [
+        "slide_mMGngx",
         "slide_gcJaCq",
         "slide_WJiHjR",
         "slide_yVQ6Af",
