@@ -580,7 +580,7 @@
           "settings": {
             "button_label_1": "Shop Men's",
             "button_link_1": "shopify://pages/the-christmas-gift-guide-2025-personalised-jewellery-for-men-and-women",
-            "button_style_secondary_1": false,
+            "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
