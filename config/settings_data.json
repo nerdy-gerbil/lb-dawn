@@ -194,7 +194,7 @@
         "disabled": false,
         "settings": {
           "css_selector": "#product-faq",
-          "custom_css": ".faq-heading-title {\ndisplay:none;\n}\n.faq-container {\npadding: 0 !important;\n}\n.s-main-faq__main {\nmin-width: unset !important;\nmargin: 2rem 0 0 !important;\n}\n.faq-article-header {\nbackground-color: #e6dfd7 !important;\n}"
+          "custom_css": ".faq-heading-title {\ndisplay:none;\n}\n.faq-container {\npadding: 0 !important;\n}\n.s-main-faq__main {\nmin-width: unset !important;\nmargin: 2rem 0 0 !important;\n}\n.faq-article-header {\nbackground-color: #D8C6A3 !important;\n}"
         }
       },
       "2950567246721570496": {
@@ -255,11 +255,11 @@
       },
       "background-2": {
         "settings": {
-          "background": "#e6dfd7",
+          "background": "#D8C6A3",
           "background_gradient": "",
           "text": "#121212",
           "button": "#121212",
-          "button_label": "#e6dfd7",
+          "button_label": "#D8C6A3",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
