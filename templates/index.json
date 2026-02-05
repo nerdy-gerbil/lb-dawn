@@ -602,7 +602,7 @@
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
-        "color_scheme": "accent-1",
+        "color_scheme": "background-2",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
