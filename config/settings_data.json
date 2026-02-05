@@ -230,7 +230,7 @@
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": true,
         "settings": {
-          "button_color": "#6a2c32",
+          "button_color": "#5F2B3A",
           "secondary_color": "#ffffff",
           "ternary_color": "#6a6a6a",
           "button_icon": "chat_bubble",
@@ -247,7 +247,7 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#121212",
-          "button": "#6a2c32",
+          "button": "#5F2B3A",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
@@ -277,11 +277,11 @@
       },
       "accent-1": {
         "settings": {
-          "background": "#6a2c32",
+          "background": "#5F2B3A",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#6a2c32",
+          "button_label": "#5F2B3A",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
@@ -324,7 +324,7 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#6a2c32",
+          "button": "#5F2B3A",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",
           "shadow": "#121212"
