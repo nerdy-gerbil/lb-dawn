@@ -4,16 +4,97 @@
     - block: {Object} Block object containing settings.
 {% endcomment %}
 
+<style>
+  .card-custom-wrapper .card--text .card__inner {
+    align-items: center; 
+  }
+
+  .card__content--custom {
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .custom-card-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+  }
+
+  .custom-card-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.3rem; 
+  }
+
+  .custom-card-bullets .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+    color: currentColor;
+  }
+
+  @media screen and (min-width: 750px) {
+    .card__content--custom {
+      padding: 2rem;
+    }
+  }
+
+  .card-media--fit,
+  .card-media--cover {
+    height: 100%;
+  }
+
+  .card-media--fit img,
+  .card-media--cover img {
+    height: 100%;
+  }
+
+  .card-media--fit img {
+    object-fit: contain !important;
+  }
+
+  .card-media--cover img {
+    object-fit: cover !important;
+  }
+
+  .card__content--custom .card__information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+</style>
+
 <div class="card-wrapper product-card-wrapper card-custom-wrapper">
+  {%- liquid
+    assign ratio = 1
+    if block.settings.image_ratio == 'portrait'
+      assign ratio = 0.8
+    elsif block.settings.image_ratio == 'adapt' and block.settings.image
+      assign ratio = block.settings.image.aspect_ratio
+    elsif block.settings.image_ratio == 'fit' or block.settings.image_ratio == 'cover'
+      assign ratio = 'full'
+    endif
+    if ratio == 0 or ratio == null
+      assign ratio = 1
+    endif
+  -%}
   <div class="card card--{{ settings.card_style }} 
     {% if block.settings.image != blank %} card--media{% else %} card--text{% endif %}
     {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+    {% if block.settings.image_shape and block.settings.image_shape != 'default' %} card--shape{% endif %}
     "
-    style="background-color: {{ block.settings.background_color }}; --ratio-percent: 100%;"
+    style="background-color: {{ block.settings.background_color }}; {% if ratio != 'full' %}--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;{% endif %}"
   >
-    <div class="card__inner ratio" style="--ratio-percent: 100%;">
+    <div class="card__inner {% if ratio != 'full' %}ratio{% endif %}" style="{% if ratio != 'full' %}--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;{% else %}height: 100%;{% endif %}">
         {%- if block.settings.image != blank -%}
-            <div class="card__media">
+            <div class="card__media{% if block.settings.image_shape and block.settings.image_shape != 'default' %} shape--{{ block.settings.image_shape }}{% endif %}{% if block.settings.image_ratio == 'fit' %} card-media--fit{% elsif block.settings.image_ratio == 'cover' %} card-media--cover{% endif %}">
                 <div class="media media--transparent media--hover-effect">
                     <img
                         srcset="{{ block.settings.image | image_url: width: 165 }} 165w,
@@ -28,6 +109,7 @@
                         loading="lazy"
                         width="{{ block.settings.image.width }}"
                         height="{{ block.settings.image.height }}"
+                        style="object-position: {{ block.settings.image_horizontal_alignment }} {{ block.settings.image_vertical_alignment }};"
                     >
                 </div>
             </div>
@@ -60,7 +142,20 @@
                 </ul>
 
                 {%- if block.settings.button_label != blank -%}
-                    <a href="{{ block.settings.button_link }}" class="button button--primary full-width color-{{ block.settings.button_color_scheme }}">
+                    {%- liquid
+                        assign btn_style = ''
+                        assign btn_class = 'button button--primary color-' | append: block.settings.button_color_scheme
+                        if block.settings.button_horizontal_alignment == 'full'
+                            assign btn_class = btn_class | append: ' full-width'
+                        elsif block.settings.button_horizontal_alignment == 'left'
+                            assign btn_style = 'align-self: flex-start; width: fit-content;'
+                        elsif block.settings.button_horizontal_alignment == 'center'
+                            assign btn_style = 'align-self: center; width: fit-content;'
+                        elsif block.settings.button_horizontal_alignment == 'right'
+                            assign btn_style = 'align-self: flex-end; width: fit-content;'
+                        endif
+                    -%}
+                    <a href="{{ block.settings.button_link }}" class="{{ btn_class }}" style="{{ btn_style }}">
                         {{ block.settings.button_label | escape }}
                     </a>
                 {%- endif -%}
@@ -94,7 +189,20 @@
                 </ul>
 
                 {%- if block.settings.button_label != blank -%}
-                    <a href="{{ block.settings.button_link }}" class="button button--primary full-width color-{{ block.settings.button_color_scheme }}">
+                    {%- liquid
+                        assign btn_style = ''
+                        assign btn_class = 'button button--primary color-' | append: block.settings.button_color_scheme
+                        if block.settings.button_horizontal_alignment == 'full'
+                            assign btn_class = btn_class | append: ' full-width'
+                        elsif block.settings.button_horizontal_alignment == 'left'
+                            assign btn_style = 'align-self: flex-start; width: fit-content;'
+                        elsif block.settings.button_horizontal_alignment == 'center'
+                            assign btn_style = 'align-self: center; width: fit-content;'
+                        elsif block.settings.button_horizontal_alignment == 'right'
+                            assign btn_style = 'align-self: flex-end; width: fit-content;'
+                        endif
+                    -%}
+                    <a href="{{ block.settings.button_link }}" class="{{ btn_class }}" style="{{ btn_style }}">
                         {{ block.settings.button_label | escape }}
                     </a>
                 {%- endif -%}
