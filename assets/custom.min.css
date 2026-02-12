@@ -403,13 +403,11 @@ html:not(.hydrated) {
 }
 
 /* Custom Product Grid Cards */
-.card-custom-wrapper .card--text .card__inner,
-.card-newsletter-wrapper .card--text .card__inner {
+.card-custom-wrapper .card--text .card__inner {
   align-items: center; 
 }
 
-.card__content--custom,
-.card__content--newsletter {
+.card__content--custom {
   padding: 1.5rem;
   width: 100%;
   height: 100%;
@@ -418,10 +416,7 @@ html:not(.hydrated) {
   justify-content: center;
 }
 
-.card__content--newsletter {
-  align-items: center;
-  text-align: center;
-}
+
 
 .custom-card-bullets {
   list-style: none;
@@ -445,23 +440,10 @@ html:not(.hydrated) {
   color: currentColor;
 }
 
-.card-newsletter-wrapper .newsletter-form {
-  width: 100%;
-  margin-top: 1rem;
-}
 
-.card-newsletter-wrapper .field {
-  flex-direction: row; 
-}
-
-.card-newsletter-wrapper .field__input {
-  box-shadow: none;
-  border-bottom: 1px solid currentColor; 
-}
 
 @media screen and (min-width: 750px) {
-  .card__content--custom,
-  .card__content--newsletter {
+  .card__content--custom {
      padding: 2rem;
   }
 }
