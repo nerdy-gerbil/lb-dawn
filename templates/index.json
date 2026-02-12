@@ -507,9 +507,9 @@
         "template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-0": {
           "type": "collapsible_row",
           "settings": {
-            "heading": " Free UK Delivery On Orders Over £95",
+            "heading": " Free UK Delivery On Orders Over £125",
             "icon": "truck",
-            "row_content": "<p>Get it fully tracked straight to your door with our secure free-shipping option. </p><p>We’ll send you tracking details so you can see where it is on its journey. Available free of charge on orders over £95</p>",
+            "row_content": "<p>Get it fully tracked straight to your door with our secure free-shipping option. </p><p>We’ll send you tracking details so you can see where it is on its journey. Available free of charge on orders over £125</p>",
             "page": ""
           }
         }
