@@ -30,6 +30,39 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "blocks": {
+        "klaviyo_trigger_Vwjepr": {
+          "type": "klaviyo_trigger",
+          "settings": {
+            "position": 1,
+            "image": "shopify://shop_images/Lily_Blanche_merchandising_block.png",
+            "image_ratio": "adapt",
+            "image_shape": "default",
+            "image_horizontal_alignment": "center",
+            "image_vertical_alignment": "center",
+            "background_color": "#ffffff",
+            "heading": "Feature",
+            "text": "",
+            "icon_1": "checkmark",
+            "text_1": "",
+            "icon_2": "checkmark",
+            "text_2": "",
+            "icon_3": "checkmark",
+            "text_3": "",
+            "icon_4": "checkmark",
+            "text_4": "",
+            "icon_5": "checkmark",
+            "text_5": "",
+            "button_label": "test",
+            "klaviyo_form_id": "",
+            "button_color_scheme": "scheme-1",
+            "button_horizontal_alignment": "full"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_trigger_Vwjepr"
+      ],
       "custom_css": [
         ".rating-star:before {background: linear-gradient( 90deg, #fec602 calc(100%), rgba(18, 18, 18, 0.15) calc(100%) ); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}",
         ".card-information .price {font-size: 12px !important;}"
