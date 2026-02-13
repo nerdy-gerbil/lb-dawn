@@ -41,7 +41,7 @@
             "image_horizontal_alignment": "center",
             "image_vertical_alignment": "center",
             "background_color": "#ffffff",
-            "heading": "Feature",
+            "heading": "",
             "text": "",
             "icon_1": "checkmark",
             "text_1": "",
@@ -53,7 +53,7 @@
             "text_4": "",
             "icon_5": "checkmark",
             "text_5": "",
-            "button_label": "test",
+            "button_label": "Get 10% Off Now",
             "klaviyo_form_id": "",
             "button_color_scheme": "scheme-1",
             "button_horizontal_alignment": "full"
