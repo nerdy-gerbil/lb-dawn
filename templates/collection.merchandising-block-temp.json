@@ -34,7 +34,7 @@
         "klaviyo_trigger_Vwjepr": {
           "type": "klaviyo_trigger",
           "settings": {
-            "position": 1,
+            "position": 4,
             "image": "shopify://shop_images/Lily_Blanche_merchandising_block.png",
             "image_ratio": "adapt",
             "image_shape": "default",
