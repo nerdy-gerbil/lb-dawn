@@ -84,7 +84,7 @@
         "position_x_mobile": 55,
         "position_y_mobile": 50,
         "banner_height": "adapt_first",
-        "banner_height_mobile": "adapt_first",
+        "banner_height_mobile": "auto_height",
         "banner_fixed_height": 100,
         "banner_fixed_height_mobile": 70,
         "image": "shopify://shop_images/solid_whitegold_initials_large_desktop.webp",
