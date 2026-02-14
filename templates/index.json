@@ -15,7 +15,7 @@
         "heading_BRbmXE": {
           "type": "heading",
           "settings": {
-            "heading": "<p><strong>For 15% Off Use Code</strong></p>",
+            "heading": "<p><strong>Personalise your love</strong></p>",
             "heading_custom": false,
             "heading_font": "system_ui_n4",
             "heading_size": 20,
@@ -80,7 +80,7 @@
         "parallax": false,
         "parallax_mobile": false,
         "position_x_desktop": 100,
-        "position_y_desktop": 100,
+        "position_y_desktop": 79,
         "position_x_mobile": 55,
         "position_y_mobile": 50,
         "banner_height": "fixed_height",
