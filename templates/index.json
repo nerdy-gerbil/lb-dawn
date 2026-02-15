@@ -28,14 +28,14 @@
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "<p>Time to shine</p>",
+            "text": "<p>Your time to shine</p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
             "text_size": 36,
             "text_size_mobile": 26,
             "text_height": 150,
             "text_mt": 14,
-            "text_color": "#ffffff"
+            "text_color": "#121212"
           }
         },
         "button_pPck3J": {
