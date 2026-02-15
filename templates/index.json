@@ -41,8 +41,8 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "SHOP VALENTINE'S GIFTS",
-            "button_url": "shopify://collections/valentines-day-gifts",
+            "button": "SHOP STERLING SILVER",
+            "button_url": "shopify://collections/silver-necklaces",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
