@@ -28,7 +28,7 @@
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "<p>Time to shine</p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
             "text_size": 36,
