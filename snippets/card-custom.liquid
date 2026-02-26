@@ -177,14 +177,14 @@
         <div class="card__content card__content--custom">
             <div class="card__information">
                 {%- if block.settings.heading != blank -%}
-                    <div class="card__heading h5 rte" style="color: var(--color-heading, currentColor);">{{ block.settings.heading }}</div>
+                    <div class="card__heading h5 rte" style="color: var(--color-heading, currentColor); margin-bottom: {{ block.settings.heading_padding_bottom }}px;">{{ block.settings.heading }}</div>
                 {%- endif -%}
                 
                 {%- if block.settings.text != blank -%}
-                    <div class="rte" style="color: var(--color-text, currentColor);">{{ block.settings.text }}</div>
+                    <div class="rte" style="color: var(--color-text, currentColor); margin-bottom: {{ block.settings.text_padding_bottom }}px;">{{ block.settings.text }}</div>
                 {%- endif -%}
 
-                <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets">
+                <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets" style="margin-bottom: {{ block.settings.bullet_padding_bottom }}px;">
                     {%- for i in (1..5) -%}
                         {%- assign icon_key = 'icon_' | append: i -%}
                         {%- assign text_key = 'text_' | append: i -%}
@@ -213,6 +213,8 @@
                         elsif block.settings.button_horizontal_alignment == 'right'
                             assign btn_style = 'align-self: flex-end; width: fit-content;'
                         endif
+                        
+                        assign btn_style = btn_style | append: ' margin-top: ' | append: block.settings.button_padding_top | append: 'px;'
                     -%}
                     <a href="{{ block.settings.button_link }}" class="{{ btn_class }}" style="{{ btn_style }}">
                         {{ block.settings.button_label | escape }}
@@ -223,14 +225,14 @@
     <div class="card__content card__content--custom visible-on-hover">
          <div class="card__information">
              {%- if block.settings.heading != blank -%}
-                 <div class="card__heading h5 rte" style="color: var(--color-heading, currentColor);">{{ block.settings.heading }}</div>
+                 <div class="card__heading h5 rte" style="color: var(--color-heading, currentColor); margin-bottom: {{ block.settings.heading_padding_bottom }}px;">{{ block.settings.heading }}</div>
              {%- endif -%}
                 
                 {%- if block.settings.text != blank -%}
-                    <div class="rte" style="color: var(--color-text, currentColor);">{{ block.settings.text }}</div>
+                    <div class="rte" style="color: var(--color-text, currentColor); margin-bottom: {{ block.settings.text_padding_bottom }}px;">{{ block.settings.text }}</div>
                 {%- endif -%}
 
-                <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets">
+                <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets" style="margin-bottom: {{ block.settings.bullet_padding_bottom }}px;">
                     {%- for i in (1..5) -%}
                         {%- assign icon_key = 'icon_' | append: i -%}
                         {%- assign text_key = 'text_' | append: i -%}
