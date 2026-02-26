@@ -23,6 +23,7 @@
     padding: 0;
     margin: 1rem 0;
     text-align: left;
+    color: var(--color-bullet, currentColor);
   }
 
   .custom-card-bullets li {
@@ -64,10 +65,68 @@
     object-fit: cover !important;
   }
 
-  .card__content--custom .card__information {
-    display: flex;
+  .card-custom-wrapper .card__content--custom .card__information {
+    display: flex !important; /* Override Dawn base CSS display: none */
     flex-direction: column;
     width: 100%;
+  }
+
+  /* Base Overlay Styles */
+  .card-custom-wrapper .card--media .card__inner .card__content--custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    overflow-y: auto;
+    display: flex;
+    background-color: transparent; /* Text overlays background image */
+  }
+
+  /* Hover State Logic */
+  .card-custom-wrapper .card__content--custom.visible-on-hover {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+    background-color: inherit; /* Inherit the card's background color on hover if desired, or transparent */
+  }
+
+  .card-custom-wrapper .card__content--custom:not(.visible-on-hover) {
+    transition: opacity 0.3s ease;
+  }
+
+  /* Show hover content, hide normal content on card hover */
+  .card-custom-wrapper:hover .card__content--custom.visible-on-hover {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .card-custom-wrapper:hover .card__content--custom:not(.visible-on-hover) {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .card-custom-wrapper .card__heading,
+  .card-custom-wrapper .card__heading *,
+  .card-custom-wrapper .card__heading a {
+    color: var(--color-heading, currentColor) !important;
+  }
+
+  .card-custom-wrapper .rte:not(.card__heading),
+  .card-custom-wrapper .rte:not(.card__heading) *,
+  .card-custom-wrapper .rte:not(.card__heading) a {
+    color: var(--color-text, currentColor) !important;
+  }
+
+  .card-custom-wrapper .custom-card-bullets,
+  .card-custom-wrapper .custom-card-bullets *,
+  .card-custom-wrapper .custom-card-bullets a {
+    color: var(--color-bullet, currentColor) !important;
+  }
+  
+  .card-custom-wrapper .custom-card-bullets svg path {
+    fill: currentColor;
   }
 </style>
 
@@ -90,7 +149,7 @@
     {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
     {% if block.settings.image_shape and block.settings.image_shape != 'default' %} card--shape{% endif %}
     "
-    style="background-color: {{ block.settings.background_color }}; {% if ratio != 'full' %}--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;{% endif %}"
+    style="background-color: {{ block.settings.background_color }}; --color-heading: {{ block.settings.heading_color }}; --color-text: {{ block.settings.text_color }}; --color-bullet: {{ block.settings.bullet_color }}; {% if ratio != 'full' %}--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;{% endif %}"
   >
     <div class="card__inner {% if ratio != 'full' %}ratio{% endif %}" style="{% if ratio != 'full' %}--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;{% else %}height: 100%;{% endif %}">
         {%- if block.settings.image != blank -%}
@@ -118,11 +177,11 @@
         <div class="card__content card__content--custom">
             <div class="card__information">
                 {%- if block.settings.heading != blank -%}
-                    <h3 class="card__heading h5">{{ block.settings.heading | escape }}</h3>
+                    <div class="card__heading h5 rte" style="color: var(--color-heading, currentColor);">{{ block.settings.heading }}</div>
                 {%- endif -%}
                 
                 {%- if block.settings.text != blank -%}
-                    <div class="rte">{{ block.settings.text }}</div>
+                    <div class="rte" style="color: var(--color-text, currentColor);">{{ block.settings.text }}</div>
                 {%- endif -%}
 
                 <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets">
@@ -161,15 +220,14 @@
                 {%- endif -%}
             </div>
         </div>
-    </div>
     <div class="card__content card__content--custom visible-on-hover">
          <div class="card__information">
              {%- if block.settings.heading != blank -%}
-                 <h3 class="card__heading h5">{{ block.settings.heading | escape }}</h3>
+                 <div class="card__heading h5 rte" style="color: var(--color-heading, currentColor);">{{ block.settings.heading }}</div>
              {%- endif -%}
                 
                 {%- if block.settings.text != blank -%}
-                    <div class="rte">{{ block.settings.text }}</div>
+                    <div class="rte" style="color: var(--color-text, currentColor);">{{ block.settings.text }}</div>
                 {%- endif -%}
 
                 <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets">
@@ -206,7 +264,8 @@
                         {{ block.settings.button_label | escape }}
                     </a>
                 {%- endif -%}
-         </div>
     </div>
+   </div>
+   </div>
   </div>
 </div>
