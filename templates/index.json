@@ -22,20 +22,20 @@
             "heading_size_mobile": 26,
             "heading_height": 100,
             "heading_mt": 50,
-            "heading_color": "#121212"
+            "heading_color": "#ffffff"
           }
         },
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "<p>Your time to shine</p>",
+            "text": "<p>Find the perfect gift</p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
             "text_size": 36,
             "text_size_mobile": 26,
             "text_height": 150,
             "text_mt": 14,
-            "text_color": "#121212"
+            "text_color": "#ffffff"
           }
         },
         "button_pPck3J": {
@@ -93,9 +93,9 @@
         "content_maxwidth": 58,
         "content_maxwidth_mobile": 95,
         "content_horizontal_position": "start",
-        "content_horizontal_position_mobile": "start",
+        "content_horizontal_position_mobile": "end",
         "content_vertical_position": "end",
-        "content_vertical_position_mobile": "center",
+        "content_vertical_position_mobile": "start",
         "content_x_position": 0,
         "content_x_position_mobile": 0,
         "content_y_position": 0,
