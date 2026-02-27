@@ -13,10 +13,21 @@
   "sections": {
     "e5735d7c-e29b-4704-b1ea-aa5ce07cc9a1": {
       "type": "custom-liquid",
+      "disabled": true,
       "custom_css": [],
       "name": "Announcement Bar",
       "settings": {
         "custom_liquid": "{% if cart.total_price < 12500 %}\n  <div class=\"announcement-bar\">\n    <p>Free shipping on orders over £125</p>\n  </div>\n{% endif %}",
+        "color_scheme": "accent-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_PrjxLY": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  #shopify-section-sections--22499399795006__e5735d7c-e29b-4704-b1ea-aa5ce07cc9a1 {\n    z-index: 99;\n  }\n  .announcement-bar-section {\n    position: fixed;\n    top: 0;\n    z-index: 99;\n    width: 100%;\n    height: 45px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n  .announcement-bar:not(:last-of-type) {\n    border-right: 1px solid #ffffff14;\n  }\n  .announcement-bar__message {\n    display: flex;\n    align-content: center;\n    align-items: center;\n    justify-content: center;\n    height: 45px;\n    min-height: 45px;\n    min-width: 250px;\n    padding: 0;\n  }\n  .announcement-bar h5 {\n    margin: 0 1rem;\n    color: #fff;\n    font-weight: 600;\n    font-size: 13px;\n  }\n  .announcement-bar a {\n    color: #fff;\n    text-decoration: none;\n  }\n  .announcement-bar p {\n    margin: 0;\n  }\n  .announcement-bar a#profileUrl {\n    display: flex;\n    align-items: center;\n    gap: 0.2rem;\n  }\n  @keyframes bannerOne {\n    0% {\n      left: 0;\n    }\n    31% {\n      left: 0;\n    }\n    34% {\n      left: -100%;\n    }\n    97% {\n      left: 100%;\n    }\n    100% {\n      left: 0;\n    }\n  }\n  @keyframes bannerTwo {\n    0% {\n      left: 100%;\n    }\n    31% {\n      left: 100%;\n    }\n    34% {\n      left: 0;\n    }\n    64% {\n      left: 0;\n    }\n    67% {\n      left: -100%;\n    }\n    100% {\n      left: -100%;\n    }\n  }\n  @keyframes bannerThree {\n    0% {\n      left: 100%;\n    }\n    64% {\n      left: 100%;\n    }\n    67% {\n      left: 0;\n    }\n    97% {\n      left: 0;\n    }\n    100% {\n      left: -100%;\n    }\n  }\n  @media (max-width: 749px) {\n    .announcement-bar-section {\n      overflow: hidden;\n      position: relative;\n    }\n    .announcement-bar {\n      animation: bannerOne 15s linear infinite;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      width: 100%;\n      position: absolute;\n      height: 45px;\n    }\n    .announcement-bar.annc_2 {\n      animation-name: bannerTwo;\n    }\n    .announcement-bar.annc_3 {\n      animation-name: bannerThree;\n    }\n  }\n  @media (min-width: 750px) {\n    .announcement-bar__message {\n      height: 5.4rem;\n    }\n    .announcement-bar-section {\n      display: table;\n    }\n    .announcement-bar {\n      height: 5.4rem;\n      display: table-cell;\n      width: 33.33%;\n      vertical-align: middle;\n    }\n  }\n  .star-rating {\n    display: inline-flex;\n    align-items: center;\n  }\n  .star {\n    position: relative;\n    display: inline-block;\n    margin-right: 5px;\n  }\n  .star-empty {\n    color: #ccc;\n  }\n  .star-filled {\n    position: absolute;\n    top: 0;\n    left: 0;\n    overflow: hidden;\n  }\n  .annc_2 .metafield-rich_text_field {\n    display: grid;\n    grid-template-columns: repeat(3, auto);\n    grid-template-rows: 1fr;\n    gap: 1em;\n  }\n</style>\n{% assign announcements = shop.metaobjects.announcement_bar['announcement-bar'] %}\n\n{% if announcements %}\n  <div class=\"announcement-bar-section\">\n    {% for i in (1..3) %}\n      {% assign annc = 'announcement_' | append: i %}\n\n      {% if announcements[annc] %}\n        <div\n          class=\"announcement-bar annc_{{i}} color-{{ section.settings.color_scheme }} gradient\"\n          role=\"region\"\n          aria-label=\"Announcement\"\n        >\n          <div class=\"page-width announcement-bar__message center h5\">\n            {% if i == 2 %}\n              {% assign score = metaobjects.aggregate_rating.aggregate-rating-trustpilot.rating_value %}\n              {% assign totalReviews = metaobjects.aggregate_rating.aggregate-rating-trustpilot.review_count %}\n              {{ announcements[annc] | metafield_tag | replace: '|score|', score | replace: '|totalStars|', 5 | replace: '|totalReviews|', totalReviews }}\n            {% else %}\n              {{ announcements[annc] | metafield_tag }}\n            {% endif %}\n          </div>\n        </div>\n      {% endif %}\n    {% endfor %}\n  </div>\n{% endif %}",
         "color_scheme": "accent-1",
         "padding_top": 0,
         "padding_bottom": 0
@@ -51,6 +62,7 @@
   },
   "order": [
     "e5735d7c-e29b-4704-b1ea-aa5ce07cc9a1",
+    "custom_liquid_PrjxLY",
     "header"
   ]
 }
