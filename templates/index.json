@@ -92,7 +92,7 @@
         "overlay": 0,
         "content_maxwidth": 58,
         "content_maxwidth_mobile": 95,
-        "content_horizontal_position": "start",
+        "content_horizontal_position": "end",
         "content_horizontal_position_mobile": "end",
         "content_vertical_position": "center",
         "content_vertical_position_mobile": "center",
