@@ -41,8 +41,8 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "SHOP STERLING SILVER",
-            "button_url": "shopify://collections/silver-necklaces",
+            "button": "SHOP MOTHER'S DAY GIFTS",
+            "button_url": "shopify://collections/mothers-day-gifts",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
