@@ -74,7 +74,9 @@
         "text_fzB4Wt",
         "button_pPck3J"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media (min-width: 750px) {p, strong {color: #ffffff; }}"
+      ],
       "settings": {
         "fetch_priority": true,
         "parallax": false,
@@ -98,7 +100,7 @@
         "content_vertical_position_mobile": "center",
         "content_x_position": 0,
         "content_x_position_mobile": 0,
-        "content_y_position": 0,
+        "content_y_position": 24,
         "content_y_position_mobile": 32,
         "content_padding_vertical": 48,
         "content_padding_vertical_mobile": 0,
