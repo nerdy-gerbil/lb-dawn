@@ -94,7 +94,7 @@
         "content_maxwidth_mobile": 95,
         "content_horizontal_position": "start",
         "content_horizontal_position_mobile": "end",
-        "content_vertical_position": "end",
+        "content_vertical_position": "center",
         "content_vertical_position_mobile": "end",
         "content_x_position": 0,
         "content_x_position_mobile": 0,
