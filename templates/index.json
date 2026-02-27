@@ -28,14 +28,14 @@
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "<p>Your time to shine</p>",
+            "text": "<p>Find the perfect gift</p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
             "text_size": 36,
             "text_size_mobile": 26,
             "text_height": 150,
             "text_mt": 14,
-            "text_color": "#121212"
+            "text_color": "#ffffff"
           }
         },
         "button_pPck3J": {
