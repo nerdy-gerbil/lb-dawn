@@ -35,6 +35,41 @@
           "type": "klaviyo_trigger",
           "settings": {
             "position": 4,
+            "image": "shopify://shop_images/Lily_Blanche_merchandising_block_7ddb10fd-3636-44ec-98a6-bef92c47415e.png",
+            "image_ratio": "cover",
+            "image_shape": "default",
+            "image_horizontal_alignment": "center",
+            "image_vertical_alignment": "center",
+            "background_color": "#ffffff",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "bullet_color": "#ffffff",
+            "heading": "<h1><strong>Just For You</strong></h1>",
+            "heading_padding_bottom": 0,
+            "text": "<p>Sign up now for 10% off sitewide, product launches, style tips and exclusive access to our sales.<br/></p>",
+            "text_padding_bottom": 43,
+            "icon_1": "checkmark",
+            "text_1": "",
+            "icon_2": "checkmark",
+            "text_2": "",
+            "icon_3": "checkmark",
+            "text_3": "",
+            "icon_4": "checkmark",
+            "text_4": "",
+            "icon_5": "checkmark",
+            "text_5": "",
+            "bullet_padding_bottom": 91,
+            "button_label": "Get 10% Off",
+            "klaviyo_form_id": "Vk2kmd",
+            "button_color_scheme": "scheme-1",
+            "button_horizontal_alignment": "center",
+            "button_padding_top": 100
+          }
+        },
+        "klaviyo_trigger_FjgKAm": {
+          "type": "klaviyo_trigger",
+          "settings": {
+            "position": 17,
             "image": "shopify://shop_images/Lily_Blanche_merchandising_block-_free_photos2.png",
             "image_ratio": "cover",
             "image_shape": "default",
@@ -68,7 +103,8 @@
         }
       },
       "block_order": [
-        "klaviyo_trigger_Vwjepr"
+        "klaviyo_trigger_Vwjepr",
+        "klaviyo_trigger_FjgKAm"
       ],
       "custom_css": [
         ".rating-star:before {background: linear-gradient( 90deg, #fec602 calc(100%), rgba(18, 18, 18, 0.15) calc(100%) ); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}",
