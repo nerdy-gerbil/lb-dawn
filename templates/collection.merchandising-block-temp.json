@@ -47,7 +47,7 @@
             "heading": "<h1><strong>Just For You</strong></h1>",
             "heading_padding_bottom": 0,
             "text": "<p>Sign up now for 10% off sitewide, product launches, style tips and exclusive access to our sales.<br/></p>",
-            "text_padding_bottom": 100,
+            "text_padding_bottom": 39,
             "icon_1": "checkmark",
             "text_1": "",
             "icon_2": "checkmark",
@@ -58,12 +58,12 @@
             "text_4": "",
             "icon_5": "checkmark",
             "text_5": "",
-            "bullet_padding_bottom": 63,
-            "button_label": "Get 10% Off Now",
+            "bullet_padding_bottom": 24,
+            "button_label": "Get 10% Off",
             "klaviyo_form_id": "",
             "button_color_scheme": "scheme-1",
-            "button_horizontal_alignment": "full",
-            "button_padding_top": 75
+            "button_horizontal_alignment": "center",
+            "button_padding_top": 100
           }
         }
       },
