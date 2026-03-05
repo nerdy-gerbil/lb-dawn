@@ -41,6 +41,8 @@
             "image_horizontal_alignment": "center",
             "image_vertical_alignment": "center",
             "background_color": "#ffffff",
+            "show_on_all_pages": false,
+            "show_on_page_number": 1,
             "heading_color": "#ffffff",
             "text_color": "#ffffff",
             "bullet_color": "#000000",
