@@ -62,7 +62,7 @@
             "button_label": "Get 10% Off",
             "klaviyo_form_id": "Vk2kmd",
             "button_color_scheme": "scheme-1",
-            "button_horizontal_alignment": "center",
+            "button_horizontal_alignment": "full",
             "button_padding_top": 100
           }
         }
@@ -73,7 +73,7 @@
       "custom_css": [
         ".rating-star:before {background: linear-gradient( 90deg, #fec602 calc(100%), rgba(18, 18, 18, 0.15) calc(100%) ); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}",
         ".card-information .price {font-size: 12px !important;}",
-        ".button {position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; width: calc(100% - 3rem) !important;}"
+        ".button {position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem;}"
       ],
       "settings": {
         "products_per_page": 24,
