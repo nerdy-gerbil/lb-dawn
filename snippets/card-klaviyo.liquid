@@ -41,6 +41,16 @@
     color: currentColor;
   }
 
+  @media screen and (max-width: 749px) {
+    .card-custom-wrapper .card__content--custom .card__information {
+      font-size: smaller;
+
+      .card__heading * {
+        font-size: large;
+      }
+    }
+  }
+
   @media screen and (min-width: 750px) {
     .card__content--custom {
       padding: 2rem;
@@ -70,11 +80,6 @@
     flex-direction: column;
     width: 100%;
     overflow: hidden;
-    font-size: smaller;
-
-    .card__heading * {
-      font-size: large;
-    }
   }
 
   /* Base Overlay Styles */
