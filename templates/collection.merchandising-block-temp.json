@@ -35,14 +35,19 @@
           "type": "klaviyo_trigger",
           "settings": {
             "position": 4,
-            "image": "shopify://shop_images/Lily_Blanche_merchandising_block.png",
-            "image_ratio": "adapt",
+            "image": "shopify://shop_images/Lily_Blanche_merchandising_block_1.png",
+            "image_ratio": "cover",
             "image_shape": "default",
             "image_horizontal_alignment": "center",
             "image_vertical_alignment": "center",
             "background_color": "#ffffff",
-            "heading": "",
-            "text": "",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "bullet_color": "#000000",
+            "heading": "<h1><strong>Just For You</strong></h1>",
+            "heading_padding_bottom": 0,
+            "text": "<p>Sign up now for 10% off sitewide, product launches, style tips and exclusive access to our sales.<br/></p>",
+            "text_padding_bottom": 100,
             "icon_1": "checkmark",
             "text_1": "",
             "icon_2": "checkmark",
@@ -53,10 +58,12 @@
             "text_4": "",
             "icon_5": "checkmark",
             "text_5": "",
+            "bullet_padding_bottom": 63,
             "button_label": "Get 10% Off Now",
             "klaviyo_form_id": "",
             "button_color_scheme": "scheme-1",
-            "button_horizontal_alignment": "full"
+            "button_horizontal_alignment": "full",
+            "button_padding_top": 75
           }
         }
       },
