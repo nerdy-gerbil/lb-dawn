@@ -16,13 +16,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
 
-    .button {
-      position: absolute;
-      bottom: 1.5rem;
-      left: 1.5rem;
-      right: 1.5rem;
-    }
+  .card__content--custom .button {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
   }
 
   .custom-card-bullets {
@@ -291,8 +291,9 @@
                         {{ block.settings.button_label | escape }}
                     </button>
                 {%- endif -%}
-         </div>
     </div>
+  </div>
     </div>
   </div>
 </div>
+

@@ -159,32 +159,47 @@
               {%- for block in section.blocks -%}
                   {%- assign block_position = block.settings.position | default: 0 -%}
                   {%- if block_position == grid_index -%}
-                    <li
-                      class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                      {% if settings.animations_reveal_on_scroll %}
-                        data-cascade
-                        style="--animation-order: {{ grid_index }};"
-                      {% endif %}
-                    >
-                      {%- if block.type == 'custom_card' -%}
-                        {% render 'card-custom', block: block %}
-                      {%- elsif block.type == 'klaviyo_trigger' -%}
-                        {% render 'card-klaviyo', block: block %}
-                      {%- elsif block.type == 'custom_liquid' -%}
-                         <div class="card-wrapper product-card-wrapper card-custom-wrapper">
-                            <div class="card card--{{ settings.card_style }} card--text
-                                {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}"
-                                style="background-color: {{ block.settings.background_color }}; --ratio-percent: 100%;">
-                                <div class="ratio" style="--ratio-percent: 100%;">
-                                    <div class="card__content card__content--custom">
-                                        {{ block.settings.custom_liquid }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      {%- endif -%}
-                    </li>
-                    {%- assign grid_index = grid_index | plus: 1 -%}
+                    {%- liquid
+                      assign show_card = true
+                      unless block.settings.show_on_all_pages
+                        if block.settings.show_on_page_number > 0
+                          if current_page != block.settings.show_on_page_number
+                            assign show_card = false
+                          endif
+                        else
+                          assign show_card = false
+                        endif
+                      endunless
+                    -%}
+
+                    {%- if show_card -%}
+                      <li
+                        class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                        {% if settings.animations_reveal_on_scroll %}
+                          data-cascade
+                          style="--animation-order: {{ grid_index }};"
+                        {% endif %}
+                      >
+                        {%- if block.type == 'custom_card' -%}
+                          {% render 'card-custom', block: block %}
+                        {%- elsif block.type == 'klaviyo_trigger' -%}
+                          {% render 'card-klaviyo', block: block %}
+                        {%- elsif block.type == 'custom_liquid' -%}
+                           <div class="card-wrapper product-card-wrapper card-custom-wrapper">
+                              <div class="card card--{{ settings.card_style }} card--text
+                                  {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}"
+                                  style="background-color: {{ block.settings.background_color }}; --ratio-percent: 100%;">
+                                  <div class="ratio" style="--ratio-percent: 100%;">
+                                      <div class="card__content card__content--custom">
+                                          {{ block.settings.custom_liquid }}
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        {%- endif -%}
+                      </li>
+                      {%- assign grid_index = grid_index | plus: 1 -%}
+                    {%- endif -%}
                   {%- endif -%}
                 {%- endfor -%}
 
@@ -579,6 +594,22 @@
           "default": "#ffffff"
         },
         {
+          "type": "checkbox",
+          "id": "show_on_all_pages",
+          "label": "Show on all pages",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "show_on_page_number",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "label": "Show on page number",
+          "default": 1,
+          "info": "Only applies if 'Show on all pages' is false."
+        },
+        {
           "type": "color",
           "id": "heading_color",
           "label": "Heading Color",
@@ -840,6 +871,22 @@
           "id": "background_color",
           "label": "Background Color",
           "default": "#ffffff"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_on_all_pages",
+          "label": "Show on all pages",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "show_on_page_number",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "label": "Show on page number",
+          "default": 1,
+          "info": "Only applies if 'Show on all pages' is false."
         }
       ]
     },
@@ -964,6 +1011,22 @@
           "id": "background_color",
           "label": "Background Color",
           "default": "#ffffff"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_on_all_pages",
+          "label": "Show on all pages",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "show_on_page_number",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "label": "Show on page number",
+          "default": 1,
+          "info": "Only applies if 'Show on all pages' is false."
         },
         {
           "type": "color",
