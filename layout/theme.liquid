@@ -845,4 +845,11 @@ document.addEventListener('DOMContentLoaded', function () {
     displayWishlist();
 });
     </script>
+    
+    {% comment %}FIX html element not "hydrating"{% endcomment %}
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('html').classList.add('hydrated');
+      });
+    </script>
 </html>
