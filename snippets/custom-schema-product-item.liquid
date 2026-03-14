@@ -19,7 +19,8 @@
   {% for variant in product.variants %}
     {
       "@type": "Product",
-      "sku": {{ variant.sku | json }},
+      "sku": {{ variant.sku | json }},{% if variant.barcode %}
+      "gtin": {{ variant.barcode | json }},{% endif %}
       "name": {{ product.title | append: " - " | append: variant.title | json }},
       "description": {{ product.description | strip_html | json }},
       "image": [
