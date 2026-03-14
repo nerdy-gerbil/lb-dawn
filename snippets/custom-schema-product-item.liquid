@@ -141,12 +141,12 @@
     "ratingValue": "{{ hallmark }}"
   }
 }{% endif %}
-{% endif %}{% if product.metafields.reviews.rating_count > 0 and part_of != 'breadcrumbs' %},
+{% endif %}{% comment %} {% if product.metafields.reviews.rating_count > 0 and part_of != 'breadcrumbs' %},
 "aggregateRating": {
   "@type": "AggregateRating",
   "ratingValue": {{ product.metafields.reviews.rating.value }},
   "ratingCount": {{ product.metafields.reviews.rating_count }},
   "bestRating": 5,
   "worstRating": 1
-}{% endif %},
+}{% endif %} {% endcomment %},
 "award": "Google Top Quality Store"
