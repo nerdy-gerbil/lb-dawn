@@ -308,7 +308,7 @@
             {%- endif -%}
             
             {%- if show_metal -%}
-              <span class="visually-hidden">{{ 'accessibility.metal' | t }}</span>
+              <span class="visually-hidden">Metal: </span>
               {% assign metal = card_product.metafields.global.material | replace: ' carat', 'k' | replace: ' Carat', 'k' | replace: 'yellow gold', 'gold' %}
               {%- if metal contains 'Sterling silver and ' and metal contains 'gold' -%}
                 {% assign metal = metal | replace: 'Sterling silver and ', '' | append: ' vermeil' %}
