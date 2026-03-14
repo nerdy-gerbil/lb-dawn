@@ -17,7 +17,7 @@
       "item": {
         {% if template contains 'product' and collection %}
         "@id": "{{ shop.url }}{{ collection.url }}",
-        "name": "{{{ collection.title }}}"
+        "name": "{{ collection.title | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&' }}"
       }
     },
     {
@@ -35,7 +35,7 @@
       "item": {
         {% endif %}
         "@id": "{{ canonical_url }}",
-        "name": "{{{ page_title }}}"
+        "name": "{{ page_title | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&' }}"
       }
     }{% endif %}]
   }
