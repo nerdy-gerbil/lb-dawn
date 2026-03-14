@@ -17,7 +17,7 @@
       "item": {
         {% if template contains 'product' and collection %}
         "@id": "{{ shop.url }}{{ collection.url }}",
-        "name": "{{ collection.title | escape_once }}"
+        "name": "{% raw %}{{ collection.title }}{% endraw %}"
       }
     },
     {
@@ -35,7 +35,7 @@
       "item": {
         {% endif %}
         "@id": "{{ canonical_url }}",
-        "name": "{{ page_title | escape_once }}"
+        "name": "{% raw %}{{ page_title }}{% endraw %}"
       }
     }{% endif %}]
   }
