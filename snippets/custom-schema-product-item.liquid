@@ -20,7 +20,7 @@
     {
       "@type": "Product",
       "sku": {{ variant.sku | json }},{% if variant.barcode %}
-      "gtin13": {{ variant.barcode | json }},{% endif %}
+      "gtin": {{ variant.barcode | json }},{% endif %}
       "name": {{ product.title | append: " - " | append: variant.title | json }},
       "description": {{ product.description | strip_html | json }},
       "image": [
@@ -100,7 +100,7 @@
 "material": "{{ product.metafields.global.material }}",{% endif %}
 "url": "{{ shop.url }}{{ product.url }}",
 "sku": {{ product.variants.first.sku | json }},{% if product.variants.first.barcode %}
-"gtin13": {{ product.variants.first.barcode | json }},{% endif %}
+"gtin": {{ product.variants.first.barcode | json }},{% endif %}
 "offers": {
   "@type": "Offer",
   "priceCurrency": "{{ shop.currency }}",
