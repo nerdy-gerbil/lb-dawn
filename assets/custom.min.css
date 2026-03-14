@@ -373,7 +373,8 @@ html:not(.hydrated) {
   .custom-section.product-video,
   .shopify-section:has([class^='video-slider-template--']),
   .shopify-section-group-footer-group:not(:has([class^='instafeed-slider-sections--'])),
-  div[id^='shopify-section-template--'][id$='__product-grid'] ~ section {
+  div[id^='shopify-section-template--'][id$='__product-grid'] ~ section,
+  div[id^='shopify-section-template--'][id$='__product-grid'] {
     display: none !important;
   }
 
