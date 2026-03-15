@@ -41,8 +41,8 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "SHOP MOTHER'S DAY GIFTS",
-            "button_url": "shopify://collections/mothers-day-gifts",
+            "button": "SHOP GOLD",
+            "button_url": "shopify://collections/gold-necklaces",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
