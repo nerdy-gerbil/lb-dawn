@@ -102,7 +102,7 @@
         "content_x_position_mobile": 0,
         "content_y_position": 24,
         "content_y_position_mobile": 32,
-        "content_padding_vertical": 0,
+        "content_padding_vertical": 48,
         "content_padding_vertical_mobile": 0,
         "content_padding_horizontal": 62,
         "content_padding_horizontal_mobile": 14,
