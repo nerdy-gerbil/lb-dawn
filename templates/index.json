@@ -85,7 +85,7 @@
         "position_y_desktop": 50,
         "position_x_mobile": 55,
         "position_y_mobile": 50,
-        "banner_height": "adapt_first",
+        "banner_height": "fixed_height",
         "banner_height_mobile": "adapt_first",
         "banner_fixed_height": 70,
         "banner_fixed_height_mobile": 70,
