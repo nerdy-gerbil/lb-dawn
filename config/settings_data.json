@@ -189,14 +189,6 @@
         "disabled": false,
         "settings": {}
       },
-      "14171380182093092491": {
-        "type": "shopify://apps/trusted-faq/blocks/product-faq-embed/3c13bf97-def2-4442-b06f-a64e813a2392",
-        "disabled": false,
-        "settings": {
-          "css_selector": "#product-faq",
-          "custom_css": ".faq-heading-title {\ndisplay:none;\n}\n.faq-container {\npadding: 0 !important;\n}\n.s-main-faq__main {\nmin-width: unset !important;\nmargin: 2rem 0 0 !important;\n}\n.faq-article-header {\nbackground-color: #e6dfd7 !important;\n}"
-        }
-      },
       "2950567246721570496": {
         "type": "shopify://apps/tabs-studio/blocks/global_embed_block/19980fb9-f2ca-4ada-ad36-c0364c3318b8",
         "disabled": false,
@@ -238,6 +230,15 @@
           "button_horizontal_position": "bottom_right",
           "button_vertical_position": "lowest",
           "greeting_message": "👋 Hi, please message us with any questions. We're happy to help!"
+        }
+      },
+      "14171380182093092491": {
+        "type": "shopify://apps/trusted-faq/blocks/product-faq-embed/3c13bf97-def2-4442-b06f-a64e813a2392",
+        "disabled": false,
+        "settings": {
+          "include_faq_microdata": false,
+          "css_selector": "#product-faq",
+          "custom_css": ".faq-heading-title {\ndisplay:none;\n}\n.faq-container {\npadding: 0 !important;\n}\n.s-main-faq__main {\nmin-width: unset !important;\nmargin: 2rem 0 0 !important;\n}\n.faq-article-header {\nbackground-color: #e6dfd7 !important;\n}"
         }
       }
     },
