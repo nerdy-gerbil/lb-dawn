@@ -49,9 +49,9 @@
       "name": {{ product.title | append: " - " | append: variant.title | json }},
       "image": [
         {% if variant.image %}
-          "{{ variant.image.src | image_url }}"
+          "https:{{ variant.image.src | image_url }}"
         {% else %}
-          "{{ product.featured_image | image_url }}"
+          "https:{{ product.featured_image | image_url }}"
         {% endif %}
       ],
       "additionalProperty": [
@@ -94,7 +94,7 @@
 "name": {{ product.title | json }},
 "description": {{ product.description | strip_html | json }},
 "image": [
-  "{{ product.featured_image | image_url }}"
+  "https:{{ product.featured_image | image_url }}"
 ],{% if product.metafields.global.material %}
 "material": "{{ product.metafields.global.material }}",{% endif %}
 "url": "{{ shop.url }}{{ product.url }}",
