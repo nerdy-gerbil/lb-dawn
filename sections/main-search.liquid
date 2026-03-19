@@ -154,9 +154,9 @@
           <form class="facets-vertical-form" id="FacetSortForm">
             <div class="facet-filters sorting caption">
               <div class="facet-filters__field">
-                <h2 class="facet-filters__label caption-large text-body">
+                <div class="facet-filters__label caption-large text-body">
                   <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-                </h2>
+                </div>
                 <div class="select">
                   {%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
                   <select
@@ -184,7 +184,7 @@
             </div>
 
             <div class="product-count-vertical light" role="status">
-              <h2 class="product-count__text text-body">
+              <div class="product-count__text text-body">
                 <span id="ProductCountDesktop">
                   {%- if search.results_count -%}
                     {{ 'templates.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
@@ -197,7 +197,7 @@
                     }}
                   {%- endif -%}
                 </span>
-              </h2>
+              </div>
               {%- render 'loading-spinner' -%}
             </div>
           </form>
@@ -235,14 +235,14 @@
             >
               <div class="loading-overlay gradient"></div>
               <div class="title-wrapper center">
-                <h2 class="title title--primary">
+                <div class="title title--primary">
                   {{ 'sections.collection_template.empty' | t -}}
                   <br>
                   {{
                     'sections.collection_template.use_fewer_filters_html'
                     | t: link: search_url, class: 'underlined-link link'
                   }}
-                </h2>
+                </div>
               </div>
             </div>
           {%- else -%}
