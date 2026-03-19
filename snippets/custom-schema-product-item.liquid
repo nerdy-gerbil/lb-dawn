@@ -9,6 +9,9 @@
   "@type": "Brand",
   "name": {{ product.vendor | json }}
 },
+"hasMerchantReturnPolicy": {
+  "value": true
+},
 "productGroupID": "{{ product.id }}",{% if product.metafields.global.material %}
 "material": "{{ product.metafields.global.material }}",{% endif %}{% if product.metafields.global.hallmark %}
 {% liquid
