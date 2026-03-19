@@ -234,7 +234,7 @@
       },
       "14171380182093092491": {
         "type": "shopify://apps/trusted-faq/blocks/product-faq-embed/3c13bf97-def2-4442-b06f-a64e813a2392",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "include_faq_microdata": true,
           "css_selector": "#product-faq",
