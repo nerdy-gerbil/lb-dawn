@@ -5,7 +5,7 @@
     "name": "{{ collection.title }}",
     "description": "{{ collection.description | strip_html | strip_newlines | escape }}",
     "url": "http://www.lilyblanche.com{{ collection.url }}",
-    "image": "{{ collection.image | image_url }}",
+    "image": "https:{{ collection.image | image_url }}",
     "isPartOf": {
       "@type": "WebSite",
       "name": "Lily Blanche",
