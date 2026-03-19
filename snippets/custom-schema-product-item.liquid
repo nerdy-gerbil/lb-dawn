@@ -9,9 +9,6 @@
   "@type": "Brand",
   "name": {{ product.vendor | json }}
 },
-"hasMerchantReturnPolicy": {
-  "value": true
-},
 "productGroupID": "{{ product.id }}",{% if product.metafields.global.material %}
 "material": "{{ product.metafields.global.material }}",{% endif %}{% if product.metafields.global.hallmark %}
 {% liquid
@@ -79,15 +76,14 @@
         "priceValidUntil": "{{ 'now' | date: "%s" | plus: days | date: "%FT23:59:59Z" }}",
         "itemCondition": "https://schema.org/NewCondition",
         "availability": "{% if variant.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
-        "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}"{% comment %},
+        "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}",{% comment %},
         "shippingDetails": {
           "@type": "OfferShippingDetails",
           "shippingSettingsLink": "https://www.lilyblanche.com/policies/shipping-policy"
-        },
+        },{% endcomment %}
         "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "merchantReturnLink": "https://www.lilyblanche.com/policies/refund-policy"
-        }{% endcomment %}
+          "value": true
+        }
       }
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
@@ -109,15 +105,14 @@
   "price": "{{ product.price | money_without_currency | remove: ',' }}",
   "priceValidUntil": "{{ 'now' | date: "%s" | plus: days | date: "%FT23:59:59Z" }}",
   "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
-  "url": "{{ shop.url }}{{ product.url }}"{% comment %},
+  "url": "{{ shop.url }}{{ product.url }}",{% comment %},
   "shippingDetails": {
     "@type": "OfferShippingDetails",
     "shippingSettingsLink": "https://www.lilyblanche.com/policies/shipping-policy"
-  },
+  },{% endcomment %}
   "hasMerchantReturnPolicy": {
-    "@type": "MerchantReturnPolicy",
-    "merchantReturnLink": "https://www.lilyblanche.com/policies/refund-policy"
-  }{% endcomment %}
+    "value": true
+  }
 }{% if product.metafields.global.hallmark %},
 {% liquid
   comment
