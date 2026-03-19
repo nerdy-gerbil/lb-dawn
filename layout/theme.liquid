@@ -845,6 +845,50 @@ document.addEventListener('DOMContentLoaded', function () {
     displayWishlist();
 });
     </script>
+
+    {% comment %}
+      FAQ King / Trusted FAQ — Fallback Data Block Remover
+      Removes the redundant #faq-king-product-faq-data-fallback script tag.
+      Saves ~60 KB per product page. Safe to remove: the app never reads this element.
+    {% endcomment %}
+
+    <script>
+      (function () {
+        'use strict';
+
+        if (window.location.pathname.indexOf('/products/') === -1) return;
+
+        var TARGET_ID = 'faq-king-product-faq-data-fallback';
+
+        // If the snippet runs after the element has already been parsed, remove it immediately.
+        var existing = document.getElementById(TARGET_ID);
+        if (existing) {
+          existing.parentNode.removeChild(existing);
+          return;
+        }
+
+        // Otherwise, watch for it being added and remove it the moment it appears.
+        var observer = new MutationObserver(function (mutations) {
+          for (var i = 0; i < mutations.length; i++) {
+            var nodes = mutations[i].addedNodes;
+            for (var j = 0; j < nodes.length; j++) {
+              var node = nodes[j];
+              if (node.nodeType === 1 && node.id === TARGET_ID) {
+                node.parentNode.removeChild(node);
+                observer.disconnect();
+                return;
+              }
+            }
+          }
+        });
+
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+
+        window.addEventListener('load', function () { observer.disconnect(); });
+
+      })();
+    </script>
+    {% comment %} END: FAQ King / Trusted FAQ — Fallback Data Block Remover {% endcomment %}
     
     {% comment %}FIX html element not "hydrating"{% endcomment %}
     <script>
