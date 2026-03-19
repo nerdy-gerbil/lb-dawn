@@ -236,7 +236,7 @@
         "type": "shopify://apps/trusted-faq/blocks/product-faq-embed/3c13bf97-def2-4442-b06f-a64e813a2392",
         "disabled": false,
         "settings": {
-          "include_faq_microdata": false,
+          "include_faq_microdata": true,
           "css_selector": "#product-faq",
           "custom_css": ".faq-heading-title {\ndisplay:none;\n}\n.faq-container {\npadding: 0 !important;\n}\n.s-main-faq__main {\nmin-width: unset !important;\nmargin: 2rem 0 0 !important;\n}\n.faq-article-header {\nbackground-color: #e6dfd7 !important;\n}"
         }
