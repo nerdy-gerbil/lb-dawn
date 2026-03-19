@@ -82,7 +82,7 @@
                 >
                 {%- if block.settings.heading != blank -%}
                   <label for="{{- block.settings.heading | handle -}}" class="lbl-toggle">
-                    <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2>
+                    <div class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</div>
                   </label>
                 {%- endif -%}
 
@@ -132,7 +132,7 @@
                             </div>
                           {%- endif -%}
                           {%- if settings.brand_headline != blank -%}
-                            <h2 class="footer-block__heading rte">{{ settings.brand_headline }}</h2>
+                            <div class="footer-block__heading rte">{{ settings.brand_headline }}</div>
                           {%- endif -%}
                           {%- if settings.brand_description != blank -%}
                             <div class="rte">{{ settings.brand_description }}</div>
