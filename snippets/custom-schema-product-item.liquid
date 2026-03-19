@@ -76,11 +76,11 @@
         "priceValidUntil": "{{ 'now' | date: "%s" | plus: days | date: "%FT23:59:59Z" }}",
         "itemCondition": "https://schema.org/NewCondition",
         "availability": "{% if variant.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
-        "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}",{% comment %},
+        "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}",
         "shippingDetails": {
           "@type": "OfferShippingDetails",
           "shippingSettingsLink": "https://www.lilyblanche.com/policies/shipping-policy"
-        },{% endcomment %}
+        },
         "hasMerchantReturnPolicy": {
           "value": true
         }
@@ -105,11 +105,11 @@
   "price": "{{ product.price | money_without_currency | remove: ',' }}",
   "priceValidUntil": "{{ 'now' | date: "%s" | plus: days | date: "%FT23:59:59Z" }}",
   "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
-  "url": "{{ shop.url }}{{ product.url }}",{% comment %},
+  "url": "{{ shop.url }}{{ product.url }}",
   "shippingDetails": {
     "@type": "OfferShippingDetails",
     "shippingSettingsLink": "https://www.lilyblanche.com/policies/shipping-policy"
-  },{% endcomment %}
+  },
   "hasMerchantReturnPolicy": {
     "value": true
   }
