@@ -77,8 +77,8 @@
         "itemCondition": "https://schema.org/NewCondition",
         "availability": "{% if variant.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
         "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}"{% if shop.metaobjects.schema_shipping_policy.default %},
-        "shippingDetails": {{ shop.metaobjects.schema_shipping_policy.default | json }}{% endif %}{% if shop.metaobjects.merchant_return_policy %},
-        "hasMerchantReturnPolicy": {{ shop.metaobjects.merchant_return_policy }}{% endif %}
+        "shippingDetails": {{ shop.metaobjects.schema_shipping_policy.default | json }}{% endif %}{% if shop.metaobjects.merchant_return_policy.default %},
+        "hasMerchantReturnPolicy": {{ shop.metaobjects.merchant_return_policy.default | json }}{% endif %}
       }
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
