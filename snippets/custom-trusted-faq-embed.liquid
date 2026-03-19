@@ -1,0 +1,99 @@
+{% comment %}
+  ============================================================
+  Trusted FAQ (FAQ King) — Manual App Embed Replacement
+  ============================================================
+
+  PREREQUISITES:
+    1. Go to Online Store > Themes > Customise > App embeds
+    2. Turn OFF the "Trusted FAQ" app embed toggle
+    3. Save the theme
+    4. Then add THIS snippet to theme.liquid immediately before </body>
+
+  WHAT THIS REPLACES:
+  The app embed outputs 5 things per product page:
+    1. <script id="faq-king-product-faq-data-fallback"> — 60 KB  ← OMITTED (redundant)
+    2. <script> window.Shopify.FaqKing = { ... } </script>       ← REPLICATED
+    3. <script id="faq-king-product-faq-data"> ... </script>     ← REPLICATED (via app's own API)
+    4. <style> ... custom overrides ... </style>                  ← REPLICATED
+    5. External JS + CSS loaded from Shopify CDN (in <head>)     ← REPLICATED
+
+  The fallback block (#1) is byte-for-byte identical to #3 and is
+  never read by the app at runtime. Omitting it saves ~60 KB per page.
+  ============================================================
+{% endcomment %}
+
+{% if template.name == 'product' %}
+
+  {% comment %} ── 1. External CSS (replaces the <link> the app embed adds to <head>) ── {% endcomment %}
+  <link
+    rel="stylesheet"
+    type="text/css"
+    media="all"
+    href="https://cdn.shopify.com/extensions/019cdb93-f8d5-7de1-a7c7-9242b02e67a4/trusted-faq-101/assets/load-styles.css"
+  >
+
+  {% comment %} ── 2. FaqKing product config (tells the app which product/collections to match FAQs against) ── {% endcomment %}
+  <script>
+    window.Shopify = window.Shopify || {};
+    window.Shopify.FaqKing = {
+      'css_selector': '#product-faq',
+      'load_faq_microdata': 'false',
+      'locale': null,
+      'product': {
+        'id': {{ product.id }},
+        'collection_ids': '{% for c in product.collections %}{{ c.id }}{% unless forloop.last %},{% endunless %}{% endfor %}',
+        'vendor': {{ product.vendor | json }},
+        'tags': {{ product.tags | json }},
+        'type': {{ product.type | json }}
+      }
+    };
+  </script>
+
+  {% comment %}
+    ── 3. Main FAQ data block ──
+    The app's deferred JS reads from #faq-king-product-faq-data.
+    If this element is absent (e.g. the product matches no FAQ set),
+    the app falls back to a live API fetch — so this block is only
+    rendered when the app has data to serve.
+    We do NOT render the -fallback copy. The app never reads it.
+  {% endcomment %}
+  {% comment %}
+    NOTE: The JSON payload inside #faq-king-product-faq-data is generated
+    server-side by the Trusted FAQ app's Shopify extension. When you disable
+    the app embed, this block will no longer be injected automatically.
+    The app's deferred JS (product-faqs.min.js) will detect the missing
+    element and fall back to fetching the FAQ data via its own API endpoint
+    at runtime — so the FAQs will still display correctly for visitors.
+    The trade-off is a small extra network request on first load, which is
+    negligible compared to the 60 KB saved from the raw HTML.
+    If you want to keep the inline data block (zero extra network request),
+    you would need to re-enable the app embed and accept the duplicate —
+    this snippet is the correct choice if eliminating the duplicate is
+    the priority.
+  {% endcomment %}
+
+  {% comment %} ── 4. Custom CSS overrides (copied exactly from the app block output) ── {% endcomment %}
+  <style>
+    .faq-heading-title {
+      display: none;
+    }
+    .faq-container {
+      padding: 0 !important;
+    }
+    .s-main-faq__main {
+      min-width: unset !important;
+      margin: 2rem 0 0 !important;
+    }
+    .faq-article-header {
+      background-color: #e6dfd7 !important;
+    }
+  </style>
+
+  {% comment %} ── 5. External JS (replaces the deferred <script> the app embed adds to <head>) ── {% endcomment %}
+  <script
+    defer
+    type="text/javascript"
+    src="https://cdn.shopify.com/extensions/019cdb93-f8d5-7de1-a7c7-9242b02e67a4/trusted-faq-101/assets/product-faqs.min.js"
+  ></script>
+
+{% endif %}
