@@ -71,7 +71,6 @@
         },
         "2d65ec9f-0f10-4229-8807-58b6cc8e1fae": {
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "disabled": true,
           "settings": {
             "data_key": "credit-promotion-auto-size",
             "theme": "custom",
@@ -83,6 +82,7 @@
         "custom_liquid_hzdz9f": {
           "type": "custom_liquid",
           "name": "Klarna Placement",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div id=\"shopify-block-klarna-lb\" class=\"shopify-block shopify-app-block\">\n  <klarna-placement\n    id=\"lb-klarna-placement\"\n    data-key=\"credit-promotion-auto-size\"\n    data-theme=\"custom\"\n    data-message-prefix=\"\"\n    data-integration-style=\"app-block\">\n  </klarna-placement>\n</div>"
           }
