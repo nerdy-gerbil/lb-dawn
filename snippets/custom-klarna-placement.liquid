@@ -1,47 +1,50 @@
 {% comment %}
   ============================================================
-  Klarna On-Site Messaging — Lazy-Load Replacement v2
+  Klarna On-Site Messaging — Lazy-Load Replacement v3
   ------------------------------------------------------------
   PREREQUISITES:
-  1. Disable the Klarna app BLOCK on the product template
-     (remove it from the product template sections in the
-     theme customiser — NOT the app embed, which does not
-     exist for Klarna).
-  2. Add the <klarna-placement> element to your product
-     template as a Custom Liquid block (see bottom of file).
+  1. Remove the Klarna app BLOCK from the product template
+     in the theme customiser (drag it out of the sections).
+  2. Add the <klarna-placement> Custom Liquid block to your
+     product template (see bottom of this file).
   3. Paste THIS snippet immediately before </body> in
-     theme.liquid.
+     theme.liquid, replacing any previous version.
 
-  WHAT WAS WRONG IN v1:
-  Klarna's index.js removes the placement element under two
-  conditions:
-    a) getLocale() returns null  — happens when storefrontCountry
-       is not in Klarna's mid_locales list for your account.
-       The store's mid_locales come from Klarna's own API
-       (https://skosm.klarna.com/app-blocks/v1/store), NOT
-       from the config object we push. So passing the wrong
-       storefrontCountry / storefrontLanguage causes a null
-       locale and instant removal.
-    b) isDynamicPlacement() && !hasMatchingCurrency() — the
-       data-key "credit-promotion-auto-size" is a dynamic
-       placement, so Klarna cross-checks storefrontCurrency
-       against localeToCurrency(storefrontCountry). The live
-       app block was passing storefrontCurrency='USD' and
-       storefrontCountry='US' (Shopify's server-side defaults
-       when fetched without a session cookie), which caused a
-       currency mismatch for UK visitors.
+  WHAT WAS WRONG IN v1 AND v2 — confirmed via live browser:
+  -------------------------------------------------------
+  Issue 1 — STALE CACHED COUNTRY
+    localStorage had 'klarnaosm_user_locale' = 'US' from a
+    previous session. v2 read this cache and passed
+    storefrontCountry='US', storefrontCurrency='USD'.
+    Klarna's index.js then called hasMatchingCurrency() which
+    maps GB → GBP, found USD ≠ GBP, and removed the element.
+    FIX: Clear the stale cache on first run, then re-resolve.
 
-  THE FIX:
-  - storefrontCountry and storefrontCurrency are now resolved
-    client-side AFTER the page loads, using Klarna's own
-    geolocation service (the same one index.js uses internally)
-    and the Shopify.currency object that is always present on
-    Shopify storefronts. This guarantees the values match what
-    Klarna's API returns for the visitor's actual country.
-  - The config push is deferred until after geolocation
-    resolves, so klarnaAppBlocksManager always receives the
-    correct values.
-  - The Klarna JS is still lazy-loaded on scroll or after 3 s.
+  Issue 2 — KLARNA index.js NEVER LOADED
+    The Klarna index.js script tag was not present in the DOM
+    at all (confirmed: 'Klarna script tags: ' was empty and
+    'klarna-osm-script-tag present: false'). The lazy-load
+    IntersectionObserver was not firing because the placement
+    element was below the fold and the observer threshold was
+    not being met before the 3s timer. More critically, the
+    script was being appended to <head> after the page had
+    already parsed, which on some Shopify themes causes the
+    defer queue to be ignored.
+    FIX: Load the script into <body> instead of <head>, and
+    reduce the fallback timer to 1s.
+
+  Issue 3 — SHOPIFY CURRENCY IS USD NOT GBP
+    window.Shopify.currency.active = 'USD' on this store.
+    This is because the store has multi-currency enabled and
+    the browser's geolocation (sandbox = US) is returning USD
+    as the active currency. Klarna's hasMatchingCurrency()
+    uses storefrontCurrency from our config object — NOT from
+    window.Shopify.currency — so we must pass the currency
+    that matches the VISITOR'S COUNTRY as resolved by
+    Klarna's own geolocation, not the Shopify display currency.
+    FIX: Always derive storefrontCurrency from the resolved
+    country using Klarna's own localeToCurrency map, ignoring
+    window.Shopify.currency entirely.
   ============================================================
 {% endcomment %}
 
@@ -55,13 +58,14 @@
 
   var KLARNA_JS_URL  = 'https://cdn.shopify.com/extensions/6da6ffdd-cf2b-4a18-80e5-578ff81399ca/klarna-on-site-messaging-33/assets/index.js';
   var GEOSERVICE_URL = 'https://skosm.klarna.com/geolocation/v1';
+  var CACHE_KEY      = 'klarnaosm_user_locale';
   var PLACEMENT_ID   = 'lb-klarna-placement';
   var VARIANT_PRICE  = {{ klarna_variant_price }};
   var SHOP_DOMAIN    = {{ shop.permanent_domain | json }};
   var SHOP_LOCALE    = {{ request.locale.iso_code | json }};
   var loaded         = false;
 
-  /* ── Currency map (matches Klarna's internal localeToCurrency) ── */
+  /* ── Klarna's exact localeToCurrency map ── */
   var COUNTRY_CURRENCY = {
     AU:'AUD', AT:'EUR', BE:'EUR', CA:'CAD', CZ:'CZK', DK:'DKK',
     FI:'EUR', FR:'EUR', DE:'EUR', GR:'EUR', HU:'HUF', IE:'EUR',
@@ -70,54 +74,74 @@
     GB:'GBP', US:'USD'
   };
 
-  /* ── 1. Set up the manager queue before index.js loads ── */
-  window.appBlockPlacements = window.appBlockPlacements || [];
-  window.klarnaAppBlocksManager = window.klarnaAppBlocksManager || {
-    _queue: [],
-    push: function (cfg) { this._queue.push(cfg); }
+  /* ── Timezone → country fallback map ── */
+  var TZ_MAP = {
+    'Europe/London':'GB','Europe/Dublin':'IE','Europe/Paris':'FR',
+    'Europe/Berlin':'DE','Europe/Amsterdam':'NL','Europe/Stockholm':'SE',
+    'Europe/Oslo':'NO','Europe/Copenhagen':'DK','Europe/Helsinki':'FI',
+    'Europe/Warsaw':'PL','Europe/Prague':'CZ','Europe/Budapest':'HU',
+    'Europe/Bucharest':'RO','Europe/Bratislava':'SK','Europe/Vienna':'AT',
+    'Europe/Brussels':'BE','Europe/Zurich':'CH','Europe/Lisbon':'PT',
+    'Europe/Madrid':'ES','Europe/Rome':'IT','Europe/Athens':'GR',
+    'America/New_York':'US','America/Chicago':'US','America/Denver':'US',
+    'America/Los_Angeles':'US','America/Toronto':'CA','America/Vancouver':'CA',
+    'Australia/Sydney':'AU','Pacific/Auckland':'NZ'
   };
 
-  /* ── 2. Resolve visitor country then push config ── */
+  /* ── 1. Clear any stale cached country from previous sessions ──
+     The cache may contain 'US' from a crawl-bot or previous visit.
+     We always re-resolve on product pages to ensure accuracy.     */
+  try { localStorage.removeItem(CACHE_KEY); } catch(e) {}
+
+  /* ── 2. Set up the manager queue BEFORE index.js loads ── */
+  window.appBlockPlacements = window.appBlockPlacements || [];
+
+  /* Stub manager: queues pushes until the real one (from index.js) takes over */
+  if (!window.klarnaAppBlocksManager || typeof window.klarnaAppBlocksManager.pushPlacement !== 'function') {
+    window.klarnaAppBlocksManager = {
+      _queue: [],
+      push: function (cfg) { this._queue.push(cfg); }
+    };
+  }
+
+  /* ── 3. Build and push the config object ── */
   function pushKlarnaConfig(country) {
-    var currency = COUNTRY_CURRENCY[country] || (window.Shopify && window.Shopify.currency && window.Shopify.currency.active) || 'GBP';
+    var currency = COUNTRY_CURRENCY[country] || 'GBP';
     var lang     = SHOP_LOCALE ? SHOP_LOCALE.slice(0, 2) : 'en';
 
     var cfg = {
-      productVariants:     [],          /* empty — Klarna fetches from its CDN */
-      templateName:        'product',
-      dataKey:             'credit-promotion-auto-size',
-      storefrontCurrency:  currency,
-      storefrontCountry:   country,
-      storefrontLanguage:  lang,
-      shopLocale:          lang,
-      shopDomain:          SHOP_DOMAIN,
-      variantPrice:        String(VARIANT_PRICE),
-      cartPrice:           '0',
-      selector:            PLACEMENT_ID,
-      topPadding:          '0',
-      bottomPadding:       '0'
+      productVariants:    [],
+      templateName:       'product',
+      dataKey:            'credit-promotion-auto-size',
+      storefrontCurrency: currency,
+      storefrontCountry:  country,
+      storefrontLanguage: lang,
+      shopLocale:         lang,
+      shopDomain:         SHOP_DOMAIN,
+      variantPrice:       String(VARIANT_PRICE),
+      cartPrice:          '0',
+      selector:           PLACEMENT_ID,
+      topPadding:         '0',
+      bottomPadding:      '0'
     };
 
-    /* Push to queue — index.js will process it when it loads */
+    /* Push to appBlockPlacements — this is what index.js reads on load */
     window.appBlockPlacements.push(cfg);
 
-    /* If index.js already loaded and created the real manager, push directly */
+    /* Also push to manager in case index.js already loaded */
     if (window.klarnaAppBlocksManager && typeof window.klarnaAppBlocksManager.pushPlacement === 'function') {
       window.klarnaAppBlocksManager.pushPlacement(cfg);
+    } else if (window.klarnaAppBlocksManager && typeof window.klarnaAppBlocksManager.push === 'function') {
+      window.klarnaAppBlocksManager.push(cfg);
     }
   }
 
-  /* ── 3. Resolve country via Klarna's geolocation API ── */
+  /* ── 4. Resolve visitor country via Klarna's geolocation API ── */
   function resolveCountryAndPush() {
-    var cached = null;
-    try { cached = localStorage.getItem('klarnaosm_user_locale'); } catch(e) {}
+    var tz       = (typeof Intl !== 'undefined' && Intl.DateTimeFormat) ? Intl.DateTimeFormat().resolvedOptions().timeZone : '';
+    var tzCountry = TZ_MAP[tz] || 'GB';
 
-    if (cached) {
-      pushKlarnaConfig(cached);
-      return;
-    }
-
-    var url = GEOSERVICE_URL + '?defaultDomain=' + encodeURIComponent(SHOP_DOMAIN) + '&customDomain=';
+    var url  = GEOSERVICE_URL + '?defaultDomain=' + encodeURIComponent(SHOP_DOMAIN) + '&customDomain=';
     var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
     var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 1500) : null;
 
@@ -125,30 +149,15 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         clearTimeout(timer);
-        var country = (data && data.country) ? data.country : 'GB';
-        try { localStorage.setItem('klarnaosm_user_locale', country); } catch(e) {}
+        var country = (data && data.country) ? data.country : tzCountry;
         pushKlarnaConfig(country);
       })
       .catch(function () {
-        /* Fallback: derive from timezone, default to GB */
-        var tz = (Intl && Intl.DateTimeFormat) ? Intl.DateTimeFormat().resolvedOptions().timeZone : '';
-        var TZ_MAP = {
-          'Europe/London':'GB','Europe/Dublin':'IE','Europe/Paris':'FR',
-          'Europe/Berlin':'DE','Europe/Amsterdam':'NL','Europe/Stockholm':'SE',
-          'Europe/Oslo':'NO','Europe/Copenhagen':'DK','Europe/Helsinki':'FI',
-          'Europe/Warsaw':'PL','Europe/Prague':'CZ','Europe/Budapest':'HU',
-          'Europe/Bucharest':'RO','Europe/Bratislava':'SK','Europe/Vienna':'AT',
-          'Europe/Brussels':'BE','Europe/Zurich':'CH','Europe/Lisbon':'PT',
-          'Europe/Madrid':'ES','Europe/Rome':'IT','Europe/Athens':'GR',
-          'America/New_York':'US','America/Chicago':'US','America/Denver':'US',
-          'America/Los_Angeles':'US','America/Toronto':'CA','America/Vancouver':'CA',
-          'Australia/Sydney':'AU','Pacific/Auckland':'NZ'
-        };
-        pushKlarnaConfig(TZ_MAP[tz] || 'GB');
+        pushKlarnaConfig(tzCountry);
       });
   }
 
-  /* ── 4. Lazy-load the Klarna JS ── */
+  /* ── 5. Load the Klarna index.js ── */
   function loadKlarnaScript() {
     if (loaded) return;
     loaded = true;
@@ -156,46 +165,53 @@
     script.src   = KLARNA_JS_URL;
     script.async = true;
     script.type  = 'text/javascript';
-    /* When index.js loads it reads window.appBlockPlacements — already populated */
-    document.head.appendChild(script);
+    /* Append to body (not head) to ensure it executes after DOM is ready */
+    var body = document.body || document.getElementsByTagName('body')[0];
+    if (body) {
+      body.appendChild(script);
+    } else {
+      document.head.appendChild(script);
+    }
   }
 
-  /* Trigger on scroll-into-view OR after 3 s */
-  var placement = document.getElementById(PLACEMENT_ID);
-  if (placement && 'IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      if (entries[0].isIntersecting) {
-        loadKlarnaScript();
-        observer.disconnect();
-      }
-    }, { rootMargin: '200px' });
-    observer.observe(placement);
+  /* ── 6. Trigger loading: scroll-into-view OR 1s fallback ── */
+  function setupLazyLoad() {
+    var placement = document.getElementById(PLACEMENT_ID);
+
+    if (placement && typeof IntersectionObserver !== 'undefined') {
+      var observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) {
+          loadKlarnaScript();
+          observer.disconnect();
+        }
+      }, { rootMargin: '400px' }); /* 400px pre-load margin */
+      observer.observe(placement);
+    }
+
+    /* Always load after 1s regardless — ensures it loads even if placement
+       is above fold or IntersectionObserver fires late */
+    setTimeout(loadKlarnaScript, 1000);
   }
-  setTimeout(loadKlarnaScript, 3000);
 
-  /* ── 5. Resolve country and push config (runs immediately) ── */
-  resolveCountryAndPush();
-
-  /* ── 6. Update price on variant change ── */
-  /* Dawn / most themes dispatch a native 'change' on the variant select/radio */
+  /* ── 7. Variant price updates ── */
   document.addEventListener('change', function (e) {
     var t = e.target;
     if (!t || !t.form) return;
     if (!t.form.action || t.form.action.indexOf('/cart/add') === -1) return;
     var idInput = t.form.querySelector('[name="id"]');
     if (!idInput) return;
-    fetchVariantPrice(parseInt(idInput.value, 10));
+    fetchAndSetVariantPrice(parseInt(idInput.value, 10));
   });
 
-  /* Some themes (e.g. Dawn) also fire a custom event */
   document.addEventListener('variant:changed', function (e) {
     if (e.detail && e.detail.variant) setKlarnaPrice(e.detail.variant.price);
   });
+
   document.addEventListener('variantChange', function (e) {
     if (e.detail && e.detail.variant) setKlarnaPrice(e.detail.variant.price);
   });
 
-  function fetchVariantPrice(variantId) {
+  function fetchAndSetVariantPrice(variantId) {
     fetch(window.location.pathname + '.json')
       .then(function (r) { return r.json(); })
       .then(function (data) {
@@ -213,6 +229,10 @@
     if (el) el.setAttribute('data-purchase-amount', String(priceInCents));
   }
 
+  /* ── Run ── */
+  resolveCountryAndPush();
+  setupLazyLoad();
+
 })();
 </script>
 
@@ -224,8 +244,8 @@
   ------------------------------------------------------------
   In the theme customiser, add a Custom Liquid block to your
   product template at the position where you want the Klarna
-  instalment message to appear (below the price, above Add
-  to Cart). Paste this exactly:
+  instalment message to appear (below the price, above the
+  Add to Cart button). Paste this exactly:
 
   <div id="shopify-block-klarna-lb" class="shopify-block shopify-app-block">
     <klarna-placement
