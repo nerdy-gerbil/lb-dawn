@@ -101,8 +101,8 @@
   "priceValidUntil": "{{ 'now' | date: "%s" | plus: days | date: "%FT23:59:59Z" }}",
   "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
   "url": "{{ shop.url }}{{ product.url }}"{% if shop.metaobjects.schema_shipping_policy %},
-  "shippingDetails": {{ shop.metaobjects.schema_shipping_policy }}{% endif %}{% if shop.metaobjects.merchant_return_policy %},
-  "hasMerchantReturnPolicy": {{ shop.metaobjects.merchant_return_policy }}{% endif %}
+  "shippingDetails": {{ shop.metaobjects.schema_shipping_policy.default | json }}{% endif %}{% if shop.metaobjects.merchant_return_policy.default %},
+  "hasMerchantReturnPolicy": {{ shop.metaobjects.merchant_return_policy.default | json }}{% endif %}
 }{% if product.metafields.global.hallmark %},
 {% liquid
   comment
