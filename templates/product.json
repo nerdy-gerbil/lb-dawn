@@ -71,7 +71,6 @@
         },
         "2d65ec9f-0f10-4229-8807-58b6cc8e1fae": {
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "disabled": false,
           "settings": {
             "data_key": "credit-promotion-auto-size",
             "theme": "custom",
@@ -139,7 +138,6 @@
         "custom_liquid_Wwgmp7",
         "85c0012a-8985-47c8-94ab-60e489e9784f",
         "2d65ec9f-0f10-4229-8807-58b6cc8e1fae",
-        "custom_liquid_hzdz9f",
         "817985f5-d9b8-4816-a0e3-f277a78232d2",
         "custom_liquid_mUePKW",
         "custom_liquid_kJMn8a",
