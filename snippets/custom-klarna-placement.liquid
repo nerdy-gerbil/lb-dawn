@@ -1,0 +1,191 @@
+{% comment %}
+  ============================================================
+  Klarna On-Site Messaging — Lazy-Load Replacement
+  ------------------------------------------------------------
+  REPLACES: the Klarna app embed (disable it in the theme
+  customiser under App Embeds before adding this snippet).
+
+  HOW IT WORKS:
+  - On product pages, renders the <klarna-placement> element
+    immediately so layout space is reserved.
+  - Defers loading the Klarna JS until the user has scrolled
+    the placement into view (IntersectionObserver), or after
+    3 seconds — whichever comes first.
+  - Passes only the CURRENT variant price to Klarna via a
+    small config object. The full productVariants array that
+    the app embed inlines (up to 245 KB) is NOT included.
+    Klarna's script fetches variant data from its own CDN
+    when needed for price updates on variant switches.
+  - Listens for Shopify variant change events and updates
+    the data-purchase-amount attribute so the instalment
+    message refreshes correctly when the customer selects
+    a different variant.
+
+  WHERE TO ADD:
+  Paste immediately before the closing </body> tag in
+  theme.liquid.
+
+  PLACEMENT ELEMENT:
+  The <klarna-placement> web component must also exist in
+  your product template (product.json / product.liquid) at
+  the point where you want the messaging to appear. If you
+  were using the Klarna app block, that block rendered both
+  the placement element AND this script. With the app embed
+  disabled, you need to add the placement element manually
+  to your product template section. See the note at the
+  bottom of this file.
+  ============================================================
+{% endcomment %}
+
+{% if template.name == 'product' %}
+
+  {%- assign klarna_variant_price = product.selected_or_first_available_variant.price -%}
+  {%- assign klarna_placement_id = 'lb-klarna-placement' -%}
+
+  {{- '<!-- Klarna On-Site Messaging (lazy-loaded) -->' -}}
+
+  <script>
+    (function () {
+      'use strict';
+
+      var KLARNA_JS_URL = 'https://cdn.shopify.com/extensions/6da6ffdd-cf2b-4a18-80e5-578ff81399ca/klarna-on-site-messaging-33/assets/index.js';
+      var PLACEMENT_ID  = {{ klarna_placement_id | json }};
+      var loaded        = false;
+
+      /* ── 1. Initialise the manager queue ── */
+      window.klarnaAppBlocksManager = window.klarnaAppBlocksManager || { push: function(cfg) { this._queue = this._queue || []; this._queue.push(cfg); } };
+
+      /* ── 2. Config object — no productVariants array ── */
+      var klarnaConfig = {
+        templateName:        'product',
+        dataKey:             'credit-promotion-auto-size',
+        storefrontCurrency:  {{ shop.currency | json }},
+        storefrontCountry:   {{ localization.country.iso_code | json }},
+        storefrontLanguage:  {{ request.locale.iso_code | json }},
+        shopLocale:          {{ request.locale.iso_code | json }},
+        shopDomain:          {{ shop.permanent_domain | json }},
+        variantPrice:        {{ klarna_variant_price | json | replace: '"', '' }},
+        cartPrice:           '0',
+        selector:            PLACEMENT_ID,
+        topPadding:          '0',
+        bottomPadding:       '0'
+      };
+
+      window.klarnaAppBlocksManager.push(klarnaConfig);
+
+      /* ── 3. Lazy-load the Klarna JS ── */
+      function loadKlarnaScript() {
+        if (loaded) return;
+        loaded = true;
+
+        var script    = document.createElement('script');
+        script.src    = KLARNA_JS_URL;
+        script.async  = true;
+        script.type   = 'text/javascript';
+        document.head.appendChild(script);
+      }
+
+      /* Trigger on scroll-into-view OR after 3 s, whichever first */
+      var placement = document.getElementById(PLACEMENT_ID);
+
+      if (placement && 'IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting) {
+            loadKlarnaScript();
+            observer.disconnect();
+          }
+        }, { rootMargin: '200px' });
+        observer.observe(placement);
+      }
+
+      /* Fallback: load after 3 seconds regardless */
+      setTimeout(loadKlarnaScript, 3000);
+
+      /* ── 4. Update price on variant change ── */
+      document.addEventListener('change', function (e) {
+        if (!e.target || !e.target.name || e.target.name.indexOf('option') === -1) return;
+        updateKlarnaPrice();
+      });
+
+      /* Also listen for the Shopify variant:changed custom event (used by many themes) */
+      document.addEventListener('variant:changed', function (e) {
+        if (e.detail && e.detail.variant && e.detail.variant.price) {
+          setKlarnaPrice(e.detail.variant.price);
+        }
+      });
+
+      /* Dawn / Debut themes dispatch this event */
+      document.addEventListener('variantChange', function (e) {
+        if (e.detail && e.detail.variant && e.detail.variant.price) {
+          setKlarnaPrice(e.detail.variant.price);
+        }
+      });
+
+      function updateKlarnaPrice() {
+        /* Read the currently selected variant ID from the form */
+        var form    = document.querySelector('form[action*="/cart/add"]');
+        if (!form) return;
+        var idInput = form.querySelector('[name="id"]');
+        if (!idInput) return;
+        var variantId = parseInt(idInput.value, 10);
+
+        /* Use Shopify's storefront product JSON to get the price */
+        fetch(window.location.pathname + '.json')
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            var variants = data.product && data.product.variants;
+            if (!variants) return;
+            for (var i = 0; i < variants.length; i++) {
+              if (variants[i].id === variantId) {
+                setKlarnaPrice(variants[i].price);
+                break;
+              }
+            }
+          })
+          .catch(function () {});
+      }
+
+      function setKlarnaPrice(priceInCents) {
+        var el = document.getElementById(PLACEMENT_ID);
+        if (!el) return;
+        el.setAttribute('data-purchase-amount', String(priceInCents));
+
+        /* Tell Klarna's manager about the new price too */
+        if (window.klarnaAppBlocksManager && typeof window.klarnaAppBlocksManager.update === 'function') {
+          window.klarnaAppBlocksManager.update({ selector: PLACEMENT_ID, variantPrice: String(priceInCents) });
+        }
+      }
+
+    })();
+  </script>
+
+{% endif %}
+
+{% comment %}
+  ============================================================
+  PRODUCT TEMPLATE PLACEMENT ELEMENT
+  ------------------------------------------------------------
+  With the Klarna app embed disabled, the <klarna-placement>
+  web component is no longer injected automatically. You need
+  to add it manually to your product template at the location
+  where you want the Klarna messaging to appear (typically
+  just below the price, before the Add to Cart button).
+
+  Add this block to your product section Liquid file
+  (e.g. sections/main-product.liquid) or as a Custom Liquid
+  block in the theme customiser:
+
+  <div id="shopify-block-klarna-lb" class="shopify-block shopify-app-block">
+    <klarna-placement
+      id="lb-klarna-placement"
+      data-key="credit-promotion-auto-size"
+      data-theme="custom"
+      data-message-prefix=""
+      data-integration-style="app-block">
+    </klarna-placement>
+  </div>
+
+  The id="lb-klarna-placement" must match the PLACEMENT_ID
+  variable in the script above.
+  ============================================================
+{% endcomment %}
