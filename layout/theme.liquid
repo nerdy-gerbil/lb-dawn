@@ -593,6 +593,7 @@
       {% endif %}
     {% endcomment %}
     {% comment %} END Preload Homepage Banner {% endcomment %}
+    {% render 'custom-klarna-placement' %}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -847,8 +848,6 @@ document.addEventListener('DOMContentLoaded', function () {
     </script>
 
     {% render 'custom-trusted-faq-embed' %}
-
-    {% render 'custom-klarna-placement' %}
     
     {% comment %}FIX html element not "hydrating"{% endcomment %}
     <script>
