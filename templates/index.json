@@ -597,7 +597,7 @@
       "settings": {
         "show_on_device": "mobile",
         "fetch_priority": false,
-        "image": "shopify://shop_images/mensnecklace_flatlay_small_downpage_banner.webp",
+        "image": "shopify://shop_images/mens_jewellery_hanging_large_mobile.webp",
         "image_overlay_opacity": 10,
         "image_height": "medium",
         "image_behavior": "none",
