@@ -364,6 +364,7 @@ variant-selects {
   }
 }
 
+/* General CLS Fixes */
 html:not(.hydrated) {
   section:has([id^='MainProduct-template--']) ~ .shopify-section:not(:has([class*='sb-product-carousel-'])),
   .customily-personalize-button,
@@ -374,7 +375,8 @@ html:not(.hydrated) {
   .shopify-section:has([class^='video-slider-template--']),
   .shopify-section-group-footer-group:not(:has([class^='instafeed-slider-sections--'])),
   div[id^='shopify-section-template--'][id$='__product-grid'] ~ section,
-  div[id^='shopify-section-template--'][id$='__product-grid'] {
+  div[id^='shopify-section-template--'][id$='__product-grid'],
+  article.article-template {
     display: none !important;
   }
 
