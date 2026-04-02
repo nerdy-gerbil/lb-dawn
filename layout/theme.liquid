@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="js" lang="{% if request.path == '/pages/for-our-brazilian-visitors' %}pt{% else %}en{% endif %}">
   <head>
+    {% render 'shogun-optimizer' %}
+
     {%- if content_for_header contains 'tapita-seo-script-tags' -%}{%- include 'tapita-seo-schema' -%}{%- endif -%}
 
     <script>
