@@ -377,7 +377,8 @@ html:not(.hydrated) {
   div[id^='shopify-section-template--'][id$='__product-grid'] ~ section,
   div[id^='shopify-section-template--'][id$='__product-grid'],
   .shopify-section:has(article.article-template),
-  .shopify-section:has(div.shopbox_blog-post) {
+  .shopify-section:has(div.shopbox_blog-post),
+  .shopify-section.shopify-section-group-footer-group {
     display: none !important;
   }
 
