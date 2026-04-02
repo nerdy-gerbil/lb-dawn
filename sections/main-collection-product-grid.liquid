@@ -610,6 +610,40 @@
           "info": "Only applies if 'Show on all pages' is false."
         },
         {
+          "type": "select",
+          "id": "layout",
+          "label": "Layout",
+          "options": [
+            { "value": "text_top_button_bottom", "label": "Text on top, button on bottom" },
+            { "value": "button_top_text_bottom", "label": "Button on top, text on bottom" },
+            { "value": "only_text", "label": "Only text" },
+            { "value": "only_button", "label": "Only button" }
+          ],
+          "default": "text_top_button_bottom"
+        },
+        {
+          "type": "select",
+          "id": "content_vertical_alignment",
+          "label": "Content Vertical Alignment",
+          "options": [
+            { "value": "flex-start", "label": "Top" },
+            { "value": "center", "label": "Middle" },
+            { "value": "flex-end", "label": "Bottom" }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "content_horizontal_alignment",
+          "label": "Content Horizontal Alignment",
+          "options": [
+            { "value": "flex-start", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "flex-end", "label": "Right" }
+          ],
+          "default": "center"
+        },
+        {
           "type": "color",
           "id": "heading_color",
           "label": "Heading Color",
@@ -1027,6 +1061,40 @@
           "label": "Show on page number",
           "default": 1,
           "info": "Only applies if 'Show on all pages' is false."
+        },
+        {
+          "type": "select",
+          "id": "layout",
+          "label": "Layout",
+          "options": [
+            { "value": "text_top_button_bottom", "label": "Text on top, button on bottom" },
+            { "value": "button_top_text_bottom", "label": "Button on top, text on bottom" },
+            { "value": "only_text", "label": "Only text" },
+            { "value": "only_button", "label": "Only button" }
+          ],
+          "default": "text_top_button_bottom"
+        },
+        {
+          "type": "select",
+          "id": "content_vertical_alignment",
+          "label": "Content Vertical Alignment",
+          "options": [
+            { "value": "flex-start", "label": "Top" },
+            { "value": "center", "label": "Middle" },
+            { "value": "flex-end", "label": "Bottom" }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "content_horizontal_alignment",
+          "label": "Content Horizontal Alignment",
+          "options": [
+            { "value": "flex-start", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "flex-end", "label": "Right" }
+          ],
+          "default": "center"
         },
         {
           "type": "color",

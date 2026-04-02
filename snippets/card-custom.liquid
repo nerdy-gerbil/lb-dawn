@@ -15,7 +15,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
 
   .custom-card-bullets {
@@ -174,81 +173,92 @@
             </div>
         {%- endif -%}
         
-        <div class="card__content card__content--custom">
-            <div class="card__information">
-                {%- if block.settings.heading != blank -%}
-                    <div class="card__heading h5 rte" style="color: var(--color-heading, currentColor); margin-bottom: {{ block.settings.heading_padding_bottom }}px;">{{ block.settings.heading }}</div>
-                {%- endif -%}
-                
-                {%- if block.settings.text != blank -%}
-                    <div class="rte" style="color: var(--color-text, currentColor); margin-bottom: {{ block.settings.text_padding_bottom }}px;">{{ block.settings.text }}</div>
-                {%- endif -%}
-
-                <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets" style="margin-bottom: {{ block.settings.bullet_padding_bottom }}px;">
-                    {%- for i in (1..5) -%}
-                        {%- assign icon_key = 'icon_' | append: i -%}
-                        {%- assign text_key = 'text_' | append: i -%}
-                        {%- assign icon = block.settings[icon_key] -%}
-                        {%- assign text = block.settings[text_key] -%}
-                        
-                        {%- if text != blank -%}
-                        <li class="icon-with-text__item">
-                            {% render 'icon-accordion', icon: icon %}
-                            <span class="h4 inline-richtext">{{ text }}</span>
-                        </li>
+        <div class="card__content card__content--custom" style="justify-content: {{ block.settings.content_vertical_alignment }}; align-items: {{ block.settings.content_horizontal_alignment }}; text-align: {{ block.settings.content_horizontal_alignment | replace: 'flex-start', 'left' | replace: 'flex-end', 'right' }};">
+            <div class="card__information" style="align-items: {{ block.settings.content_horizontal_alignment }};">
+                {%- if block.settings.layout != 'only_button' -%}
+                    <div class="card__text-content" style="order: {% if block.settings.layout == 'button_top_text_bottom' %}2{% else %}1{% endif %}; width: 100%; display: flex; flex-direction: column; align-items: {{ block.settings.content_horizontal_alignment }};">
+                        {%- if block.settings.heading != blank -%}
+                            <div class="card__heading h5 rte" style="color: var(--color-heading, currentColor); margin-bottom: {{ block.settings.heading_padding_bottom }}px;">{{ block.settings.heading }}</div>
                         {%- endif -%}
-                    {%- endfor -%}
-                </ul>
-
-                {%- if block.settings.button_label != blank -%}
-                    {%- liquid
-                        assign btn_style = ''
-                        assign btn_class = 'button button--primary color-' | append: block.settings.button_color_scheme
-                        if block.settings.button_horizontal_alignment == 'full'
-                            assign btn_class = btn_class | append: ' full-width'
-                        elsif block.settings.button_horizontal_alignment == 'left'
-                            assign btn_style = 'align-self: flex-start; width: fit-content;'
-                        elsif block.settings.button_horizontal_alignment == 'center'
-                            assign btn_style = 'align-self: center; width: fit-content;'
-                        elsif block.settings.button_horizontal_alignment == 'right'
-                            assign btn_style = 'align-self: flex-end; width: fit-content;'
-                        endif
                         
-                        assign btn_style = btn_style | append: ' margin-top: ' | append: block.settings.button_padding_top | append: 'px;'
-                    -%}
-                    <a href="{{ block.settings.button_link }}" class="{{ btn_class }}" style="{{ btn_style }}">
-                        {{ block.settings.button_label | escape }}
-                    </a>
+                        {%- if block.settings.text != blank -%}
+                            <div class="rte" style="color: var(--color-text, currentColor); margin-bottom: {{ block.settings.text_padding_bottom }}px;">{{ block.settings.text }}</div>
+                        {%- endif -%}
+
+                        <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets" style="margin-bottom: {{ block.settings.bullet_padding_bottom }}px; width: 100%; display: flex; flex-direction: column; align-items: {{ block.settings.content_horizontal_alignment }};">
+                            {%- for i in (1..5) -%}
+                                {%- assign icon_key = 'icon_' | append: i -%}
+                                {%- assign text_key = 'text_' | append: i -%}
+                                {%- assign icon = block.settings[icon_key] -%}
+                                {%- assign text = block.settings[text_key] -%}
+                                
+                                {%- if text != blank -%}
+                                <li class="icon-with-text__item" style="justify-content: {{ block.settings.content_horizontal_alignment }};">
+                                    {% render 'icon-accordion', icon: icon %}
+                                    <span class="h4 inline-richtext">{{ text }}</span>
+                                </li>
+                                {%- endif -%}
+                            {%- endfor -%}
+                        </ul>
+                    </div>
+                {%- endif -%}
+
+                {%- if block.settings.layout != 'only_text' and block.settings.button_label != blank -%}
+                    <div class="card__button-content" style="order: {% if block.settings.layout == 'button_top_text_bottom' %}1{% else %}2{% endif %}; width: 100%; display: flex; flex-direction: column; align-items: {{ block.settings.content_horizontal_alignment }};">
+                        {%- liquid
+                            assign btn_style = ''
+                            assign btn_class = 'button button--primary color-' | append: block.settings.button_color_scheme
+                            if block.settings.button_horizontal_alignment == 'full'
+                                assign btn_class = btn_class | append: ' full-width'
+                            elsif block.settings.button_horizontal_alignment == 'left'
+                                assign btn_style = 'align-self: flex-start; width: fit-content;'
+                            elsif block.settings.button_horizontal_alignment == 'center'
+                                assign btn_style = 'align-self: center; width: fit-content;'
+                            elsif block.settings.button_horizontal_alignment == 'right'
+                                assign btn_style = 'align-self: flex-end; width: fit-content;'
+                            endif
+                            
+                            assign btn_style = btn_style | append: ' margin-top: ' | append: block.settings.button_padding_top | append: 'px;'
+                        -%}
+                        <a href="{{ block.settings.button_link }}" class="{{ btn_class }}" style="{{ btn_style }}">
+                            {{ block.settings.button_label | escape }}
+                        </a>
+                    </div>
                 {%- endif -%}
             </div>
         </div>
-    <div class="card__content card__content--custom visible-on-hover">
-         <div class="card__information">
-             {%- if block.settings.heading != blank -%}
-                 <div class="card__heading h5 rte" style="color: var(--color-heading, currentColor); margin-bottom: {{ block.settings.heading_padding_bottom }}px;">{{ block.settings.heading }}</div>
-             {%- endif -%}
-                
-                {%- if block.settings.text != blank -%}
-                    <div class="rte" style="color: var(--color-text, currentColor); margin-bottom: {{ block.settings.text_padding_bottom }}px;">{{ block.settings.text }}</div>
-                {%- endif -%}
-
-                <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets" style="margin-bottom: {{ block.settings.bullet_padding_bottom }}px;">
-                    {%- for i in (1..5) -%}
-                        {%- assign icon_key = 'icon_' | append: i -%}
-                        {%- assign text_key = 'text_' | append: i -%}
-                        {%- assign icon = block.settings[icon_key] -%}
-                        {%- assign text = block.settings[text_key] -%}
+    <div class="card__content card__content--custom visible-on-hover" style="justify-content: {{ block.settings.content_vertical_alignment }}; align-items: {{ block.settings.content_horizontal_alignment }}; text-align: {{ block.settings.content_horizontal_alignment | replace: 'flex-start', 'left' | replace: 'flex-end', 'right' }};">
+         <div class="card__information" style="align-items: {{ block.settings.content_horizontal_alignment }};">
+             {%- if block.settings.layout != 'only_button' -%}
+                 <div class="card__text-content" style="order: {% if block.settings.layout == 'button_top_text_bottom' %}2{% else %}1{% endif %}; width: 100%; display: flex; flex-direction: column; align-items: {{ block.settings.content_horizontal_alignment }};">
+                     {%- if block.settings.heading != blank -%}
+                         <div class="card__heading h5 rte" style="color: var(--color-heading, currentColor); margin-bottom: {{ block.settings.heading_padding_bottom }}px;">{{ block.settings.heading }}</div>
+                     {%- endif -%}
                         
-                        {%- if text != blank -%}
-                        <li class="icon-with-text__item">
-                            {% render 'icon-accordion', icon: icon %}
-                            <span class="h4 inline-richtext">{{ text }}</span>
-                        </li>
+                        {%- if block.settings.text != blank -%}
+                            <div class="rte" style="color: var(--color-text, currentColor); margin-bottom: {{ block.settings.text_padding_bottom }}px;">{{ block.settings.text }}</div>
                         {%- endif -%}
-                    {%- endfor -%}
-                </ul>
 
-                {%- if block.settings.button_label != blank -%}
+                        <ul class="icon-with-text icon-with-text--vertical list-unstyled custom-card-bullets" style="margin-bottom: {{ block.settings.bullet_padding_bottom }}px; width: 100%; display: flex; flex-direction: column; align-items: {{ block.settings.content_horizontal_alignment }};">
+                            {%- for i in (1..5) -%}
+                                {%- assign icon_key = 'icon_' | append: i -%}
+                                {%- assign text_key = 'text_' | append: i -%}
+                                {%- assign icon = block.settings[icon_key] -%}
+                                {%- assign text = block.settings[text_key] -%}
+                                
+                                {%- if text != blank -%}
+                                <li class="icon-with-text__item" style="justify-content: {{ block.settings.content_horizontal_alignment }};">
+                                    {% render 'icon-accordion', icon: icon %}
+                                    <span class="h4 inline-richtext">{{ text }}</span>
+                                </li>
+                                {%- endif -%}
+                            {%- endfor -%}
+                        </ul>
+                 </div>
+             {%- endif -%}
+
+             {%- if block.settings.layout != 'only_text' and block.settings.button_label != blank -%}
+                 <div class="card__button-content" style="order: {% if block.settings.layout == 'button_top_text_bottom' %}1{% else %}2{% endif %}; width: 100%; display: flex; flex-direction: column; align-items: {{ block.settings.content_horizontal_alignment }};">
                     {%- liquid
                         assign btn_style = ''
                         assign btn_class = 'button button--primary color-' | append: block.settings.button_color_scheme
@@ -265,8 +275,9 @@
                     <a href="{{ block.settings.button_link }}" class="{{ btn_class }}" style="{{ btn_style }}">
                         {{ block.settings.button_label | escape }}
                     </a>
-                {%- endif -%}
-    </div>
+                 </div>
+             {%- endif -%}
+        </div>
    </div>
    </div>
   </div>
