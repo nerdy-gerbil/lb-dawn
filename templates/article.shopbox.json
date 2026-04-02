@@ -12,7 +12,7 @@
     "custom_liquid_wP7fX8": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"shopbox_blog-post\" style=\"--sb-rows: 1; min-height: calc(240px * var(--sb-rows));\">\n     <shopbox-grid cid=\"shopify72617427262\" currency=\"GBP\" id=\"shopify72617427262_recommendations\"></shopbox-grid>\n  </div>",
+        "custom_liquid": "<div class=\"shopbox_blog-post\" style=\"--sb-rows: 1; min-height: calc(400px * var(--sb-rows)); max-height: calc(400px * var(--sb-rows));\">\n     <shopbox-grid cid=\"shopify72617427262\" currency=\"GBP\" id=\"shopify72617427262_recommendations\"></shopbox-grid>\n  </div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
