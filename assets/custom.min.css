@@ -376,7 +376,7 @@ html:not(.hydrated) {
   .shopify-section-group-footer-group:not(:has([class^='instafeed-slider-sections--'])),
   div[id^='shopify-section-template--'][id$='__product-grid'] ~ section,
   div[id^='shopify-section-template--'][id$='__product-grid'],
-  article.article-template {
+  .shopify-section:has(article.article-template) {
     display: none !important;
   }
 
