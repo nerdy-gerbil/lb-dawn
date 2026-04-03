@@ -41,8 +41,8 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "SHOP GOLD",
-            "button_url": "shopify://collections/gold-necklaces",
+            "button": "SHOP EASTER SALE",
+            "button_url": "shopify://collections/easter-gifts",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
