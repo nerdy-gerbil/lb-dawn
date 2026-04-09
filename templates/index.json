@@ -15,7 +15,7 @@
         "heading_BRbmXE": {
           "type": "heading",
           "settings": {
-            "heading": "<p><strong>Gold Devotion</strong></p>",
+            "heading": "",
             "heading_custom": false,
             "heading_font": "system_ui_n4",
             "heading_size": 20,
@@ -28,7 +28,7 @@
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "<p>Wear What Moves You</p>",
+            "text": "<p>Strength. Love. Devotion.</p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
             "text_size": 32,
@@ -41,7 +41,7 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "SHOP GOLD",
+            "button": "Shop Gold Neklaces",
             "button_url": "shopify://collections/gold-necklaces",
             "button_custom": true,
             "button_font": "system_ui_n4",
@@ -93,11 +93,11 @@
         "image_mobile": "shopify://shop_images/lb_banner_2026_03_12_mobile.webp",
         "overlay": 0,
         "content_maxwidth": 58,
-        "content_maxwidth_mobile": 95,
+        "content_maxwidth_mobile": 72,
         "content_horizontal_position": "center",
         "content_horizontal_position_mobile": "end",
         "content_vertical_position": "center",
-        "content_vertical_position_mobile": "center",
+        "content_vertical_position_mobile": "end",
         "content_x_position": 0,
         "content_x_position_mobile": 0,
         "content_y_position": 24,

@@ -227,6 +227,11 @@
           "custom_css": ".faq-heading-title {\ndisplay:none;\n}\n.faq-container {\npadding: 0 !important;\n}\n.s-main-faq__main {\nmin-width: unset !important;\nmargin: 2rem 0 0 !important;\n}\n.faq-article-header {\nbackground-color: #e6dfd7 !important;\n}"
         }
       },
+      "11175655759228028154": {
+        "type": "shopify://apps/essential-a-b-testing/blocks/ab-testing/0154ac6b-7b9c-4958-8219-ed5b06e6d463",
+        "disabled": false,
+        "settings": {}
+      },
       "15683396631634586217": {
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
@@ -240,11 +245,6 @@
           "button_vertical_position": "lowest",
           "greeting_message": "👋 Hi, please message us with any questions. We're happy to help!"
         }
-      },
-      "11175655759228028154": {
-        "type": "shopify://apps/essential-a-b-testing/blocks/ab-testing/0154ac6b-7b9c-4958-8219-ed5b06e6d463",
-        "disabled": false,
-        "settings": {}
       }
     },
     "color_schemes": {
