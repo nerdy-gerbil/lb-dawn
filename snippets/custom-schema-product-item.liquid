@@ -3,7 +3,7 @@
 {% if product.variants.size > 1 and part_of != 'collection' %}
 "@type": "ProductGroup",{% unless part_of == 'breadcrumbs' %}
 "name": {{ product.title | json }},{% endunless %}
-"description": {{ product.description | strip_html | json }},
+"description": {{ product.description | strip_html | truncate: 2000, "..." | json }},
 "url": "{{ shop.url }}{{ product.url }}",
 "brand": {
   "@type": "Brand",
@@ -86,7 +86,7 @@
 {% else %}
 "@type": "Product",
 "name": {{ product.title | json }},
-"description": {{ product.description | strip_html | json }},
+"description": {{ product.description | strip_html | truncate: 2000, "..." | json }},
 "image": [
   "https:{{ product.featured_image | image_url }}"
 ],{% if product.metafields.global.material %}
