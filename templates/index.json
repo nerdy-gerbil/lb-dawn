@@ -42,7 +42,7 @@
           "type": "button",
           "settings": {
             "button": "Shop Initials",
-            "button_url": "shopify://collections/gold-necklaces",
+            "button_url": "shopify://collections/initial-necklaces-personalised-solid-gold-silver-diamond-letters",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
