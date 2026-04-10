@@ -41,7 +41,7 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "Shop Gold Neklaces",
+            "button": "Shop Initials",
             "button_url": "shopify://collections/gold-necklaces",
             "button_custom": true,
             "button_font": "system_ui_n4",
