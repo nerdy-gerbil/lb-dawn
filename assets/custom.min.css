@@ -408,4 +408,6 @@ html:not(.hydrated) {
     text-align: justify;
 }
 
-
+.disable-pointer {
+  pointer-events: none;
+}
