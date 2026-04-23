@@ -1,12 +1,12 @@
 {% comment %}
-    Renders a custom card with optional image, text, and button.
+    Renders a custom card with optional image, text, and button (link or Klaviyo trigger).
     Accepts:
     - block: {Object} Block object containing settings.
 {% endcomment %}
 
 <style>
   .card-custom-wrapper .card--text .card__inner {
-    align-items: center; 
+    align-items: center;
   }
 
   .card__content--custom {
@@ -16,6 +16,8 @@
     display: flex;
     flex-direction: column;
   }
+
+  /* Removed absolute positioning for button to allow flex order */
 
   .custom-card-bullets {
     list-style: none;
@@ -38,6 +40,16 @@
     height: 1.2rem;
     flex-shrink: 0;
     color: currentColor;
+  }
+
+  @media screen and (max-width: 749px) {
+    .card-custom-wrapper .card__content--custom .card__information {
+      font-size: smaller;
+
+      .card__heading * {
+        font-size: large;
+      }
+    }
   }
 
   @media screen and (min-width: 750px) {
@@ -68,6 +80,7 @@
     display: flex !important; /* Override Dawn base CSS display: none */
     flex-direction: column;
     width: 100%;
+    overflow: hidden;
   }
 
   /* Base Overlay Styles */
@@ -81,6 +94,7 @@
     overflow-y: auto;
     display: flex;
     background-color: transparent; /* Text overlays background image */
+    justify-content: flex-start;
   }
 
   /* Hover State Logic */
@@ -129,7 +143,7 @@
   }
 </style>
 
-<div class="card-wrapper product-card-wrapper card-custom-wrapper">
+<div class="card-wrapper product-card-wrapper card-custom-wrapper {{ block.settings.show_on_device }}">
   {%- liquid
     assign ratio = 1
     if block.settings.image_ratio == 'portrait'
@@ -220,9 +234,17 @@
                             
                             assign btn_style = btn_style | append: ' margin-top: ' | append: block.settings.button_padding_top | append: 'px;'
                         -%}
-                        <a href="{{ block.settings.button_link }}" class="{{ btn_class }}" style="{{ btn_style }}">
-                            {{ block.settings.button_label | escape }}
-                        </a>
+                        {%- if block.settings.klaviyo_form_id != blank -%}
+                            <button type="button" 
+                                class="{{ btn_class }}" style="{{ btn_style }}"
+                                onclick="window._klOnsite = window._klOnsite || []; window._klOnsite.push(['openForm', '{{ block.settings.klaviyo_form_id }}']);">
+                                {{ block.settings.button_label | escape }}
+                            </button>
+                        {%- else -%}
+                            <a href="{{ block.settings.button_link }}" class="{{ btn_class }}" style="{{ btn_style }}">
+                                {{ block.settings.button_label | escape }}
+                            </a>
+                        {%- endif -%}
                     </div>
                 {%- endif -%}
             </div>
@@ -271,15 +293,25 @@
                         elsif block.settings.button_horizontal_alignment == 'right'
                             assign btn_style = 'align-self: flex-end; width: fit-content;'
                         endif
+
+                        assign btn_style = btn_style | append: ' margin-top: ' | append: block.settings.button_padding_top | append: 'px;'
                     -%}
-                    <a href="{{ block.settings.button_link }}" class="{{ btn_class }}" style="{{ btn_style }}">
-                        {{ block.settings.button_label | escape }}
-                    </a>
+                     {%- if block.settings.klaviyo_form_id != blank -%}
+                        <button type="button" 
+                            class="{{ btn_class }}" style="{{ btn_style }}"
+                            onclick="window._klOnsite = window._klOnsite || []; window._klOnsite.push(['openForm', '{{ block.settings.klaviyo_form_id }}']);">
+                            {{ block.settings.button_label | escape }}
+                        </button>
+                     {%- else -%}
+                        <a href="{{ block.settings.button_link }}" class="{{ btn_class }}" style="{{ btn_style }}">
+                            {{ block.settings.button_label | escape }}
+                        </a>
+                     {%- endif -%}
                  </div>
              {%- endif -%}
         </div>
-   </div>
-   </div>
+  </div>
+    </div>
   </div>
 </div>
 

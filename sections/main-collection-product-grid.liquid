@@ -180,12 +180,10 @@
                           style="--animation-order: {{ grid_index }};"
                         {% endif %}
                       >
-                        {%- if block.type == 'custom_card' -%}
+                        {%- if block.type == 'card_custom' or block.type == 'klaviyo_trigger' -%}
                           {% render 'card-custom', block: block %}
-                        {%- elsif block.type == 'klaviyo_trigger' -%}
-                          {% render 'card-klaviyo', block: block %}
                         {%- elsif block.type == 'custom_liquid' -%}
-                           <div class="card-wrapper product-card-wrapper card-custom-wrapper">
+                           <div class="card-wrapper product-card-wrapper card-custom-wrapper {{ block.settings.show_on_device }}">
                               <div class="card card--{{ settings.card_style }} card--text
                                   {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}"
                                   style="background-color: {{ block.settings.background_color }}; --ratio-percent: 100%;">
@@ -472,8 +470,69 @@
   ],
   "blocks": [
     {
-      "type": "custom_card",
-      "name": "Custom Card",
+      "type": "custom_liquid",
+      "name": "Custom Liquid",
+      "settings": [
+        {
+          "type": "number",
+          "id": "position",
+          "label": "Grid Position (1-based)",
+          "default": 3
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom Liquid",
+          "info": "Add app snippets or other custom code here. The code will be wrapped in a card."
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_on_all_pages",
+          "label": "Show on all pages",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "show_on_page_number",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "label": "Show on page number",
+          "default": 1,
+          "info": "Only applies if 'Show on all pages' is false."
+        },
+        {
+          "type": "select",
+          "id": "show_on_device",
+          "options": [
+            {
+              "value": "mobile",
+              "label": "Mobile and Tablet"
+            },
+            {
+              "value": "desktop",
+              "label": "Desktop only"
+            },
+            {
+              "value": "all-devices",
+              "label": "All Devices"
+            }
+          ],
+          "default": "all-devices",
+          "label": "Show this banner on:",
+          "info": "Choose on which device(s) you want this banner to show"
+        }
+      ]
+    },
+    {
+      "type": "card_custom",
+      "name": "Merchandising Block",
       "settings": [
         {
           "type": "number",
@@ -522,7 +581,6 @@
               "value": "default",
               "label": "t:sections.all.image_shape.options__1.label"
             },
-
             {
               "value": "chevronleft",
               "label": "t:sections.all.image_shape.options__4.label"
@@ -608,6 +666,27 @@
           "label": "Show on page number",
           "default": 1,
           "info": "Only applies if 'Show on all pages' is false."
+        },
+        {
+          "type": "select",
+          "id": "show_on_device",
+          "options": [
+            {
+              "value": "mobile",
+              "label": "Mobile and Tablet"
+            },
+            {
+              "value": "desktop",
+              "label": "Desktop only"
+            },
+            {
+              "value": "all-devices",
+              "label": "All Devices"
+            }
+          ],
+          "default": "all-devices",
+          "label": "Show this banner on:",
+          "info": "Choose on which device(s) you want this banner to show"
         },
         {
           "type": "select",
@@ -843,6 +922,12 @@
           "label": "Button Link"
         },
         {
+          "type": "text",
+          "id": "klaviyo_form_id",
+          "label": "Klaviyo Form ID",
+          "info": "If left blank, the button will use the Button Link instead."
+        },
+        {
           "type": "color_scheme",
           "id": "button_color_scheme",
           "label": "Button Color Scheme",
@@ -885,48 +970,8 @@
       ]
     },
     {
-      "type": "custom_liquid",
-      "name": "Custom Liquid",
-      "settings": [
-        {
-          "type": "number",
-          "id": "position",
-          "label": "Grid Position (1-based)",
-          "default": 3
-        },
-        {
-          "type": "liquid",
-          "id": "custom_liquid",
-          "label": "Custom Liquid",
-          "info": "Add app snippets or other custom code here. The code will be wrapped in a card."
-        },
-        {
-          "type": "color",
-          "id": "background_color",
-          "label": "Background Color",
-          "default": "#ffffff"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_on_all_pages",
-          "label": "Show on all pages",
-          "default": true
-        },
-        {
-          "type": "range",
-          "id": "show_on_page_number",
-          "min": 1,
-          "max": 20,
-          "step": 1,
-          "label": "Show on page number",
-          "default": 1,
-          "info": "Only applies if 'Show on all pages' is false."
-        }
-      ]
-    },
-    {
       "type": "klaviyo_trigger",
-      "name": "Klaviyo Form Trigger",
+      "name": "Merchandising Block (T)",
       "settings": [
         {
           "type": "number",
@@ -975,7 +1020,6 @@
               "value": "default",
               "label": "t:sections.all.image_shape.options__1.label"
             },
-
             {
               "value": "chevronleft",
               "label": "t:sections.all.image_shape.options__4.label"
@@ -1061,6 +1105,27 @@
           "label": "Show on page number",
           "default": 1,
           "info": "Only applies if 'Show on all pages' is false."
+        },
+        {
+          "type": "select",
+          "id": "show_on_device",
+          "options": [
+            {
+              "value": "mobile",
+              "label": "Mobile and Tablet"
+            },
+            {
+              "value": "desktop",
+              "label": "Desktop only"
+            },
+            {
+              "value": "all-devices",
+              "label": "All Devices"
+            }
+          ],
+          "default": "all-devices",
+          "label": "Show this banner on:",
+          "info": "Choose on which device(s) you want this banner to show"
         },
         {
           "type": "select",
@@ -1291,9 +1356,15 @@
           "label": "Button Label"
         },
         {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        },
+        {
           "type": "text",
           "id": "klaviyo_form_id",
-          "label": "Klaviyo Form ID"
+          "label": "Klaviyo Form ID",
+          "info": "If left blank, the button will use the Button Link instead."
         },
         {
           "type": "color_scheme",
@@ -1336,7 +1407,7 @@
           "default": 10
         }
       ]
-    },
+    }
   ]
 }
 {% endschema %}
