@@ -15,7 +15,7 @@
         "heading_BRbmXE": {
           "type": "heading",
           "settings": {
-            "heading": "",
+            "heading": "<p> CLOSE TO YOUR HEART</p>",
             "heading_custom": false,
             "heading_font": "system_ui_n4",
             "heading_size": 20,
@@ -28,7 +28,7 @@
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "<p>Strength. Love. Devotion.</p>",
+            "text": "<p> Love Letters</p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
             "text_size": 32,
@@ -41,8 +41,8 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "Shop Gold Neklaces",
-            "button_url": "shopify://collections/gold-necklaces",
+            "button": "Shop Initials",
+            "button_url": "shopify://collections/initial-necklaces-personalised-solid-gold-silver-diamond-letters",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
@@ -87,10 +87,10 @@
         "position_y_mobile": 50,
         "banner_height": "fixed_height",
         "banner_height_mobile": "adapt_first",
-        "banner_fixed_height": 75,
+        "banner_fixed_height": 100,
         "banner_fixed_height_mobile": 70,
-        "image": "shopify://shop_images/lb_banner_2026_03_12_desktop.webp",
-        "image_mobile": "shopify://shop_images/lb_banner_2026_03_12_mobile.webp",
+        "image": "shopify://shop_images/Banner_Pink_1.webp",
+        "image_mobile": "shopify://shop_images/lb_banner_2026_04_09_mobile.webp",
         "overlay": 0,
         "content_maxwidth": 58,
         "content_maxwidth_mobile": 72,
@@ -98,10 +98,10 @@
         "content_horizontal_position_mobile": "end",
         "content_vertical_position": "center",
         "content_vertical_position_mobile": "end",
-        "content_x_position": 0,
+        "content_x_position": 19,
         "content_x_position_mobile": 0,
-        "content_y_position": 24,
-        "content_y_position_mobile": 32,
+        "content_y_position": 0,
+        "content_y_position_mobile": 0,
         "content_padding_vertical": 48,
         "content_padding_vertical_mobile": 0,
         "content_padding_horizontal": 62,
