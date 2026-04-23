@@ -174,7 +174,7 @@
 
                     {%- if show_card -%}
                       <li
-                        class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                        class="grid__item {{ block.settings.show_on_device }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                         {% if settings.animations_reveal_on_scroll %}
                           data-cascade
                           style="--animation-order: {{ grid_index }};"
@@ -183,7 +183,7 @@
                         {%- if block.type == 'card_custom' or block.type == 'klaviyo_trigger' -%}
                           {% render 'card-custom', block: block %}
                         {%- elsif block.type == 'custom_liquid' -%}
-                           <div class="card-wrapper product-card-wrapper card-custom-wrapper {{ block.settings.show_on_device }}">
+                           <div class="card-wrapper product-card-wrapper card-custom-wrapper">
                               <div class="card card--{{ settings.card_style }} card--text
                                   {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}"
                                   style="background-color: {{ block.settings.background_color }}; --ratio-percent: 100%;">
