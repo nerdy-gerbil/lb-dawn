@@ -408,4 +408,6 @@ html:not(.hydrated) {
     text-align: justify;
 }
 
-
+cart-remove-button:not(.enabled) {
+  pointer-events: none;
+}
