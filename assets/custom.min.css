@@ -408,6 +408,7 @@ html:not(.hydrated) {
     text-align: justify;
 }
 
-cart-remove-button:not(.enabled) {
+cart-remove-button:not(.enabled),
+.quantity__button[name="minus"]:not(.enabled) {
   pointer-events: none;
 }
