@@ -407,8 +407,3 @@ html:not(.hydrated) {
 .shopify-pc__banner__dialog p {
     text-align: justify;
 }
-
-cart-remove-button:not(.enabled),
-.quantity__button[name="minus"]:not(.enabled) {
-  pointer-events: none;
-}
