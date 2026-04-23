@@ -8,3 +8,6 @@
 ehthumbs.db
 Thumbs.db
 .shopify
+.github
+.vscode
+node_modules
