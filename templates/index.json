@@ -15,7 +15,7 @@
         "heading_BRbmXE": {
           "type": "heading",
           "settings": {
-            "heading": "<p> CLOSE TO YOUR HEART</p>",
+            "heading": "<p>LIGHT. LUMINOUS. LOVED</p>",
             "heading_custom": false,
             "heading_font": "system_ui_n4",
             "heading_size": 20,
@@ -28,7 +28,7 @@
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "<p> Love Letters</p>",
+            "text": "<p>NATURALLY YOURS</p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
             "text_size": 32,
@@ -41,7 +41,7 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "Shop Initials",
+            "button": "Shop Pearls",
             "button_url": "shopify://collections/initial-necklaces-personalised-solid-gold-silver-diamond-letters",
             "button_custom": true,
             "button_font": "system_ui_n4",
@@ -90,7 +90,7 @@
         "banner_fixed_height": 100,
         "banner_fixed_height_mobile": 70,
         "image": "shopify://shop_images/Coin_Pearl_Banner_Desktop.webp",
-        "image_mobile": "shopify://shop_images/lb_banner_2026_04_09_mobile.webp",
+        "image_mobile": "shopify://shop_images/Coin_Pearl_Banner_Mobile.webp",
         "overlay": 0,
         "content_maxwidth": 58,
         "content_maxwidth_mobile": 72,
