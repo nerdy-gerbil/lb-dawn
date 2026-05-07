@@ -409,6 +409,7 @@ html:not(.hydrated) {
 }
 
 /* Customily Engraving Fix */
-.upcart-public-cart-item:has(a[href^="/products/engrave-my-item"]) {
+li.upcart-public-cart-item:has(a[href^="/products/engrave-my-item"]),
+tr.cart-item:has(a[href^="/products/engrave-my-item"]) {
   display: none !important;
 }
