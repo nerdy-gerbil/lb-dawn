@@ -42,7 +42,7 @@
           "type": "button",
           "settings": {
             "button": "Shop Pearls",
-            "button_url": "shopify://collections/initial-necklaces-personalised-solid-gold-silver-diamond-letters",
+            "button_url": "shopify://collections/freshwater-pearl-jewellery",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
