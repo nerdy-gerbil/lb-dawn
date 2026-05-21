@@ -12,3 +12,7 @@ Thumbs.db
 .vscode
 node_modules
 scripts
+.agents
+.agent
+skills-lock.json
+scripts
