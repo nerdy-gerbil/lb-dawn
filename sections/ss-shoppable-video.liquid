@@ -1340,7 +1340,9 @@ For inquiries or permissions, contact daniel@section.store
                 {% else %}
 
                   {% assign poster_url = block.settings.poster | image_url %}
-                  <video {% if forloop.first %}src{% else %}data-src{% endif %}="{{ block.settings.video.sources[1].url }}" muted playsinline {% if block.settings.autoplay %}autoplay{% endif %} {% unless forloop.first %}preload="none" class="lazy"{% endunless %} loop poster="{{ poster_url }}"></video>
+                  {% assign smallest_mp4 = block.settings.video.sources | where: "format", "mp4" | sort: "height" | first %}
+                  {% assign video_src = smallest_mp4.url | default: block.settings.video.sources[0].url %}
+                  <video {% if forloop.first %}src{% else %}data-src{% endif %}="{{ video_src }}" muted playsinline {% if block.settings.autoplay %}autoplay{% endif %} {% unless forloop.first %}preload="none" class="lazy"{% endunless %} loop poster="{{ poster_url }}"></video>
                 {% endif %}
 
                 {% if block.settings.product != blank %}
@@ -1459,8 +1461,10 @@ For inquiries or permissions, contact daniel@section.store
             {% else %}
       
               {% assign poster_url = block.settings.poster | image_url %}
+              {% assign smallest_mp4 = block.settings.video.sources | where: "format", "mp4" | sort: "height" | first %}
+              {% assign video_src = smallest_mp4.url | default: block.settings.video.sources[0].url %}
 
-              <video {% if forloop.first %}src{% else %}data-src{% endif %}="{{ block.settings.video.sources[1].url }}" muted playsinline autoplay {% unless forloop.first %}preload="none" class="lazy"{% endunless %} loop poster="{{ poster_url }}"></video>
+              <video {% if forloop.first %}src{% else %}data-src{% endif %}="{{ video_src }}" muted playsinline autoplay {% unless forloop.first %}preload="none" class="lazy"{% endunless %} loop poster="{{ poster_url }}"></video>
             {% endif %}
             <div class="video-modal-action-{{ section.id }}">
               <svg class="video-modal-mute-{{ section.id }}" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path d="M5.889 16H2a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h3.889l5.294-4.332a.5.5 0 0 1 .817.387v15.89a.5.5 0 0 1-.817.387L5.89 16zm14.525-4l3.536 3.536-1.414 1.414L19 13.414l-3.536 3.536-1.414-1.414L17.586 12 14.05 8.464l1.414-1.414L19 10.586l3.536-3.536 1.414 1.414L20.414 12z"></path></svg>  
@@ -2050,20 +2054,30 @@ For inquiries or permissions, contact daniel@section.store
       );
   }
 
-  function initializeAllShoppableVideoSections() {
+  function observeShoppableVideoSections() {
     const sections = document.querySelectorAll('[id^="shopify-section-"]');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const section = entry.target;
+          const sectionId = section.id.replace('shopify-section-', '');
+          loadSwiper(() => initShoppableVideo(sectionId));
+          obs.unobserve(section);
+        }
+      });
+    }, { rootMargin: '200px 0px' });
+
     sections.forEach(section => {
       if (section.querySelector('.video-{{ section.id }}')) {
-        const sectionId = section.id.replace('shopify-section-', '');
-        loadSwiper(() => initShoppableVideo(sectionId));
+        observer.observe(section);
       }
     });
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeAllShoppableVideoSections);
+    document.addEventListener('DOMContentLoaded', observeShoppableVideoSections);
   } else {
-    initializeAllShoppableVideoSections();
+    observeShoppableVideoSections();
   }
 
   if (Shopify.designMode) {
