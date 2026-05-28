@@ -1,6 +1,14 @@
 <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
-    {% render 'custom-schema-product-item' %}
+    "@graph": [
+      {
+        {% render 'custom-schema-product-item' %}
+      }{% if shop.metaobjects.schema_shipping_policy.default %},
+      {% assign shipping_json = shop.metaobjects.schema_shipping_policy.default | json %}
+      {{ shipping_json | replace_first: '{', '{"@id": "#shipping-policy",' }}{% endif %}{% if shop.metaobjects.merchant_return_policy.default %},
+      {% assign return_json = shop.metaobjects.merchant_return_policy.default | json %}
+      {{ return_json | replace_first: '{', '{"@id": "#return-policy",' }}{% endif %}
+    ]
   }
 </script>

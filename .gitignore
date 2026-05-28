@@ -16,3 +16,9 @@ scripts
 .agent
 skills-lock.json
 scripts
+AGENTS.md
+CLAUDE.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+copilot-instructions.md
+lighthouse-*.json
