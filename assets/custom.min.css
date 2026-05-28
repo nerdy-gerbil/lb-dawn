@@ -413,3 +413,8 @@ html:not(.hydrated) {
 tr.cart-item:has(a[href^="/products/engrave-my-item"]) {
   display: none !important;
 } */
+
+/* Hide Swatches in Klaviyo Reviews */
+#klaviyo-featured-reviews-carousel .pl-swatches-collection {
+  display: none !important;
+}
