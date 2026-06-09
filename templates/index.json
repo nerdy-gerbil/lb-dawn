@@ -42,7 +42,7 @@
           "type": "button",
           "settings": {
             "button": "Shop Father's Day",
-            "button_url": "shopify://collections/freshwater-pearl-jewellery",
+            "button_url": "shopify://collections/fathers-day-jewellery",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
