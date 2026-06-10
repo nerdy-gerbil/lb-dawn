@@ -268,6 +268,54 @@
         "padding_bottom": 36
       }
     },
+    "collection_list_4rfLMr": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_4TDLPW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "rings"
+          }
+        },
+        "featured_collection_AwELjY": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mens-rings"
+          }
+        },
+        "featured_collection_NHyRHV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "silver-rings"
+          }
+        },
+        "featured_collection_cECVef": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gold-rings"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_4TDLPW",
+        "featured_collection_AwELjY",
+        "featured_collection_NHyRHV",
+        "featured_collection_cECVef"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Find Your Perfect Ring",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_with_text_aPNFXP": {
       "type": "image-with-text",
       "blocks": {
@@ -365,54 +413,6 @@
         "padding_top": 24,
         "padding_bottom": 0
       }
-    },
-    "collection_list_4rfLMr": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_4TDLPW": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "rings"
-          }
-        },
-        "featured_collection_AwELjY": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "mens-rings"
-          }
-        },
-        "featured_collection_NHyRHV": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "silver-rings"
-          }
-        },
-        "featured_collection_cECVef": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "gold-rings"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_4TDLPW",
-        "featured_collection_AwELjY",
-        "featured_collection_NHyRHV",
-        "featured_collection_cECVef"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "Find Your Perfect Ring",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 4,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -423,9 +423,9 @@
     "main",
     "collapsible_content_tCz3ig",
     "multicolumn_wE8dne",
+    "collection_list_4rfLMr",
     "image_with_text_aPNFXP",
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
-    "a6a19d7e-1890-4758-b926-ca82274ab64b",
-    "collection_list_4rfLMr"
+    "a6a19d7e-1890-4758-b926-ca82274ab64b"
   ]
 }
