@@ -1,6 +1,459 @@
+{% doc %}
+  @prompt
+    Create a styled comparison table for the Our Materials page that compares jewellery materials. The table should have: a dark grey or black header row background with white text, bold text in the first column (labels like Base Metal, Gold Purity, etc.), bold text in the Lily Blanche Vermeil column, and a simple border on all cells. The table should compare materials like Sterling Silver, Gold Vermeil, Gold Filled, and Lily Blanche Vermeil across rows like Base Metal, Gold Purity, Thickness, Longevity, and Tarnish Resistance.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-materials-table-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .ai-materials-table-{{ ai_gen_id }}__table {
+    width: 100%;
+    border-collapse: collapse;
+    border: {{ block.settings.border_thickness }}px solid {{ block.settings.border_color }};
+  }
+
+  .ai-materials-table-{{ ai_gen_id }}__header-row {
+    background-color: {{ block.settings.header_bg_color }};
+  }
+
+  .ai-materials-table-{{ ai_gen_id }}__header-cell {
+    padding: {{ block.settings.cell_padding }}px;
+    text-align: {{ block.settings.text_alignment }};
+    color: {{ block.settings.header_text_color }};
+    font-weight: bold;
+    border: {{ block.settings.border_thickness }}px solid {{ block.settings.border_color }};
+    font-size: {{ block.settings.header_font_size }}px;
+  }
+
+  .ai-materials-table-{{ ai_gen_id }}__body-row {
+    background-color: {{ block.settings.row_bg_color }};
+  }
+
+  .ai-materials-table-{{ ai_gen_id }}__body-row:nth-child(even) {
+    background-color: {{ block.settings.row_alt_bg_color }};
+  }
+
+  .ai-materials-table-{{ ai_gen_id }}__body-cell {
+    padding: {{ block.settings.cell_padding }}px;
+    text-align: {{ block.settings.text_alignment }};
+    color: {{ block.settings.text_color }};
+    border: {{ block.settings.border_thickness }}px solid {{ block.settings.border_color }};
+    font-size: {{ block.settings.body_font_size }}px;
+  }
+
+  .ai-materials-table-{{ ai_gen_id }}__body-cell--label {
+    font-weight: bold;
+  }
+
+  .ai-materials-table-{{ ai_gen_id }}__body-cell--highlight {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-materials-table-{{ ai_gen_id }}__header-cell,
+    .ai-materials-table-{{ ai_gen_id }}__body-cell {
+      font-size: {{ block.settings.header_font_size | times: 0.9 }}px;
+      padding: {{ block.settings.cell_padding | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<materials-comparison-table-{{ ai_gen_id }} class="ai-materials-table-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <table class="ai-materials-table-{{ ai_gen_id }}__table">
+    <thead>
+      <tr class="ai-materials-table-{{ ai_gen_id }}__header-row">
+        <th class="ai-materials-table-{{ ai_gen_id }}__header-cell">{{ block.settings.header_col_1 }}</th>
+        <th class="ai-materials-table-{{ ai_gen_id }}__header-cell">{{ block.settings.header_col_2 }}</th>
+        <th class="ai-materials-table-{{ ai_gen_id }}__header-cell">{{ block.settings.header_col_3 }}</th>
+        <th class="ai-materials-table-{{ ai_gen_id }}__header-cell">{{ block.settings.header_col_4 }}</th>
+        <th class="ai-materials-table-{{ ai_gen_id }}__header-cell">{{ block.settings.header_col_5 }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="ai-materials-table-{{ ai_gen_id }}__body-row">
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell ai-materials-table-{{ ai_gen_id }}__body-cell--label">{{ block.settings.row_1_label }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_1_col_2 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_1_col_3 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_1_col_4 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell ai-materials-table-{{ ai_gen_id }}__body-cell--highlight">{{ block.settings.row_1_col_5 }}</td>
+      </tr>
+      <tr class="ai-materials-table-{{ ai_gen_id }}__body-row">
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell ai-materials-table-{{ ai_gen_id }}__body-cell--label">{{ block.settings.row_2_label }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_2_col_2 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_2_col_3 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_2_col_4 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell ai-materials-table-{{ ai_gen_id }}__body-cell--highlight">{{ block.settings.row_2_col_5 }}</td>
+      </tr>
+      <tr class="ai-materials-table-{{ ai_gen_id }}__body-row">
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell ai-materials-table-{{ ai_gen_id }}__body-cell--label">{{ block.settings.row_3_label }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_3_col_2 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_3_col_3 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_3_col_4 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell ai-materials-table-{{ ai_gen_id }}__body-cell--highlight">{{ block.settings.row_3_col_5 }}</td>
+      </tr>
+      <tr class="ai-materials-table-{{ ai_gen_id }}__body-row">
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell ai-materials-table-{{ ai_gen_id }}__body-cell--label">{{ block.settings.row_4_label }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_4_col_2 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_4_col_3 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_4_col_4 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell ai-materials-table-{{ ai_gen_id }}__body-cell--highlight">{{ block.settings.row_4_col_5 }}</td>
+      </tr>
+      <tr class="ai-materials-table-{{ ai_gen_id }}__body-row">
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell ai-materials-table-{{ ai_gen_id }}__body-cell--label">{{ block.settings.row_5_label }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_5_col_2 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_5_col_3 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell">{{ block.settings.row_5_col_4 }}</td>
+        <td class="ai-materials-table-{{ ai_gen_id }}__body-cell ai-materials-table-{{ ai_gen_id }}__body-cell--highlight">{{ block.settings.row_5_col_5 }}</td>
+      </tr>
+    </tbody>
+  </table>
+</materials-comparison-table-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class MaterialsComparisonTable{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.style.display = 'block';
+      }
+    }
+
+    customElements.define('materials-comparison-table-{{ ai_gen_id }}', MaterialsComparisonTable{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Materials table",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Table headers"
+    },
+    {
+      "type": "text",
+      "id": "header_col_1",
+      "label": "Column 1 header",
+      "default": "Property"
+    },
+    {
+      "type": "text",
+      "id": "header_col_2",
+      "label": "Column 2 header",
+      "default": "Sterling Silver"
+    },
+    {
+      "type": "text",
+      "id": "header_col_3",
+      "label": "Column 3 header",
+      "default": "Gold Vermeil"
+    },
+    {
+      "type": "text",
+      "id": "header_col_4",
+      "label": "Column 4 header",
+      "default": "Gold Filled"
+    },
+    {
+      "type": "text",
+      "id": "header_col_5",
+      "label": "Column 5 header",
+      "default": "Lily Blanche Vermeil"
+    },
+    {
+      "type": "header",
+      "content": "Row 1"
+    },
+    {
+      "type": "text",
+      "id": "row_1_label",
+      "label": "Label",
+      "default": "Base Metal"
+    },
+    {
+      "type": "text",
+      "id": "row_1_col_2",
+      "label": "Column 2",
+      "default": "Sterling Silver"
+    },
+    {
+      "type": "text",
+      "id": "row_1_col_3",
+      "label": "Column 3",
+      "default": "Sterling Silver"
+    },
+    {
+      "type": "text",
+      "id": "row_1_col_4",
+      "label": "Column 4",
+      "default": "Brass Core"
+    },
+    {
+      "type": "text",
+      "id": "row_1_col_5",
+      "label": "Column 5",
+      "default": "Sterling Silver"
+    },
+    {
+      "type": "header",
+      "content": "Row 2"
+    },
+    {
+      "type": "text",
+      "id": "row_2_label",
+      "label": "Label",
+      "default": "Gold Purity"
+    },
+    {
+      "type": "text",
+      "id": "row_2_col_2",
+      "label": "Column 2",
+      "default": "N/A"
+    },
+    {
+      "type": "text",
+      "id": "row_2_col_3",
+      "label": "Column 3",
+      "default": "18ct or 24ct"
+    },
+    {
+      "type": "text",
+      "id": "row_2_col_4",
+      "label": "Column 4",
+      "default": "14ct"
+    },
+    {
+      "type": "text",
+      "id": "row_2_col_5",
+      "label": "Column 5",
+      "default": "18ct"
+    },
+    {
+      "type": "header",
+      "content": "Row 3"
+    },
+    {
+      "type": "text",
+      "id": "row_3_label",
+      "label": "Label",
+      "default": "Thickness"
+    },
+    {
+      "type": "text",
+      "id": "row_3_col_2",
+      "label": "Column 2",
+      "default": "N/A"
+    },
+    {
+      "type": "text",
+      "id": "row_3_col_3",
+      "label": "Column 3",
+      "default": "2.5 microns"
+    },
+    {
+      "type": "text",
+      "id": "row_3_col_4",
+      "label": "Column 4",
+      "default": "5% gold layer"
+    },
+    {
+      "type": "text",
+      "id": "row_3_col_5",
+      "label": "Column 5",
+      "default": "3 microns"
+    },
+    {
+      "type": "header",
+      "content": "Row 4"
+    },
+    {
+      "type": "text",
+      "id": "row_4_label",
+      "label": "Label",
+      "default": "Longevity"
+    },
+    {
+      "type": "text",
+      "id": "row_4_col_2",
+      "label": "Column 2",
+      "default": "Lifetime"
+    },
+    {
+      "type": "text",
+      "id": "row_4_col_3",
+      "label": "Column 3",
+      "default": "1-2 years"
+    },
+    {
+      "type": "text",
+      "id": "row_4_col_4",
+      "label": "Column 4",
+      "default": "10-30 years"
+    },
+    {
+      "type": "text",
+      "id": "row_4_col_5",
+      "label": "Column 5",
+      "default": "3-5 years"
+    },
+    {
+      "type": "header",
+      "content": "Row 5"
+    },
+    {
+      "type": "text",
+      "id": "row_5_label",
+      "label": "Label",
+      "default": "Tarnish Resistance"
+    },
+    {
+      "type": "text",
+      "id": "row_5_col_2",
+      "label": "Column 2",
+      "default": "Low"
+    },
+    {
+      "type": "text",
+      "id": "row_5_col_3",
+      "label": "Column 3",
+      "default": "Medium"
+    },
+    {
+      "type": "text",
+      "id": "row_5_col_4",
+      "label": "Column 4",
+      "default": "High"
+    },
+    {
+      "type": "text",
+      "id": "row_5_col_5",
+      "label": "Column 5",
+      "default": "High"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "color",
+      "id": "header_bg_color",
+      "label": "Header background",
+      "default": "#2b2b2b"
+    },
+    {
+      "type": "color",
+      "id": "header_text_color",
+      "label": "Header text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "row_bg_color",
+      "label": "Row background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "row_alt_bg_color",
+      "label": "Alternate row background",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#dddddd"
+    },
+    {
+      "type": "range",
+      "id": "border_thickness",
+      "label": "Border thickness",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "cell_padding",
+      "label": "Cell padding",
+      "min": 8,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "header_font_size",
+      "label": "Header font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    }
+  ],
+  "presets": [
+    {
+      "name": "Materials table"
+    }
+  ]
+}
 {% endschema %}
