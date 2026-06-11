@@ -53,10 +53,11 @@
     {%- endunless -%}
 
     <title>
-      {{ page_title }}
+      {%- assign clean_title = page_title | replace: ' | Lily Blanche', '' | replace: ' - Lily Blanche', '' | replace: ' – Lily Blanche', '' -%}
+      {{ clean_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      &ndash; {{ shop.name }}
     </title>
 
     {% if page_description %}
@@ -546,7 +547,7 @@
       <link rel="alternate" hreflang="en" href="{{ canonical_url }}">
       <link rel="alternate" hreflang="pt" href="https://www.lilyblanche.com/pages/for-our-brazilian-visitors">
     {% elsif request.path == '/pages/for-our-brazilian-visitors' %}
-      <link rel="alternate" hreflang="x-default" href="{{ canonical_url }}">
+      <link rel="alternate" hreflang="x-default" href="https://www.lilyblanche.com/">
       <link rel="alternate" hreflang="pt" href="{{ canonical_url }}">
       <link rel="alternate" hreflang="en" href="https://www.lilyblanche.com/">
     {% endif %}
@@ -697,12 +698,24 @@
     {% comment %}
       ADDED BY CUSTOMILY
     {% endcomment %}
-    {% comment %} {% if template contains 'product' %} {% endcomment %}
-      <script defer src="https://cdn.customily.com/customily.js"></script>
-      <script defer src="https://cdn.customily.com/shopify/static/customily.shopify.script.unified.js"></script>
-    {% comment %} {% elsif template contains 'cart' %}
-      <script defer src="https://cdn.customily.com/shopify/static/customily.shopify.script.unified.js"></script>
-    {% endif %} {% endcomment %}
+    <script>
+      function loadCustomilyScripts() {
+        if (window.customilyScriptsLoaded) return;
+        window.customilyScriptsLoaded = true;
+        const scripts = [
+          "https://cdn.customily.com/customily.js",
+          "https://cdn.customily.com/shopify/static/customily.shopify.script.unified.js"
+        ];
+        scripts.forEach(src => {
+          const script = document.createElement('script');
+          script.src = src;
+          script.defer = true;
+          document.head.appendChild(script);
+        });
+      }
+      ['mousemove', 'touchstart', 'scroll'].forEach(event => window.addEventListener(event, loadCustomilyScripts, {once: true}));
+      setTimeout(loadCustomilyScripts, 3000);
+    </script>
     {% comment %}
       END: ADDED BY CUSTOMILY
     {% endcomment %}

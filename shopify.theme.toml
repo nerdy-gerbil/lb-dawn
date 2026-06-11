@@ -1,0 +1,5 @@
+[environments.default]
+store = "lily-blanche-1727"
+output = "json"
+live = true
+allow-live = true

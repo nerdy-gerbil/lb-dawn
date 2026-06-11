@@ -1,0 +1,346 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_J6UNRR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_gLg3Hi": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Our Materials & Craftsmanship</strong>",
+            "heading_size": "h0"
+          }
+        },
+        "text_GwcMQW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every piece of luxury Scottish jewellery that we create is crafted with only the finest precious metals and ethically sourced gemstones. Our commitment to quality craftsmanship ensures that each item is designed to be treasured for generations.</p>"
+          }
+        },
+        "text_fzYBDd": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_gLg3Hi",
+        "text_GwcMQW",
+        "text_fzYBDd"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "multicolumn_rLpFpy": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_rLzzYJ": {
+          "type": "column",
+          "settings": {
+            "title": "GOLD- JAN 2026 PEAK",
+            "text": "<h1><strong>$5,521</strong></h1><p>Per ounce, a record high. Gold has reached an all time high over the past 12 months, making precious metal jewellery an increasingly strong long term choice.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fw4HWY": {
+          "type": "column",
+          "settings": {
+            "title": "SILVER- LAST 12 MONTHS",
+            "text": "<h1><strong>3x</strong></h1><p>Silver has tripled in value over the last year. Our sterling silver and vermeil jewellery have appreciated significantly, meaning that items purchased 18 months ago have risen in value massively. </p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_rLzzYJ",
+        "column_fw4HWY"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Jewellery that holds its value",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1781102204820e45ca": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "17811763033df6947b": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1781176385533e6e0f": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1781176469d537411a": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h1.h0 {display: none;}"
+      ],
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "a6a19d7e-1890-4758-b926-ca82274ab64b": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "blocks_g7hHfz": {
+      "type": "_blocks",
+      "name": "Horizontal button group",
+      "settings": {}
+    },
+    "image_with_text_ADYBic": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_3Uy4bN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Solid Gold",
+            "heading_size": "h1"
+          }
+        },
+        "text_RndFEK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We use high-quality <strong>9-carat and 18-carat gold </strong>to craft our lockets, necklaces, rings, earrings & bracelets, ensuring a luxurious and durable finish. Our <strong>solid gold lockets and rings </strong>are designed to withstand everyday wear while retaining their beauty. Every gold piece is <strong>hallmarked at the </strong><a href=\"https://www.lilyblanche.com/pages/our-hallmark\"><strong>Edinburgh Assay Office</strong></a>, guaranteeing its authenticity and purity.<br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_mqdVxH": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Solid Gold Jewellery",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_3Uy4bN",
+        "text_RndFEK",
+        "button_mqdVxH"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Two_Cross_Gold_Background.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_6pkNtr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GbcyGm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gold Vermeil",
+            "heading_size": "h1"
+          }
+        },
+        "text_iicg9N": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For those who love the warmth of gold with exceptional value, our <strong>gold vermeil jewellery </strong>is the perfect choice. We use a thick layer of <strong>18-carat gold (3 microns thick) </strong>over <strong>solid sterling silver</strong>, offering a rich, long-lasting finish. Unlike gold-plated jewellery, gold vermeil contains no base metals like brass or copper, making it a superior choice for sensitive skin.<br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_BkdjfE": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Gold Vermeil",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_GbcyGm",
+        "text_iicg9N",
+        "button_BkdjfE"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Model_Letter_L_Gold.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17811784467f177925": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "image_with_text_AJkzjF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_w8gkxm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sterling Silver",
+            "heading_size": "h1"
+          }
+        },
+        "text_9mB8qd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our <strong>sterling silver jewellery </strong>is crafted from <strong>92.5% pure silver. </strong>Each locket is <a href=\"https://www.lilyblanche.com/pages/our-hallmark\">hallmarked </a> at the Edinburgh Assay office, confirming it's purity and our commitment to quality. <br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_eXDQXQ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Sterling Silver",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_w8gkxm",
+        "text_9mB8qd",
+        "button_eXDQXQ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/silver_filigree_heart_locket_2.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "138c49d2-7ccc-466a-a9a9-18275e1ed23b": {
+      "type": "newsletter",
+      "blocks": {
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "FROM INBOX TO JEWELLERY BOX",
+            "heading_size": "h2"
+          }
+        },
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up for exclusive sales, private events, style tips and much more! </p><p>You can unsubscribe at any time. Please read our <a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">privacy policy</a>.</p>"
+          }
+        },
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-2": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-0",
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-1",
+        "template--19394087878974__138c49d2-7ccc-466a-a9a9-18275e1ed23b-16870970770d498a58-2"
+      ],
+      "custom_css": [
+        ".field__input,.select__select,.customer .field input,.customer select {background-color: #fff; color: #121212;}",
+        ".field__label,.field__button {color: #bbb;}",
+        ".field__input::-moz-selection {background: #d0d0d0;}",
+        ".field__input::selection {background: #d0d0d0;}"
+      ],
+      "settings": {
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "178117658864eb57bf": {
+      "type": "_blocks",
+      "settings": {}
+    }
+  },
+  "order": [
+    "rich_text_J6UNRR",
+    "multicolumn_rLpFpy",
+    "1781102204820e45ca",
+    "17811763033df6947b",
+    "1781176385533e6e0f",
+    "1781176469d537411a",
+    "main",
+    "a6a19d7e-1890-4758-b926-ca82274ab64b",
+    "blocks_g7hHfz",
+    "image_with_text_ADYBic",
+    "image_with_text_6pkNtr",
+    "17811784467f177925",
+    "image_with_text_AJkzjF",
+    "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
+    "178117658864eb57bf"
+  ]
+}

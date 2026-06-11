@@ -353,7 +353,7 @@
         "item_WJUzzi": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/campaigns_campaign-13852_clip_creator_10526_957e7586-048e-4b8f-a9e1-b402ca6f90d3.mov",
+            "video": "shopify://files/videos/Campaigns Campaign-13852.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "poster": "shopify://shop_images/vlcsnap-2025-11-20-13h08m26s972.png",
             "autoplay": true,
@@ -379,10 +379,10 @@
         "item_rT4TDr": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/2 photo diamond locket necklace.mp4",
+            "video": "shopify://files/videos/Large2photoHeartlocket_3670013e-b212-4e15-b0bf-a957b7dee2ab.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "poster": "shopify://shop_images/2_photo_diamond_locket.jpg",
-            "autoplay": false,
+            "poster": "shopify://shop_images/vlcsnap-2026-05-28-14h09m49s257.png",
+            "autoplay": true,
             "product": "2-photo-diamond-heart-locket-gold",
             "use_variants": true,
             "modal_heading": "<h4>2 Photo Diamond Heart Locket</h4>",
@@ -395,7 +395,7 @@
             "video": "shopify://files/videos/green amethyst gold ring.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "poster": "shopify://shop_images/green_amethyst_ring.jpg",
-            "autoplay": false,
+            "autoplay": true,
             "product": "green-amethyst-cocktail-ring-gold",
             "use_variants": true,
             "modal_heading": "<h4>Green Amethyst Cocktail Ring</h4>",
@@ -408,7 +408,7 @@
             "video": "shopify://files/videos/mensgoldcrossnecklace.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "poster": "shopify://shop_images/gold_cross.jpg",
-            "autoplay": false,
+            "autoplay": true,
             "product": "mens-heavy-gold-cross-necklace",
             "use_variants": true,
             "modal_heading": "<h4>Heavy Gold Cross Necklace</h4>",

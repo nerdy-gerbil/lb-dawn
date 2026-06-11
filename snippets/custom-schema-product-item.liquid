@@ -44,9 +44,11 @@
   {% for variant in product.variants %}
     {
       "@type": "Product",
-      "sku": {{ variant.sku | json }},{% if variant.barcode %}
-      "gtin": {{ variant.barcode | json }},{% endif %}
+      "sku": {{ variant.sku | json }},{% if variant.barcode and variant.barcode != blank %}
+      "gtin": {{ variant.barcode | json }},{% else %}
+      "gtin": {{ variant.sku | json }},{% endif %}
       "name": {{ product.title | append: " - " | append: variant.title | json }},
+      "description": {{ product.description | strip_html | truncate: 2000, "..." | json }},
       "image": [
         {% if variant.image %}
           "https:{{ variant.image.src | image_url }}"
@@ -76,13 +78,13 @@
         "priceValidUntil": "{{ 'now' | date: "%s" | plus: days | date: "%FT23:59:59Z" }}",
         "itemCondition": "https://schema.org/NewCondition",
         "availability": "{% if variant.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
-        "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}"
+        "url": "{{ shop.url }}{{ product.url }}?variant={{ variant.id }}"{% if shop.metaobjects.schema_shipping_policy.default %},
+        "shippingDetails": {"@id": "#shipping-policy"}{% endif %}{% if shop.metaobjects.merchant_return_policy.default %},
+        "hasMerchantReturnPolicy": {"@id": "#return-policy"}{% endif %}
       }
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
-]{% if shop.metaobjects.schema_shipping_policy.default %},
-"shippingDetails": {{ shop.metaobjects.schema_shipping_policy.default | json }}{% endif %}{% if shop.metaobjects.merchant_return_policy.default %},
-"hasMerchantReturnPolicy": {{ shop.metaobjects.merchant_return_policy.default | json }}{% endif %}
+]
 {% else %}
 "@type": "Product",
 "name": {{ product.title | json }},
@@ -100,9 +102,9 @@
   "price": "{{ product.price | money_without_currency | remove: ',' }}",
   "priceValidUntil": "{{ 'now' | date: "%s" | plus: days | date: "%FT23:59:59Z" }}",
   "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
-  "url": "{{ shop.url }}{{ product.url }}"{% if shop.metaobjects.schema_shipping_policy %},
-  "shippingDetails": {{ shop.metaobjects.schema_shipping_policy.default | json }}{% endif %}{% if shop.metaobjects.merchant_return_policy.default %},
-  "hasMerchantReturnPolicy": {{ shop.metaobjects.merchant_return_policy.default | json }}{% endif %}
+  "url": "{{ shop.url }}{{ product.url }}"{% if shop.metaobjects.schema_shipping_policy.default %},
+  "shippingDetails": {"@id": "#shipping-policy"}{% endif %}{% if shop.metaobjects.merchant_return_policy.default %},
+  "hasMerchantReturnPolicy": {"@id": "#return-policy"}{% endif %}
 }{% if product.metafields.global.hallmark %},
 {% liquid
   comment
@@ -128,12 +130,12 @@
     "ratingValue": "{{ hallmark }}"
   }
 }{% endif %}
-{% endif %}{% comment %} {% if product.metafields.reviews.rating_count > 0 and part_of != 'breadcrumbs' %},
+{% endif %}{% if product.metafields.reviews.rating_count > 0 and part_of != 'breadcrumbs' %},
 "aggregateRating": {
   "@type": "AggregateRating",
   "ratingValue": {{ product.metafields.reviews.rating.value }},
   "ratingCount": {{ product.metafields.reviews.rating_count }},
   "bestRating": 5,
   "worstRating": 1
-}{% endif %} {% endcomment %},
+}{% endif %},
 "award": "Google Top Quality Store"
