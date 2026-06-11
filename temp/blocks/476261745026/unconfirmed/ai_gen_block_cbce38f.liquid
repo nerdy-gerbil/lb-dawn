@@ -1,6 +1,76 @@
+{% doc %}
+  @prompt
+    add a simple HTML table with 7 rows and 4 columns. Do not add any CSS or styling. Here is the exact content:
+    Row 1 (header): blank | Gold Plated | Lily Blanche Vermeil | Solid Gold
+    Row 2: Base Metal | Brass or copper | Sterling silver (925) | Pure gold alloy
+    Row 3: Gold Purity | Often unknown | 18-carat | 9ct or 18ct
+    Row 4: Gold Thickness | 0.5µm minimum | 3µm+ | Solid throughout
+    Row 5: Hallmarkable | No | Yes | Yes
+    Row 6: Hypoallergenic | Not guaranteed | Yes | Yes
+    Row 7: Best For | Trend pieces | Everyday luxury | Heirloom investment
+    Add this table to the body of the Our Materials page
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+<div class="ai-materials-table-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Gold Plated</th>
+        <th>Lily Blanche Vermeil</th>
+        <th>Solid Gold</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Base Metal</td>
+        <td>Brass or copper</td>
+        <td>Sterling silver (925)</td>
+        <td>Pure gold alloy</td>
+      </tr>
+      <tr>
+        <td>Gold Purity</td>
+        <td>Often unknown</td>
+        <td>18-carat</td>
+        <td>9ct or 18ct</td>
+      </tr>
+      <tr>
+        <td>Gold Thickness</td>
+        <td>0.5µm minimum</td>
+        <td>3µm+</td>
+        <td>Solid throughout</td>
+      </tr>
+      <tr>
+        <td>Hallmarkable</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Hypoallergenic</td>
+        <td>Not guaranteed</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Best For</td>
+        <td>Trend pieces</td>
+        <td>Everyday luxury</td>
+        <td>Heirloom investment</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Materials table",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Materials table"
+    }
+  ]
+}
 {% endschema %}
