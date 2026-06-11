@@ -48,11 +48,11 @@
     "telephone": "+441786271376",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "25 Clarendon Place",
-      "addressLocality": "Stirling",
-      "addressRegion": "Scotland",
-      "postalCode": "FK8 2QW",
-      "addressCountry": "GB"
+      "streetAddress": "{{ metaobjects.local_business.address.streetAddress }}",
+      "addressLocality": "{{ metaobjects.local_business.address.addressLocality }}",
+      "addressRegion": "{{ metaobjects.local_business.address.addressRegion }}",
+      "postalCode": "{{ metaobjects.local_business.address.postalCode }}",
+      "addressCountry": "{{ metaobjects.local_business.address.addressCountry }}"
     },
     "sameAs": [
       "https://www.facebook.com/lilyblanchejewellery",
