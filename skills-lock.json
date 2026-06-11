@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "skills": {
+    "caveman": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/caveman/SKILL.md",
+      "computedHash": "536908fcfcb232600a5875aa85f1fd50fd13305e9d67379bcd95f07c8c916f3f"
+    },
+    "diagnose": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/diagnose/SKILL.md",
+      "computedHash": "1c3c85517ac42116fe5f2bfb5150f7b3e38ad23808e40b33fbb01f1afb611983"
+    },
+    "graphql-dev": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "saleor-commerce/skills/graphql-dev/SKILL.md",
+      "computedHash": "72b7dc95be3e3355fc2cf5680b11c8b02d96950e9c7adc75bd6bf895ec2daccb"
+    },
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "computedHash": "daf64ca15f4fa081a6747766db538e2dbd1131725ed4fcdd3d538dc62c7035ba"
+    },
+    "grill-with-docs": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/grill-with-docs/SKILL.md",
+      "computedHash": "7c212cee6a823b956aaec7dff2a846814fe9986caa2e62313734010c7bd3db70"
+    },
+    "handoff": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/handoff/SKILL.md",
+      "computedHash": "3fdffd9dce6fc3e9f9f756ba79d694c5f162e11c7e7fbc72a0958f204312e0b1"
+    },
+    "improve-codebase-architecture": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "computedHash": "5d9444ffe5c240f2d20081c42c547112e1b8c372375a14e4c98df4d94bde11e1"
+    },
+    "js-modern": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "bigcommerce-commerce/skills/js-modern/SKILL.md",
+      "computedHash": "b7625017eb46ea8e3075b103353ca154f9257f72b7a642ed26e6ffd057a85384"
+    },
+    "node-backend": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "bigcommerce-commerce/skills/node-backend/SKILL.md",
+      "computedHash": "d6490f4988aeab7a37d0778ded3deb10d6ac1a83d5fd4adb183b942f8ef68d45"
+    },
+    "prototype": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/prototype/SKILL.md",
+      "computedHash": "f52c019c3e0af2ad1807332d553b9ee7282a28c162d78cdeddd89dc8456b73ff"
+    },
+    "setup-matt-pocock-skills": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "computedHash": "f686b246e95afeaeeb3ff21b0f9f2c1ab29b02958468170cc9802fb477508488"
+    },
+    "shopify-api-graphql": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-api-graphql/SKILL.md",
+      "computedHash": "bc76f8af61ef4f494b6737a475478faca97ff47d59efa1c05abcb9929e452def"
+    },
+    "shopify-api-rest": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-api-rest/SKILL.md",
+      "computedHash": "bd99127d1e4c5510b3211101e7ca7116d5936fc7d8d80864057176af995b88ab"
+    },
+    "shopify-app-dev": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-app-dev/SKILL.md",
+      "computedHash": "049f5b5df7c09122dfe34af8137018417b71aeba16ac6ada842bfacfdf8dd759"
+    },
+    "shopify-catalog": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-catalog/SKILL.md",
+      "computedHash": "2eb14c2f84d2d06897155863419dc0ae7f8f664e201bc372037af1211eac2d82"
+    },
+    "shopify-checkout-ui": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-checkout-ui/SKILL.md",
+      "computedHash": "89c4cf2299287d30eb6d80e5b2c5fce68f2748421010f7f4ecdbc6b24af8db26"
+    },
+    "shopify-customers": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-customers/SKILL.md",
+      "computedHash": "58df66ad8d0860597a28188fa65bb9408df1a7971ba4c434cfe4bb1fd8276bb0"
+    },
+    "shopify-functions": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-functions/SKILL.md",
+      "computedHash": "062c11456c5c3fd37857496294cc0ff539f21417abb299f1e2b63144124df6fe"
+    },
+    "shopify-hydrogen": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-hydrogen/SKILL.md",
+      "computedHash": "13974081b27b3faa2e53f2a16037621ffba9efc8f7aac91063c8ca5f2f7f586d"
+    },
+    "shopify-liquid": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-liquid/SKILL.md",
+      "computedHash": "a1925f0dbb2f1f20c8845834f741d19c48a018b5fe9e524baffa8def98c3231c"
+    },
+    "shopify-orders": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-orders/SKILL.md",
+      "computedHash": "25bee1f3ffc72d190dd4c7a578e27f8e9ca7b4519ee1bddda0bc3078a22553ca"
+    },
+    "shopify-payments": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-payments/SKILL.md",
+      "computedHash": "866783e8a044c72a7a5f0d61c3e794ad735ca7f1d21abbe6149504c9f7ac27a1"
+    },
+    "shopify-performance": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-performance/SKILL.md",
+      "computedHash": "b84bfd1a104079fff9f47dbc951b55253372b433cf5b52e69763336ae733c68a"
+    },
+    "shopify-polaris": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-polaris/SKILL.md",
+      "computedHash": "5fe1a5f3fe0d26011eda3c259fd2bf0b3154b9f61bc441ba512d2e1425a9f933"
+    },
+    "shopify-security": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-security/SKILL.md",
+      "computedHash": "2ed574eb8d047dc22ebb246b4eca0c15261206747b2fe29ace36356b3bacce9b"
+    },
+    "shopify-setup": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-setup/SKILL.md",
+      "computedHash": "763e94759187fa7b747dd34e134e12b041f9c616ed49c8545a2f723e8a0ef3fc"
+    },
+    "shopify-testing": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-testing/SKILL.md",
+      "computedHash": "7873a976eac8f49db0f11e582ee4d77c40a33529d8fd641d460683566871b3b9"
+    },
+    "shopify-themes": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-themes/SKILL.md",
+      "computedHash": "e41d636f4bf96167020148c011391d5117f334c824f5ed5d12c2b7957c36fd08"
+    },
+    "shopify-webhooks": {
+      "source": "orcaqubits/agentic-commerce-skills-plugins",
+      "sourceType": "github",
+      "skillPath": "shopify-commerce/skills/shopify-webhooks/SKILL.md",
+      "computedHash": "12e569ddcd5e23dec6126f7db851a436053e19dc4eb272675dd8297d118a28d6"
+    },
+    "tdd": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/tdd/SKILL.md",
+      "computedHash": "78b31b2120c5fe7aced1cebfd4c7c94acb0037fd4f89c83c67584414aa4173bd"
+    },
+    "teach": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/teach/SKILL.md",
+      "computedHash": "d1c64f5747de3da32afd390096ecc9a116245e3b4a17c587b5de345e8235522a"
+    },
+    "to-issues": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/to-issues/SKILL.md",
+      "computedHash": "41915d1686991b0d3796eb0b52f3aa8e9021abc5f268d14e6dc62e95dbf8e044"
+    },
+    "to-prd": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/to-prd/SKILL.md",
+      "computedHash": "1f5f7a475757eb4030155130f4fd7f161a20e5731c4b39edd4abe2df9cc72901"
+    },
+    "triage": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/triage/SKILL.md",
+      "computedHash": "56ff15b41bbebfa4cb329d96150d9b297c1d919ce30784d883b8755b4bfd8e7e"
+    },
+    "write-a-skill": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/write-a-skill/SKILL.md",
+      "computedHash": "3b58a16bde08f84ed490cd449ecdc40289216d660e070c485f53bc2d1ed2b843"
+    },
+    "zoom-out": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/zoom-out/SKILL.md",
+      "computedHash": "a8b8ed45609fdfa9f184d0c9f69326e43822a42eebea14db2792d777373de562"
+    }
+  }
+}
