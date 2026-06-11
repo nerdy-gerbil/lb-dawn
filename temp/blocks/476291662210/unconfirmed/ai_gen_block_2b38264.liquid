@@ -1,6 +1,1006 @@
+{% doc %}
+  @prompt
+    create a design like this but make it fully editable <!-- =====================================================
+         LILY BLANCHE — Gemstone Grid
+         Paste into a Custom HTML / Custom Liquid section
+         in the Shopify Theme Editor on the Our Materials page
+         ===================================================== -->
+    
+    <style>
+      .lb-gems-wrap {
+        max-width: 860px;
+        margin: 48px auto;
+        padding: 0 16px;
+        font-family: inherit;
+      }
+    
+      .lb-gems-eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #B8966A;
+        margin-bottom: 12px;
+        display: block;
+      }
+    
+      .lb-gems-title {
+        font-size: 36px;
+        font-weight: 400;
+        color: #000000;
+        margin: 0 0 4px;
+        line-height: 1.15;
+      }
+    
+      .lb-gems-title-italic {
+        font-size: 36px;
+        font-weight: 400;
+        font-style: italic;
+        color: #B8966A;
+        margin: 0 0 12px;
+        display: block;
+        line-height: 1.15;
+      }
+    
+      .lb-gems-subtitle {
+        font-size: 14px;
+        color: #555555;
+        margin: 0 0 32px;
+      }
+    
+      .lb-gems-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: #E0D8CE;
+        border: 1px solid #E0D8CE;
+      }
+    
+      .lb-gem-card {
+        background: #FAF7F2;
+        padding: 32px 28px;
+      }
+    
+      .lb-gem-dot {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-bottom: 16px;
+        display: block;
+      }
+    
+      .lb-gem-name {
+        font-size: 24px;
+        font-weight: 400;
+        color: #000000;
+        margin: 0 0 6px;
+        display: block;
+      }
+    
+      .lb-gem-meaning {
+        font-size: 13px;
+        font-style: italic;
+        color: #7A7268;
+        margin: 0 0 12px;
+        display: block;
+      }
+    
+      .lb-gem-desc {
+        font-size: 14px;
+        color: #333333;
+        line-height: 1.65;
+        margin: 0;
+      }
+    
+      .lb-gem-desc a {
+        color: #B8966A;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    
+      /* Diamond callout box */
+      .lb-gems-callout {
+        margin-top: 2px;
+        border: 1px solid #E0D8CE;
+        border-top: none;
+        padding: 24px 28px;
+        background: #ffffff;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+    
+      .lb-gems-callout-icon {
+        font-size: 20px;
+        color: #B8966A;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+    
+      .lb-gems-callout p {
+        font-size: 14px;
+        color: #333333;
+        line-height: 1.7;
+        margin: 0;
+      }
+    
+      .lb-gems-callout a {
+        color: #B8966A;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    
+      /* Mobile: single column */
+      @media (max-width: 540px) {
+        .lb-gems-grid {
+          grid-template-columns: 1fr;
+        }
+        .lb-gems-title,
+        .lb-gems-title-italic {
+          font-size: 26px;
+        }
+      }
+    </style>
+    
+    <div class="lb-gems-wrap">
+    
+      <span class="lb-gems-eyebrow">Natural Gemstones &amp; Diamonds</span>
+      <h2 class="lb-gems-title">Ethically sourced.</h2>
+      <span class="lb-gems-title-italic">Naturally beautiful.</span>
+      <p class="lb-gems-subtitle">Every gemstone is natural, ethically sourced, and hand-set by our master craftspeople. No two are identical.</p>
+    
+      <div class="lb-gems-grid">
+    
+        <div class="lb-gem-card">
+          <span class="lb-gem-dot" style="background: radial-gradient(circle at 35% 35%, #9B5FC0, #5B2D8E);"></span>
+          <span class="lb-gem-name">Amethyst</span>
+          <span class="lb-gem-meaning">Calmness &amp; Clarity</span>
+          <p class="lb-gem-desc">February's <a href="https://www.lilyblanche.com/collections/february-birthstone">birthstone</a> — a deep, captivating purple with centuries of royal heritage.</p>
+        </div>
+    
+        <div class="lb-gem-card">
+          <span class="lb-gem-dot" style="background: radial-gradient(circle at 35% 35%, #E85A5A, #9B1A1A);"></span>
+          <span class="lb-gem-name">Garnet</span>
+          <span class="lb-gem-meaning">Passion &amp; Vitality</span>
+          <p class="lb-gem-desc">January's <a href="https://www.lilyblanche.com/collections/january-birthstone">birthstone</a> — rich, warm reds that glow in any light.</p>
+        </div>
+    
+        <div class="lb-gem-card">
+          <span class="lb-gem-dot" style="background: radial-gradient(circle at 35% 35%, #5AACD4, #1A5C8A);"></span>
+          <span class="lb-gem-name">Blue Topaz</span>
+          <span class="lb-gem-meaning">Love &amp; Affection</span>
+          <p class="lb-gem-desc">Cool, sky-blue tones with excellent brilliance and clarity.</p>
+        </div>
+    
+        <div class="lb-gem-card">
+          <span class="lb-gem-dot" style="background: radial-gradient(circle at 35% 35%, #3DB87A, #1A6B42);"></span>
+          <span class="lb-gem-name">Emerald</span>
+          <span class="lb-gem-meaning">Rebirth &amp; Prosperity</span>
+          <p class="lb-gem-desc">Vivid greens of the highest quality — a gemstone of timeless elegance.</p>
+        </div>
+    
+        <div class="lb-gem-card">
+          <span class="lb-gem-dot" style="background: radial-gradient(circle at 35% 35%, #3A5FC0, #1A2D8E);"></span>
+          <span class="lb-gem-name">Sapphire</span>
+          <span class="lb-gem-meaning">Wisdom &amp; Nobility</span>
+          <p class="lb-gem-desc">September's <a href="https://www.lilyblanche.com/collections/september-birthstone">
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-gemstone-grid-{{ ai_gen_id }} {
+    display: block;
+    max-width: {{ block.settings.max_width }}px;
+    margin: {{ block.settings.section_spacing }}px auto;
+    padding: 0 16px;
+    font-family: inherit;
+    width: {{ block.settings.desktop_width_percent }}%;
+  }
+
+  .ai-gemstone-eyebrow-{{ ai_gen_id }} {
+    font-size: {{ block.settings.eyebrow_size }}px;
+    letter-spacing: {{ block.settings.eyebrow_spacing }}em;
+    text-transform: uppercase;
+    color: {{ block.settings.eyebrow_color }};
+    margin-bottom: {{ block.settings.eyebrow_margin }}px;
+    display: block;
+  }
+
+  .ai-gemstone-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 400;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 4px;
+    line-height: 1.15;
+  }
+
+  .ai-gemstone-title-italic-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 400;
+    font-style: italic;
+    color: {{ block.settings.title_italic_color }};
+    margin: 0 0 {{ block.settings.title_margin }}px;
+    display: block;
+    line-height: 1.15;
+  }
+
+  .ai-gemstone-subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.subtitle_color }};
+    margin: 0 0 {{ block.settings.subtitle_margin }}px;
+  }
+
+  .ai-gemstone-grid-container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.columns_desktop }}, 1fr);
+    gap: {{ block.settings.grid_gap }}px;
+    background: {{ block.settings.grid_border_color }};
+    border: {{ block.settings.grid_gap }}px solid {{ block.settings.grid_border_color }};
+  }
+
+  .ai-gem-card-{{ ai_gen_id }} {
+    background: {{ block.settings.card_bg_color }};
+    padding: {{ block.settings.card_padding }}px {{ block.settings.card_padding_horizontal }}px;
+  }
+
+  .ai-gem-dot-{{ ai_gen_id }} {
+    width: {{ block.settings.dot_size }}px;
+    height: {{ block.settings.dot_size }}px;
+    border-radius: 50%;
+    margin-bottom: {{ block.settings.dot_margin }}px;
+    display: block;
+  }
+
+  .ai-gem-name-{{ ai_gen_id }} {
+    font-size: {{ block.settings.gem_name_size }}px;
+    font-weight: 400;
+    color: {{ block.settings.gem_name_color }};
+    margin: 0 0 6px;
+    display: block;
+  }
+
+  .ai-gem-meaning-{{ ai_gen_id }} {
+    font-size: {{ block.settings.gem_meaning_size }}px;
+    font-style: italic;
+    color: {{ block.settings.gem_meaning_color }};
+    margin: 0 0 {{ block.settings.gem_meaning_margin }}px;
+    display: block;
+  }
+
+  .ai-gem-desc-{{ ai_gen_id }} {
+    font-size: {{ block.settings.gem_desc_size }}px;
+    color: {{ block.settings.gem_desc_color }};
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .ai-gem-desc-{{ ai_gen_id }} a {
+    color: {{ block.settings.link_color }};
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .ai-gemstone-callout-{{ ai_gen_id }} {
+    margin-top: 2px;
+    border: {{ block.settings.grid_gap }}px solid {{ block.settings.grid_border_color }};
+    border-top: none;
+    padding: {{ block.settings.callout_padding }}px {{ block.settings.card_padding_horizontal }}px;
+    background: {{ block.settings.callout_bg_color }};
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .ai-gemstone-callout-icon-{{ ai_gen_id }} {
+    font-size: {{ block.settings.callout_icon_size }}px;
+    color: {{ block.settings.callout_icon_color }};
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .ai-gemstone-callout-{{ ai_gen_id }} p {
+    font-size: {{ block.settings.callout_text_size }}px;
+    color: {{ block.settings.callout_text_color }};
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .ai-gemstone-callout-{{ ai_gen_id }} a {
+    color: {{ block.settings.link_color }};
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 749px) {
+    .ai-gemstone-grid-container-{{ ai_gen_id }} {
+      grid-template-columns: repeat({{ block.settings.columns_mobile }}, 1fr);
+    }
+    .ai-gemstone-title-{{ ai_gen_id }},
+    .ai-gemstone-title-italic-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<gemstone-grid-{{ ai_gen_id }} class="ai-gemstone-grid-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.eyebrow != blank %}
+    <span class="ai-gemstone-eyebrow-{{ ai_gen_id }}">{{ block.settings.eyebrow }}</span>
+  {% endif %}
+
+  {% if block.settings.title != blank %}
+    <h2 class="ai-gemstone-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+  {% endif %}
+
+  {% if block.settings.title_italic != blank %}
+    <span class="ai-gemstone-title-italic-{{ ai_gen_id }}">{{ block.settings.title_italic }}</span>
+  {% endif %}
+
+  {% if block.settings.subtitle != blank %}
+    <div class="ai-gemstone-subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</div>
+  {% endif %}
+
+  <div class="ai-gemstone-grid-container-{{ ai_gen_id }}">
+    {% for i in (1..6) %}
+      {% liquid
+        assign gem_enabled_key = 'gem_' | append: i | append: '_enabled'
+        assign gem_name_key = 'gem_' | append: i | append: '_name'
+        assign gem_meaning_key = 'gem_' | append: i | append: '_meaning'
+        assign gem_desc_key = 'gem_' | append: i | append: '_description'
+        assign gem_color_key = 'gem_' | append: i | append: '_color'
+
+        assign gem_enabled = block.settings[gem_enabled_key]
+        assign gem_name = block.settings[gem_name_key]
+        assign gem_meaning = block.settings[gem_meaning_key]
+        assign gem_desc = block.settings[gem_desc_key]
+        assign gem_color = block.settings[gem_color_key]
+      %}
+
+      {% if gem_enabled %}
+        <div class="ai-gem-card-{{ ai_gen_id }}">
+          <span class="ai-gem-dot-{{ ai_gen_id }}" style="background: {{ gem_color }};"></span>
+          {% if gem_name != blank %}
+            <span class="ai-gem-name-{{ ai_gen_id }}">{{ gem_name }}</span>
+          {% endif %}
+          {% if gem_meaning != blank %}
+            <span class="ai-gem-meaning-{{ ai_gen_id }}">{{ gem_meaning }}</span>
+          {% endif %}
+          {% if gem_desc != blank %}
+            <div class="ai-gem-desc-{{ ai_gen_id }}">{{ gem_desc }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if block.settings.show_callout %}
+    <div class="ai-gemstone-callout-{{ ai_gen_id }}">
+      {% if block.settings.callout_icon != blank %}
+        <span class="ai-gemstone-callout-icon-{{ ai_gen_id }}">{{ block.settings.callout_icon }}</span>
+      {% endif %}
+      {% if block.settings.callout_text != blank %}
+        <div>{{ block.settings.callout_text }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+</gemstone-grid-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class GemstoneGrid{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+      }
+    }
+
+    customElements.define('gemstone-grid-{{ ai_gen_id }}', GemstoneGrid{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Gemstone grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 600,
+      "max": 1400,
+      "step": 100,
+      "unit": "px",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_spacing",
+      "label": "Section spacing",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "label": "Columns on mobile",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "Natural Gemstones & Diamonds"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Ethically sourced."
+    },
+    {
+      "type": "text",
+      "id": "title_italic",
+      "label": "Title italic",
+      "default": "Naturally beautiful."
+    },
+    {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "<p>Every gemstone is natural, ethically sourced, and hand-set by our master craftspeople. No two are identical.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Header style"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size",
+      "label": "Eyebrow size",
+      "min": 8,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 11
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_spacing",
+      "label": "Eyebrow spacing",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.1,
+      "default": 0.2
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_margin",
+      "label": "Eyebrow margin",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow color",
+      "default": "#B8966A"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "label": "Title size mobile",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 26
+    },
+    {
+      "type": "range",
+      "id": "title_margin",
+      "label": "Title margin",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "title_italic_color",
+      "label": "Title italic color",
+      "default": "#B8966A"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "Subtitle size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "subtitle_margin",
+      "label": "Subtitle margin",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle color",
+      "default": "#555555"
+    },
+    {
+      "type": "header",
+      "content": "Grid style"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Grid gap",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "grid_border_color",
+      "label": "Grid border color",
+      "default": "#E0D8CE"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card background",
+      "default": "#FAF7F2"
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "label": "Card padding vertical",
+      "min": 10,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "card_padding_horizontal",
+      "label": "Card padding horizontal",
+      "min": 10,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "header",
+      "content": "Gemstone style"
+    },
+    {
+      "type": "range",
+      "id": "dot_size",
+      "label": "Dot size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "dot_margin",
+      "label": "Dot margin",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "gem_name_size",
+      "label": "Name size",
+      "min": 14,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "gem_name_color",
+      "label": "Name color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "gem_meaning_size",
+      "label": "Meaning size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "gem_meaning_margin",
+      "label": "Meaning margin",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "gem_meaning_color",
+      "label": "Meaning color",
+      "default": "#7A7268"
+    },
+    {
+      "type": "range",
+      "id": "gem_desc_size",
+      "label": "Description size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "gem_desc_color",
+      "label": "Description color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#B8966A"
+    },
+    {
+      "type": "header",
+      "content": "Gemstone 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "gem_1_enabled",
+      "label": "Enable gemstone 1",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "gem_1_name",
+      "label": "Name",
+      "default": "Amethyst"
+    },
+    {
+      "type": "text",
+      "id": "gem_1_meaning",
+      "label": "Meaning",
+      "default": "Calmness & Clarity"
+    },
+    {
+      "type": "richtext",
+      "id": "gem_1_description",
+      "label": "Description",
+      "default": "<p>February's <a href=\"/collections/february-birthstone\">birthstone</a> — a deep, captivating purple with centuries of royal heritage.</p>"
+    },
+    {
+      "type": "color",
+      "id": "gem_1_color",
+      "label": "Dot color",
+      "default": "#9B5FC0"
+    },
+    {
+      "type": "header",
+      "content": "Gemstone 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "gem_2_enabled",
+      "label": "Enable gemstone 2",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "gem_2_name",
+      "label": "Name",
+      "default": "Garnet"
+    },
+    {
+      "type": "text",
+      "id": "gem_2_meaning",
+      "label": "Meaning",
+      "default": "Passion & Vitality"
+    },
+    {
+      "type": "richtext",
+      "id": "gem_2_description",
+      "label": "Description",
+      "default": "<p>January's <a href=\"/collections/january-birthstone\">birthstone</a> — rich, warm reds that glow in any light.</p>"
+    },
+    {
+      "type": "color",
+      "id": "gem_2_color",
+      "label": "Dot color",
+      "default": "#E85A5A"
+    },
+    {
+      "type": "header",
+      "content": "Gemstone 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "gem_3_enabled",
+      "label": "Enable gemstone 3",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "gem_3_name",
+      "label": "Name",
+      "default": "Blue Topaz"
+    },
+    {
+      "type": "text",
+      "id": "gem_3_meaning",
+      "label": "Meaning",
+      "default": "Love & Affection"
+    },
+    {
+      "type": "richtext",
+      "id": "gem_3_description",
+      "label": "Description",
+      "default": "<p>Cool, sky-blue tones with excellent brilliance and clarity.</p>"
+    },
+    {
+      "type": "color",
+      "id": "gem_3_color",
+      "label": "Dot color",
+      "default": "#5AACD4"
+    },
+    {
+      "type": "header",
+      "content": "Gemstone 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "gem_4_enabled",
+      "label": "Enable gemstone 4",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "gem_4_name",
+      "label": "Name",
+      "default": "Emerald"
+    },
+    {
+      "type": "text",
+      "id": "gem_4_meaning",
+      "label": "Meaning",
+      "default": "Rebirth & Prosperity"
+    },
+    {
+      "type": "richtext",
+      "id": "gem_4_description",
+      "label": "Description",
+      "default": "<p>Vivid greens of the highest quality — a gemstone of timeless elegance.</p>"
+    },
+    {
+      "type": "color",
+      "id": "gem_4_color",
+      "label": "Dot color",
+      "default": "#3DB87A"
+    },
+    {
+      "type": "header",
+      "content": "Gemstone 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "gem_5_enabled",
+      "label": "Enable gemstone 5",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "gem_5_name",
+      "label": "Name",
+      "default": "Sapphire"
+    },
+    {
+      "type": "text",
+      "id": "gem_5_meaning",
+      "label": "Meaning",
+      "default": "Wisdom & Nobility"
+    },
+    {
+      "type": "richtext",
+      "id": "gem_5_description",
+      "label": "Description",
+      "default": "<p>September's <a href=\"/collections/september-birthstone\">birthstone</a> — deep blue with unmatched elegance.</p>"
+    },
+    {
+      "type": "color",
+      "id": "gem_5_color",
+      "label": "Dot color",
+      "default": "#3A5FC0"
+    },
+    {
+      "type": "header",
+      "content": "Gemstone 6"
+    },
+    {
+      "type": "checkbox",
+      "id": "gem_6_enabled",
+      "label": "Enable gemstone 6",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "gem_6_name",
+      "label": "Name"
+    },
+    {
+      "type": "text",
+      "id": "gem_6_meaning",
+      "label": "Meaning"
+    },
+    {
+      "type": "richtext",
+      "id": "gem_6_description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "gem_6_color",
+      "label": "Dot color",
+      "default": "#B8966A"
+    },
+    {
+      "type": "header",
+      "content": "Callout box"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_callout",
+      "label": "Show callout box",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "callout_icon",
+      "label": "Icon",
+      "default": "💎"
+    },
+    {
+      "type": "richtext",
+      "id": "callout_text",
+      "label": "Text",
+      "default": "<p>All our diamonds are ethically sourced and conflict-free. <a href=\"/pages/our-materials\">Learn more</a> about our commitment to sustainability.</p>"
+    },
+    {
+      "type": "range",
+      "id": "callout_padding",
+      "label": "Callout padding",
+      "min": 10,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "callout_bg_color",
+      "label": "Callout background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "callout_icon_size",
+      "label": "Icon size",
+      "min": 14,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "callout_icon_color",
+      "label": "Icon color",
+      "default": "#B8966A"
+    },
+    {
+      "type": "range",
+      "id": "callout_text_size",
+      "label": "Text size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "callout_text_color",
+      "label": "Text color",
+      "default": "#333333"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Gemstone grid"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}
