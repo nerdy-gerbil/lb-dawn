@@ -15,14 +15,14 @@
         "heading_gLg3Hi": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Ring Size Chart & Guide </strong>",
+            "heading": "<strong>Our Materials & Craftsmanship</strong>",
             "heading_size": "h0"
           }
         },
         "text_GwcMQW": {
           "type": "text",
           "settings": {
-            "text": "<p>How To Measure Ring Size at Home | Expert Tips and Conversion Charts</p>"
+            "text": "<p>Every piece of luxury Scottish jewellery that we create is crafted with only the finest precious metals and ethically sourced gemstones. Our commitment to quality craftsmanship ensures that each item is designed to be treasured for generations.</p>"
           }
         },
         "text_fzYBDd": {
@@ -47,99 +47,65 @@
         "padding_bottom": 12
       }
     },
-    "rich_text_RBPUj4": {
-      "type": "rich-text",
+    "multicolumn_rLpFpy": {
+      "type": "multicolumn",
       "blocks": {
-        "heading_MgAPzw": {
-          "type": "heading",
+        "column_rLzzYJ": {
+          "type": "column",
           "settings": {
-            "heading": "Find Your Perfect Ring Size",
-            "heading_size": "h1"
+            "title": "GOLD- JAN 2026 PEAK",
+            "text": "<h1><strong>$5,521</strong></h1><p>Per ounce, a record high. Gold has reached an all time high over the past 12 months, making precious metal jewellery an increasingly strong long term choice.</p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "text_VWcEbq": {
-          "type": "text",
+        "column_fw4HWY": {
+          "type": "column",
           "settings": {
-            "text": "<p>Whether your shopping for an engagement ring, wedding band or if you would just like to add a new ring to your jewellery box, getting the right size is essential for comfort and style. </p>"
+            "title": "SILVER- LAST 12 MONTHS",
+            "text": "<h1><strong>3x</strong></h1><p>Silver has tripled in value over the last year. Our sterling silver and vermeil jewellery have appreciated significantly, meaning that items purchased 18 months ago have risen in value massively. </p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "heading_MgAPzw",
-        "text_VWcEbq"
+        "column_rLzzYJ",
+        "column_fw4HWY"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "title": "Jewellery that holds its value",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
         "color_scheme": "",
-        "full_width": true,
-        "padding_top": 4,
-        "padding_bottom": 28
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "1781102204820e45ca": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_ee8f81f_NCjq8d": {
-          "type": "ai_gen_block_ee8f81f",
-          "settings": {
-            "desktop_width_percent": 100,
-            "image_width": 40,
-            "sticky_offset": 200,
-            "image": "shopify://shop_images/gemstone_ring_gold_stack.jpg",
-            "image_border_radius": 0,
-            "table_background_color": "#ffffff",
-            "header_background_color": "#e6dfd7",
-            "header_text_color": "#121212",
-            "text_color": "#121212",
-            "border_color": "#e6dfd7",
-            "row_hover_color": "#f9f7f5",
-            "border_thickness": 1,
-            "table_border_radius": 0,
-            "cell_padding": 16,
-            "text_alignment": "left",
-            "header_font_size": 16,
-            "text_font_size": 14
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_ee8f81f_NCjq8d"
-      ],
       "settings": {}
     },
-    "rich_text_rgeJxa": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_nEtPgR": {
-          "type": "heading",
-          "settings": {
-            "heading": "Quick Size Reference",
-            "heading_size": "h1"
-          }
-        },
-        "text_NyJnbh": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Most Popular Women's Sizes: </strong>L (UK) / 6 (US) to P (UK) / 8 (US)</p><p><strong>Most Popular Men's Sizes: </strong>R (UK) / 9 (US) to V (UK) / 11 (US)</p><p><strong>Average Sizes: Women:</strong> N (UK) / 7 (US) | Men: T (UK) / 10 (US)</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_nEtPgR",
-        "text_NyJnbh"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-2",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
+    "17811763033df6947b": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1781176385533e6e0f": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1781176469d537411a": {
+      "type": "_blocks",
+      "settings": {}
     },
     "main": {
       "type": "main-page",
@@ -152,205 +118,57 @@
         "padding_bottom": 0
       }
     },
-    "collapsible_content_tCz3ig": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_VMEbTk": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Method 1: String or Paper Strip Method",
-            "icon": "none",
-            "row_content": "<p>This is the most popular and accurate method for measuring your ring size at home. You'll need a piece of string or a thin strip of paper, a ruler and a pen.  </p><p> </p><ol><li>Cut a strip of paper about 6 inches long and 1/4 inches wide, or use a piece of string of a similar length. </li><li>Wrap the paper or string around the base of your ring finger, positioning it where the ring would normally sit.</li><li>Ensure the material is snug but not tight - it should slide over your knuckle comfortably.</li><li>Mark with a pen where the paper or string overlaps to complete the circle.</li><li>Lay the material flat and measure the length from the start to your mark using a ruler in millimetres.</li><li>Use our sizing chart below to convert your measurement to the correct ring size.</li></ol>",
-            "page": ""
-          }
-        },
-        "collapsible_row_zwfxWn": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Method 2: Existing Ring Measurement",
-            "icon": "none",
-            "row_content": "<p>If you have a ring that fits well on the intended finger, you can measure its internal diameter to determine your size.</p><p> </p><ol><li>Choose a ring that fits comfortably on the finger you want to size.</li><li>Place the ring on a flat surface and measure the internal diameter using a ruler.</li><li>Measure from the inside edge to the opposite inside edge, ensuring you measure the widest part.</li><li>Record your measurement in millimetres for the most accurate<br/>conversion.</li><li>Use our diameter conversion chart to find your corresponding<br/>UK ring size.</li><li>Consider that different ring styles may require slight size adjustments.</li></ol>",
-            "page": ""
-          }
-        },
-        "collapsible_row_EfUDtx": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Method 3: Professional Ring Sizer (Recommended)",
-            "icon": "none",
-            "row_content": "<p>For the most accurate measurement, we recommend using a professional ring sizer. We include one free with every Lily Blanche order, or you can request one from most local jewellers.</p><p> </p><p>Using a Ring Sizer:</p><ol><li>Slide the ring sizer onto your finger, starting with a smaller size.</li><li>Gradually increase the size until you find one that slides over your knuckle with slight resistance.</li><li>The correct size should feel snug but comfortable, allowing for natural finger movement.</li><li>Test the fit by making a fist, the ring should not feel uncomfortably tight.</li></ol>",
-            "page": ""
-          }
-        },
-        "collapsible_row_7CkCwg": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Why Professional Ring Sizers Are Best",
-            "icon": "none",
-            "row_content": "<ul><li>Account for Knuckle size variations </li><li>Test actual ring thickness.</li><li>Provide Consistent, Standardised measurements.</li><li>Allow for comfort testing with movement.</li></ul>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_VMEbTk",
-        "collapsible_row_zwfxWn",
-        "collapsible_row_EfUDtx",
-        "collapsible_row_7CkCwg"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
+    "a6a19d7e-1890-4758-b926-ca82274ab64b": {
+      "type": "rich-text",
       "settings": {
-        "caption": "",
-        "heading": "How to Measure Ring Size at Home",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 0
       }
     },
-    "multicolumn_wE8dne": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_Vm6UUw": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Timing Matters</strong>",
-            "text": "<p>Your finger size constantly changes throughout the day due to temperature, activity and fluid retention. To get the most accurate measurement, size your finger at the end of the day when your fingers are at their largest. </p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_QFRX8r": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Measure Multiple Times</strong>",
-            "text": "<p>For accuracy, measure your finger size at least three times on different days. If you get varied results, choose the measurement that is in the middle. If your results are consistant this indicates a reliable size. </p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_fWgK9c": {
-          "type": "column",
-          "settings": {
-            "title": "<strong>Knuckle Considerations</strong>",
-            "text": "<p>If you have a knuckle that is much bigger than the base of your finger, measure both areas and choose the size between the two of these measurements. The ring needs to be able to slide over your knuckle but not be so loose that it can easily spin on your finger.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_Vm6UUw",
-        "column_QFRX8r",
-        "column_fWgK9c"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "Expert Ring Sizing Tips",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+    "blocks_g7hHfz": {
+      "type": "_blocks",
+      "name": "Horizontal button group",
+      "settings": {}
     },
-    "collection_list_4rfLMr": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_4TDLPW": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "rings"
-          }
-        },
-        "featured_collection_AwELjY": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "mens-rings"
-          }
-        },
-        "featured_collection_NHyRHV": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "silver-rings"
-          }
-        },
-        "featured_collection_cECVef": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "gold-rings"
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_4TDLPW",
-        "featured_collection_AwELjY",
-        "featured_collection_NHyRHV",
-        "featured_collection_cECVef"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "Find Your Perfect Ring",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 4,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_aPNFXP": {
+    "image_with_text_ADYBic": {
       "type": "image-with-text",
       "blocks": {
-        "heading_yJgh3a": {
+        "heading_3Uy4bN": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Free Ring Sizer Included</strong>",
+            "heading": "Solid Gold",
             "heading_size": "h1"
           }
         },
-        "text_LeYbnW": {
+        "text_RndFEK": {
           "type": "text",
           "settings": {
-            "text": "<p>Each Lily Blanche order comes with a complimentary ring sizer as part of our free jewellery care kit. Your ring size can change over time, so it is a handy tool to keep in your jewellery box.</p>",
+            "text": "<p>We use high-quality <strong>9-carat and 18-carat gold </strong>to craft our lockets, necklaces, rings, earrings & bracelets, ensuring a luxurious and durable finish. Our <strong>solid gold lockets and rings </strong>are designed to withstand everyday wear while retaining their beauty. Every gold piece is <strong>hallmarked at the </strong><a href=\"https://www.lilyblanche.com/pages/our-hallmark\"><strong>Edinburgh Assay Office</strong></a>, guaranteeing its authenticity and purity.<br/></p>",
             "text_style": "body"
           }
         },
-        "button_cF84fn": {
+        "button_mqdVxH": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Our Rings",
-            "button_link": "https://www.lilyblanche.com/collections/rings",
+            "button_label": "Shop Solid Gold Jewellery",
+            "button_link": "",
             "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "heading_yJgh3a",
-        "text_LeYbnW",
-        "button_cF84fn"
+        "heading_3Uy4bN",
+        "text_RndFEK",
+        "button_mqdVxH"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "image": "shopify://shop_images/ruby_solid_gold_ring_stack.webp",
-        "height": "adapt",
+        "image": "shopify://shop_images/Two_Cross_Gold_Background.webp",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
@@ -359,9 +177,115 @@
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
         "section_color_scheme": "",
-        "color_scheme": "background-2",
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_with_text_6pkNtr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GbcyGm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gold Vermeil",
+            "heading_size": "h1"
+          }
+        },
+        "text_iicg9N": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For those who love the warmth of gold with exceptional value, our <strong>gold vermeil jewellery </strong>is the perfect choice. We use a thick layer of <strong>18-carat gold (3 microns thick) </strong>over <strong>solid sterling silver</strong>, offering a rich, long-lasting finish. Unlike gold-plated jewellery, gold vermeil contains no base metals like brass or copper, making it a superior choice for sensitive skin.<br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_BkdjfE": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Gold Vermeil",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_GbcyGm",
+        "text_iicg9N",
+        "button_BkdjfE"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Model_Letter_L_Gold.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_AJkzjF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_w8gkxm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sterling Silver",
+            "heading_size": "h1"
+          }
+        },
+        "text_9mB8qd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our <strong>sterling silver jewellery </strong>is crafted from <strong>92.5% pure silver. </strong>Each locket is <a href=\"https://www.lilyblanche.com/pages/our-hallmark\">hallmarked </a> at the Edinburgh Assay office, confirming it's purity and our commitment to quality. <br/><br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_eXDQXQ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Sterling Silver",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_w8gkxm",
+        "text_9mB8qd",
+        "button_eXDQXQ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/silver_filigree_heart_locket_2.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_FLqcQn": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<!-- =====================================================\n     LILY BLANCHE — Micron Thickness Visualiser\n     Paste this into a Custom HTML section in Shopify\n     Theme Editor → Our Materials page → Add Section\n     → Custom HTML (or Custom Liquid)\n     ===================================================== -->\n\n<style>\n  .lb-micron-wrap {\n    max-width: 860px;\n    margin: 48px auto;\n    padding: 0 16px;\n    font-family: inherit;\n  }\n\n  .lb-micron-eyebrow {\n    font-size: 11px;\n    letter-spacing: 0.2em;\n    text-transform: uppercase;\n    color: #B8966A;\n    text-align: center;\n    margin-bottom: 10px;\n  }\n\n  .lb-micron-title {\n    font-size: 28px;\n    font-weight: 400;\n    text-align: center;\n    margin: 0 0 8px;\n    color: #000000;\n  }\n\n  .lb-micron-subtitle {\n    font-size: 13px;\n    color: #555555;\n    text-align: center;\n    margin: 0 0 40px;\n  }\n\n  .lb-micron-table {\n    border: 1px solid #E0D8CE;\n    background: #ffffff;\n    width: 100%;\n  }\n\n  .lb-micron-row {\n    display: grid !important;\n    grid-template-columns: 180px 1fr 80px;\n    align-items: center;\n    border-bottom: 1px solid #E0D8CE;\n  }\n\n  .lb-micron-row:last-child {\n    border-bottom: none;\n  }\n\n  .lb-micron-row--highlight {\n    background: #FAF7F2;\n  }\n\n  .lb-micron-label {\n    padding: 18px 20px;\n    font-size: 13px;\n    font-weight: 600;\n    color: #000000;\n    border-right: 1px solid #E0D8CE;\n    line-height: 1.3;\n  }\n\n  .lb-micron-label small {\n    display: block !important;\n    font-size: 11px;\n    font-weight: 400;\n    color: #555555;\n    margin-top: 3px;\n  }\n\n  .lb-micron-tag {\n    display: inline-block !important;\n    background: #B8966A;\n    color: #ffffff;\n    font-size: 9px;\n    font-weight: 600;\n    letter-spacing: 0.1em;\n    text-transform: uppercase;\n    padding: 2px 7px;\n    margin-top: 5px;\n  }\n\n  .lb-micron-track {\n    padding: 14px 20px;\n    overflow: hidden;\n  }\n\n  .lb-micron-bar {\n    display: block !important;\n    height: 14px !important;\n    min-height: 14px !important;\n    border-radius: 1px;\n    width: 0;\n    transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);\n    visibility: visible !important;\n    opacity: 1 !important;\n  }\n\n  .lb-micron-bar[data-w=\"flash\"]  { background: #C8C0B8 !important; }\n  .lb-micron-bar[data-w=\"plated\"] { background: #D4B896 !important; }\n  .lb-micron-bar[data-w=\"legal\"]  { background: #C4A07A !important; }\n  .lb-micron-bar[data-w=\"lb\"]     { background: #B8966A !important; }\n  .lb-micron-bar[data-w=\"solid\"]  {\n    background: repeating-linear-gradient(\n      45deg,\n      #B8966A 0px, #B8966A 4px,\n      #8C6E4A 4px, #8C6E4A 8px\n    ) !important;\n  }\n\n  .lb-micron-value {\n    padding: 18px 14px 18px 10px;\n    font-size: 17px;\n    font-weight: 400;\n    color: #000000;\n    text-align: right;\n    border-left: 1px solid #E0D8CE;\n    white-space: nowrap;\n  }\n\n  .lb-micron-row--highlight .lb-micron-value {\n    color: #B8966A;\n    font-weight: 700;\n  }\n\n  .lb-micron-caption {\n    font-size: 12px;\n    color: #555555;\n    text-align: center;\n    margin-top: 14px;\n  }\n\n  /* Mobile */\n  @media (max-width: 600px) {\n    .lb-micron-row {\n      grid-template-columns: 130px 1fr 56px !important;\n    }\n    .lb-micron-label {\n      padding: 14px 12px;\n      font-size: 11px;\n    }\n    .lb-micron-value {\n      font-size: 12px;\n      padding: 14px 8px;\n    }\n    .lb-micron-track {\n      padding: 14px 12px;\n    }\n    .lb-micron-title {\n      font-size: 22px;\n    }\n  }\n\n  @media (prefers-reduced-motion: reduce) {\n    .lb-micron-bar { transition: none !important; }\n  }\n</style>\n\n<div class=\"lb-micron-wrap\" id=\"lb-micron-wrap\">\n\n \n  <h1 class=\"lb-micron-title\">Why microns matter</h1>\n  <p class=\"lb-micron-subtitle\">The thickness of gold determines how long your jewellery lasts. Here's how Lily Blanche compares — shown to scale.</p>\n\n  <div class=\"lb-micron-table\">\n\n    <div class=\"lb-micron-row\">\n      <div class=\"lb-micron-label\">Flash Plated<small>Budget jewellery</small></div>\n      <div class=\"lb-micron-track\">\n        <div class=\"lb-micron-bar\" data-w=\"flash\" data-target=\"2.5\"></div>\n      </div>\n      <div class=\"lb-micron-value\">0.125µm</div>\n    </div>\n\n    <div class=\"lb-micron-row\">\n      <div class=\"lb-micron-label\">Gold Plated<small>Industry standard</small></div>\n      <div class=\"lb-micron-track\">\n        <div class=\"lb-micron-bar\" data-w=\"plated\" data-target=\"21\"></div>\n      </div>\n      <div class=\"lb-micron-value\">0.5µm</div>\n    </div>\n\n    <div class=\"lb-micron-row\">\n      <div class=\"lb-micron-label\">Vermeil (Legal)<small>US minimum standard</small></div>\n      <div class=\"lb-micron-track\">\n        <div class=\"lb-micron-bar\" data-w=\"legal\" data-target=\"42\"></div>\n      </div>\n      <div class=\"lb-micron-value\">2.5µm</div>\n    </div>\n\n    <div class=\"lb-micron-row lb-micron-row--highlight\">\n      <div class=\"lb-micron-label\">Lily Blanche Vermeil<small>Our standard</small><span class=\"lb-micron-tag\">Our pieces</span></div>\n      <div class=\"lb-micron-track\">\n        <div class=\"lb-micron-bar\" data-w=\"lb\" data-target=\"100\"></div>\n      </div>\n      <div class=\"lb-micron-value\">3µm+</div>\n    </div>\n\n    <div class=\"lb-micron-row\">\n      <div class=\"lb-micron-label\">Solid Gold<small>No plating required</small></div>\n      <div class=\"lb-micron-track\">\n        <div class=\"lb-micron-bar\" data-w=\"solid\" data-target=\"100\"></div>\n      </div>\n      <div class=\"lb-micron-value\">Solid</div>\n    </div>\n\n  </div>\n\n  <p class=\"lb-micron-caption\">Bars shown proportionally. Lily Blanche vermeil is 24&times; thicker than flash-plated gold.</p>\n\n</div>\n\n<script>\n(function() {\n  // Run immediately AND on DOMContentLoaded to handle both\n  // inline execution and deferred script scenarios in Shopify\n  function init() {\n    var wrap = document.getElementById('lb-micron-wrap');\n    if (!wrap) return;\n    var bars = wrap.querySelectorAll('.lb-micron-bar');\n    var animated = false;\n\n    function animateBars() {\n      if (animated) return;\n      animated = true;\n      bars.forEach(function(bar, i) {\n        var target = bar.getAttribute('data-target') + '%';\n        setTimeout(function() {\n          bar.style.width = target;\n        }, i * 180);\n      });\n    }\n\n    if ('IntersectionObserver' in window) {\n      var observer = new IntersectionObserver(function(entries) {\n        entries.forEach(function(entry) {\n          if (entry.isIntersecting) {\n            animateBars();\n            observer.disconnect();\n          }\n        });\n      }, { threshold: 0.2 });\n      observer.observe(wrap);\n    } else {\n      // Fallback: just animate after a short delay\n      setTimeout(animateBars, 400);\n    }\n  }\n\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', init);\n  } else {\n    init();\n  }\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b": {
@@ -403,29 +327,26 @@
         "padding_bottom": 52
       }
     },
-    "a6a19d7e-1890-4758-b926-ca82274ab64b": {
-      "type": "rich-text",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 24,
-        "padding_bottom": 0
-      }
+    "178117658864eb57bf": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
     "rich_text_J6UNRR",
-    "rich_text_RBPUj4",
+    "multicolumn_rLpFpy",
     "1781102204820e45ca",
-    "rich_text_rgeJxa",
+    "17811763033df6947b",
+    "1781176385533e6e0f",
+    "1781176469d537411a",
     "main",
-    "collapsible_content_tCz3ig",
-    "multicolumn_wE8dne",
-    "collection_list_4rfLMr",
-    "image_with_text_aPNFXP",
+    "a6a19d7e-1890-4758-b926-ca82274ab64b",
+    "blocks_g7hHfz",
+    "image_with_text_ADYBic",
+    "image_with_text_6pkNtr",
+    "image_with_text_AJkzjF",
+    "custom_liquid_FLqcQn",
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
-    "a6a19d7e-1890-4758-b926-ca82274ab64b"
+    "178117658864eb57bf"
   ]
 }
