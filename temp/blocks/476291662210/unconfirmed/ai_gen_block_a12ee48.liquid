@@ -1,6 +1,1166 @@
+{% doc %}
+  @prompt
+    create me a table that is editable with this code <!-- =====================================================
+         LILY BLANCHE — Material Comparison Table
+         Paste into a Custom HTML / Custom Liquid section
+         in the Shopify Theme Editor on the Our Materials page
+         ===================================================== -->
+    
+    <style>
+      .lb-compare-wrap {
+        max-width: 860px;
+        margin: 48px auto;
+        padding: 0 16px;
+        font-family: inherit;
+      }
+    
+      .lb-compare-eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #B8966A;
+        margin-bottom: 12px;
+        display: block;
+      }
+    
+      .lb-compare-title {
+        font-size: 36px;
+        font-weight: 400;
+        color: #000000;
+        margin: 0 0 4px;
+        line-height: 1.15;
+      }
+    
+      .lb-compare-title-italic {
+        font-size: 36px;
+        font-weight: 400;
+        font-style: italic;
+        color: #B8966A;
+        margin: 0 0 12px;
+        display: block;
+        line-height: 1.15;
+      }
+    
+      .lb-compare-subtitle {
+        font-size: 14px;
+        color: #555555;
+        margin: 0 0 32px;
+      }
+    
+      /* ── TABLE ── */
+      .lb-compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #E0D8CE;
+        background: #ffffff;
+      }
+    
+      .lb-compare-table th,
+      .lb-compare-table td {
+        padding: 18px 20px;
+        border: 1px solid #E0D8CE;
+        font-size: 13px;
+        color: #000000;
+        vertical-align: middle;
+        line-height: 1.4;
+      }
+    
+      /* Header row */
+      .lb-compare-table thead th {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #000000;
+        background: #F2EDE5;
+        text-align: center;
+      }
+    
+      .lb-compare-table thead th:first-child {
+        background: #F2EDE5;
+      }
+    
+      /* Highlighted centre column header */
+      .lb-compare-table thead th.lb-col-highlight {
+        background: #1C1A18;
+        color: #ffffff;
+      }
+    
+      .lb-compare-table thead th.lb-col-highlight small {
+        display: block;
+        font-size: 10px;
+        font-weight: 400;
+        color: #B8966A;
+        text-transform: none;
+        letter-spacing: 0.04em;
+        margin-top: 4px;
+      }
+    
+      /* Row label (first column) */
+      .lb-compare-table td:first-child {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #000000;
+        background: #F2EDE5;
+        width: 140px;
+      }
+    
+      /* Centre column cells */
+      .lb-compare-table td.lb-col-highlight {
+        background: #FAFAF8;
+        font-weight: 600;
+        color: #000000;
+      }
+    
+      /* Other data cells */
+      .lb-compare-table td:not(:first-child) {
+        text-align: center;
+        color: #333333;
+      }
+    
+      /* Tick and cross */
+      .lb-tick {
+        color: #B8966A;
+        font-size: 15px;
+        margin-right: 5px;
+      }
+    
+      .lb-cross {
+        color: #BBBBBB;
+        font-size: 15px;
+        margin-right: 5px;
+      }
+    
+      .lb-dash {
+        color: #BBBBBB;
+        font-size: 18px;
+        margin-right: 5px;
+      }
+    
+      /* Mobile: allow horizontal scroll */
+      @media (max-width: 640px) {
+        .lb-compare-scroll {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .lb-compare-table {
+          min-width: 480px;
+        }
+        .lb-compare-table th,
+        .lb-compare-table td {
+          padding: 14px 12px;
+          font-size: 12px;
+        }
+        .lb-compare-title,
+        .lb-compare-title-italic {
+          font-size: 26px;
+        }
+      }
+    </style>
+    
+    <div class="lb-compare-wrap">
+    
+      <span class="lb-compare-eyebrow">Material Comparison</span>
+      <h2 class="lb-compare-title">Gold-plated vs Vermeil</h2>
+      <span class="lb-compare-title-italic">vs Solid Gold</span>
+      <p class="lb-compare-subtitle">Understanding your options before you buy.</p>
+    
+      <div class="lb-compare-scroll">
+        <table class="lb-compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Gold Plated</th>
+              <th class="lb-col-highlight">Lily Blanche Vermeil<small>Our standard</small></th>
+              <th>Solid Gold</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Base Metal</td>
+              <td>Brass or copper</td>
+              <td class="lb-col-highlight"><span class="lb-tick">✓</span> Sterling silver (925)</td>
+              <td><span class="lb-tick">✓</span> Pure gold alloy</td>
+            </tr>
+            <tr>
+              <td>Gold Purity</td>
+              <td><span class="lb-dash">–</span> Often unknown</td>
+              <td class="lb-col-highlight"><span class="lb-tick">✓</span> 18-carat</td>
+              <td><span class="lb-tick">✓</span> 9ct or 18ct</td>
+            </tr>
+            <tr>
+              <td>Gold Thickness</td>
+              <td>0.5µm minimum</td>
+              <td class="lb-col-highlight"><span class="lb-tick">✓</span> 3µm+ (6× thicker)</td>
+              <td><span class="lb-tick">✓</span> Solid throughout</td>
+            </tr>
+            <tr>
+              <td>Hallmarkable</td>
+              <td><span class="lb-cross">✗</span> No — base metal</td>
+              <td class="lb-col-highlight"><span class="lb-tick">✓</span> Yes — 925 stamped</td>
+              <td><span class="lb-tick">✓</span> Yes — Edinburgh Assay</td>
+            </tr>
+            <tr>
+              <td>Hypoallergenic</td>
+              <td><span class="lb-cros
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .lb-compare-wrap-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: {{ block.settings.top_margin }}px auto {{ block.settings.bottom_margin }}px;
+    padding: 0 16px;
+    font-family: inherit;
+    width: {{ block.settings.desktop_width_percent }}%;
+  }
+
+  .lb-compare-eyebrow-{{ ai_gen_id }} {
+    font-size: {{ block.settings.eyebrow_size }}px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: {{ block.settings.eyebrow_color }};
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .lb-compare-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 400;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 4px;
+    line-height: 1.15;
+  }
+
+  .lb-compare-title-italic-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 400;
+    font-style: italic;
+    color: {{ block.settings.title_italic_color }};
+    margin: 0 0 12px;
+    display: block;
+    line-height: 1.15;
+  }
+
+  .lb-compare-subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.subtitle_color }};
+    margin: 0 0 32px;
+  }
+
+  .lb-compare-table-{{ ai_gen_id }} {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid {{ block.settings.border_color }};
+    background: {{ block.settings.table_bg_color }};
+  }
+
+  .lb-compare-table-{{ ai_gen_id }} th,
+  .lb-compare-table-{{ ai_gen_id }} td {
+    padding: {{ block.settings.cell_padding }}px {{ block.settings.cell_padding | times: 1.1 }}px;
+    border: 1px solid {{ block.settings.border_color }};
+    font-size: {{ block.settings.cell_text_size }}px;
+    color: {{ block.settings.cell_text_color }};
+    vertical-align: middle;
+    line-height: 1.4;
+  }
+
+  .lb-compare-table-{{ ai_gen_id }} thead th {
+    font-size: {{ block.settings.header_text_size }}px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: {{ block.settings.header_text_color }};
+    background: {{ block.settings.header_bg_color }};
+    text-align: center;
+  }
+
+  .lb-compare-table-{{ ai_gen_id }} thead th:first-child {
+    background: {{ block.settings.header_bg_color }};
+  }
+
+  .lb-compare-table-{{ ai_gen_id }} thead th.lb-col-highlight-{{ ai_gen_id }} {
+    background: {{ block.settings.highlight_header_bg }};
+    color: {{ block.settings.highlight_header_text }};
+  }
+
+  .lb-compare-table-{{ ai_gen_id }} thead th.lb-col-highlight-{{ ai_gen_id }} small {
+    display: block;
+    font-size: {{ block.settings.header_text_size | times: 0.9 }}px;
+    font-weight: 400;
+    color: {{ block.settings.highlight_header_small_text }};
+    text-transform: none;
+    letter-spacing: 0.04em;
+    margin-top: 4px;
+  }
+
+  .lb-compare-table-{{ ai_gen_id }} td:first-child {
+    font-size: {{ block.settings.row_label_size }}px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: {{ block.settings.row_label_color }};
+    background: {{ block.settings.row_label_bg }};
+    width: {{ block.settings.row_label_width }}px;
+  }
+
+  .lb-compare-table-{{ ai_gen_id }} td.lb-col-highlight-{{ ai_gen_id }} {
+    background: {{ block.settings.highlight_cell_bg }};
+    font-weight: 600;
+    color: {{ block.settings.highlight_cell_text }};
+  }
+
+  .lb-compare-table-{{ ai_gen_id }} td:not(:first-child) {
+    text-align: center;
+    color: {{ block.settings.cell_text_color }};
+  }
+
+  .lb-tick-{{ ai_gen_id }} {
+    color: {{ block.settings.tick_color }};
+    font-size: {{ block.settings.icon_size }}px;
+    margin-right: 5px;
+  }
+
+  .lb-cross-{{ ai_gen_id }} {
+    color: {{ block.settings.cross_color }};
+    font-size: {{ block.settings.icon_size }}px;
+    margin-right: 5px;
+  }
+
+  .lb-dash-{{ ai_gen_id }} {
+    color: {{ block.settings.dash_color }};
+    font-size: {{ block.settings.icon_size | times: 1.2 }}px;
+    margin-right: 5px;
+  }
+
+  @media (max-width: 640px) {
+    .lb-compare-scroll-{{ ai_gen_id }} {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .lb-compare-table-{{ ai_gen_id }} {
+      min-width: 480px;
+    }
+    .lb-compare-table-{{ ai_gen_id }} th,
+    .lb-compare-table-{{ ai_gen_id }} td {
+      padding: 14px 12px;
+      font-size: {{ block.settings.cell_text_size | times: 0.9 }}px;
+    }
+    .lb-compare-title-{{ ai_gen_id }},
+    .lb-compare-title-italic-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.7 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="lb-compare-wrap-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.eyebrow != blank %}
+    <span class="lb-compare-eyebrow-{{ ai_gen_id }}">{{ block.settings.eyebrow }}</span>
+  {% endif %}
+
+  {% if block.settings.title != blank %}
+    <h2 class="lb-compare-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+  {% endif %}
+
+  {% if block.settings.title_italic != blank %}
+    <span class="lb-compare-title-italic-{{ ai_gen_id }}">{{ block.settings.title_italic }}</span>
+  {% endif %}
+
+  {% if block.settings.subtitle != blank %}
+    <p class="lb-compare-subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</p>
+  {% endif %}
+
+  <div class="lb-compare-scroll-{{ ai_gen_id }}">
+    <table class="lb-compare-table-{{ ai_gen_id }}">
+      <thead>
+        <tr>
+          <th></th>
+          <th>{{ block.settings.col1_header }}</th>
+          <th class="lb-col-highlight-{{ ai_gen_id }}">
+            {{ block.settings.col2_header }}
+            {% if block.settings.col2_subheader != blank %}
+              <small>{{ block.settings.col2_subheader }}</small>
+            {% endif %}
+          </th>
+          <th>{{ block.settings.col3_header }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ block.settings.row1_label }}</td>
+          <td>{{ block.settings.row1_col1 }}</td>
+          <td class="lb-col-highlight-{{ ai_gen_id }}">
+            {% if block.settings.row1_col2_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row1_col2_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row1_col2_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row1_col2 }}
+          </td>
+          <td>
+            {% if block.settings.row1_col3_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row1_col3_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row1_col3_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row1_col3 }}
+          </td>
+        </tr>
+        <tr>
+          <td>{{ block.settings.row2_label }}</td>
+          <td>
+            {% if block.settings.row2_col1_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row2_col1_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row2_col1_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row2_col1 }}
+          </td>
+          <td class="lb-col-highlight-{{ ai_gen_id }}">
+            {% if block.settings.row2_col2_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row2_col2_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row2_col2_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row2_col2 }}
+          </td>
+          <td>
+            {% if block.settings.row2_col3_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row2_col3_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row2_col3_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row2_col3 }}
+          </td>
+        </tr>
+        <tr>
+          <td>{{ block.settings.row3_label }}</td>
+          <td>{{ block.settings.row3_col1 }}</td>
+          <td class="lb-col-highlight-{{ ai_gen_id }}">
+            {% if block.settings.row3_col2_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row3_col2_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row3_col2_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row3_col2 }}
+          </td>
+          <td>
+            {% if block.settings.row3_col3_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row3_col3_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row3_col3_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row3_col3 }}
+          </td>
+        </tr>
+        <tr>
+          <td>{{ block.settings.row4_label }}</td>
+          <td>
+            {% if block.settings.row4_col1_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row4_col1_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row4_col1_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row4_col1 }}
+          </td>
+          <td class="lb-col-highlight-{{ ai_gen_id }}">
+            {% if block.settings.row4_col2_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row4_col2_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row4_col2_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row4_col2 }}
+          </td>
+          <td>
+            {% if block.settings.row4_col3_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row4_col3_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row4_col3_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row4_col3 }}
+          </td>
+        </tr>
+        <tr>
+          <td>{{ block.settings.row5_label }}</td>
+          <td>
+            {% if block.settings.row5_col1_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row5_col1_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row5_col1_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row5_col1 }}
+          </td>
+          <td class="lb-col-highlight-{{ ai_gen_id }}">
+            {% if block.settings.row5_col2_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row5_col2_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row5_col2_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row5_col2 }}
+          </td>
+          <td>
+            {% if block.settings.row5_col3_icon == 'tick' %}
+              <span class="lb-tick-{{ ai_gen_id }}">✓</span>
+            {% elsif block.settings.row5_col3_icon == 'cross' %}
+              <span class="lb-cross-{{ ai_gen_id }}">✗</span>
+            {% elsif block.settings.row5_col3_icon == 'dash' %}
+              <span class="lb-dash-{{ ai_gen_id }}">–</span>
+            {% endif %}
+            {{ block.settings.row5_col3 }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Material comparison table",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 600,
+      "max": 1400,
+      "step": 20,
+      "unit": "px",
+      "default": 860
+    },
+    {
+      "type": "range",
+      "id": "top_margin",
+      "label": "Top margin",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "bottom_margin",
+      "label": "Bottom margin",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow text",
+      "default": "Material Comparison"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Gold-plated vs Vermeil"
+    },
+    {
+      "type": "text",
+      "id": "title_italic",
+      "label": "Title italic",
+      "default": "vs Solid Gold"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Understanding your options before you buy."
+    },
+    {
+      "type": "header",
+      "content": "Column headers"
+    },
+    {
+      "type": "text",
+      "id": "col1_header",
+      "label": "Column 1 header",
+      "default": "Gold Plated"
+    },
+    {
+      "type": "text",
+      "id": "col2_header",
+      "label": "Column 2 header (highlighted)",
+      "default": "Lily Blanche Vermeil"
+    },
+    {
+      "type": "text",
+      "id": "col2_subheader",
+      "label": "Column 2 subheader",
+      "default": "Our standard"
+    },
+    {
+      "type": "text",
+      "id": "col3_header",
+      "label": "Column 3 header",
+      "default": "Solid Gold"
+    },
+    {
+      "type": "header",
+      "content": "Row 1"
+    },
+    {
+      "type": "text",
+      "id": "row1_label",
+      "label": "Label",
+      "default": "Base Metal"
+    },
+    {
+      "type": "text",
+      "id": "row1_col1",
+      "label": "Column 1",
+      "default": "Brass or copper"
+    },
+    {
+      "type": "select",
+      "id": "row1_col2_icon",
+      "label": "Column 2 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "tick"
+    },
+    {
+      "type": "text",
+      "id": "row1_col2",
+      "label": "Column 2",
+      "default": "Sterling silver (925)"
+    },
+    {
+      "type": "select",
+      "id": "row1_col3_icon",
+      "label": "Column 3 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "tick"
+    },
+    {
+      "type": "text",
+      "id": "row1_col3",
+      "label": "Column 3",
+      "default": "Pure gold alloy"
+    },
+    {
+      "type": "header",
+      "content": "Row 2"
+    },
+    {
+      "type": "text",
+      "id": "row2_label",
+      "label": "Label",
+      "default": "Gold Purity"
+    },
+    {
+      "type": "select",
+      "id": "row2_col1_icon",
+      "label": "Column 1 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "dash"
+    },
+    {
+      "type": "text",
+      "id": "row2_col1",
+      "label": "Column 1",
+      "default": "Often unknown"
+    },
+    {
+      "type": "select",
+      "id": "row2_col2_icon",
+      "label": "Column 2 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "tick"
+    },
+    {
+      "type": "text",
+      "id": "row2_col2",
+      "label": "Column 2",
+      "default": "18-carat"
+    },
+    {
+      "type": "select",
+      "id": "row2_col3_icon",
+      "label": "Column 3 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "tick"
+    },
+    {
+      "type": "text",
+      "id": "row2_col3",
+      "label": "Column 3",
+      "default": "9ct or 18ct"
+    },
+    {
+      "type": "header",
+      "content": "Row 3"
+    },
+    {
+      "type": "text",
+      "id": "row3_label",
+      "label": "Label",
+      "default": "Gold Thickness"
+    },
+    {
+      "type": "text",
+      "id": "row3_col1",
+      "label": "Column 1",
+      "default": "0.5µm minimum"
+    },
+    {
+      "type": "select",
+      "id": "row3_col2_icon",
+      "label": "Column 2 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "tick"
+    },
+    {
+      "type": "text",
+      "id": "row3_col2",
+      "label": "Column 2",
+      "default": "3µm+ (6× thicker)"
+    },
+    {
+      "type": "select",
+      "id": "row3_col3_icon",
+      "label": "Column 3 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "tick"
+    },
+    {
+      "type": "text",
+      "id": "row3_col3",
+      "label": "Column 3",
+      "default": "Solid throughout"
+    },
+    {
+      "type": "header",
+      "content": "Row 4"
+    },
+    {
+      "type": "text",
+      "id": "row4_label",
+      "label": "Label",
+      "default": "Hallmarkable"
+    },
+    {
+      "type": "select",
+      "id": "row4_col1_icon",
+      "label": "Column 1 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "cross"
+    },
+    {
+      "type": "text",
+      "id": "row4_col1",
+      "label": "Column 1",
+      "default": "No — base metal"
+    },
+    {
+      "type": "select",
+      "id": "row4_col2_icon",
+      "label": "Column 2 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "tick"
+    },
+    {
+      "type": "text",
+      "id": "row4_col2",
+      "label": "Column 2",
+      "default": "Yes — 925 stamped"
+    },
+    {
+      "type": "select",
+      "id": "row4_col3_icon",
+      "label": "Column 3 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "tick"
+    },
+    {
+      "type": "text",
+      "id": "row4_col3",
+      "label": "Column 3",
+      "default": "Yes — Edinburgh Assay"
+    },
+    {
+      "type": "header",
+      "content": "Row 5"
+    },
+    {
+      "type": "text",
+      "id": "row5_label",
+      "label": "Label",
+      "default": "Hypoallergenic"
+    },
+    {
+      "type": "select",
+      "id": "row5_col1_icon",
+      "label": "Column 1 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "cross"
+    },
+    {
+      "type": "text",
+      "id": "row5_col1",
+      "label": "Column 1",
+      "default": "No — may irritate"
+    },
+    {
+      "type": "select",
+      "id": "row5_col2_icon",
+      "label": "Column 2 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "tick"
+    },
+    {
+      "type": "text",
+      "id": "row5_col2",
+      "label": "Column 2",
+      "default": "Yes — nickel-free"
+    },
+    {
+      "type": "select",
+      "id": "row5_col3_icon",
+      "label": "Column 3 icon",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "tick", "label": "Tick ✓" },
+        { "value": "cross", "label": "Cross ✗" },
+        { "value": "dash", "label": "Dash –" }
+      ],
+      "default": "tick"
+    },
+    {
+      "type": "text",
+      "id": "row5_col3",
+      "label": "Column 3",
+      "default": "Yes — pure metal"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size",
+      "label": "Eyebrow size",
+      "min": 8,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 11
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "Subtitle size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "header_text_size",
+      "label": "Header text size",
+      "min": 8,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 11
+    },
+    {
+      "type": "range",
+      "id": "cell_text_size",
+      "label": "Cell text size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "row_label_size",
+      "label": "Row label size",
+      "min": 8,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 11
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "Eyebrow",
+      "default": "#B8966A"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "title_italic_color",
+      "label": "Title italic",
+      "default": "#B8966A"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "table_bg_color",
+      "label": "Table background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#E0D8CE"
+    },
+    {
+      "type": "color",
+      "id": "header_bg_color",
+      "label": "Header background",
+      "default": "#F2EDE5"
+    },
+    {
+      "type": "color",
+      "id": "header_text_color",
+      "label": "Header text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "highlight_header_bg",
+      "label": "Highlight header background",
+      "default": "#1C1A18"
+    },
+    {
+      "type": "color",
+      "id": "highlight_header_text",
+      "label": "Highlight header text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "highlight_header_small_text",
+      "label": "Highlight header small text",
+      "default": "#B8966A"
+    },
+    {
+      "type": "color",
+      "id": "row_label_bg",
+      "label": "Row label background",
+      "default": "#F2EDE5"
+    },
+    {
+      "type": "color",
+      "id": "row_label_color",
+      "label": "Row label text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "highlight_cell_bg",
+      "label": "Highlight cell background",
+      "default": "#FAFAF8"
+    },
+    {
+      "type": "color",
+      "id": "highlight_cell_text",
+      "label": "Highlight cell text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "cell_text_color",
+      "label": "Cell text",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "tick_color",
+      "label": "Tick icon",
+      "default": "#B8966A"
+    },
+    {
+      "type": "color",
+      "id": "cross_color",
+      "label": "Cross icon",
+      "default": "#BBBBBB"
+    },
+    {
+      "type": "color",
+      "id": "dash_color",
+      "label": "Dash icon",
+      "default": "#BBBBBB"
+    },
+    {
+      "type": "header",
+      "content": "Table settings"
+    },
+    {
+      "type": "range",
+      "id": "cell_padding",
+      "label": "Cell padding",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "row_label_width",
+      "label": "Row label width",
+      "min": 100,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 140
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    }
+  ],
+  "presets": [
+    {
+      "name": "Material comparison table"
+    }
+  ]
+}
 {% endschema %}
