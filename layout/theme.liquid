@@ -555,7 +555,7 @@
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="U49XC6ZS6FOUC+HMnEpk+Q" async></script>
     {% comment %} BEGIN MerchantWidget Code {% endcomment %}
     {% if template contains 'product' %}
-    {% comment %} <script
+    <script
       id="merchantWidgetScript"
       src="https://www.gstatic.com/shopping/merchant/merchantwidget.js"
       defer
@@ -571,23 +571,6 @@
           zIndex: 2147483640
         });
         document.getElementById("google-merchantwidget-iframe-wrapper").style.zIndex = 1999999;
-      });
-    </script> {% endcomment %}
-    <script id='merchantWidgetScript' src="https://www.gstatic.com/shopping/merchant/merchantwidget.js" defer></script>
-    <script>
-      merchantWidgetScript.addEventListener('load', function () {
-        merchantwidget.start({
-            // REQUIRED FIELDS
-            merchant_id: 108299859,
-
-            // OPTIONAL FIELDS
-            position: 'RIGHT_BOTTOM',
-            sideMargin: 96,
-            bottomMargin: 7,
-            mobileSideMargin: 7,
-            mobileBottomMargin: 96,
-            zIndex: 2147483640
-        });
       });
     </script>
     {% endif %}
