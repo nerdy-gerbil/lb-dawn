@@ -580,6 +580,7 @@
     <script>
       window.renderGCRBadge = function() {
         var container = document.createElement('div');
+        container.id = 'google-badge';
         container.style.cssText = 'position:fixed;bottom:7px;right:96px;z-index:2147483640;';
         document.body.appendChild(container);
         window.gapi.load('ratingbadge', function() {
