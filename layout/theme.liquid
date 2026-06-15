@@ -580,38 +580,36 @@
     ></script>
     <script type="text/javascript">
       function initMerchantWidget() {
-        if (typeof merchantwidget !== 'undefined' && merchantwidget.start) {
-          merchantwidget.start({
-            position: 'RIGHT_BOTTOM',
-            sideMargin: 96,
-            bottomMargin: 7,
-            mobileSideMargin: 7,
-            mobileBottomMargin: 96,
-            zIndex: 2147483640
-          });
-          {% comment %} var wrapper = document.getElementById("google-merchantwidget-iframe-wrapper");
+        if (typeof merchantwidget === 'undefined') return;
+        merchantwidget.start({
+          position: 'RIGHTBOTTOM',
+          sideMargin: 96,
+          bottomMargin: 7,
+          mobileSideMargin: 7,
+          mobileBottomMargin: 96,
+          zIndex: 2147483640
+        });
+
+        // Poll until the iframe is injected, then force the wrapper visible
+        var attempts = 0;
+        var poll = setInterval(function () {
+          var wrapper = document.getElementById('google-merchantwidget-iframe-wrapper');
           if (wrapper) {
-            wrapper.style.zIndex = 1999999;
-          } {% endcomment %}
-        }
+            wrapper.style.height = 'auto';
+            wrapper.style.width = 'auto';
+            wrapper.style.minHeight = '60px';
+            wrapper.style.minWidth = '60px';
+            clearInterval(poll);
+          }
+          if (++attempts > 20) clearInterval(poll);
+        }, 500);
       }
 
-      var scriptEl = document.getElementById('merchantWidgetScript');
-      if (scriptEl.readyState) {
-        // Already loaded
-        if (scriptEl.readyState === 'complete') {
-          initMerchantWidget();
-        } else {
-          scriptEl.onreadystatechange = function () {
-            if (scriptEl.readyState === 'complete') initMerchantWidget();
-          };
-        }
-      } else if (typeof merchantwidget !== 'undefined') {
-        // Script already executed
+      var s = document.getElementById('merchantWidgetScript');
+      if (typeof merchantwidget !== 'undefined') {
         initMerchantWidget();
       } else {
-        // Script not yet loaded
-        scriptEl.addEventListener('load', initMerchantWidget);
+        s.addEventListener('load', initMerchantWidget);
       }
     </script>
     {% endif %}
