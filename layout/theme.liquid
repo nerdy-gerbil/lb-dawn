@@ -573,17 +573,21 @@
         document.getElementById("google-merchantwidget-iframe-wrapper").style.zIndex = 1999999;
       });
     </script> {% endcomment %}
-    <script src="https://apis.google.com/js/platform.js?onload=renderBadge" async defer></script>
     <script>
-      window.renderBadge = function() {
-        var ratingBadgeContainer = document.createElement("div");
-        document.body.appendChild(ratingBadgeContainer);
+      window.__gcr_merchant_id = '108299859';
+    </script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderGCRBadge" async defer></script>
+    <script>
+      window.renderGCRBadge = function() {
+        var container = document.createElement('div');
+        container.style.cssText = 'position:fixed;bottom:7px;right:96px;z-index:2147483640;';
+        document.body.appendChild(container);
         window.gapi.load('ratingbadge', function() {
-          window.gapi.ratingbadge.render(ratingBadgeContainer, {
-            merchant_id: 108299859
+          window.gapi.ratingbadge.render(container, {
+            merchant_id: window.__gcr_merchant_id
           });
         });
-      }
+      };
     </script>
     {% endif %}
     {% comment %} END MerchantWidget Code {% endcomment %}
