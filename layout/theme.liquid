@@ -573,43 +573,16 @@
         document.getElementById("google-merchantwidget-iframe-wrapper").style.zIndex = 1999999;
       });
     </script> {% endcomment %}
-    <script
-      id="merchantWidgetScript"
-      src="https://www.gstatic.com/shopping/merchant/merchantwidget.js"
-      defer
-    ></script>
-    <script type="text/javascript">
-      function initMerchantWidget() {
-        if (typeof merchantwidget === 'undefined') return;
-        merchantwidget.start({
-          position: 'RIGHT_BOTTOM',  // ← add the underscore
-          sideMargin: 96,
-          bottomMargin: 7,
-          mobileSideMargin: 7,
-          mobileBottomMargin: 96,
-          zIndex: 2147483640
+    <script src="https://apis.google.com/js/platform.js?onload=renderBadge" async defer></script>
+    <script>
+      window.renderBadge = function() {
+        var ratingBadgeContainer = document.createElement("div");
+        document.body.appendChild(ratingBadgeContainer);
+        window.gapi.load('ratingbadge', function() {
+          window.gapi.ratingbadge.render(ratingBadgeContainer, {
+            merchant_id: 108299859
+          });
         });
-
-        // Poll until the iframe is injected, then force the wrapper visible
-        var attempts = 0;
-        var poll = setInterval(function () {
-          var wrapper = document.getElementById('google-merchantwidget-iframe-wrapper');
-          if (wrapper) {
-            wrapper.style.height = 'auto';
-            wrapper.style.width = 'auto';
-            wrapper.style.minHeight = '60px';
-            wrapper.style.minWidth = '60px';
-            clearInterval(poll);
-          }
-          if (++attempts > 20) clearInterval(poll);
-        }, 500);
-      }
-
-      var s = document.getElementById('merchantWidgetScript');
-      if (typeof merchantwidget !== 'undefined') {
-        initMerchantWidget();
-      } else {
-        s.addEventListener('load', initMerchantWidget);
       }
     </script>
     {% endif %}
