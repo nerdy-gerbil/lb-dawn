@@ -339,25 +339,25 @@
             "header_text_size": 11,
             "cell_text_size": 13,
             "row_label_size": 11,
-            "eyebrow_color": "#B8966A",
+            "eyebrow_color": "#b8966a",
             "title_color": "#000000",
             "title_italic_color": "#121212",
             "subtitle_color": "#000000",
             "table_bg_color": "#ffffff",
-            "border_color": "#E0D8CE",
-            "header_bg_color": "#F2EDE5",
+            "border_color": "#e0d8ce",
+            "header_bg_color": "#f2ede5",
             "header_text_color": "#000000",
             "highlight_header_bg": "#6a2c32",
             "highlight_header_text": "#ffffff",
             "highlight_header_small_text": "#ffffff",
-            "row_label_bg": "#F2EDE5",
+            "row_label_bg": "#f2ede5",
             "row_label_color": "#000000",
-            "highlight_cell_bg": "#FAFAF8",
+            "highlight_cell_bg": "#fafaf8",
             "highlight_cell_text": "#000000",
             "cell_text_color": "#000000",
-            "tick_color": "#B8966A",
-            "cross_color": "#BBBBBB",
-            "dash_color": "#BBBBBB",
+            "tick_color": "#b8966a",
+            "cross_color": "#bbbbbb",
+            "dash_color": "#bbbbbb",
             "cell_padding": 18,
             "row_label_width": 140,
             "icon_size": 15
@@ -369,6 +369,149 @@
         "ai_gen_block_a12ee48_Lq9ViP"
       ],
       "settings": {}
+    },
+    "rich_text_FtpPYC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wc4nY6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Will Vermeil Wear Out?",
+            "heading_size": "h1"
+          }
+        },
+        "text_RpyMft": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vermeil is Built to last. Lily Blanche exceeds industry standards with 18 carat gold at a minimum of 3 microns, significantly more than the legal 2.5 micron requirement. </p><p>Store your Lily Blanche Pieces in our Intercept anti-tarnish pouches, included with every Lily Blanche Jewellery Care Kit. Custom made for us in the USA, the pouches are woven with patented polymers to neutralise the gasses that cause tarnishing. </p><p>Vermeil jewellery represents an outstanding and affordable alternative to solid gold. Its sterling silver foundation—a pure precious metal—makes it an excellent option for those with metal sensitivities. For those seeking to elevate their jewellery collection, vermeil offers exceptional value and quality.</p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wc4nY6",
+        "text_RpyMft"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_N8QXet": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VA8Fpn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/garnet_gold_earring1.jpg",
+            "title": "Garnet",
+            "text": "<p>Known for its deep red tones, symbolising passion and vitality.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xtXYiW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/amethyst_gold_locket_1_small_c27c3a83-f023-4977-9f2d-aab8752e4d43.webp",
+            "title": "Amethyst",
+            "text": "<p>Celebrated for its captivating purple hue and believed to promote calmness and clarity.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Dr8f9m": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blue_topaz_earring_gold_3.webp",
+            "title": "Topaz",
+            "text": "<p>Available in various shades, topaz is associated with love and affection.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_H9FbRt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blue_topaz_earring_gold_3.webp",
+            "title": "Topaz",
+            "text": "<p>Available in various shades, topaz is associated with love and affection.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_X7zfnE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/blue_topaz_earring_gold_3.webp",
+            "title": "Topaz",
+            "text": "<p>Available in various shades, topaz is associated with love and affection.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GNcRz6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/emerald_diamond_gold_ring_1.webp",
+            "title": "Emerald",
+            "text": "<p>A vibrant green gemstone representing rebirth and prosperity.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_P4iFFx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/emerald_diamond_gold_ring_1.webp",
+            "title": "Emerald",
+            "text": "<p>A vibrant green gemstone representing rebirth and prosperity.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zwnpAC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/emerald_diamond_gold_ring_1.webp",
+            "title": "Emerald",
+            "text": "<p>A vibrant green gemstone representing rebirth and prosperity.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_VA8Fpn",
+        "column_xtXYiW",
+        "column_Dr8f9m",
+        "column_H9FbRt",
+        "column_X7zfnE",
+        "column_GNcRz6",
+        "column_P4iFFx",
+        "column_zwnpAC"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "1781183871c0b21209": {
       "type": "_blocks",
@@ -398,7 +541,7 @@
             "subtitle_margin": 32,
             "subtitle_color": "#555555",
             "grid_gap": 1,
-            "grid_border_color": "#E0D8CE",
+            "grid_border_color": "#e0d8ce",
             "card_bg_color": "#ffffff",
             "card_padding": 32,
             "card_padding_horizontal": 10,
@@ -408,10 +551,10 @@
             "gem_name_color": "#000000",
             "gem_meaning_size": 13,
             "gem_meaning_margin": 12,
-            "gem_meaning_color": "#7A7268",
+            "gem_meaning_color": "#7a7268",
             "gem_desc_size": 14,
             "gem_desc_color": "#333333",
-            "link_color": "#B8966A",
+            "link_color": "#b8966a",
             "gem_1_enabled": true,
             "gem_1_name": "Garnet",
             "gem_1_meaning": "Passion & Vitality",
@@ -426,29 +569,29 @@
             "gem_3_name": "Blue Topaz",
             "gem_3_meaning": "Love & Affection",
             "gem_3_description": "<p>Cool, sky-blue tones with excellent brilliance and clarity.</p>",
-            "gem_3_color": "#5AACD4",
+            "gem_3_color": "#5aacd4",
             "gem_4_enabled": true,
             "gem_4_name": "Emerald",
             "gem_4_meaning": "Rebirth & Prosperity",
             "gem_4_description": "<p>Vivid greens of the highest quality — a gemstone of timeless elegance.</p>",
-            "gem_4_color": "#3DB87A",
+            "gem_4_color": "#3db87a",
             "gem_5_enabled": true,
             "gem_5_name": "Sapphire",
             "gem_5_meaning": "Wisdom & Nobility",
             "gem_5_description": "<p>September's <a href=\"/collections/september-birthstone\">birthstone</a> — deep blue with unmatched elegance.</p>",
-            "gem_5_color": "#3A5FC0",
+            "gem_5_color": "#3a5fc0",
             "gem_6_enabled": false,
             "gem_6_name": "",
             "gem_6_meaning": "",
             "gem_6_description": "",
-            "gem_6_color": "#B8966A",
+            "gem_6_color": "#b8966a",
             "show_callout": false,
             "callout_icon": "💎",
             "callout_text": "<p>All our diamonds are ethically sourced and conflict-free. <a href=\"/pages/our-materials\">Learn more</a> about our commitment to sustainability.</p>",
             "callout_padding": 24,
             "callout_bg_color": "#ffffff",
             "callout_icon_size": 20,
-            "callout_icon_color": "#B8966A",
+            "callout_icon_color": "#b8966a",
             "callout_text_size": 14,
             "callout_text_color": "#333333"
           },
@@ -502,51 +645,6 @@
     "178117658864eb57bf": {
       "type": "_blocks",
       "settings": {}
-    },
-    "multirow_jUYQPm": {
-      "type": "multirow",
-      "blocks": {
-        "row_eDc4pc": {
-          "type": "row",
-          "settings": {
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        },
-        "row_EWMP4f": {
-          "type": "row",
-          "settings": {
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_eDc4pc",
-        "row_EWMP4f"
-      ],
-      "name": "t:sections.multirow.presets.name",
-      "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -564,9 +662,10 @@
     "17811784467f177925",
     "image_with_text_AJkzjF",
     "178118321054941693",
+    "rich_text_FtpPYC",
+    "multicolumn_N8QXet",
     "1781183871c0b21209",
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
-    "178117658864eb57bf",
-    "multirow_jUYQPm"
+    "178117658864eb57bf"
   ]
 }
