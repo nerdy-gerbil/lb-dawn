@@ -434,46 +434,6 @@
             "link": ""
           }
         },
-        "column_H9FbRt": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/blue_topaz_earring_gold_3.webp",
-            "title": "Topaz",
-            "text": "<p>Available in various shades, topaz is associated with love and affection.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_X7zfnE": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/blue_topaz_earring_gold_3.webp",
-            "title": "Topaz",
-            "text": "<p>Available in various shades, topaz is associated with love and affection.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_GNcRz6": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/emerald_diamond_gold_ring_1.webp",
-            "title": "Emerald",
-            "text": "<p>A vibrant green gemstone representing rebirth and prosperity.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_P4iFFx": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/emerald_diamond_gold_ring_1.webp",
-            "title": "Emerald",
-            "text": "<p>A vibrant green gemstone representing rebirth and prosperity.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_zwnpAC": {
           "type": "column",
           "settings": {
@@ -489,10 +449,6 @@
         "column_VA8Fpn",
         "column_xtXYiW",
         "column_Dr8f9m",
-        "column_H9FbRt",
-        "column_X7zfnE",
-        "column_GNcRz6",
-        "column_P4iFFx",
         "column_zwnpAC"
       ],
       "name": "t:sections.multicolumn.presets.name",
@@ -512,96 +468,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "1781183871c0b21209": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_2b38264_YyL7Em": {
-          "type": "ai_gen_block_2b38264",
-          "settings": {
-            "max_width": 800,
-            "desktop_width_percent": 100,
-            "section_spacing": 48,
-            "columns_desktop": 2,
-            "columns_mobile": "1",
-            "eyebrow": "Natural Gemstones & Diamonds",
-            "title": "Ethically sourced.",
-            "title_italic": "Naturally beautiful.",
-            "subtitle": "<p>Every gemstone is natural, ethically sourced, and hand-set by our master craftspeople. No two are identical.</p>",
-            "eyebrow_size": 11,
-            "eyebrow_spacing": 0.2,
-            "eyebrow_margin": 12,
-            "eyebrow_color": "#121212",
-            "title_size": 36,
-            "title_size_mobile": 26,
-            "title_margin": 12,
-            "title_color": "#000000",
-            "title_italic_color": "#121212",
-            "subtitle_size": 14,
-            "subtitle_margin": 32,
-            "subtitle_color": "#555555",
-            "grid_gap": 1,
-            "grid_border_color": "#e0d8ce",
-            "card_bg_color": "#ffffff",
-            "card_padding": 32,
-            "card_padding_horizontal": 10,
-            "dot_size": 32,
-            "dot_margin": 16,
-            "gem_name_size": 24,
-            "gem_name_color": "#000000",
-            "gem_meaning_size": 13,
-            "gem_meaning_margin": 12,
-            "gem_meaning_color": "#7a7268",
-            "gem_desc_size": 14,
-            "gem_desc_color": "#333333",
-            "link_color": "#b8966a",
-            "gem_1_enabled": true,
-            "gem_1_name": "Garnet",
-            "gem_1_meaning": "Passion & Vitality",
-            "gem_1_description": "<p>January's <a href=\"/collections/january-birthstone\">birthstone</a> — rich, warm reds that glow in any light.</p>",
-            "gem_1_color": "#e50914",
-            "gem_2_enabled": true,
-            "gem_2_name": "Amethyst",
-            "gem_2_meaning": "Calmness & Clarity",
-            "gem_2_description": "<p>February's birthstone. A deep captivating purple with cent</p>",
-            "gem_2_color": "#a92bfe",
-            "gem_3_enabled": true,
-            "gem_3_name": "Blue Topaz",
-            "gem_3_meaning": "Love & Affection",
-            "gem_3_description": "<p>Cool, sky-blue tones with excellent brilliance and clarity.</p>",
-            "gem_3_color": "#5aacd4",
-            "gem_4_enabled": true,
-            "gem_4_name": "Emerald",
-            "gem_4_meaning": "Rebirth & Prosperity",
-            "gem_4_description": "<p>Vivid greens of the highest quality — a gemstone of timeless elegance.</p>",
-            "gem_4_color": "#3db87a",
-            "gem_5_enabled": true,
-            "gem_5_name": "Sapphire",
-            "gem_5_meaning": "Wisdom & Nobility",
-            "gem_5_description": "<p>September's <a href=\"/collections/september-birthstone\">birthstone</a> — deep blue with unmatched elegance.</p>",
-            "gem_5_color": "#3a5fc0",
-            "gem_6_enabled": false,
-            "gem_6_name": "",
-            "gem_6_meaning": "",
-            "gem_6_description": "",
-            "gem_6_color": "#b8966a",
-            "show_callout": false,
-            "callout_icon": "💎",
-            "callout_text": "<p>All our diamonds are ethically sourced and conflict-free. <a href=\"/pages/our-materials\">Learn more</a> about our commitment to sustainability.</p>",
-            "callout_padding": 24,
-            "callout_bg_color": "#ffffff",
-            "callout_icon_size": 20,
-            "callout_icon_color": "#b8966a",
-            "callout_text_size": 14,
-            "callout_text_color": "#333333"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_2b38264_YyL7Em"
-      ],
-      "settings": {}
     },
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b": {
       "type": "newsletter",
@@ -664,7 +530,6 @@
     "178118321054941693",
     "rich_text_FtpPYC",
     "multicolumn_N8QXet",
-    "1781183871c0b21209",
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
     "178117658864eb57bf"
   ]
