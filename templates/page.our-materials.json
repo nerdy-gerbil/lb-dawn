@@ -166,8 +166,8 @@
         "button_mqdVxH": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Solid Gold Jewellery",
-            "button_link": "",
+            "button_label": "Discover Solid Gold Jewellery",
+            "button_link": "https://www.lilyblanche.com/collections/gold-necklaces",
             "button_style_secondary": false
           }
         }
@@ -191,7 +191,7 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "image_with_text_6pkNtr": {
@@ -214,8 +214,8 @@
         "button_BkdjfE": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Gold Vermeil",
-            "button_link": "",
+            "button_label": "Discover Gold Vermeil Jewellery",
+            "button_link": "https://www.lilyblanche.com/collections/gold-necklaces",
             "button_style_secondary": false
           }
         }
@@ -239,7 +239,7 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "17811784467f177925": {
@@ -266,8 +266,8 @@
         "button_eXDQXQ": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Sterling Silver",
-            "button_link": "",
+            "button_label": "Discover Sterling Silver Jewellery",
+            "button_link": "https://www.lilyblanche.com/collections/silver-necklaces",
             "button_style_secondary": false
           }
         }
@@ -291,7 +291,7 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "rich_text_FtpPYC": {
@@ -434,7 +434,7 @@
           "type": "button",
           "settings": {
             "button_label": "Discover All Chains",
-            "button_link": "",
+            "button_link": "https://www.lilyblanche.com/collections/chains",
             "button_style_secondary": false
           }
         }
@@ -458,7 +458,7 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "image_with_text_V39nwX": {
@@ -481,8 +481,8 @@
         "button_gUCcym": {
           "type": "button",
           "settings": {
-            "button_label": "Explore Pearls",
-            "button_link": "",
+            "button_label": "Discover Pearl Jewellery",
+            "button_link": "https://www.lilyblanche.com/collections/freshwater-pearl-jewellery",
             "button_style_secondary": false
           }
         }
@@ -506,7 +506,7 @@
         "section_color_scheme": "",
         "color_scheme": "",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "rich_text_JNhM4N": {
@@ -604,7 +604,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/garnet_gold_earring1.jpg",
-            "title": "Garnet",
+            "title": "<strong>Garnet</strong>",
             "text": "<p>Known for its deep red tones, symbolising passion and vitality.</p>",
             "link_label": "",
             "link": ""
@@ -614,7 +614,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/amethyst_necklace_in_gold_2.jpg",
-            "title": "Amethyst",
+            "title": "<strong>Amethyst</strong>",
             "text": "<p>Celebrated for its captivating purple hue and believed to promote calmness and clarity.</p>",
             "link_label": "",
             "link": ""
@@ -624,7 +624,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/blue_topaz_earring_gold_3.webp",
-            "title": "Topaz",
+            "title": "<strong>Topaz</strong>",
             "text": "<p>Available in various shades, topaz is associated with love and affection.</p>",
             "link_label": "",
             "link": ""
@@ -634,7 +634,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/emerald_diamond_gold_ring_1.webp",
-            "title": "Emerald",
+            "title": "<strong>Emerald</strong>",
             "text": "<p>A vibrant green gemstone representing rebirth and prosperity.</p>",
             "link_label": "",
             "link": ""
@@ -644,7 +644,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/sapphire_heart_locket_gold.webp",
-            "title": "Sapphire",
+            "title": "<strong>Sapphire</strong>",
             "text": "<p>Esteemed for its rich blue colour, symbolising wisdom and nobility.<br/></p>",
             "link_label": "",
             "link": ""
@@ -654,7 +654,7 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/ruby_gemstone_gold_ring.jpg",
-            "title": "Ruby",
+            "title": "<strong>Ruby</strong>",
             "text": "<p>A striking red gem associated with love and courage.</p>",
             "link_label": "",
             "link": ""
