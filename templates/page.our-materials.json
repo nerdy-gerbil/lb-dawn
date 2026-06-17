@@ -22,7 +22,7 @@
         "text_GwcMQW": {
           "type": "text",
           "settings": {
-            "text": "<p>Every piece of luxury Scottish jewellery that we create is crafted with only the finest precious metals and ethically sourced gemstones. Our commitment to quality craftsmanship ensures that each item is designed to be treasured for generations.</p>"
+            "text": "<p>Every piece of <a href=\"https://www.lilyblanche.com/\" title=\"https://www.lilyblanche.com/\">luxury Scottish jewellery</a> that we create is crafted with only the finest precious metals and ethically sourced gemstones. Our commitment to quality craftsmanship ensures that each item is designed to be treasured for generations.</p>"
           }
         },
         "text_fzYBDd": {
@@ -307,7 +307,7 @@
         "text_RpyMft": {
           "type": "text",
           "settings": {
-            "text": "<p>Vermeil is Built to last. Lily Blanche exceeds industry standards with 18 carat gold at a minimum of 3 microns, significantly more than the legal 2.5 micron requirement. </p><p>Store your Lily Blanche Pieces in our Intercept anti-tarnish pouches, included with every Lily Blanche Jewellery Care Kit. Custom made for us in the USA, the pouches are woven with patented polymers to neutralise the gasses that cause tarnishing. </p><p>Vermeil jewellery represents an outstanding and affordable alternative to solid gold. Its sterling silver foundation—a pure precious metal—makes it an excellent option for those with metal sensitivities. For those seeking to elevate their jewellery collection, vermeil offers exceptional value and quality.</p><p></p>"
+            "text": "<p>Vermeil <a href=\"https://www.lilyblanche.com/collections/jewellery\" title=\"https://www.lilyblanche.com/collections/jewellery\">Jewellery</a> is Built to last. Lily Blanche exceeds industry standards with 18 carat gold at a minimum of 3 microns, significantly more than the legal 2.5 micron requirement. </p><p>Store your Lily Blanche Pieces in our Intercept anti-tarnish pouches, included with every Lily Blanche Jewellery Care Kit. Custom made for us in the USA, the pouches are woven with patented polymers to neutralise the gasses that cause tarnishing. </p><p>Vermeil jewellery represents an outstanding and affordable alternative to solid gold. Its sterling silver foundation—a pure precious metal—makes it an excellent option for those with metal sensitivities. For those seeking to elevate their jewellery collection, vermeil offers exceptional value and quality.</p><p></p>"
           }
         }
       },
@@ -707,7 +707,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop all gemstone jewellery",
-            "button_link": "",
+            "button_link": "https://www.lilyblanche.com/collections/gemstones",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -743,7 +743,7 @@
         "text_yM7gag": {
           "type": "text",
           "settings": {
-            "text": "<p>We aim to provide as much transparency as possible to our customers. All dimensions and weights listed in the product descriptions and details boxes include the entire jewellery piece, including pendant and locket bails (the loops that chains pass through) and earring wires. The item weight refers to the locket or pendant component only, while the total weight includes the full piece with the chain.</p><p>We are always happy to answer any questions about jewellery dimensions or materials. Please contact us at <a href=\"mailto:hello@lilyblanche.com\">hello@lilyblanche.com </a>or via our live chat.</p><p>Our jewellery is photographed in multiple ways to give the best representation. The initial image on a white background meets Google standards and is shot under bright studio lights. Model photography is taken in natural light, and videos are available on our website, <a href=\"https://www.instagram.com/lilyblanchejewellery/\">Instagram</a>, <a href=\"https://www.facebook.com/lilyblanchejewellery\">Facebook</a>, <a href=\"https://www.tiktok.com/@lily_blanche_jewellery\">TikTok </a><a href=\"https://uk.pinterest.com/lilyblanchejewellery/\">Pinterest</a> and <a href=\"https://www.youtube.com/@LilyBlancheJewellery\">YouTube </a>to provide additional perspective.</p>"
+            "text": "<p>We aim to provide as much transparency as possible to our customers. All dimensions and weights listed in the product descriptions and details boxes include the entire jewellery piece, including pendant and locket bails (the loops that chains pass through) and earring wires. The item weight refers to the locket or pendant component only, while the total weight includes the full piece with the chain.</p><p>We are always happy to answer any questions about jewellery dimensions or materials. Please contact us at <a href=\"mailto:hello@lilyblanche.com\">hello@lilyblanche.com </a>or via our live chat.</p><p>Our jewellery is photographed in multiple ways to give the best representation. The initial image on a white background meets Google standards and is shot under bright studio lights. Model photography is taken in natural light, and videos are available on our website, <a href=\"https://www.instagram.com/lilyblanchejewellery/\">Instagram</a>, <a href=\"https://www.facebook.com/lilyblanchejewellery\">Facebook</a>, <a href=\"https://www.tiktok.com/@lily_blanche_jewellery\">TikTok, </a><a href=\"https://uk.pinterest.com/lilyblanchejewellery/\">Pinterest</a> and <a href=\"https://www.youtube.com/@LilyBlancheJewellery\">YouTube </a>to provide additional perspective.</p>"
           }
         }
       },
@@ -761,66 +761,35 @@
         "padding_bottom": 52
       }
     },
-    "collapsible_content_dPmL7R": {
-      "type": "collapsible-content",
+    "rich_text_KKKqfT": {
+      "type": "rich-text",
       "blocks": {
-        "collapsible_row_dfXATF": {
-          "type": "collapsible_row",
+        "heading_fxQ9Kd": {
+          "type": "heading",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
+            "heading": "Why Choose Lily Blanche Jewellery?",
+            "heading_size": "h1"
           }
         },
-        "collapsible_row_tnpFwx": {
-          "type": "collapsible_row",
+        "text_knUPjy": {
+          "type": "text",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_PjLMLk": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_cWf78h": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
+            "text": "<p>✔<strong>100% Precious Metals</strong>– No base metals, only high-quality gold and silver.<br/>✔<strong>Ethically Sourced Gemstones</strong>– Natural stones selected for brilliance and beauty.<br/>✔<strong>Handcrafted by Experts</strong>– Created by master goldsmiths and silversmiths.<br/>✔<strong>Hallmarked & Certified</strong>– Guaranteed authenticity and premium quality.<br/>✔<strong>Designed to Last</strong>– Timeless, heirloom-worthy jewellery for every occasion.<br/><br/></p>"
           }
         }
       },
       "block_order": [
-        "collapsible_row_dfXATF",
-        "collapsible_row_tnpFwx",
-        "collapsible_row_PjLMLk",
-        "collapsible_row_cWf78h"
+        "heading_fxQ9Kd",
+        "text_knUPjy"
       ],
-      "name": "t:sections.collapsible_content.presets.name",
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "caption": "",
-        "heading": "Collapsible content",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b": {
@@ -890,7 +859,7 @@
     "multicolumn_N8QXet",
     "rich_text_MFNeam",
     "rich_text_gzU4kY",
-    "collapsible_content_dPmL7R",
+    "rich_text_KKKqfT",
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
     "178117658864eb57bf"
   ]
