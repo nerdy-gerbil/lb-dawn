@@ -120,6 +120,18 @@
     },
     "a6a19d7e-1890-4758-b926-ca82274ab64b": {
       "type": "rich-text",
+      "blocks": {
+        "heading_AqkpPe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Precious Metals",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AqkpPe"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -282,6 +294,37 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_FtpPYC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wc4nY6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Will Vermeil Wear Out?",
+            "heading_size": "h1"
+          }
+        },
+        "text_RpyMft": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Vermeil is Built to last. Lily Blanche exceeds industry standards with 18 carat gold at a minimum of 3 microns, significantly more than the legal 2.5 micron requirement. </p><p>Store your Lily Blanche Pieces in our Intercept anti-tarnish pouches, included with every Lily Blanche Jewellery Care Kit. Custom made for us in the USA, the pouches are woven with patented polymers to neutralise the gasses that cause tarnishing. </p><p>Vermeil jewellery represents an outstanding and affordable alternative to solid gold. Its sterling silver foundation—a pure precious metal—makes it an excellent option for those with metal sensitivities. For those seeking to elevate their jewellery collection, vermeil offers exceptional value and quality.</p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wc4nY6",
+        "text_RpyMft"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "178118321054941693": {
       "type": "_blocks",
       "blocks": {
@@ -370,26 +413,122 @@
       ],
       "settings": {}
     },
-    "rich_text_FtpPYC": {
-      "type": "rich-text",
+    "image_with_text_L9eVg7": {
+      "type": "image-with-text",
       "blocks": {
-        "heading_wc4nY6": {
+        "heading_dQXzDX": {
           "type": "heading",
           "settings": {
-            "heading": "Will Vermeil Wear Out?",
+            "heading": "Chains",
             "heading_size": "h1"
           }
         },
-        "text_RpyMft": {
+        "text_9GPV8Y": {
           "type": "text",
           "settings": {
-            "text": "<p>Vermeil is Built to last. Lily Blanche exceeds industry standards with 18 carat gold at a minimum of 3 microns, significantly more than the legal 2.5 micron requirement. </p><p>Store your Lily Blanche Pieces in our Intercept anti-tarnish pouches, included with every Lily Blanche Jewellery Care Kit. Custom made for us in the USA, the pouches are woven with patented polymers to neutralise the gasses that cause tarnishing. </p><p>Vermeil jewellery represents an outstanding and affordable alternative to solid gold. Its sterling silver foundation—a pure precious metal—makes it an excellent option for those with metal sensitivities. For those seeking to elevate their jewellery collection, vermeil offers exceptional value and quality.</p><p></p>"
+            "text": "<p>We make our chains in a variety of versions, including sterling silver, 18-carat gold vermeil and solid gold. We can also make bespoke solid gold chains. If there is a style and length you would like, please email us at <a href=\"mailto:hello@lilyblanche.com\">hello@lilyblanche.com</a></p>",
+            "text_style": "body"
+          }
+        },
+        "button_aU9Ap8": {
+          "type": "button",
+          "settings": {
+            "button_label": "Discover All Chains",
+            "button_link": "",
+            "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "heading_wc4nY6",
-        "text_RpyMft"
+        "heading_dQXzDX",
+        "text_9GPV8Y",
+        "button_aU9Ap8"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Spiga_Necklaces.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_V39nwX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ybgzFa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pearls",
+            "heading_size": "h1"
+          }
+        },
+        "text_JyYxGi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our <strong>cultured freshwater pearls </strong>are hand-selected for their luminous quality and elegance. Grown sustainably, each pearl showcases a unique, organic beauty, making it the perfect addition to timeless designs.<br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_gUCcym": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore Pearls",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ybgzFa",
+        "text_JyYxGi",
+        "button_gUCcym"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Silver_Coin_Pearl_3d844ab2-5cb8-407d-8812-fc089f014adb.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_JNhM4N": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_FYbCdi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Natural Gemstones & Diamonds",
+            "heading_size": "h1"
+          }
+        },
+        "text_jDzUta": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We carefully select <strong>natural, ethically sourced gemstones</strong> to enhance the beauty and meaning of our jewellery. Our gemstones are cut and polished by expert lapidarists to ensure maximum brilliance and quality.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FYbCdi",
+        "text_jDzUta"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -398,7 +537,64 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 32
+      }
+    },
+    "multicolumn_J7cM98": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_BXBc4r": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/diamond_circle_ring_gold_1.webp",
+            "title": "<strong>Diamonds</strong>",
+            "text": "<p>We use natural, conflict-free diamonds that adhere to the <strong>Kimberley Process</strong>, ensuring ethical sourcing. Our diamond jewellery comes with a certificate of authenticity.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4h7CPG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gemstone_ring_gold_stack.webp",
+            "title": "<strong>Emeralds, Sapphires & Rubies</strong>",
+            "text": "<p>Our vibrant, high-quality gemstones are sourced for their exceptional colour and clarity.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8PPPMc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/img_proxy_7baa8c8f-2bf1-4a17-be61-76a72f822af6.jpg",
+            "title": "<strong>Birthstones</strong>",
+            "text": "<p>From deep blue <strong>sapphires </strong>to fiery <strong>garnets</strong>, our genuine birthstones add a personal touch to your jewellery.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_BXBc4r",
+        "column_4h7CPG",
+        "column_8PPPMc"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "multicolumn_N8QXet": {
@@ -417,7 +613,7 @@
         "column_xtXYiW": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/amethyst_gold_locket_1_small_c27c3a83-f023-4977-9f2d-aab8752e4d43.webp",
+            "image": "shopify://shop_images/amethyst_necklace_in_gold_2.jpg",
             "title": "Amethyst",
             "text": "<p>Celebrated for its captivating purple hue and believed to promote calmness and clarity.</p>",
             "link_label": "",
@@ -443,21 +639,43 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_WVztUq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/sapphire_heart_locket_gold.webp",
+            "title": "Sapphire",
+            "text": "<p>Esteemed for its rich blue colour, symbolising wisdom and nobility.<br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FtfkkL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ruby_gemstone_gold_ring.jpg",
+            "title": "Ruby",
+            "text": "<p>A striking red gem associated with love and courage.</p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column_VA8Fpn",
         "column_xtXYiW",
         "column_Dr8f9m",
-        "column_zwnpAC"
+        "column_zwnpAC",
+        "column_WVztUq",
+        "column_FtfkkL"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
+        "title": "Our Collections Feature",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "Shop All Birthstone Jewellery",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
@@ -527,8 +745,12 @@
     "image_with_text_6pkNtr",
     "17811784467f177925",
     "image_with_text_AJkzjF",
-    "178118321054941693",
     "rich_text_FtpPYC",
+    "178118321054941693",
+    "image_with_text_L9eVg7",
+    "image_with_text_V39nwX",
+    "rich_text_JNhM4N",
+    "multicolumn_J7cM98",
     "multicolumn_N8QXet",
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
     "178117658864eb57bf"
