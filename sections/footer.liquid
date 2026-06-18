@@ -34,49 +34,63 @@
   }
 
   .footer__follow-on-shop-wrapper .footer__withdrawal-button {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
   }
 
   .footer__follow-on-shop-wrapper .footer__withdrawal-button > * {
+    display: block !important;
     width: auto !important;
     max-width: 100% !important;
     margin: 0 auto !important;
+    text-align: center !important;
   }
 
-  .footer__follow-on-shop-wrapper .footer__withdrawal-button * {
+  .footer__follow-on-shop-wrapper .footer__withdrawal-button button,
+  .footer__follow-on-shop-wrapper .footer__withdrawal-button a,
+  .footer__follow-on-shop-wrapper .footer__withdrawal-button .button,
+  .footer__follow-on-shop-wrapper .footer__withdrawal-button [class*="button"],
+  .footer__follow-on-shop-wrapper .footer__withdrawal-button [class*="btn"] {
+    margin: 0 auto !important;
+    display: inline-block !important;
     text-align: center !important;
-    justify-content: center !important;
+    float: none !important;
   }
 
   .footer__follow-on-shop-wrapper .footer__follow-on-shop {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
   }
 
   @media screen and (min-width: 750px) {
     .footer__follow-on-shop-wrapper {
-      align-items: flex-start;
-      text-align: left;
+      align-items: flex-start !important;
+      text-align: left !important;
     }
 
     .footer__follow-on-shop-wrapper .footer__withdrawal-button {
-      justify-content: flex-start;
+      justify-content: flex-start !important;
     }
 
     .footer__follow-on-shop-wrapper .footer__withdrawal-button > * {
       margin: 0 !important;
+      text-align: left !important;
     }
 
-    .footer__follow-on-shop-wrapper .footer__withdrawal-button * {
+    .footer__follow-on-shop-wrapper .footer__withdrawal-button button,
+    .footer__follow-on-shop-wrapper .footer__withdrawal-button a,
+    .footer__follow-on-shop-wrapper .footer__withdrawal-button .button,
+    .footer__follow-on-shop-wrapper .footer__withdrawal-button [class*="button"],
+    .footer__follow-on-shop-wrapper .footer__withdrawal-button [class*="btn"] {
+      margin: 0 !important;
       text-align: left !important;
-      justify-content: flex-start !important;
     }
 
     .footer__follow-on-shop-wrapper .footer__follow-on-shop {
-      justify-content: flex-start;
+      justify-content: flex-start !important;
     }
   }
 {%- endstyle -%}
