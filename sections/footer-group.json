@@ -186,6 +186,25 @@
     },
     "footer": {
       "type": "footer",
+      "blocks": {
+        "eu_widerrufsbutton_withdrawal_button_inline_JgmeNy": {
+          "type": "shopify://apps/eu-widerrufsbutton/blocks/withdrawal-button-inline/019e3842-e8eb-772d-9292-20f5ccbc0337",
+          "settings": {
+            "alignment": "left",
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "button_text": "",
+            "full_width": false,
+            "size": "small",
+            "border_radius": 4,
+            "text_color": "#ffffff",
+            "background_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "eu_widerrufsbutton_withdrawal_button_inline_JgmeNy"
+      ],
       "custom_css": [
         ".copyright__content a[href*=\"shopify\"] {display: none;}"
       ],
