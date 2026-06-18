@@ -25,72 +25,95 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
-
-  .footer__follow-on-shop-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+  .footer-block--newsletter {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 1.5rem !important;
   }
 
-  .footer__follow-on-shop-wrapper .footer__withdrawal-button {
+  .footer__withdrawal-button {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
   }
 
-  .footer__follow-on-shop-wrapper .footer__withdrawal-button > * {
-    display: block !important;
+  .footer__withdrawal-button *,
+  .footer__withdrawal-button .shopify-block,
+  .footer__withdrawal-button .shopify-app-block,
+  .footer__withdrawal-button .anv-withdrawal-button-inline-wrap,
+  .footer__withdrawal-button .anv-withdrawal-button-inline-wrap--center,
+  .footer__withdrawal-button .anv-withdrawal-button {
     width: auto !important;
     max-width: 100% !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-  }
-
-  .footer__follow-on-shop-wrapper .footer__withdrawal-button button,
-  .footer__follow-on-shop-wrapper .footer__withdrawal-button a,
-  .footer__follow-on-shop-wrapper .footer__withdrawal-button .button,
-  .footer__follow-on-shop-wrapper .footer__withdrawal-button [class*="button"],
-  .footer__follow-on-shop-wrapper .footer__withdrawal-button [class*="btn"] {
-    margin: 0 auto !important;
     display: inline-block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     text-align: center !important;
-    float: none !important;
+    justify-content: center !important;
   }
 
-  .footer__follow-on-shop-wrapper .footer__follow-on-shop {
+  .footer__follow-and-social {
     display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1.5rem !important;
     justify-content: center !important;
+    align-items: center !important;
     width: 100% !important;
   }
 
+  .footer__follow-and-social .footer__follow-on-shop {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 !important;
+  }
+
+  .footer__follow-and-social .footer__list-social {
+    justify-content: center !important;
+    margin: 0 !important;
+  }
+
   @media screen and (min-width: 750px) {
-    .footer__follow-on-shop-wrapper {
+    .footer-block--newsletter {
       align-items: flex-start !important;
-      text-align: left !important;
+      gap: 1.5rem !important;
     }
 
-    .footer__follow-on-shop-wrapper .footer__withdrawal-button {
+    .footer__withdrawal-button {
       justify-content: flex-start !important;
     }
 
-    .footer__follow-on-shop-wrapper .footer__withdrawal-button > * {
-      margin: 0 !important;
+    .footer__withdrawal-button *,
+    .footer__withdrawal-button .shopify-block,
+    .footer__withdrawal-button .shopify-app-block,
+    .footer__withdrawal-button .anv-withdrawal-button-inline-wrap,
+    .footer__withdrawal-button .anv-withdrawal-button-inline-wrap--center,
+    .footer__withdrawal-button .anv-withdrawal-button {
+      width: auto !important;
+      max-width: 100% !important;
+      display: inline-block !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
       text-align: left !important;
-    }
-
-    .footer__follow-on-shop-wrapper .footer__withdrawal-button button,
-    .footer__follow-on-shop-wrapper .footer__withdrawal-button a,
-    .footer__follow-on-shop-wrapper .footer__withdrawal-button .button,
-    .footer__follow-on-shop-wrapper .footer__withdrawal-button [class*="button"],
-    .footer__follow-on-shop-wrapper .footer__withdrawal-button [class*="btn"] {
-      margin: 0 !important;
-      text-align: left !important;
-    }
-
-    .footer__follow-on-shop-wrapper .footer__follow-on-shop {
       justify-content: flex-start !important;
+    }
+
+    .footer__follow-and-social {
+      flex-wrap: nowrap !important;
+      justify-content: space-between !important;
+    }
+
+    .footer__follow-and-social .footer__follow-on-shop {
+      justify-content: flex-start !important;
+      margin: 0 !important;
+    }
+
+    .footer__follow-and-social .footer__list-social {
+      justify-content: flex-end !important;
+      margin: 0 !important;
+      flex-wrap: nowrap !important;
     }
   }
 {%- endstyle -%}
@@ -135,7 +158,7 @@
             {% endif %}
           >
             {%- for block in section.blocks -%}
-              {%- if block.type contains 'eu-widerrufsbutton' or block.type contains 'withdrawal-button' -%}
+              {%- if block.type contains 'eu-widerrufsbutton' or block.type contains 'withdrawal-button' or block.id contains 'eu_widerrufsbutton' or block.id contains 'withdrawal-button' -%}
                 {%- continue -%}
               {%- endif -%}
               <div
@@ -324,7 +347,7 @@
           {%- liquid
             assign has_withdrawal_block = false
             for block in section.blocks
-              if block.type contains 'eu-widerrufsbutton' or block.type contains 'withdrawal-button'
+              if block.type contains 'eu-widerrufsbutton' or block.type contains 'withdrawal-button' or block.id contains 'eu_widerrufsbutton' or block.id contains 'withdrawal-button'
                 assign has_withdrawal_block = true
                 break
               endif
@@ -336,28 +359,28 @@
             endif
           -%}
 
-          {%- if has_withdrawal_block or has_follow_on_shop -%}
-            <div class="footer__follow-on-shop-wrapper">
-              {%- if has_withdrawal_block -%}
-                {%- for block in section.blocks -%}
-                  {%- if block.type contains 'eu-widerrufsbutton' or block.type contains 'withdrawal-button' -%}
-                    <div class="footer__withdrawal-button">
-                      {% render block %}
-                    </div>
-                  {%- endif -%}
-                {%- endfor -%}
-              {%- endif -%}
+          {%- if has_withdrawal_block -%}
+            <div class="footer__withdrawal-button">
+              {%- for block in section.blocks -%}
+                {%- if block.type contains 'eu-widerrufsbutton' or block.type contains 'withdrawal-button' or block.id contains 'eu_widerrufsbutton' or block.id contains 'withdrawal-button' -%}
+                  {% render block %}
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
 
+          {%- if has_follow_on_shop or section.settings.show_social and has_social_icons -%}
+            <div class="footer__follow-and-social">
               {%- if has_follow_on_shop -%}
                 <div class="footer__follow-on-shop">
                   {{ shop | login_button: action: 'follow' }}
                 </div>
               {%- endif -%}
-            </div>
-          {%- endif -%}
 
-          {%- if section.settings.show_social and has_social_icons -%}
-            {%- render 'social-icons', class: 'footer__list-social' -%}
+              {%- if section.settings.show_social and has_social_icons -%}
+                {%- render 'social-icons', class: 'footer__list-social' -%}
+              {%- endif -%}
+            </div>
           {%- endif -%}
         </div>
       </div>
