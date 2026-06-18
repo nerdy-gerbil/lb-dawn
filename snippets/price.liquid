@@ -23,6 +23,11 @@
 
   assign compare_at_price = target.compare_at_price
   assign price = target.price | default: 1999
+  if compare_at_price != nil and compare_at_price != blank
+    if compare_at_price == 0 or compare_at_price == 0.00 or compare_at_price <= price
+      assign compare_at_price = nil
+    endif
+  endif
   assign price_min = product.price_min
   assign price_max = product.price_max
   assign available = target.available | default: false

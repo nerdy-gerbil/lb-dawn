@@ -244,6 +244,9 @@
                         >
                           {%- if product.selected_or_first_available_variant.quantity_price_breaks.size > 0 -%}
                             {%- assign variant_price_compare = product.selected_or_first_available_variant.compare_at_price -%}
+                            {%- if variant_price_compare == 0 or variant_price_compare == 0.00 or variant_price_compare <= product.selected_or_first_available_variant.price -%}
+                              {%- assign variant_price_compare = nil -%}
+                            {%- endif -%}
                             <div class="price-per-item">
                               {%- if variant_price_compare -%}
                                 <dl class="price-per-item--current">
@@ -284,6 +287,9 @@
                               | money_with_currency
                             -%}
                             {%- assign variant_price_compare = product.selected_or_first_available_variant.compare_at_price -%}
+                            {%- if variant_price_compare == 0 or variant_price_compare == 0.00 or variant_price_compare <= product.selected_or_first_available_variant.price -%}
+                              {%- assign variant_price_compare = nil -%}
+                            {%- endif -%}
                             <div class="price-per-item">
                               {%- if variant_price_compare -%}
                                 <dl class="price-per-item--current">
