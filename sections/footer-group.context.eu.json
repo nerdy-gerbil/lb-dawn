@@ -1,0 +1,43 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "eu"
+  },
+  "parent": "footer-group.json",
+  "sections": {
+    "footer": {
+      "settings": {},
+      "blocks": {
+        "eu_widerrufsbutton_withdrawal_button_inline_cNFEe": {
+          "type": "shopify://apps/eu-widerrufsbutton/blocks/withdrawal-button-inline/019e3842-e8eb-772d-9292-20f5ccbc0337",
+          "disabled": false,
+          "settings": {
+            "header-e2e30c83fd350c37aa00cb6471948fb7": null,
+            "alignment": "left",
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "header-1a013ac79e628e75004b78c225f578bc": null,
+            "button_text": "",
+            "full_width": false,
+            "size": "small",
+            "border_radius": 4,
+            "header-d2c5e3733567ce61f35c7c0d919612eb": null,
+            "text_color": "#ffffff",
+            "background_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "eu_widerrufsbutton_withdrawal_button_inline_cNFEe"
+      ]
+    }
+  }
+}
