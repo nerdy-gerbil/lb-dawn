@@ -16,7 +16,8 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Our Materials & Craftsmanship</strong>",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "heading_tag": "h1"
           }
         },
         "text_GwcMQW": {
@@ -125,7 +126,8 @@
           "type": "heading",
           "settings": {
             "heading": "Precious Metals",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         }
       },
@@ -153,7 +155,8 @@
           "type": "heading",
           "settings": {
             "heading": "Solid Gold",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h3"
           }
         },
         "text_RndFEK": {
@@ -201,7 +204,8 @@
           "type": "heading",
           "settings": {
             "heading": "Gold Vermeil",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h3"
           }
         },
         "text_iicg9N": {
@@ -253,7 +257,8 @@
           "type": "heading",
           "settings": {
             "heading": "Sterling Silver",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h3"
           }
         },
         "text_9mB8qd": {
@@ -301,7 +306,8 @@
           "type": "heading",
           "settings": {
             "heading": "Will Vermeil Wear Out?",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "text_RpyMft": {
@@ -420,7 +426,8 @@
           "type": "heading",
           "settings": {
             "heading": "Chains",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "text_9GPV8Y": {
@@ -468,7 +475,8 @@
           "type": "heading",
           "settings": {
             "heading": "Pearls",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "text_JyYxGi": {
@@ -516,7 +524,8 @@
           "type": "heading",
           "settings": {
             "heading": "Natural Gemstones & Diamonds",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "text_jDzUta": {
@@ -673,6 +682,7 @@
       "settings": {
         "title": "Our Collections Feature",
         "heading_size": "h2",
+        "heading_tag": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
@@ -737,7 +747,8 @@
           "type": "heading",
           "settings": {
             "heading": "Transparency",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "text_yM7gag": {
@@ -768,7 +779,8 @@
           "type": "heading",
           "settings": {
             "heading": "Why Choose Lily Blanche Jewellery?",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "text_knUPjy": {
