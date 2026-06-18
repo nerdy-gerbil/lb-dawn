@@ -1,9 +1,10 @@
 
 {% assign days = 365 | times: 24 | times: 60 | times: 60 %}
+{% assign cleaned_description = product.description | replace: '[gstatic.com](https://www.gstatic.com/shopping/merchant/merchantwidget.js)', '' | replace: 'href="[gstatic.com](https://www.gstatic.com/shopping/merchant/merchantwidget.js)"', '' %}
 {% if product.variants.size > 1 and part_of != 'collection' %}
 "@type": "ProductGroup",{% unless part_of == 'breadcrumbs' %}
 "name": {{ product.title | json }},{% endunless %}
-"description": {{ product.description | strip_html | truncate: 2000, "..." | json }},
+"description": {{ cleaned_description | strip_html | truncate: 2000, "..." | json }},
 "url": "{{ shop.url }}{{ product.url }}",
 "brand": {
   "@type": "Brand",
@@ -43,7 +44,7 @@
       "gtin": {{ variant.barcode | json }},{% else %}
       "gtin": {{ variant.sku | json }},{% endif %}
       "name": {{ product.title | append: " - " | append: variant.title | json }},
-      "description": {{ product.description | strip_html | truncate: 2000, "..." | json }},
+      "description": {{ cleaned_description | strip_html | truncate: 150, "..." | json }},
       "image": [
         {% if variant.image %}
           "https:{{ variant.image.src | image_url }}"
@@ -83,7 +84,7 @@
 {% else %}
 "@type": "Product",
 "name": {{ product.title | json }},
-"description": {{ product.description | strip_html | truncate: 2000, "..." | json }},
+"description": {{ cleaned_description | strip_html | truncate: 2000, "..." | json }},
 "image": [
   "https:{{ product.featured_image | image_url }}"
 ],{% if product.metafields.global.material %}

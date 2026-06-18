@@ -87,7 +87,7 @@
     {% comment %}
       Conditional robots meta tags: don't let crawlers index search, customer or 404 pages
     {% endcomment %}
-    {% if template contains 'search' or template contains '404' %}
+    {% if template contains 'search' or template contains '404' or template contains 'wishlist' or page.handle == 'thanks-for-letting-us-know' %}
       <meta name="robots" content="noindex, follow">
     {% elsif template contains 'customers' %}
       <meta name="robots" content="noindex, nofollow">

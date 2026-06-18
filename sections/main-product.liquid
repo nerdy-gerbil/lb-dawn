@@ -194,7 +194,7 @@
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
+                    {{ product.description | replace: '[gstatic.com](https://www.gstatic.com/shopping/merchant/merchantwidget.js)', '' | replace: 'href="[gstatic.com](https://www.gstatic.com/shopping/merchant/merchantwidget.js)"', '' }}
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}
