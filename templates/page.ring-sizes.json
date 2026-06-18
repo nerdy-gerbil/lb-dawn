@@ -78,36 +78,45 @@
         "padding_bottom": 28
       }
     },
-    "1781102204820e45ca": {
+    "17817761455339fc9a": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_ee8f81f_NCjq8d": {
-          "type": "ai_gen_block_ee8f81f",
+        "ai_gen_block_0c3eb21_ji3rNW": {
+          "type": "ai_gen_block_0c3eb21",
           "settings": {
-            "desktop_width_percent": 100,
-            "image_width": 40,
-            "sticky_offset": 200,
-            "image": "shopify://shop_images/gemstone_ring_gold_stack.jpg",
+            "image": "shopify://shop_images/gemstone_ring_stack.jpg",
+            "image_width": 400,
+            "image_spacing": 16,
             "image_border_radius": 0,
-            "table_background_color": "#ffffff",
+            "sticky_offset": 100,
+            "desktop_width_percent": 100,
+            "font_family": "system_ui_n4",
+            "font_size": 14,
+            "header_font_size": 13,
+            "cell_padding": 12,
+            "background_color": "#ffffff",
+            "text_color": "#121212",
             "header_background_color": "#e6dfd7",
             "header_text_color": "#121212",
-            "text_color": "#121212",
+            "row_alternate_color": "#f9f7f5",
+            "row_hover_color": "#f0ebe5",
             "border_color": "#e6dfd7",
-            "row_hover_color": "#f9f7f5",
-            "border_thickness": 1,
-            "table_border_radius": 0,
-            "cell_padding": 16,
-            "text_alignment": "left",
-            "header_font_size": 16,
-            "text_font_size": 14
+            "border_width": 1,
+            "note_text": "EU sizes are based on inner circumference (mm) and Japan sizes follow the JIS numeric scale. As with all international conversions, these are close equivalents — if you're ordering from outside the UK, we recommend confirming with the millimetre diameter measurement for the most accurate fit.",
+            "note_font_size": 12,
+            "note_text_color": "#666666",
+            "note_spacing": 16
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_ee8f81f_NCjq8d"
+        "ai_gen_block_0c3eb21_ji3rNW"
       ],
+      "settings": {}
+    },
+    "1781102204820e45ca": {
+      "type": "_blocks",
       "settings": {}
     },
     "rich_text_rgeJxa": {
@@ -268,6 +277,68 @@
         "padding_bottom": 36
       }
     },
+    "collapsible_content_6Nynxp": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_FBfPKF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if my measurement falls between two sizes?",
+            "icon": "none",
+            "row_content": "<p>If you are between two sizes we generally recommend sizing up rather than sizing down. A slightly looser ring is more comfortable and easier to have resized than one that is too tight. The exception is of you have larger knuckles than the base of your finger, in that case chose a ring that slides over your knuckle but still sits snug at the base. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UnqkzX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Does the width of the ring affect my size?",
+            "icon": "none",
+            "row_content": "<p>Yes. Wider bands take up more space on your finger and often fit tighter than slim bands that are the same size. If you are ordering a ring that is over 5mm it's worth sizing up half a size.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kFqm8M": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the most common ring size in the UK?",
+            "icon": "none",
+            "row_content": "<p>The average UK ring size for a woman is size N (US size 7) and for men it's T (US size 10) Most women's rings fall between L and P (UK), whilst most men's rings fall between R and V (UK)</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_KJRmh9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why does my ring size change throughout the day?",
+            "icon": "none",
+            "row_content": "<p>Your finger size naturally fluctuates throughout the day due to temperature, activity levels and fluid retention. Your fingers are typically smallest in the morning and largest in the evening. For the most accurate ring size result , measure at the end of the day and take an average of your measurements.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_FBfPKF",
+        "collapsible_row_UnqkzX",
+        "collapsible_row_kFqm8M",
+        "collapsible_row_KJRmh9"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Ring Size FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collection_list_4rfLMr": {
       "type": "collection-list",
       "blocks": {
@@ -418,11 +489,13 @@
   "order": [
     "rich_text_J6UNRR",
     "rich_text_RBPUj4",
+    "17817761455339fc9a",
     "1781102204820e45ca",
     "rich_text_rgeJxa",
     "main",
     "collapsible_content_tCz3ig",
     "multicolumn_wE8dne",
+    "collapsible_content_6Nynxp",
     "collection_list_4rfLMr",
     "image_with_text_aPNFXP",
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b",

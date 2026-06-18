@@ -1,0 +1,537 @@
+{% doc %}
+  @prompt
+    Update the existing ring size table block to add two new columns: EU SIZE and JAPAN SIZE, positioned between the existing US SIZE and DIAMETER (mm) columns. The full updated table should contain these 5 columns: UK | US | EU | JAPAN | DIAMETER (mm) with rows: J|5|49|9|15.6, J½||50|9|15.8, K|5½|50|10|16.0, K½||51|10|16.1, L|6|52|11|16.4, L½||52|12|16.6, M|6½|53|12|16.8, M½||53|13|17.0, N|7|54|14|17.2, N½||55|14|17.4, O|7½|55|15|17.6, O½||56|15|17.8, P|8|57|16|18.0, P½||57|17|18.2, Q|8½|58|17|18.4, R|9|59|18|18.8, S|9½|60|20|19.2, T|10|62|21|19.6, U|10½|63|22|20.0, V|11|64|23|20.4, W|12|67|26|21.2, Y|12½|68|27|21.6, Z|13|68|27|21.8. Add this note below the table in smaller muted italic text: "EU sizes are based on inner circumference (mm) and Japan sizes follow the JIS numeric scale. As with all international conversions, these are close equivalents — if you're ordering from outside the UK, we recommend confirming with the millimetre diameter measurement for the most accurate fit." Style to match a clean, elegant jewellery brand aesthetic., can you add an image to the left hand side of the table that sicks when you scroll down the table
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-ring-size-table-{{ ai_gen_id }} {
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    display: block;
+  }
+
+  .ai-ring-size-table__container-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.image_spacing }}px;
+    align-items: flex-start;
+  }
+
+  .ai-ring-size-table__image-wrapper-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.image_width }}px;
+    position: sticky;
+    top: {{ block.settings.sticky_offset }}px;
+    align-self: flex-start;
+  }
+
+  .ai-ring-size-table__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-ring-size-table__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-ring-size-table__image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .ai-ring-size-table__table-wrapper-{{ ai_gen_id }} {
+    flex-grow: 1;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ai-ring-size-table__table-{{ ai_gen_id }} {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: {{ block.settings.font_family.family }}, {{ block.settings.font_family.fallback_families }};
+    font-size: {{ block.settings.font_size }}px;
+    color: {{ block.settings.text_color }};
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-ring-size-table__table-{{ ai_gen_id }} th {
+    background-color: {{ block.settings.header_background_color }};
+    color: {{ block.settings.header_text_color }};
+    font-weight: 600;
+    text-align: left;
+    padding: {{ block.settings.cell_padding }}px;
+    border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+    font-size: {{ block.settings.header_font_size }}px;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-ring-size-table__table-{{ ai_gen_id }} td {
+    padding: {{ block.settings.cell_padding }}px;
+    border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+    text-align: left;
+  }
+
+  .ai-ring-size-table__table-{{ ai_gen_id }} tbody tr:nth-child(even) {
+    background-color: {{ block.settings.row_alternate_color }};
+  }
+
+  .ai-ring-size-table__table-{{ ai_gen_id }} tbody tr:hover {
+    background-color: {{ block.settings.row_hover_color }};
+  }
+
+  .ai-ring-size-table__note-{{ ai_gen_id }} {
+    margin-top: {{ block.settings.note_spacing }}px;
+    font-size: {{ block.settings.note_font_size }}px;
+    color: {{ block.settings.note_text_color }};
+    font-style: italic;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-ring-size-table__container-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+
+    .ai-ring-size-table__image-wrapper-{{ ai_gen_id }} {
+      position: static;
+      width: 100%;
+      max-width: {{ block.settings.image_width }}px;
+      margin: 0 auto {{ block.settings.image_spacing }}px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-ring-size-table__table-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size | times: 0.9 }}px;
+    }
+
+    .ai-ring-size-table__table-{{ ai_gen_id }} th {
+      font-size: {{ block.settings.header_font_size | times: 0.9 }}px;
+      padding: {{ block.settings.cell_padding | times: 0.8 }}px;
+    }
+
+    .ai-ring-size-table__table-{{ ai_gen_id }} td {
+      padding: {{ block.settings.cell_padding | times: 0.8 }}px;
+    }
+
+    .ai-ring-size-table__note-{{ ai_gen_id }} {
+      font-size: {{ block.settings.note_font_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-ring-size-table-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-ring-size-table__container-{{ ai_gen_id }}">
+    <div class="ai-ring-size-table__image-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.image %}
+        <img
+          src="{{ block.settings.image | image_url: width: 600 }}"
+          alt="{{ block.settings.image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.image.width }}"
+          height="{{ block.settings.image.height }}"
+          class="ai-ring-size-table__image-{{ ai_gen_id }}"
+        >
+      {% else %}
+        <div class="ai-ring-size-table__image-placeholder-{{ ai_gen_id }}">
+          {{ 'product-1' | placeholder_svg_tag }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ai-ring-size-table__table-wrapper-{{ ai_gen_id }}">
+      <table class="ai-ring-size-table__table-{{ ai_gen_id }}">
+        <thead>
+          <tr>
+            <th>UK SIZE</th>
+            <th>US SIZE</th>
+            <th>EU SIZE</th>
+            <th>JAPAN SIZE</th>
+            <th>DIAMETER (mm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>J</td>
+            <td>5</td>
+            <td>49</td>
+            <td>9</td>
+            <td>15.6</td>
+          </tr>
+          <tr>
+            <td>J½</td>
+            <td></td>
+            <td>50</td>
+            <td>9</td>
+            <td>15.8</td>
+          </tr>
+          <tr>
+            <td>K</td>
+            <td>5½</td>
+            <td>50</td>
+            <td>10</td>
+            <td>16.0</td>
+          </tr>
+          <tr>
+            <td>K½</td>
+            <td></td>
+            <td>51</td>
+            <td>10</td>
+            <td>16.1</td>
+          </tr>
+          <tr>
+            <td>L</td>
+            <td>6</td>
+            <td>52</td>
+            <td>11</td>
+            <td>16.4</td>
+          </tr>
+          <tr>
+            <td>L½</td>
+            <td></td>
+            <td>52</td>
+            <td>12</td>
+            <td>16.6</td>
+          </tr>
+          <tr>
+            <td>M</td>
+            <td>6½</td>
+            <td>53</td>
+            <td>12</td>
+            <td>16.8</td>
+          </tr>
+          <tr>
+            <td>M½</td>
+            <td></td>
+            <td>53</td>
+            <td>13</td>
+            <td>17.0</td>
+          </tr>
+          <tr>
+            <td>N</td>
+            <td>7</td>
+            <td>54</td>
+            <td>14</td>
+            <td>17.2</td>
+          </tr>
+          <tr>
+            <td>N½</td>
+            <td></td>
+            <td>55</td>
+            <td>14</td>
+            <td>17.4</td>
+          </tr>
+          <tr>
+            <td>O</td>
+            <td>7½</td>
+            <td>55</td>
+            <td>15</td>
+            <td>17.6</td>
+          </tr>
+          <tr>
+            <td>O½</td>
+            <td></td>
+            <td>56</td>
+            <td>15</td>
+            <td>17.8</td>
+          </tr>
+          <tr>
+            <td>P</td>
+            <td>8</td>
+            <td>57</td>
+            <td>16</td>
+            <td>18.0</td>
+          </tr>
+          <tr>
+            <td>P½</td>
+            <td></td>
+            <td>57</td>
+            <td>17</td>
+            <td>18.2</td>
+          </tr>
+          <tr>
+            <td>Q</td>
+            <td>8½</td>
+            <td>58</td>
+            <td>17</td>
+            <td>18.4</td>
+          </tr>
+          <tr>
+            <td>R</td>
+            <td>9</td>
+            <td>59</td>
+            <td>18</td>
+            <td>18.8</td>
+          </tr>
+          <tr>
+            <td>S</td>
+            <td>9½</td>
+            <td>60</td>
+            <td>20</td>
+            <td>19.2</td>
+          </tr>
+          <tr>
+            <td>T</td>
+            <td>10</td>
+            <td>62</td>
+            <td>21</td>
+            <td>19.6</td>
+          </tr>
+          <tr>
+            <td>U</td>
+            <td>10½</td>
+            <td>63</td>
+            <td>22</td>
+            <td>20.0</td>
+          </tr>
+          <tr>
+            <td>V</td>
+            <td>11</td>
+            <td>64</td>
+            <td>23</td>
+            <td>20.4</td>
+          </tr>
+          <tr>
+            <td>W</td>
+            <td>12</td>
+            <td>67</td>
+            <td>26</td>
+            <td>21.2</td>
+          </tr>
+          <tr>
+            <td>Y</td>
+            <td>12½</td>
+            <td>68</td>
+            <td>27</td>
+            <td>21.6</td>
+          </tr>
+          <tr>
+            <td>Z</td>
+            <td>13</td>
+            <td>68</td>
+            <td>27</td>
+            <td>21.8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="ai-ring-size-table__note-{{ ai_gen_id }}">
+        {{ block.settings.note_text }}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Ring size table",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "Image width",
+      "min": 150,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "default": 250
+    },
+    {
+      "type": "range",
+      "id": "image_spacing",
+      "label": "Image spacing",
+      "min": 16,
+      "max": 64,
+      "step": 8,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Image border radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "sticky_offset",
+      "label": "Sticky offset from top",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Table style"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "font_picker",
+      "id": "font_family",
+      "label": "Font",
+      "default": "sans-serif"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Body font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "header_font_size",
+      "label": "Header font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "range",
+      "id": "cell_padding",
+      "label": "Cell padding",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "header_background_color",
+      "label": "Header background",
+      "default": "#e6dfd7"
+    },
+    {
+      "type": "color",
+      "id": "header_text_color",
+      "label": "Header text",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "row_alternate_color",
+      "label": "Alternate row",
+      "default": "#f9f7f5"
+    },
+    {
+      "type": "color",
+      "id": "row_hover_color",
+      "label": "Row hover",
+      "default": "#f0ebe5"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#e6dfd7"
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "Border width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "header",
+      "content": "Note"
+    },
+    {
+      "type": "textarea",
+      "id": "note_text",
+      "label": "Note text",
+      "default": "EU sizes are based on inner circumference (mm) and Japan sizes follow the JIS numeric scale. As with all international conversions, these are close equivalents — if you're ordering from outside the UK, we recommend confirming with the millimetre diameter measurement for the most accurate fit."
+    },
+    {
+      "type": "range",
+      "id": "note_font_size",
+      "label": "Note font size",
+      "min": 10,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "note_text_color",
+      "label": "Note text color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "note_spacing",
+      "label": "Note spacing",
+      "min": 8,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ring size table"
+    }
+  ]
+}
+{% endschema %}

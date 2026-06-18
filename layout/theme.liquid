@@ -560,17 +560,31 @@
       src="https://www.gstatic.com/shopping/merchant/merchantwidget.js"
       defer
     ></script>
-    <script type="text/javascript">
-      merchantWidgetScript.addEventListener('load', function () {
-        merchantwidget.start({
-          position: 'RIGHT_BOTTOM',
-          sideMargin: 96,
-          bottomMargin: 7,
-          mobileSideMargin: 7,
-          mobileBottomMargin: 96,
-          zIndex: 2147483640
-        });
-        document.getElementById("google-merchantwidget-iframe-wrapper").style.zIndex = 1999999;
+
+    <script defer>
+      function initMerchantWidget() {
+        if (typeof merchantwidget !== 'undefined') {
+          merchantwidget.start({
+            position: 'RIGHT_BOTTOM',
+            sideMargin: 96,
+            bottomMargin: 7,
+            mobileSideMargin: 7,
+            mobileBottomMargin: 96,
+            zIndex: 2147483640
+          });
+          var wrapper = document.getElementById("google-merchantwidget-iframe-wrapper");
+          if (wrapper) wrapper.style.zIndex = 1999999;
+        } else {
+          // merchantwidget not ready yet, retry shortly
+          setTimeout(initMerchantWidget, 100);
+        }
+      }
+
+      document.getElementById('merchantWidgetScript').addEventListener('load', initMerchantWidget);
+
+      // Fallback: also try on DOMContentLoaded in case load already fired
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(initMerchantWidget, 500);
       });
     </script>
     {% endif %}
