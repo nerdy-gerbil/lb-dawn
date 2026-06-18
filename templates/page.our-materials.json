@@ -259,7 +259,7 @@
         "text_9mB8qd": {
           "type": "text",
           "settings": {
-            "text": "<p>Our <strong>sterling silver jewellery </strong>is crafted from <strong>92.5% pure silver. </strong>Each locket is <a href=\"https://www.lilyblanche.com/pages/our-hallmark\">hallmarked </a> at the Edinburgh Assay office, confirming it's purity and our commitment to quality. <br/><br/></p>",
+            "text": "<p>Our <strong>sterling silver jewellery </strong>is crafted from <strong>92.5% pure silver. </strong>Each locket is <a href=\"https://www.lilyblanche.com/pages/our-hallmark\">hallmarked </a> at the Edinburgh Assay office, confirming its purity and our commitment to quality. <br/><br/></p>",
             "text_style": "body"
           }
         },
@@ -566,7 +566,7 @@
         "column_8PPPMc": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/img_proxy_7baa8c8f-2bf1-4a17-be61-76a72f822af6.jpg",
+            "image": "shopify://shop_images/birthstone_earrings_1.jpg",
             "title": "<strong>Birthstones</strong>",
             "text": "<p>From deep blue <strong>sapphires </strong>to fiery <strong>garnets</strong>, our genuine birthstones add a personal touch to your jewellery.<br/><br/></p>",
             "link_label": "",
@@ -736,7 +736,7 @@
         "heading_JDacRe": {
           "type": "heading",
           "settings": {
-            "heading": "Transparancy",
+            "heading": "Transparency",
             "heading_size": "h1"
           }
         },
