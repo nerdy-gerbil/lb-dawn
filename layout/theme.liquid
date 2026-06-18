@@ -18,6 +18,9 @@
 
     {% comment %} Custom SEO Schema Markup {% endcomment %}
     {% include 'custom-schema-business' %}
+    {%- if template.name == 'page' and page.handle == 'ring-sizes' -%}
+      {% render 'custom-schema-faq-ring-sizes' %}
+    {%- endif -%}
     {% comment %} /Custom SEO Schema Markup {% endcomment %}
   
     {% comment %} Tapita {% endcomment %}

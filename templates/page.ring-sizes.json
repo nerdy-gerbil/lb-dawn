@@ -285,7 +285,7 @@
           "settings": {
             "heading": "What if my measurement falls between two sizes?",
             "icon": "none",
-            "row_content": "<p>If you are between two sizes we generally recommend sizing up rather than sizing down. A slightly looser ring is more comfortable and easier to have resized than one that is too tight. The exception is of you have larger knuckles than the base of your finger, in that case chose a ring that slides over your knuckle but still sits snug at the base. </p>",
+            "row_content": "<p>If you are between two sizes we generally recommend sizing up rather than sizing down. A slightly looser ring is more comfortable and easier to have resized than one that is too tight. The exception is if you have larger knuckles than the base of your finger. In that case, choose a ring that slides over your knuckle but still sits snug at the base.</p>",
             "page": ""
           }
         },
@@ -303,7 +303,7 @@
           "settings": {
             "heading": "What is the most common ring size in the UK?",
             "icon": "none",
-            "row_content": "<p>The average UK ring size for a woman is size N (US size 7) and for men it's T (US size 10) Most women's rings fall between L and P (UK), whilst most men's rings fall between R and V (UK)</p>",
+            "row_content": "<p>The average UK ring size for a woman is size N (US size 7) and for men it's T (US size 10). Most women's rings fall between L and P (UK), whilst most men's rings fall between R and V (UK).</p>",
             "page": ""
           }
         },
@@ -312,7 +312,7 @@
           "settings": {
             "heading": "Why does my ring size change throughout the day?",
             "icon": "none",
-            "row_content": "<p>Your finger size naturally fluctuates throughout the day due to temperature, activity levels and fluid retention. Your fingers are typically smallest in the morning and largest in the evening. For the most accurate ring size result , measure at the end of the day and take an average of your measurements.</p>",
+            "row_content": "<p>Your finger size naturally fluctuates throughout the day due to temperature, activity levels and fluid retention. Your fingers are typically smallest in the morning and largest in the evening. For the most accurate ring size result, measure at the end of the day and take an average of your measurements.</p>",
             "page": ""
           }
         }
