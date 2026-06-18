@@ -7,42 +7,47 @@
       }{% if shop.metaobjects.schema_shipping_policy.default %},
       {% assign shipping_json = shop.metaobjects.schema_shipping_policy.default | json %}
       {% capture top_level_shipping %}
-        "@id": "#shipping-policy",
-        "shippingRate": {
-          "@type": "MonetaryAmount",
-          "value": "0.00",
-          "currency": "GBP"
-        },
-        "shippingDestination": {
-          "@type": "DefinedRegion",
-          "addressCountry": "GB"
-        },
-        "deliveryTime": {
-          "@type": "ShippingDeliveryTime",
-          "handlingTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 1,
-            "maxValue": 2,
-            "unitCode": "DAY"
+        {
+          "@id": "#shipping-policy",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0.00",
+            "currency": "GBP"
           },
-          "transitTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 2,
-            "maxValue": 4,
-            "unitCode": "DAY"
-          }
-        },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "GB"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 4,
+              "unitCode": "DAY"
+            }
+          },
       {% endcapture %}
       {{ shipping_json | replace_first: '{', top_level_shipping }}{% endif %}{% if shop.metaobjects.merchant_return_policy.values.size > 0 %}{% for policy in shop.metaobjects.merchant_return_policy.values %},
       {% assign return_json = policy | json %}
-      {% unless return_json contains 'applicableCountry' %}
+      {% unless return_json contains '"applicableCountry"' %}
         {% assign return_json = return_json | replace_first: '{', '{"applicableCountry": "GB",' %}
+      {% else %}
+        {% assign return_json = return_json | replace: '"applicableCountry":null', '"applicableCountry":"GB"' | replace: '"applicableCountry": null', '"applicableCountry": "GB"' | replace: '"applicableCountry":""', '"applicableCountry":"GB"' | replace: '"applicableCountry": ""', '"applicableCountry": "GB"' %}
       {% endunless %}
-      {% unless return_json contains 'returnPolicyCategory' %}
+      {% unless return_json contains '"returnPolicyCategory"' %}
         {% assign return_json = return_json | replace_first: '{', '{"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod",' %}
+      {% else %}
+        {% assign return_json = return_json | replace: '"returnPolicyCategory":null', '"returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnPeriod"' | replace: '"returnPolicyCategory": null', '"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod"' | replace: '"returnPolicyCategory":""', '"returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnPeriod"' | replace: '"returnPolicyCategory": ""', '"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod"' %}
       {% endunless %}
-      {% assign return_json = return_json | replace: 'https://www.lilyblanche.com/refund-policy', 'https://www.lilyblanche.com/policies/refund-policy' %}
-      {% assign return_json = return_json | replace: 'https://www.lilyblanche.com/path-to-your-logo.jpg', 'https://www.lilyblanche.com/cdn/shop/files/LB.png?v=1682953456' %}
+      {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/refund-policy', 'https:\/\/www.lilyblanche.com\/policies\/refund-policy' | replace: 'https://www.lilyblanche.com/refund-policy', 'https://www.lilyblanche.com/policies/refund-policy' %}
+      {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/path-to-your-logo.jpg', 'https:\/\/www.lilyblanche.com\/cdn\/shop\/files\/LB.png?v=1682953456' | replace: 'https://www.lilyblanche.com/path-to-your-logo.jpg', 'https://www.lilyblanche.com/cdn/shop/files/LB.png?v=1682953456' %}
       {% assign return_json = return_json | replace: 'personalization', 'personalisation' %}
       {% assign policy_handle = policy.system.handle | default: policy.handle %}
       {% if policy_handle == 'default' %}
