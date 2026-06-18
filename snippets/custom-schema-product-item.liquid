@@ -13,12 +13,11 @@
 "material": "{{ product.metafields.global.material }}",{% endif %}{% if product.metafields.global.hallmark %}
 {% liquid
   comment
-    Silver hallmark is 925, 9ct Gold is 375
+    Silver hallmark is 925, Solid Gold is 375
   endcomment
   assign hallmark = '375'
-  assign words = product.metafields.global.material | downcase | split: 'silver'
-
-  if words.size > 1
+  assign material_downcase = product.metafields.global.material | downcase
+  if material_downcase contains 'silver' or material_downcase contains 'vermeil'
     assign hallmark = '925'
   endif
 %}
@@ -29,11 +28,7 @@
     "name": "Edinburgh Assay Office"
   },
   "name": "Full UK Hallmark",
-  "certificationIdentification": "{{ hallmark }}",
-  "certificationRating": {
-    "@type": "Rating",
-    "ratingValue": "{{ hallmark }}"
-  }
+  "certificationIdentification": "{{ hallmark }}"
 },{% endif %}
 "variesBy": [
   {% for option in product.options %}
@@ -111,9 +106,8 @@
     Silver hallmark is 925, Solid Gold is 375
   endcomment
   assign hallmark = '375'
-  assign words = product.metafields.global.material | downcase | split: 'silver'
-
-  if words.size > 1
+  assign material_downcase = product.metafields.global.material | downcase
+  if material_downcase contains 'silver' or material_downcase contains 'vermeil'
     assign hallmark = '925'
   endif
 %}
@@ -124,11 +118,7 @@
     "name": "Edinburgh Assay Office"
   },
   "name": "Full UK Hallmark",
-  "certificationIdentification": "{{ hallmark }}",
-  "certificationRating": {
-    "@type": "Rating",
-    "ratingValue": "{{ hallmark }}"
-  }
+  "certificationIdentification": "{{ hallmark }}"
 }{% endif %}
 {% endif %}{% if product.metafields.reviews.rating_count > 0 and part_of != 'breadcrumbs' %},
 "aggregateRating": {
