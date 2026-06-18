@@ -25,6 +25,24 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .footer__follow-on-shop-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .footer__follow-on-shop-wrapper {
+      align-items: flex-start;
+      text-align: left;
+    }
+    .footer__follow-on-shop-wrapper .footer__withdrawal-button {
+      text-align: left;
+      width: 100%;
+    }
+  }
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
@@ -67,6 +85,9 @@
             {% endif %}
           >
             {%- for block in section.blocks -%}
+              {%- if block.type contains 'eu-widerrufsbutton' or block.type contains 'withdrawal-button' -%}
+                {%- continue -%}
+              {%- endif -%}
               <div
                 class="wrap-collabsible footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
@@ -250,9 +271,38 @@
             </div>
           {%- endif -%}
 
-          {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
-            <div class="footer__follow-on-shop">
-              {{ shop | login_button: action: 'follow' }}
+          {%- liquid
+            assign has_withdrawal_block = false
+            for block in section.blocks
+              if block.type contains 'eu-widerrufsbutton' or block.type contains 'withdrawal-button'
+                assign has_withdrawal_block = true
+                break
+              endif
+            endfor
+
+            assign has_follow_on_shop = false
+            if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop
+              assign has_follow_on_shop = true
+            endif
+          -%}
+
+          {%- if has_withdrawal_block or has_follow_on_shop -%}
+            <div class="footer__follow-on-shop-wrapper">
+              {%- if has_withdrawal_block -%}
+                {%- for block in section.blocks -%}
+                  {%- if block.type contains 'eu-widerrufsbutton' or block.type contains 'withdrawal-button' -%}
+                    <div class="footer__withdrawal-button">
+                      {% render block %}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endif -%}
+
+              {%- if has_follow_on_shop -%}
+                <div class="footer__follow-on-shop">
+                  {{ shop | login_button: action: 'follow' }}
+                </div>
+              {%- endif -%}
             </div>
           {%- endif -%}
 
