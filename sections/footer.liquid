@@ -33,14 +33,38 @@
     align-items: center;
   }
 
+  .footer__follow-on-shop-wrapper .footer__withdrawal-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer__follow-on-shop-wrapper .footer__withdrawal-button > * {
+    margin: 0 auto !important;
+  }
+
+  .footer__follow-on-shop-wrapper .footer__follow-on-shop {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   @media screen and (min-width: 750px) {
     .footer__follow-on-shop-wrapper {
       align-items: flex-start;
       text-align: left;
     }
+
     .footer__follow-on-shop-wrapper .footer__withdrawal-button {
-      text-align: left;
-      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .footer__follow-on-shop-wrapper .footer__withdrawal-button > * {
+      margin: 0 !important;
+    }
+
+    .footer__follow-on-shop-wrapper .footer__follow-on-shop {
+      justify-content: flex-start;
     }
   }
 {%- endstyle -%}
