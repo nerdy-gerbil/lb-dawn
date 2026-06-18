@@ -16,6 +16,10 @@
           "type": "title",
           "settings": {}
         },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
         "7c962e1a-8ceb-403d-a9f7-b87378d7f7ae": {
           "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
           "settings": {
@@ -120,6 +124,7 @@
       },
       "block_order": [
         "title",
+        "rating",
         "7c962e1a-8ceb-403d-a9f7-b87378d7f7ae",
         "dc7dc56b-91f0-463b-b408-f8aaacac5197",
         "2ce1235d-886c-49bf-b8ce-8d0976c79d42",
