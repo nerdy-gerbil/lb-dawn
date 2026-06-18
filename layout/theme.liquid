@@ -627,7 +627,9 @@
       {%- capture tapita-seo-snippets -%}
     {% include 'tapita-page-speed-status' %}
     {%- if tapitaPageSpeedStatus -%}
+    {% # theme-check-disable MissingTemplate %}
     {% include 'tapita-splash-img' %}
+    {% # theme-check-enable MissingTemplate %}
     {%- endif -%}
     {%- endcapture -%}
       {%- unless tapita-seo-snippets contains 'Liquid error' -%}

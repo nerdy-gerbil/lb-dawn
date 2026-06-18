@@ -691,7 +691,15 @@
                      </div>
                   {% elsif block.settings.image != blank %}
                     <div class="multicolumns-item-image-{{ section.id }}">
-                      <img src="{{ block.settings.image | image_url: width: 800 }}" alt="multicolumns-item-image-{{ forloop.index }}" {% if lazy %}lazy="loading"{% endif %}>
+                      <img
+                        src="{{ block.settings.image | image_url: width: 800 }}"
+                        alt="multicolumns-item-image-{{ forloop.index }}"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                        {% if lazy %}
+                          loading="lazy"
+                        {% endif %}
+                      >
                     </div>
                   {% endif %}
     
@@ -717,10 +725,10 @@
         <div class="multicolumns-btn-next-{{ section.id }}">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Left"><path d="M14,17a1,1,0,0,1-.707-.293l-4-4a1,1,0,0,1,0-1.414l4-4a1,1,0,1,1,1.414,1.414L11.414,12l3.293,3.293A1,1,0,0,1,14,17Z"/></g></svg>
         </div>
+        </div>
         {% endif %}
     </div>
   </div>
-</div>
 <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js"></script> -->
 
 {% assign column_row = column_row | plus: 0 %}

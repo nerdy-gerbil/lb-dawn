@@ -1148,6 +1148,8 @@
                   <img
                     src="{{ block.settings.image | image_url }}"
                     alt="{{ block.settings.image.alt }}"
+                    width="{{ block.settings.image.width }}"
+                    height="{{ block.settings.image.height }}"
                     {% if lazy %}
                       loading="lazy"
                     {% endif %}
@@ -1271,6 +1273,8 @@
                     <img
                       src="{{ block.settings.image | image_url }}"
                       alt="{{ block.settings.image.alt }}"
+                      width="{{ block.settings.image.width }}"
+                      height="{{ block.settings.image.height }}"
                       {% if lazy %}
                         loading="lazy"
                       {% endif %}
@@ -1355,6 +1359,8 @@
                 <img
                   src="{{ block.settings.image | image_url }}"
                   alt="{{ block.settings.image.alt }}"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
                   {% if lazy %}
                     loading="lazy"
                   {% endif %}
@@ -1412,6 +1418,8 @@
                         <img
                           src="{{ block.settings.image | image_url }}"
                           alt="{{ block.settings.image.alt }}"
+                          width="{{ block.settings.image.width }}"
+                          height="{{ block.settings.image.height }}"
                           {% if lazy %}
                             loading="lazy"
                           {% endif %}

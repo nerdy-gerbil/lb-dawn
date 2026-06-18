@@ -2,3 +2,9 @@ MatchingTranslations:
   enabled: false
 TemplateLength:
   enabled: false
+
+ignore:
+  - snippets/shogun-optimizer.liquid
+  - snippets/tapita-page-speed-status.liquid
+  - snippets/tapita-seo-schema.liquid
+

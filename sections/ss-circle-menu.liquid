@@ -314,7 +314,11 @@
     		{%- for block in section.blocks -%}
               <div class="circle-item-{{ section.id }} swiper-slide">
                 
-                <{% if block.settings.bubble_link != blank %}a href="{{ block.settings.bubble_link }}"{% else %}div{% endif %} class="circle-icon-{{ section.id }}">
+                {% if block.settings.bubble_link != blank %}
+                  <a href="{{ block.settings.bubble_link }}" class="circle-icon-{{ section.id }}">
+                {% else %}
+                  <div class="circle-icon-{{ section.id }}">
+                {% endif %}
                   
                   {%- if block.settings.bubble_img -%}
                     {% assign image_alt = block.settings.bubble_img.alt | escape %}
@@ -331,7 +335,11 @@
                     {{ 'image' | placeholder_svg_tag }}
                   {%- endif -%}
               
-    			</{% if block.settings.bubble_link != blank %}a{% else %}div{% endif %}>
+    			{% if block.settings.bubble_link != blank %}
+                  </a>
+                {% else %}
+                  </div>
+                {% endif %}
               
                 {% if block.settings.bubble_text != blank %}
                   <p class="circle-text-{{ section.id }}"> {{ block.settings.bubble_text }} </p>
@@ -345,7 +353,7 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
 <script>
   function initInstagramMenu() {
