@@ -33,6 +33,7 @@
               "unitCode": "DAY"
             }
           },
+        }
       {% endcapture %}
       {{ shipping_json | replace_first: '{', top_level_shipping }}{% endif %}{% if shop.metaobjects.merchant_return_policy.values.size > 0 %}{% for policy in shop.metaobjects.merchant_return_policy.values %},
       {% assign return_json = policy | json %}
