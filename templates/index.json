@@ -89,8 +89,8 @@
         "banner_height_mobile": "adapt_first",
         "banner_fixed_height": 100,
         "banner_fixed_height_mobile": 70,
-        "image": "shopify://shop_images/Father_s_Day_Banner_2026_1.png",
-        "image_mobile": "shopify://shop_images/Untitled_design_41.png",
+        "image": "shopify://shop_images/July_Banner_Desktop.webp",
+        "image_mobile": "shopify://shop_images/July_Banner_Mobile_1.webp",
         "overlay": 0,
         "content_maxwidth": 58,
         "content_maxwidth_mobile": 72,
@@ -393,6 +393,7 @@
       "settings": {
         "title": "Create Your Locket",
         "heading_size": "h2",
+        "heading_tag": "h2",
         "image_width": "full",
         "image_ratio": "square",
         "button_label": "CREATE YOURS",
@@ -414,7 +415,8 @@
           "type": "heading",
           "settings": {
             "heading": "Trusted by Many, Created for You",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         },
         "template--19394087682366__ddfe2653-5686-4887-bf42-389b8aae2fe8-text-1": {
@@ -460,7 +462,8 @@
           "type": "heading",
           "settings": {
             "heading": "Why Shop With Us",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         }
       },
@@ -706,6 +709,7 @@
       "settings": {
         "title": "As Loved By",
         "heading_size": "h2",
+        "heading_tag": "h2",
         "image_width": "half",
         "image_ratio": "circle",
         "button_label": "",
@@ -773,6 +777,7 @@
       "settings": {
         "title": "As Seen In",
         "heading_size": "h2",
+        "heading_tag": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
@@ -846,7 +851,8 @@
           "type": "heading",
           "settings": {
             "heading": "Follow us Instagram <a href=\"https://www.instagram.com/lilyblanchejewellery/\" target=\"_blank\">@lilyblanchejewellery</a>",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         }
       },
