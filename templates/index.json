@@ -41,7 +41,7 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "Shop Father's Day",
+            "button": "Shop Carnelian",
             "button_url": "shopify://collections/fathers-day-jewellery",
             "button_custom": true,
             "button_font": "system_ui_n4",
