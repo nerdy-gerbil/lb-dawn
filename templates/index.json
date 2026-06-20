@@ -22,7 +22,7 @@
             "heading_size_mobile": 20,
             "heading_height": 100,
             "heading_mt": 50,
-            "heading_color": "#FFFFFF"
+            "heading_color": "#ffffff"
           }
         },
         "text_fzB4Wt": {
@@ -35,7 +35,7 @@
             "text_size_mobile": 18,
             "text_height": 150,
             "text_mt": 30,
-            "text_color": "#FFFFFF"
+            "text_color": "#ffffff"
           }
         },
         "button_pPck3J": {
@@ -348,7 +348,7 @@
           "settings": {
             "image": "shopify://shop_images/locket-transparent-1-_400.gif",
             "title": "",
-            "text": "",
+            "text": "<p><br/><br/></p>",
             "link_label": "",
             "link": ""
           }
