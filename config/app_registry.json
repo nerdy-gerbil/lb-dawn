@@ -1,0 +1,79 @@
+{
+  "apps": [
+    {
+      "handle": "shopify-messaging",
+      "title": "Messaging",
+      "latest_version": "1.0.0"
+    },
+    {
+      "handle": "customily-options-3",
+      "title": "Customily Product Personalizer",
+      "latest_version": "2.4.5"
+    },
+    {
+      "handle": "click-drop-app-1",
+      "title": "Click & Drop",
+      "latest_version": "1.0.0"
+    },
+    {
+      "handle": "clearpay-onsite-messaging",
+      "title": "Clearpay On-Site Messaging",
+      "latest_version": "1.0.0"
+    },
+    {
+      "handle": "klarna-on-site-messaging",
+      "title": "Klarna On-Site Messaging",
+      "latest_version": "1.0.0"
+    },
+    {
+      "handle": "tabs-studio",
+      "title": "Tabs Studio",
+      "latest_version": "1.0.0"
+    },
+    {
+      "handle": "search-and-discovery",
+      "title": "Search & Discovery",
+      "latest_version": "2.0.1"
+    },
+    {
+      "handle": "klaviyo-email-marketing",
+      "title": "Klaviyo: Email Marketing & SMS",
+      "latest_version": "3.1.0"
+    },
+    {
+      "handle": "one-click-json-ld-1",
+      "title": "GoBlog: Blog Optimizer",
+      "latest_version": "1.0.0"
+    },
+    {
+      "handle": "flow",
+      "title": "Flow",
+      "latest_version": "2.1.1"
+    },
+    {
+      "handle": "trustpilot-reviews",
+      "title": "Trustpilot Reviews",
+      "latest_version": "1.2.0"
+    },
+    {
+      "handle": "google-shopping-feed",
+      "title": "Simprosys Google Shopping Feed",
+      "latest_version": "3.5.0"
+    },
+    {
+      "handle": "backup",
+      "title": "Rewind Backups",
+      "latest_version": "4.0.0"
+    },
+    {
+      "handle": "dpd-integration-by-webshopassist",
+      "title": "DPD Integration by WSA",
+      "latest_version": "1.0.0"
+    },
+    {
+      "handle": "zigpoll",
+      "title": "Zigpoll Customer Surveys",
+      "latest_version": "1.0.0"
+    }
+  ]
+}
