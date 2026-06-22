@@ -189,7 +189,7 @@
       "custom_css": [],
       "name": "Description Tabs",
       "settings": {
-        "custom_liquid": "<div class=\"custom-section editor-notes\">\n  <input type=\"checkbox\" id=\"read-more-toggle\">\n  <div class=\"product-tabs\">\n    {{ product.description | replace: '<h1', '<h2 class=\"h1\"' | replace: '</h1>', '</h2>' | replace: '[gstatic.com](https://www.gstatic.com/shopping/merchant/merchantwidget.js)', '' | replace: 'href=\"[gstatic.com](https://www.gstatic.com/shopping/merchant/merchantwidget.js)\"', '' }}\n  </div>\n  <label for=\"read-more-toggle\" class=\"read-more-label\"></label>\n</div>",
+        "custom_liquid": "<div class=\"custom-section editor-notes\">\n  <input type=\"checkbox\" id=\"read-more-toggle\" aria-label=\"Toggle full description\">\n  <div class=\"product-tabs\">\n    {{ product.description | replace: '<h1', '<h2 class=\"h1\"' | replace: '</h1>', '</h2>' | replace: '[gstatic.com](https://www.gstatic.com/shopping/merchant/merchantwidget.js)', '' | replace: 'href=\"[gstatic.com](https://www.gstatic.com/shopping/merchant/merchantwidget.js)\"', '' }}\n  </div>\n  <label for=\"read-more-toggle\" class=\"read-more-label\"></label>\n</div>",
         "color_scheme": "background-1",
         "padding_top": 0,
         "padding_bottom": 0

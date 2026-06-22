@@ -76,6 +76,7 @@
                   id="{{- block.settings.heading | handle -}}"
                   class="toggle"
                   type="checkbox"
+                  aria-label="{{ block.settings.heading | escape }}"
                   {%- if block.settings.heading == blank -%}
                     checked
                   {%- endif -%}

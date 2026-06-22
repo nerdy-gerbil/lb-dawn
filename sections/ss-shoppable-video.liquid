@@ -1431,7 +1431,7 @@ For inquiries or permissions, contact daniel@section.store
                   {% endif %}
             
                   {% if block.settings.use_variants %}
-                    <button class="video-arrow-{{ section.id }}">
+                    <button class="video-arrow-{{ section.id }}" aria-label="Toggle variants">
                       <svg viewBox="0 0 32 32"><rect width="32" height="32" fill="#fff" opacity="0"></rect><path fill="rgba(255, 255, 255, 1)" d="M16.7,20.67l0,0,7-7.71a1.2,1.2,0,0,0,0-1.57h0A1,1,0,0,0,23,11H9a.91.91,0,0,0-.72.35h0a1.2,1.2,0,0,0,0,1.57l7,7.75a.93.93,0,0,0,1.31.11A.52.52,0,0,0,16.7,20.67Z"></path></svg>
                     </button>
                   {% endif %}
@@ -1606,16 +1606,16 @@ For inquiries or permissions, contact daniel@section.store
       </div>
     </div>
   </div>
-  <button class="video-modal-close-{{ section.id }}">
+  <button class="video-modal-close-{{ section.id }}" aria-label="Close player">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.0002 10.586L4.70718 3.29297L3.29297 4.70718L10.586 12.0002L3.29297 19.2933L4.70718 20.7075L12.0002 13.4145L19.2933 20.7075L20.7075 19.2933L13.4145 12.0002L20.7075 4.70723L19.2933 3.29302L12.0002 10.586Z" fill="white"></path></svg>
   </button>
   {% if section.blocks.size > 1 %}
     
-    <button class="video-modal-prev-{{ section.id }}">
+    <button class="video-modal-prev-{{ section.id }}" aria-label="Previous video">
       <svg viewBox="0 0 24 24"><path d="m8.5 12.8 5.7 5.6c.4.4 1 .4 1.4 0 .4-.4.4-1 0-1.4l-4.9-5 4.9-5c.4-.4.4-1 0-1.4-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3l-5.7 5.6c-.4.5-.4 1.1 0 1.6 0-.1 0-.1 0 0z"></path></svg>
     </button>
   
-    <button class="video-modal-next-{{ section.id }}">
+    <button class="video-modal-next-{{ section.id }}" aria-label="Next video">
       <svg viewBox="0 0 24 24"><path d="M15.54,11.29,9.88,5.64a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.95,5L8.46,17a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.3,1,1,0,0,0,.71-.3l5.66-5.65A1,1,0,0,0,15.54,11.29Z"></path></svg>  
     </button>
   
