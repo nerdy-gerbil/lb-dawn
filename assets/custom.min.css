@@ -370,14 +370,30 @@ variant-selects {
 
 /* General CLS Fixes */
 html:not(.hydrated) {
+  section:has([id^='MainProduct-template--']) ~ .shopify-section:not(:has([class*='sb-product-carousel-'])),
+  .customily-personalize-button,
   .pl-swatches,
   klarna-placement,
-  square-placement {
+  square-placement,
+  .custom-section.product-video,
+  .shopify-section:has([class^='video-slider-template--']),
+  .shopify-section-group-footer-group:not(:has([class^='instafeed-slider-sections--'])),
+  div[id^='shopify-section-template--'][id$='__product-grid'] ~ section,
+  div[id^='shopify-section-template--'][id$='__product-grid'],
+  .shopify-section:has(article.article-template),
+  .shopify-section:has(div.shopbox_blog-post) {
     display: none !important;
   }
 
   [id*='__ss_instafeed_2_zirfHp'] {
     visibility: hidden !important;
+  }
+
+  div[id^='shopify-section-template--'][id$='__product-grid'] {
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
   }
 }
 
