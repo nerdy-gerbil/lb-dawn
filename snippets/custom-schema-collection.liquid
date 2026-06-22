@@ -134,13 +134,16 @@
         {% assign return_json = return_json | replace: '"applicableCountry":null', '"applicableCountry":"GB"' | replace: '"applicableCountry": null', '"applicableCountry": "GB"' | replace: '"applicableCountry":""', '"applicableCountry":"GB"' | replace: '"applicableCountry": ""', '"applicableCountry": "GB"' %}
       {% endunless %}
       {% unless return_json contains '"returnPolicyCategory"' %}
-        {% assign return_json = return_json | replace_first: '{', '{"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod",' %}
+        {% assign return_json = return_json | replace_first: '{', '{"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",' %}
       {% else %}
-        {% assign return_json = return_json | replace: '"returnPolicyCategory":null', '"returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnPeriod"' | replace: '"returnPolicyCategory": null', '"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod"' | replace: '"returnPolicyCategory":""', '"returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnPeriod"' | replace: '"returnPolicyCategory": ""', '"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod"' %}
+        {% assign return_json = return_json | replace: '"returnPolicyCategory":null', '"returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow"' | replace: '"returnPolicyCategory": null', '"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow"' | replace: '"returnPolicyCategory":""', '"returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow"' | replace: '"returnPolicyCategory": ""', '"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow"' %}
       {% endunless %}
       {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/refund-policy', 'https:\/\/www.lilyblanche.com\/policies\/refund-policy' | replace: 'https://www.lilyblanche.com/refund-policy', 'https://www.lilyblanche.com/policies/refund-policy' %}
       {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/path-to-your-logo.jpg', 'https:\/\/www.lilyblanche.com\/cdn\/shop\/files\/LB.png?v=1682953456' | replace: 'https://www.lilyblanche.com/path-to-your-logo.jpg', 'https://www.lilyblanche.com/cdn/shop/files/LB.png?v=1682953456' %}
       {% assign return_json = return_json | replace: 'personalization', 'personalisation' %}
+      {% assign return_json = return_json | replace: '"CustomerResponsible"', '"https://schema.org/ReturnFeesCustomerResponsibility"' | replace: '"CustomerResponsible"', '"https:\/\/schema.org\/ReturnFeesCustomerResponsibility"' %}
+      {% assign return_json = return_json | replace: 'CustomerResponsibility', 'ReturnLabelCustomerResponsibility' %}
+      {% assign return_json = return_json | replace: 'MerchantReturnFiniteReturnPeriod', 'MerchantReturnFiniteReturnWindow' %}
       {% assign policy_handle = policy.system.handle | default: policy.handle %}
       {% if policy_handle == 'default' or policy_handle == blank %}
         {{ return_json | replace_first: '{', '{"@id": "#return-policy",' }}
