@@ -232,6 +232,18 @@
         "disabled": false,
         "settings": {}
       },
+      "13772226226185822161": {
+        "type": "shopify://apps/eu-widerrufsbutton/blocks/withdrawal-button/019e3842-e8eb-772d-9292-20f5ccbc0337",
+        "disabled": true,
+        "settings": {
+          "position": "right",
+          "button_text": "",
+          "size": "small",
+          "border_radius": 4,
+          "text_color": "#ffffff",
+          "background_color": "#000000"
+        }
+      },
       "15683396631634586217": {
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
@@ -244,18 +256,6 @@
           "button_horizontal_position": "bottom_right",
           "button_vertical_position": "lowest",
           "greeting_message": "👋 Hi, please message us with any questions. We're happy to help!"
-        }
-      },
-      "13772226226185822161": {
-        "type": "shopify://apps/eu-widerrufsbutton/blocks/withdrawal-button/019e3842-e8eb-772d-9292-20f5ccbc0337",
-        "disabled": true,
-        "settings": {
-          "position": "right",
-          "button_text": "",
-          "size": "small",
-          "border_radius": 4,
-          "text_color": "#ffffff",
-          "background_color": "#000000"
         }
       }
     },

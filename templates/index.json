@@ -15,7 +15,7 @@
         "heading_BRbmXE": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Code <strong>FATHER15</strong> for 15% Off</p>",
+            "heading": "<p>Carnelian Dreams</p>",
             "heading_custom": false,
             "heading_font": "system_ui_n4",
             "heading_size": 32,
@@ -28,7 +28,7 @@
         "text_fzB4Wt": {
           "type": "text",
           "settings": {
-            "text": "<p>all Men's jewellery</p>",
+            "text": "<p>The passion stone</p>",
             "text_custom": false,
             "text_font": "system_ui_n4",
             "text_size": 30,
@@ -41,8 +41,8 @@
         "button_pPck3J": {
           "type": "button",
           "settings": {
-            "button": "Shop Father's Day",
-            "button_url": "shopify://collections/fathers-day-jewellery",
+            "button": "Shop Carnelian",
+            "button_url": "shopify://collections/carnelian-jewellery",
             "button_custom": true,
             "button_font": "system_ui_n4",
             "button_size": 22,
@@ -89,15 +89,15 @@
         "banner_height_mobile": "adapt_first",
         "banner_fixed_height": 100,
         "banner_fixed_height_mobile": 70,
-        "image": "shopify://shop_images/Father_s_Day_Banner_2026_1.png",
-        "image_mobile": "shopify://shop_images/Untitled_design_41.png",
+        "image": "shopify://shop_images/July_Banner_Desktop.webp",
+        "image_mobile": "shopify://shop_images/July_Banner_Mobile_1.webp",
         "overlay": 0,
         "content_maxwidth": 58,
         "content_maxwidth_mobile": 72,
-        "content_horizontal_position": "start",
-        "content_horizontal_position_mobile": "start",
-        "content_vertical_position": "start",
-        "content_vertical_position_mobile": "center",
+        "content_horizontal_position": "center",
+        "content_horizontal_position_mobile": "end",
+        "content_vertical_position": "center",
+        "content_vertical_position_mobile": "end",
         "content_x_position": 10,
         "content_x_position_mobile": 0,
         "content_y_position": 0,
@@ -348,7 +348,7 @@
           "settings": {
             "image": "shopify://shop_images/locket-transparent-1-_400.gif",
             "title": "",
-            "text": "",
+            "text": "<p><br/><br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -393,6 +393,7 @@
       "settings": {
         "title": "Create Your Locket",
         "heading_size": "h2",
+        "heading_tag": "h2",
         "image_width": "full",
         "image_ratio": "square",
         "button_label": "CREATE YOURS",
@@ -414,7 +415,8 @@
           "type": "heading",
           "settings": {
             "heading": "Trusted by Many, Created for You",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         },
         "template--19394087682366__ddfe2653-5686-4887-bf42-389b8aae2fe8-text-1": {
@@ -460,7 +462,8 @@
           "type": "heading",
           "settings": {
             "heading": "Why Shop With Us",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         }
       },
@@ -706,6 +709,7 @@
       "settings": {
         "title": "As Loved By",
         "heading_size": "h2",
+        "heading_tag": "h2",
         "image_width": "half",
         "image_ratio": "circle",
         "button_label": "",
@@ -773,6 +777,7 @@
       "settings": {
         "title": "As Seen In",
         "heading_size": "h2",
+        "heading_tag": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "button_label": "",
@@ -846,7 +851,8 @@
           "type": "heading",
           "settings": {
             "heading": "Follow us Instagram <a href=\"https://www.instagram.com/lilyblanchejewellery/\" target=\"_blank\">@lilyblanchejewellery</a>",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "heading_tag": "h2"
           }
         }
       },

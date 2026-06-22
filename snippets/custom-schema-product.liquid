@@ -5,36 +5,42 @@
       {
         {% render 'custom-schema-product-item' %}
       }{% if shop.metaobjects.schema_shipping_policy.default %},
-      {% assign shipping_json = shop.metaobjects.schema_shipping_policy.default | json %}
-      {% capture top_level_shipping %}
-        {
-          "@id": "#shipping-policy",
-          "shippingRate": {
-            "@type": "MonetaryAmount",
-            "value": "0.00",
-            "currency": "GBP"
-          },
-          "shippingDestination": {
-            "@type": "DefinedRegion",
-            "addressCountry": "GB"
-          },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 1,
-              "maxValue": 2,
-              "unitCode": "DAY"
-            },
-            "transitTime": {
-              "@type": "QuantitativeValue",
-              "minValue": 2,
-              "maxValue": 4,
-              "unitCode": "DAY"
-            }
-          },
-      {% endcapture %}
-      {{ shipping_json | replace_first: '{', top_level_shipping }}{% endif %}{% if shop.metaobjects.merchant_return_policy.values.size > 0 %}{% for policy in shop.metaobjects.merchant_return_policy.values %},
+      {% assign shipping_json = shop.metaobjects.schema_shipping_policy.default.value %}
+
+{
+  "@id": "#shipping-policy",
+  "@type": "OfferShippingDetails",
+
+  "shippingRate": {
+    "@type": "MonetaryAmount",
+    "value": "0.00",
+    "currency": "GBP"
+  },
+
+  "shippingDestination": {
+    "@type": "DefinedRegion",
+    "addressCountry": "GB"
+  },
+
+  "deliveryTime": {
+    "@type": "ShippingDeliveryTime",
+    "handlingTime": {
+      "@type": "QuantitativeValue",
+      "minValue": 1,
+      "maxValue": 2,
+      "unitCode": "DAY"
+    },
+    "transitTime": {
+      "@type": "QuantitativeValue",
+      "minValue": 2,
+      "maxValue": 4,
+      "unitCode": "DAY"
+    }
+  },
+
+  "shippingSettings":
+  {{ shipping_json.shippingSettings | json }}
+}{% endif %}{% if shop.metaobjects.merchant_return_policy.values.size > 0 %}{% for policy in shop.metaobjects.merchant_return_policy.values %},
       {% assign return_json = policy | json %}
       {% unless return_json contains '"applicableCountry"' %}
         {% assign return_json = return_json | replace_first: '{', '{"applicableCountry": "GB",' %}
