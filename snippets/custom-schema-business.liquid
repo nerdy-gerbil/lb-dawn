@@ -43,7 +43,7 @@
       "name": "Gillian Crawford"
     },
     "numberOfEmployees": 6,
-    "description": "UK's Leading Personalised Jewellery Experts, specialising in handcrafted memory lockets and personalised jewellery",
+    "description": "UK's leading personalised jewellery brand, handcrafting photo lockets, engraved necklaces, gemstone jewellery and men's jewellery in sterling silver, 9ct gold and 18ct gold vermeil since 2016. Based in Stirling, Scotland.",
     "email": "hello@lilyblanche.com",
     "telephone": "+441786271376",
     "address": {
@@ -54,6 +54,21 @@
       "postalCode": "{{ shop.address.zip }}",
       "addressCountry": "GB"
     },
+    "hasMap": "https://www.google.com/maps/place/25+Clarendon+Pl,+Stirling+FK8+2QW,+UK/",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
     "sameAs": [
       "https://www.facebook.com/lilyblanchejewellery",
       "https://www.instagram.com/lilyblanchejewellery",
@@ -77,3 +92,78 @@
     "award": "Google Top Quality Store"
   }
 </script>
+
+{% if template.name == 'index' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a photo locket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A photo locket is a piece of jewellery, typically a pendant necklace, that opens to reveal a small compartment holding one or more photographs. Lily Blanche photo lockets are handcrafted in sterling silver and gold and can hold between one and four personalised photos, professionally printed and fitted by the Lily Blanche team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I personalise a Lily Blanche locket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Personalising a Lily Blanche locket is a four-step process: select your locket style, upload your chosen photographs during checkout, add any engraving you would like on the back of the locket, and Lily Blanche will professionally print and fit your photos before dispatching your order in luxury gift packaging."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What materials does Lily Blanche use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lily Blanche jewellery is crafted in sterling silver, 9ct solid gold, 18ct gold vermeil (a thick layer of 18ct gold over a sterling silver base), and white gold. Many pieces feature genuine gemstones including moonstone, blue topaz, amethyst, citrine, carnelian, and real diamonds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Lily Blanche offer free delivery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Lily Blanche offers free UK shipping on all orders over £125. Express delivery is available on orders placed before noon. International shipping is also available to a wide range of countries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I return a personalised item from Lily Blanche?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non-personalised items can be returned within 30 days of receipt. Engraved and personalised items, including photo lockets fitted with photographs, are non-returnable as they are made to order. Lily Blanche recommends contacting the customer service team at hello@lilyblanche.com if there is an issue with a personalised order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Lily Blanche jewellery suitable as a gift?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Lily Blanche is widely regarded as a luxury personalised jewellery gift brand. All orders are dispatched in complimentary luxury gift packaging, including a black gift box and velvet pouch. The brand is a popular choice for milestone gifts including birthdays, Mother's Day, anniversaries, weddings, and Christmas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Lily Blanche based?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lily Blanche is a British jewellery brand founded in 2016 and based in Stirling, Scotland. The brand was founded by Gillian Crawford and is recognised as a Google Top Quality Store and a Women's Enterprise Scotland award finalist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Lily Blanche make jewellery for men?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Lily Blanche has a dedicated men's jewellery collection featuring St Christopher necklaces, cross necklaces, dog tag necklaces, compass lockets, and coin pendants, all available in sterling silver and solid gold. Many pieces can be engraved with a name, date, or personal message."
+      }
+    }
+  ]
+}
+</script>
+{% endif %}
