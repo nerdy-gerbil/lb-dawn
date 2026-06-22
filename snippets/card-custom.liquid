@@ -157,10 +157,11 @@
   }
 </style>
 
-<div class="card-wrapper product-card-wrapper card-custom-wrapper">
-  {%- if block.settings.button_link != blank and block.settings.button_label == blank -%}
-    <a href="{{ block.settings.button_link }}" class="card-custom-overlay-link" aria-label="{{ block.settings.heading | strip_html | escape }}"></a>
-  {%- endif -%}
+{%- if block.settings.button_link != blank and block.settings.button_label == blank -%}
+  <a href="{{ block.settings.button_link }}" class="card-wrapper product-card-wrapper card-custom-wrapper" style="text-decoration: none; display: block;">
+{%- else -%}
+  <div class="card-wrapper product-card-wrapper card-custom-wrapper">
+{%- endif -%}
   {%- liquid
     assign ratio = 1
     if block.settings.image_ratio == 'portrait'
@@ -330,5 +331,9 @@
   </div>
     </div>
   </div>
-</div>
+{%- if block.settings.button_link != blank and block.settings.button_label == blank -%}
+  </a>
+{%- else -%}
+  </div>
+{%- endif -%}
 
