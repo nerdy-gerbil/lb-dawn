@@ -62,6 +62,21 @@
 
         <div class="product-form__buttons">
           {%- liquid
+            assign is_customizable = false
+            for tag in product.tags
+              assign tag_lower = tag | downcase
+              if tag_lower contains 'custom' or tag_lower contains 'person' or tag_lower contains 'photo' or tag_lower contains 'engrav'
+                assign is_customizable = true
+                break
+              endif
+            endfor
+          -%}
+          {%- if is_customizable -%}
+            <div class="customily-placeholder-wrapper">
+              <div class="customily-placeholder-button"></div>
+            </div>
+          {%- endif -%}
+          {%- liquid
             assign check_against_inventory = true
             if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
               assign check_against_inventory = false

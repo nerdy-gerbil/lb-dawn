@@ -595,25 +595,47 @@
     {% comment %} END MerchantWidget Code {% endcomment %}
 
     {% comment %} Preload Homepage Banner {% endcomment %}
-    {% comment %}
-      {% if template.name == 'index' %}
+    {%- if template.name == 'index' -%}
+      {%- assign desktop_image = images['July_Banner_Desktop.webp'] -%}
+      {%- assign mobile_image = images['July_Banner_Mobile_1.webp'] -%}
+      {%- if desktop_image != blank -%}
         <link
           rel="preload"
           as="image"
-          sizes="(max-width: 800px) 100vw, 800px"
-          fetchpriority="high"
-          imagesrcset="//www.lilyblanche.com/cdn/shop/files/Untitled_design_-_2025-10-05T160245.361.webp?v=1760009064&width=352 352w, //www.lilyblanche.com/cdn/shop/files/Untitled_design_-_2025-10-05T160245.361.webp?v=1760009064&width=800 800w"
-        >
-        <link
-          rel="preload"
-          as="image"
+          media="(min-width: 750px)"
           sizes="(max-width: 1920px) 100vw, 1920px"
           fetchpriority="high"
-          imagesrcset="//www.lilyblanche.com/cdn/shop/files/Woman_wearing_layered_gold_necklaces_including_a_heart_pendant_and_key_charm_with_gemstone_rings_and_stacked_bracelets.webp?v=1760024880&width=352 352w, //www.lilyblanche.com/cdn/shop/files/Woman_wearing_layered_gold_necklaces_including_a_heart_pendant_and_key_charm_with_gemstone_rings_and_stacked_bracelets.webp?v=1760024880&width=800 800w, //www.lilyblanche.com/cdn/shop/files/Woman_wearing_layered_gold_necklaces_including_a_heart_pendant_and_key_charm_with_gemstone_rings_and_stacked_bracelets.webp?v=1760024880&width=1200 1200w, //www.lilyblanche.com/cdn/shop/files/Woman_wearing_layered_gold_necklaces_including_a_heart_pendant_and_key_charm_with_gemstone_rings_and_stacked_bracelets.webp?v=1760024880&width=1920 1920w"
+          imagesrcset="{{ desktop_image | image_url: width: 800 }} 800w, {{ desktop_image | image_url: width: 1000 }} 1000w, {{ desktop_image | image_url: width: 1200 }} 1200w, {{ desktop_image | image_url: width: 1920 }} 1920w"
         >
-      {% endif %}
-    {% endcomment %}
-    {% comment %} END Preload Homepage Banner {% endcomment %}
+      {%- endif -%}
+      {%- if mobile_image != blank -%}
+        <link
+          rel="preload"
+          as="image"
+          media="(max-width: 749px)"
+          sizes="(max-width: 800px) 100vw, 800px"
+          fetchpriority="high"
+          imagesrcset="{{ mobile_image | image_url: width: 800 }} 800w, {{ mobile_image | image_url: width: 1000 }} 1000w"
+        >
+      {%- endif -%}
+    {%- endif -%}
+    <script>
+      (function() {
+        function patchShopbox() {
+          document.querySelectorAll('button.sb-carousel__arrow').forEach(button => {
+            if (!button.hasAttribute('aria-label')) {
+              const isLeft = button.classList.contains('sb-carousel__arrow--left') || (button.getAttribute('data-glide-dir') || '').includes('<');
+              button.setAttribute('aria-label', isLeft ? 'Previous slide' : 'Next slide');
+            }
+          });
+        }
+        const observer = new MutationObserver(patchShopbox);
+        document.addEventListener('DOMContentLoaded', () => {
+          patchShopbox();
+          observer.observe(document.body, { childList: true, subtree: true });
+        });
+      })();
+    </script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
