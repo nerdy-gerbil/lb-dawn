@@ -408,12 +408,42 @@ square-placement {
 
 #star-container {
   display: inline-flex;
-  min-width: 95px;
-  min-height: 18px;
+  align-items: center;
+  /* lock width to 5×14px stars so widget hydration causes zero CLS */
+  width: 70px;
+  min-width: 70px;
+  min-height: 14px;
+  overflow: hidden;
+}
+
+/* Trustpilot CTB bar stars: pre-size them to prevent horizontal shift on injection */
+#star-container .star {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Suppress <br> injected by metafield rich text before #star-container in announcement bar */
+.announcement-bar .metafield-rich_text_field br {
+  display: none;
+}
+
+/* Prevent the metafield <p> wrappers from adding extra line-height in the bar */
+.announcement-bar .metafield-rich_text_field > p {
+  margin: 0;
+  line-height: 1;
 }
 
 .pl-swatches {
   min-height: 25px;
+}
+
+/* Trust badge reservation — ConversionBear injects iframe into .ultimate-badges asynchronously */
+div.ultimate-badges:empty {
+  min-height: 0;
+}
+div.ultimate-badges {
+  min-height: 60px;
 }
 
 /* Customily Button placeholder */
