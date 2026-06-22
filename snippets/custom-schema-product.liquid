@@ -41,7 +41,41 @@
   "shippingSettings":
   {{ shipping_json.shippingSettings | json }}
 }{% endif %}{% if shop.metaobjects.merchant_return_policy.values.size > 0 %}{% for policy in shop.metaobjects.merchant_return_policy.values %},
-      {% assign return_json = policy | json %}
+      {% assign return_policy_obj = policy.returnpolicy.value | default: policy.return_policy.value %}
+      {% if return_policy_obj %}
+        {% assign return_json = return_policy_obj | json %}
+      {% else %}
+        {% assign return_json = policy | json %}
+      {% endif %}
+
+      {% comment %} Strip unrecognized fields {% endcomment %}
+      {% if return_json contains '"refundableDutyAndTax":' %}
+        {% assign temp = return_json | split: '"refundableDutyAndTax":' %}
+        {% assign first = temp[0] %}
+        {% assign rest = temp[1] | split: ',' | slice: 1, 999 | join: ',' %}
+        {% assign return_json = first | append: rest %}
+      {% endif %}
+      {% if return_json contains '"customerReturnIpExtension":' %}
+        {% assign temp = return_json | split: '"customerReturnIpExtension":' %}
+        {% assign first = temp[0] %}
+        {% assign rest = temp[1] | split: ',' | slice: 1, 999 | join: ',' %}
+        {% assign return_json = first | append: rest %}
+      {% endif %}
+      {% if return_json contains '"returnAddress":' %}
+        {% assign temp = return_json | split: '"returnAddress":' %}
+        {% assign first = temp[0] %}
+        {% assign rest = temp[1] | split: '},' | slice: 1, 999 | join: '},' %}
+        {% assign return_json = first | append: rest %}
+      {% endif %}
+      {% if return_json contains '"hasMerchantReturnPolicy":' %}
+        {% assign temp = return_json | split: '"hasMerchantReturnPolicy":' %}
+        {% assign first = temp[0] %}
+        {% assign rest = temp[1] | split: '},' | slice: 1, 999 | join: '},' %}
+        {% assign return_json = first | append: rest %}
+      {% endif %}
+
+      {% assign return_json = return_json | replace: '"@type":"ProductReturnPolicy"', '"@type":"MerchantReturnPolicy"' | replace: '"@type": "ProductReturnPolicy"', '"@type": "MerchantReturnPolicy"' %}
+
       {% unless return_json contains '"applicableCountry"' %}
         {% assign return_json = return_json | replace_first: '{', '{"applicableCountry": "GB",' %}
       {% else %}
