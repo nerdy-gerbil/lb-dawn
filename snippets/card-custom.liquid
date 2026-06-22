@@ -141,9 +141,26 @@
   .card-custom-wrapper .custom-card-bullets svg path {
     fill: currentColor;
   }
+
+  .card-custom-wrapper {
+    position: relative;
+  }
+
+  .card-custom-overlay-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    cursor: pointer;
+  }
 </style>
 
 <div class="card-wrapper product-card-wrapper card-custom-wrapper">
+  {%- if block.settings.button_link != blank and block.settings.button_label == blank -%}
+    <a href="{{ block.settings.button_link }}" class="card-custom-overlay-link" aria-label="{{ block.settings.heading | strip_html | escape }}"></a>
+  {%- endif -%}
   {%- liquid
     assign ratio = 1
     if block.settings.image_ratio == 'portrait'
