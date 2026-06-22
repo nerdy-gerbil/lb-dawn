@@ -142,7 +142,7 @@
       {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/path-to-your-logo.jpg', 'https:\/\/www.lilyblanche.com\/cdn\/shop\/files\/LB.png?v=1682953456' | replace: 'https://www.lilyblanche.com/path-to-your-logo.jpg', 'https://www.lilyblanche.com/cdn/shop/files/LB.png?v=1682953456' %}
       {% assign return_json = return_json | replace: 'personalization', 'personalisation' %}
       {% assign return_json = return_json | replace: '"CustomerResponsible"', '"https://schema.org/ReturnFeesCustomerResponsibility"' | replace: '"CustomerResponsible"', '"https:\/\/schema.org\/ReturnFeesCustomerResponsibility"' %}
-      {% assign return_json = return_json | replace: 'CustomerResponsibility', 'ReturnLabelCustomerResponsibility' %}
+      {% assign return_json = return_json | replace: '/CustomerResponsibility', '/ReturnLabelCustomerResponsibility' | replace: '\/CustomerResponsibility', '\/ReturnLabelCustomerResponsibility' | replace: '"CustomerResponsibility"', '"https://schema.org/ReturnLabelCustomerResponsibility"' | replace: '"CustomerResponsibility"', '"https:\/\/schema.org\/ReturnLabelCustomerResponsibility"' %}
       {% assign return_json = return_json | replace: 'MerchantReturnFiniteReturnPeriod', 'MerchantReturnFiniteReturnWindow' %}
       {% assign policy_handle = policy.system.handle | default: policy.handle %}
       {% if policy_handle == 'default' or policy_handle == blank %}
