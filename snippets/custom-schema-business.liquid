@@ -54,7 +54,7 @@
       "postalCode": "{{ shop.address.zip }}",
       "addressCountry": "GB"
     },
-    "hasMap": "https://www.google.com/maps/place/25+Clarendon+Pl,+Stirling+FK8+2QW,+UK/",
+    "hasMap": "https://www.google.com/maps/place/{{ shop.address.address1 | escape | replace: ' ', '+' }},+{{ shop.address.city | escape | replace: ' ', '+' }},+{{ shop.address.zip | escape | replace: ' ', '+' }},+GB",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
