@@ -740,24 +740,38 @@
     {% comment %}
       ADDED BY CUSTOMILY
     {% endcomment %}
-    <script>
-      function loadCustomilyScripts() {
-        if (window.customilyScriptsLoaded) return;
-        window.customilyScriptsLoaded = true;
-        const scripts = [
-          "https://cdn.customily.com/customily.js",
-          "https://cdn.customily.com/shopify/static/customily.shopify.script.unified.js"
-        ];
-        scripts.forEach(src => {
-          const script = document.createElement('script');
-          script.src = src;
-          script.defer = true;
-          document.head.appendChild(script);
-        });
-      }
-      ['mousemove', 'touchstart', 'scroll'].forEach(event => window.addEventListener(event, loadCustomilyScripts, {once: true}));
-      setTimeout(loadCustomilyScripts, 3000);
-    </script>
+    {%- if template.name == 'product' -%}
+      {%- liquid
+        assign is_customizable = false
+        for tag in product.tags
+          assign tag_lower = tag | downcase
+          if tag_lower contains 'custom' or tag_lower contains 'person' or tag_lower contains 'photo' or tag_lower contains 'engrav'
+            assign is_customizable = true
+            break
+          endif
+        endfor
+      -%}
+      {%- if is_customizable -%}
+        <script>
+          function loadCustomilyScripts() {
+            if (window.customilyScriptsLoaded) return;
+            window.customilyScriptsLoaded = true;
+            const scripts = [
+              "https://cdn.customily.com/customily.js",
+              "https://cdn.customily.com/shopify/static/customily.shopify.script.unified.js"
+            ];
+            scripts.forEach(src => {
+              const script = document.createElement('script');
+              script.src = src;
+              script.defer = true;
+              document.head.appendChild(script);
+            });
+          }
+          ['mousemove', 'touchstart', 'scroll'].forEach(event => window.addEventListener(event, loadCustomilyScripts, {once: true}));
+          setTimeout(loadCustomilyScripts, 3000);
+        </script>
+      {%- endif -%}
+    {%- endif -%}
     {% comment %}
       END: ADDED BY CUSTOMILY
     {% endcomment %}
