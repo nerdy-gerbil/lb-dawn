@@ -159,7 +159,7 @@
 
 {% form 'currency' %}
   <div class="disclosure">
-    <select name="currency" onchange="this.form.submit()">
+    <select name="currency" onchange="this.form.submit()" aria-label="Currency Selector">
       {% if show_popular_countries %}
         {% assign currency_selected = false %}
         {%- for country in popular_countries -%}

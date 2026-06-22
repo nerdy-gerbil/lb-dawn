@@ -368,13 +368,21 @@
       <div class="instafeed-slider-{{ section.id }} swiper presets-{{ section.id }}">
         <div class="swiper-wrapper">
           {% for block in section.blocks %}
-            <a href="{{ block.settings.url }}" class="instafeed-slide-{{ section.id }} swiper-slide">
+            {% if block.settings.url != blank %}
+              <a href="{{ block.settings.url }}" class="instafeed-slide-{{ section.id }} swiper-slide">
+            {% else %}
+              <div class="instafeed-slide-{{ section.id }} swiper-slide">
+            {% endif %}
               {% if block.settings.image != blank %}
                 <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" width="240" height="240" {% if lazy %}lazy="loading"{% endif %}>
               {% else %}
                 {{ 'image' | placeholder_svg_tag: 'placeholder' }}
               {% endif %}
-            </a>
+            {% if block.settings.url != blank %}
+              </a>
+            {% else %}
+              </div>
+            {% endif %}
           {% endfor %}
         </div>
         <div class="swiper-button-prev instafeed-btn-prev-{{ section.id }}"></div>
@@ -394,6 +402,7 @@
   function instafeedSliderInit() {
     document.querySelector('.instafeed-slider-{{ section.id }}').classList.remove('presets-{{ section.id }}');
     new Swiper('.instafeed-slider-{{ section.id }}', {
+      a11y: false,
       speed: 300,
       watchOverflow: false,
       {% if autoplay %}
