@@ -48,43 +48,10 @@
         {% assign return_json = policy | json %}
       {% endif %}
 
-      {% comment %} Strip unrecognized fields {% endcomment %}
-      {% if return_json contains '"hasMerchantReturnPolicy":' %}
-        {% assign temp = return_json | split: '"hasMerchantReturnPolicy":' %}
-        {% assign first = temp[0] %}
-        {% if temp[1] contains ',' %}
-          {% assign rest = temp[1] | split: ',' | slice: 1, 999 | join: ',' %}
-          {% assign return_json = first | append: rest %}
-        {% else %}
-          {% assign first_len = first | size | minus: 1 %}
-          {% assign first_clean = first | slice: 0, first_len %}
-          {% assign return_json = first_clean | append: '}' %}
-        {% endif %}
-      {% endif %}
-      {% if return_json contains '"returnShippingFees":' %}
-        {% assign temp = return_json | split: '"returnShippingFees":' %}
-        {% assign first = temp[0] %}
-        {% if temp[1] contains ',' %}
-          {% assign rest = temp[1] | split: ',' | slice: 1, 999 | join: ',' %}
-          {% assign return_json = first | append: rest %}
-        {% else %}
-          {% assign first_len = first | size | minus: 1 %}
-          {% assign first_clean = first | slice: 0, first_len %}
-          {% assign return_json = first_clean | append: '}' %}
-        {% endif %}
-      {% endif %}
-      {% if return_json contains '"returnShippingFeesAmount":' %}
-        {% assign temp = return_json | split: '"returnShippingFeesAmount":' %}
-        {% assign first = temp[0] %}
-        {% if temp[1] contains ',' %}
-          {% assign rest = temp[1] | split: ',' | slice: 1, 999 | join: ',' %}
-          {% assign return_json = first | append: rest %}
-        {% else %}
-          {% assign first_len = first | size | minus: 1 %}
-          {% assign first_clean = first | slice: 0, first_len %}
-          {% assign return_json = first_clean | append: '}' %}
-        {% endif %}
-      {% endif %}
+      {% comment %} Strip unrecognized fields safely using simple replacements {% endcomment %}
+      {% assign return_json = return_json | replace: ',"returnShippingFees":0', '' | replace: '"returnShippingFees":0,', '' | replace: '"returnShippingFees":0', '' %}
+      {% assign return_json = return_json | replace: ',"returnShippingFeesAmount":0', '' | replace: '"returnShippingFeesAmount":0,', '' | replace: '"returnShippingFeesAmount":0', '' %}
+      {% assign return_json = return_json | replace: ',"hasMerchantReturnPolicy":null', '' | replace: '"hasMerchantReturnPolicy":null,', '' | replace: '"hasMerchantReturnPolicy":null', '' %}
 
       {% assign return_json = return_json | replace: '"@type":"ProductReturnPolicy"', '"@type":"MerchantReturnPolicy"' | replace: '"@type": "ProductReturnPolicy"', '"@type": "MerchantReturnPolicy"' %}
       {% assign return_json = return_json | replace: '"name":"Hygiene \u0026 Bespoke Exclusions"', '"name":"Hygiene \u0026 Bespoke Exclusions","applicableCountry":"GB","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted"' | replace: '"name": "Hygiene \u0026 Bespoke Exclusions"', '"name": "Hygiene \u0026 Bespoke Exclusions", "applicableCountry": "GB", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"' | replace: '"name":"Hygiene & Bespoke Exclusions"', '"name":"Hygiene & Bespoke Exclusions","applicableCountry":"GB","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted"' | replace: '"name": "Hygiene & Bespoke Exclusions", "applicableCountry": "GB", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"' %}
