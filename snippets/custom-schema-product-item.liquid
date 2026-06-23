@@ -29,7 +29,11 @@
     "name": "Edinburgh Assay Office"
   },
   "name": "Full UK Hallmark",
-  "certificationIdentification": "{{ hallmark }}"
+  "certificationIdentification": "{{ hallmark }}",
+  "certificationRating": {
+    "@type": "Rating",
+    "ratingValue": "{{ hallmark }}"
+  }
 },{% endif %}
 "variesBy": [
   {% for option in product.options %}
@@ -119,7 +123,11 @@
     "name": "Edinburgh Assay Office"
   },
   "name": "Full UK Hallmark",
-  "certificationIdentification": "{{ hallmark }}"
+  "certificationIdentification": "{{ hallmark }}",
+  "certificationRating": {
+    "@type": "Rating",
+    "ratingValue": "{{ hallmark }}"
+  }
 }{% endif %}
 {% endif %}{% if product.metafields.reviews.rating_count > 0 and part_of != 'breadcrumbs' %},
 "aggregateRating": {
