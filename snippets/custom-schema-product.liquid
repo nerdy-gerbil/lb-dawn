@@ -49,42 +49,6 @@
       {% endif %}
 
       {% comment %} Strip unrecognized fields {% endcomment %}
-      {% if return_json contains '"refundableDutyAndTax":' %}
-        {% assign temp = return_json | split: '"refundableDutyAndTax":' %}
-        {% assign first = temp[0] %}
-        {% if temp[1] contains ',' %}
-          {% assign rest = temp[1] | split: ',' | slice: 1, 999 | join: ',' %}
-          {% assign return_json = first | append: rest %}
-        {% else %}
-          {% assign first_len = first | size | minus: 1 %}
-          {% assign first_clean = first | slice: 0, first_len %}
-          {% assign return_json = first_clean | append: '}' %}
-        {% endif %}
-      {% endif %}
-      {% if return_json contains '"customerReturnIpExtension":' %}
-        {% assign temp = return_json | split: '"customerReturnIpExtension":' %}
-        {% assign first = temp[0] %}
-        {% if temp[1] contains ',' %}
-          {% assign rest = temp[1] | split: ',' | slice: 1, 999 | join: ',' %}
-          {% assign return_json = first | append: rest %}
-        {% else %}
-          {% assign first_len = first | size | minus: 1 %}
-          {% assign first_clean = first | slice: 0, first_len %}
-          {% assign return_json = first_clean | append: '}' %}
-        {% endif %}
-      {% endif %}
-      {% if return_json contains '"returnAddress":' %}
-        {% assign temp = return_json | split: '"returnAddress":' %}
-        {% assign first = temp[0] %}
-        {% if temp[1] contains '}},' %}
-          {% assign rest = temp[1] | split: '}},' | slice: 1, 999 | join: '}},' %}
-          {% assign return_json = first | append: rest %}
-        {% else %}
-          {% assign first_len = first | size | minus: 1 %}
-          {% assign first_clean = first | slice: 0, first_len %}
-          {% assign return_json = first_clean | append: '}' %}
-        {% endif %}
-      {% endif %}
       {% if return_json contains '"hasMerchantReturnPolicy":' %}
         {% assign temp = return_json | split: '"hasMerchantReturnPolicy":' %}
         {% assign first = temp[0] %}
