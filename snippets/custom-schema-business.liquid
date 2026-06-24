@@ -54,21 +54,6 @@
       "postalCode": "{{ shop.address.zip }}",
       "addressCountry": "GB"
     },
-    "hasMap": "https://www.google.com/maps/place/{{ shop.address.address1 | escape | replace: ' ', '+' }},+{{ shop.address.city | escape | replace: ' ', '+' }},+{{ shop.address.zip | escape | replace: ' ', '+' }},+GB",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "17:00"
-      }
-    ],
     "sameAs": [
       "https://www.facebook.com/lilyblanchejewellery",
       "https://www.instagram.com/lilyblanchejewellery",
@@ -81,7 +66,21 @@
       {
         "@type": "ContactPoint",
         "telephone": "+44 1786 271376",
-        "contactType": "Customer Service"
+        "contactType": "Customer Service",
+        "hoursAvailable": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+          }
+        ]
       }
     ],
     "aggregateRating": {

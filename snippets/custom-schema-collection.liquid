@@ -89,6 +89,20 @@
           {% assign return_json = first_clean | append: '}' %}
         {% endif %}
       {% endif %}
+      {% if return_json contains '"returnAddress":{' %}
+        {% assign temp_addr = return_json | split: '"returnAddress":{' %}
+        {% assign addr_first = temp_addr[0] %}
+        {% if temp_addr[1] contains '},' %}
+          {% assign addr_rest = temp_addr[1] | split: '},' | slice: 1, 999 | join: '},' %}
+          {% assign return_json = addr_first | append: addr_rest %}
+        {% else %}
+          {% assign addr_first_len = addr_first | size | minus: 1 %}
+          {% assign addr_first_clean = addr_first | slice: 0, addr_first_len %}
+          {% assign return_json = addr_first_clean | append: '}' %}
+        {% endif %}
+      {% endif %}
+      {% assign return_json = return_json | replace: ',"refundableDutyAndTax":false', '' | replace: ',"refundableDutyAndTax":true', '' | replace: '"refundableDutyAndTax":false,', '' | replace: '"refundableDutyAndTax":true,', '' | replace: '"refundableDutyAndTax":false', '' | replace: '"refundableDutyAndTax":true', '' | replace: ',"refundableDutyAndTax":null', '' | replace: '"refundableDutyAndTax":null,', '' | replace: '"refundableDutyAndTax":null', '' %}
+      {% assign return_json = return_json | replace: ',"customerReturnIpExtension":30', '' | replace: '"customerReturnIpExtension":30,', '' | replace: '"customerReturnIpExtension":30', '' | replace: ',"customerReturnIpExtension":null', '' | replace: '"customerReturnIpExtension":null,', '' | replace: '"customerReturnIpExtension":null', '' %}
       {% assign return_json = return_json | replace: ',"hasMerchantReturnPolicy":null', '' | replace: '"hasMerchantReturnPolicy":null,', '' | replace: '"hasMerchantReturnPolicy":null', '' %}
 
       {% assign return_json = return_json | replace: '"@type":"ProductReturnPolicy"', '"@type":"MerchantReturnPolicy"' | replace: '"@type": "ProductReturnPolicy"', '"@type": "MerchantReturnPolicy"' %}
@@ -108,8 +122,10 @@
       {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/refund-policy', 'https:\/\/www.lilyblanche.com\/policies\/refund-policy' | replace: 'https://www.lilyblanche.com/refund-policy', 'https://www.lilyblanche.com/policies/refund-policy' %}
       {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/path-to-your-logo.jpg', 'https:\/\/www.lilyblanche.com\/cdn\/shop\/files\/LB.png?v=1682953456' | replace: 'https://www.lilyblanche.com/path-to-your-logo.jpg', 'https://www.lilyblanche.com/cdn/shop/files/LB.png?v=1682953456' %}
       {% assign return_json = return_json | replace: 'personalization', 'personalisation' %}
-      {% assign return_json = return_json | replace: '"CustomerResponsible"', '"https://schema.org/ReturnFeesCustomerResponsibility"' | replace: '"CustomerResponsible"', '"https:\/\/schema.org\/ReturnFeesCustomerResponsibility"' %}
-      {% assign return_json = return_json | replace: '"CustomerResponsibility"', '"https://schema.org/ReturnLabelCustomerResponsibility"' | replace: '"CustomerResponsibility"', '"https:\/\/schema.org\/ReturnLabelCustomerResponsibility"' %}
+      {% assign return_json = return_json | replace: 'CustomerResponsibility', 'ReturnLabelCustomerResponsibility' %}
+      {% assign return_json = return_json | replace: 'CustomerResponsible', 'ReturnFeesCustomerResponsibility' %}
+      {% assign return_json = return_json | replace: 'MerchantResponsibility', 'ReturnLabelDownloadAndPrint' %}
+      {% assign return_json = return_json | replace: 'MerchantResponsible', 'FreeReturn' %}
       {% assign return_json = return_json | replace: 'MerchantReturnFiniteReturnPeriod', 'MerchantReturnFiniteReturnWindow' %}
       {% assign return_json = return_json | replace: '"returnPolicyCategory":"MerchantReturn', '"returnPolicyCategory":"https://schema.org/MerchantReturn' | replace: '"returnPolicyCategory": "MerchantReturn', '"returnPolicyCategory": "https://schema.org/MerchantReturn' %}
       {% assign policy_handle = policy.system.handle | default: policy.handle %}
