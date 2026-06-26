@@ -67,83 +67,31 @@
   "shippingSettings":
   {{ shipping_json.shippingSettings | json }}
 }{% endif %}{% if shop.metaobjects.merchant_return_policy.values.size > 0 %}{% for policy in shop.metaobjects.merchant_return_policy.values %},
-      {% assign return_policy_obj = policy.returnpolicy.value | default: policy.return_policy.value %}
-      {% if return_policy_obj %}
-        {% assign return_json = return_policy_obj | json %}
+      {% assign return_policy_name = return_json | split: '"name"' | last | split: ',' | first | replace: ':', '' | replace: '"', '' | strip %}
+      {% assign policy_name_downcase = return_policy_name | downcase %}
+      {% if policy_name_downcase contains 'hygiene' or policy_name_downcase contains 'bespoke' %}
+        {% assign category = 'https://schema.org/MerchantReturnNotPermitted' %}
       {% else %}
-        {% assign return_json = policy | json %}
+        {% assign category = 'https://schema.org/MerchantReturnFiniteReturnWindow' %}
       {% endif %}
 
-      {% comment %} Normalize spacing around colons to handle space variations in Shopify JSON {% endcomment %}
-      {% assign return_json = return_json | replace: '"returnShippingFeesAmount": ', '"returnShippingFeesAmount":' %}
-      {% assign return_json = return_json | replace: '"returnShippingFees": ', '"returnShippingFees":' %}
-      {% assign return_json = return_json | replace: '"returnAddress": ', '"returnAddress":' %}
-
-      {% comment %} Strip unrecognized fields safely using simple replacements {% endcomment %}
-      {% assign return_json = return_json | replace: ',"returnShippingFees":0', '' | replace: '"returnShippingFees":0,', '' | replace: '"returnShippingFees":0', '' %}
-      {% assign return_json = return_json | replace: ',"returnShippingFeesAmount":0', '' | replace: '"returnShippingFeesAmount":0,', '' | replace: '"returnShippingFeesAmount":0', '' %}
-      {% if return_json contains '"returnShippingFeesAmount":{' %}
-        {% assign temp = return_json | split: '"returnShippingFeesAmount":{' %}
-        {% assign first = temp[0] %}
-        {% if temp[1] contains '},' %}
-          {% assign rest = temp[1] | split: '},' | slice: 1, 999 | join: '},' %}
-          {% assign return_json = first | append: rest %}
-        {% else %}
-          {% assign first_len = first | size | minus: 1 %}
-          {% assign first_clean = first | slice: 0, first_len %}
-          {% assign return_json = first_clean | append: '}' %}
-        {% endif %}
-      {% endif %}
-      {% if return_json contains '"returnAddress":{' %}
-        {% assign temp_addr = return_json | split: '"returnAddress":{' %}
-        {% assign addr_first = temp_addr[0] %}
-        {% if temp_addr[1] contains '},' %}
-          {% assign addr_rest = temp_addr[1] | split: '},' | slice: 1, 999 | join: '},' %}
-          {% assign return_json = addr_first | append: addr_rest %}
-        {% else %}
-          {% assign addr_first_len = addr_first | size | minus: 1 %}
-          {% assign addr_first_clean = addr_first | slice: 0, addr_first_len %}
-          {% assign return_json = addr_first_clean | append: '}' %}
-        {% endif %}
-      {% endif %}
-      {% assign return_json = return_json | replace: ',"refundableDutyAndTax":false', '' | replace: ',"refundableDutyAndTax":true', '' | replace: '"refundableDutyAndTax":false,', '' | replace: '"refundableDutyAndTax":true,', '' | replace: '"refundableDutyAndTax":false', '' | replace: '"refundableDutyAndTax":true', '' | replace: ',"refundableDutyAndTax":null', '' | replace: '"refundableDutyAndTax":null,', '' | replace: '"refundableDutyAndTax":null', '' %}
-      {% assign return_json = return_json | replace: ',"customerReturnIpExtension":30', '' | replace: '"customerReturnIpExtension":30,', '' | replace: '"customerReturnIpExtension":30', '' | replace: ',"customerReturnIpExtension":null', '' | replace: '"customerReturnIpExtension":null,', '' | replace: '"customerReturnIpExtension":null', '' %}
-      {% assign return_json = return_json | replace: ',"hasMerchantReturnPolicy":null', '' | replace: '"hasMerchantReturnPolicy":null,', '' | replace: '"hasMerchantReturnPolicy":null', '' %}
-
-      {% assign return_json = return_json | replace: '"@type":"ProductReturnPolicy"', '"@type":"MerchantReturnPolicy"' | replace: '"@type": "ProductReturnPolicy"', '"@type": "MerchantReturnPolicy"' %}
-      {% assign return_json = return_json | replace: '"name":"Hygiene \u0026 Bespoke Exclusions"', '"name":"Hygiene \u0026 Bespoke Exclusions","applicableCountry":"GB","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted"' | replace: '"name": "Hygiene \u0026 Bespoke Exclusions"', '"name": "Hygiene \u0026 Bespoke Exclusions", "applicableCountry": "GB", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"' | replace: '"name":"Hygiene & Bespoke Exclusions"', '"name":"Hygiene & Bespoke Exclusions","applicableCountry":"GB","returnPolicyCategory":"https://schema.org/MerchantReturnNotPermitted"' | replace: '"name": "Hygiene & Bespoke Exclusions", "applicableCountry": "GB", "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"' %}
-      {% assign return_json = return_json | replace: '"name":"Photo Service Policy"', '"name":"Photo Service Policy","applicableCountry":"GB","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow"' | replace: '"name": "Photo Service Policy"', '"name": "Photo Service Policy", "applicableCountry": "GB", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow"' %}
-
-      {% unless return_json contains '"applicableCountry"' %}
-        {% assign return_json = return_json | replace_first: '{', '{"applicableCountry": "GB",' %}
-      {% else %}
-        {% assign return_json = return_json | replace: '"applicableCountry":null', '"applicableCountry":"GB"' | replace: '"applicableCountry": null', '"applicableCountry": "GB"' | replace: '"applicableCountry":""', '"applicableCountry":"GB"' | replace: '"applicableCountry": ""', '"applicableCountry": "GB"' %}
-      {% endunless %}
-      {% unless return_json contains '"returnPolicyCategory"' %}
-        {% assign return_json = return_json | replace_first: '{', '{"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",' %}
-      {% else %}
-        {% assign return_json = return_json | replace: '"returnPolicyCategory":null', '"returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow"' | replace: '"returnPolicyCategory": null', '"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow"' | replace: '"returnPolicyCategory":""', '"returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow"' | replace: '"returnPolicyCategory": ""', '"returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow"' %}
-      {% endunless %}
-      {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/refund-policy', 'https:\/\/www.lilyblanche.com\/policies\/refund-policy' | replace: 'https://www.lilyblanche.com/refund-policy', 'https://www.lilyblanche.com/policies/refund-policy' %}
-      {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/path-to-your-logo.jpg', 'https:\/\/www.lilyblanche.com\/cdn\/shop\/files\/LB.png?v=1682953456' | replace: 'https://www.lilyblanche.com/path-to-your-logo.jpg', 'https://www.lilyblanche.com/cdn/shop/files/LB.png?v=1682953456' %}
-      {% assign return_json = return_json | replace: 'personalization', 'personalisation' %}
-      {% assign return_json = return_json | replace: '"CustomerResponsibility"', '"https://schema.org/ReturnLabelCustomerResponsibility"' %}
-      {% assign return_json = return_json | replace: '"CustomerResponsible"', '"https://schema.org/ReturnFeesCustomerResponsibility"' %}
-      {% assign return_json = return_json | replace: '"MerchantResponsibility"', '"https://schema.org/ReturnLabelDownloadAndPrint"' %}
-      {% assign return_json = return_json | replace: '"MerchantResponsible"', '"https://schema.org/FreeReturn"' %}
-      {% assign return_json = return_json | replace: '"ReturnFeesCustomerResponsibility"', '"https://schema.org/ReturnFeesCustomerResponsibility"' %}
-      {% assign return_json = return_json | replace: '"FreeReturn"', '"https://schema.org/FreeReturn"' %}
-      {% assign return_json = return_json | replace: '"ReturnLabelCustomerResponsibility"', '"https://schema.org/ReturnLabelCustomerResponsibility"' %}
-      {% assign return_json = return_json | replace: '"ReturnLabelDownloadAndPrint"', '"https://schema.org/ReturnLabelDownloadAndPrint"' %}
-      {% assign return_json = return_json | replace: 'MerchantReturnFiniteReturnPeriod', 'MerchantReturnFiniteReturnWindow' %}
-      {% assign return_json = return_json | replace: '"returnPolicyCategory":"MerchantReturn', '"returnPolicyCategory":"https://schema.org/MerchantReturn' | replace: '"returnPolicyCategory": "MerchantReturn', '"returnPolicyCategory": "https://schema.org/MerchantReturn' %}
       {% assign policy_handle = policy.system.handle | default: policy.handle %}
       {% if policy.id == shop.metaobjects.merchant_return_policy.default.id or policy_handle == 'default' or policy_handle == blank or shop.metaobjects.merchant_return_policy.values.size == 1 %}
-        {{ return_json | replace_first: '{', '{"@id": "#return-policy",' }}
+        {% assign policy_id = '#return-policy' %}
       {% else %}
-        {% capture id_string %}{"@id": "#return-policy-{{ policy_handle }}",{% endcapture %}
-        {{ return_json | replace_first: '{', id_string }}
-      {% endif %}{% endfor %}{% endif %}
+        {% assign policy_id = '#return-policy-' | append: policy_handle %}
+      {% endif %}
+
+      {% capture return_json_clean %}
+      {
+        "@id": "{{ policy_id }}",
+        "@type": "MerchantReturnPolicy",
+        "name": {{ return_policy_name | json }},
+        "returnPolicyCategory": "{{ category }}"
+      }
+      {% endcapture %}
+      {{ return_json_clean | strip_newlines | replace: '  ', '' }}
+      {% endfor %}{% endif %}
     ]
   }
 </script>
