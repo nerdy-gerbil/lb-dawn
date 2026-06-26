@@ -74,6 +74,11 @@
         {% assign return_json = policy | json %}
       {% endif %}
 
+      {% comment %} Normalize spacing around colons to handle space variations in Shopify JSON {% endcomment %}
+      {% assign return_json = return_json | replace: '"returnShippingFeesAmount": ', '"returnShippingFeesAmount":' %}
+      {% assign return_json = return_json | replace: '"returnShippingFees": ', '"returnShippingFees":' %}
+      {% assign return_json = return_json | replace: '"returnAddress": ', '"returnAddress":' %}
+
       {% comment %} Strip unrecognized fields safely using simple replacements {% endcomment %}
       {% assign return_json = return_json | replace: ',"returnShippingFees":0', '' | replace: '"returnShippingFees":0,', '' | replace: '"returnShippingFees":0', '' %}
       {% assign return_json = return_json | replace: ',"returnShippingFeesAmount":0', '' | replace: '"returnShippingFeesAmount":0,', '' | replace: '"returnShippingFeesAmount":0', '' %}
@@ -122,10 +127,10 @@
       {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/refund-policy', 'https:\/\/www.lilyblanche.com\/policies\/refund-policy' | replace: 'https://www.lilyblanche.com/refund-policy', 'https://www.lilyblanche.com/policies/refund-policy' %}
       {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/path-to-your-logo.jpg', 'https:\/\/www.lilyblanche.com\/cdn\/shop\/files\/LB.png?v=1682953456' | replace: 'https://www.lilyblanche.com/path-to-your-logo.jpg', 'https://www.lilyblanche.com/cdn/shop/files/LB.png?v=1682953456' %}
       {% assign return_json = return_json | replace: 'personalization', 'personalisation' %}
-      {% assign return_json = return_json | replace: 'CustomerResponsibility', 'ReturnLabelCustomerResponsibility' %}
-      {% assign return_json = return_json | replace: 'CustomerResponsible', 'ReturnFeesCustomerResponsibility' %}
-      {% assign return_json = return_json | replace: 'MerchantResponsibility', 'ReturnLabelDownloadAndPrint' %}
-      {% assign return_json = return_json | replace: 'MerchantResponsible', 'FreeReturn' %}
+      {% assign return_json = return_json | replace: 'CustomerResponsibility', 'https://schema.org/ReturnLabelCustomerResponsibility' %}
+      {% assign return_json = return_json | replace: 'CustomerResponsible', 'https://schema.org/ReturnFeesCustomerResponsibility' %}
+      {% assign return_json = return_json | replace: 'MerchantResponsibility', 'https://schema.org/ReturnLabelDownloadAndPrint' %}
+      {% assign return_json = return_json | replace: 'MerchantResponsible', 'https://schema.org/FreeReturn' %}
       {% assign return_json = return_json | replace: 'MerchantReturnFiniteReturnPeriod', 'MerchantReturnFiniteReturnWindow' %}
       {% assign return_json = return_json | replace: '"returnPolicyCategory":"MerchantReturn', '"returnPolicyCategory":"https://schema.org/MerchantReturn' | replace: '"returnPolicyCategory": "MerchantReturn', '"returnPolicyCategory": "https://schema.org/MerchantReturn' %}
       {% assign policy_handle = policy.system.handle | default: policy.handle %}
