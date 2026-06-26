@@ -89,6 +89,10 @@
 "@type": "Product",
 "name": {{ product.title | json }},
 "description": {{ cleaned_description | strip_html | truncate: 2000, "..." | json }},
+"brand": {
+  "@type": "Brand",
+  "name": {{ product.vendor | json }}
+},
 "image": [
   "https:{{ product.featured_image | image_url }}"
 ],{% if product.metafields.global.material %}
