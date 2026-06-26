@@ -101,10 +101,14 @@
       {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/refund-policy', 'https:\/\/www.lilyblanche.com\/policies\/refund-policy' | replace: 'https://www.lilyblanche.com/refund-policy', 'https://www.lilyblanche.com/policies/refund-policy' %}
       {% assign return_json = return_json | replace: 'https:\/\/www.lilyblanche.com\/path-to-your-logo.jpg', 'https:\/\/www.lilyblanche.com\/cdn\/shop\/files\/LB.png?v=1682953456' | replace: 'https://www.lilyblanche.com/path-to-your-logo.jpg', 'https://www.lilyblanche.com/cdn/shop/files/LB.png?v=1682953456' %}
       {% assign return_json = return_json | replace: 'personalization', 'personalisation' %}
-      {% assign return_json = return_json | replace: 'CustomerResponsibility', 'https://schema.org/ReturnLabelCustomerResponsibility' %}
-      {% assign return_json = return_json | replace: 'CustomerResponsible', 'https://schema.org/ReturnFeesCustomerResponsibility' %}
-      {% assign return_json = return_json | replace: 'MerchantResponsibility', 'https://schema.org/ReturnLabelDownloadAndPrint' %}
-      {% assign return_json = return_json | replace: 'MerchantResponsible', 'https://schema.org/FreeReturn' %}
+      {% assign return_json = return_json | replace: '"CustomerResponsibility"', '"https://schema.org/ReturnLabelCustomerResponsibility"' %}
+      {% assign return_json = return_json | replace: '"CustomerResponsible"', '"https://schema.org/ReturnFeesCustomerResponsibility"' %}
+      {% assign return_json = return_json | replace: '"MerchantResponsibility"', '"https://schema.org/ReturnLabelDownloadAndPrint"' %}
+      {% assign return_json = return_json | replace: '"MerchantResponsible"', '"https://schema.org/FreeReturn"' %}
+      {% assign return_json = return_json | replace: '"ReturnFeesCustomerResponsibility"', '"https://schema.org/ReturnFeesCustomerResponsibility"' %}
+      {% assign return_json = return_json | replace: '"FreeReturn"', '"https://schema.org/FreeReturn"' %}
+      {% assign return_json = return_json | replace: '"ReturnLabelCustomerResponsibility"', '"https://schema.org/ReturnLabelCustomerResponsibility"' %}
+      {% assign return_json = return_json | replace: '"ReturnLabelDownloadAndPrint"', '"https://schema.org/ReturnLabelDownloadAndPrint"' %}
       {% assign return_json = return_json | replace: 'MerchantReturnFiniteReturnPeriod', 'MerchantReturnFiniteReturnWindow' %}
       {% assign return_json = return_json | replace: '"returnPolicyCategory":"MerchantReturn', '"returnPolicyCategory":"https://schema.org/MerchantReturn' | replace: '"returnPolicyCategory": "MerchantReturn', '"returnPolicyCategory": "https://schema.org/MerchantReturn' %}
       {% assign policy_handle = policy.system.handle | default: policy.handle %}
