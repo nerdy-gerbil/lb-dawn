@@ -1,6 +1,10 @@
 <!doctype html>
 <html class="js" lang="{% if request.path == '/pages/for-our-brazilian-visitors' %}pt{% else %}en{% endif %}">
   <head>
+<!-- Start of Shoplift scripts -->
+{% render 'shoplift' %}
+<!-- End of Shoplift scripts -->
+
     <link rel="llms" href="/llms.txt">
     {% render 'shogun-optimizer' %}
 
