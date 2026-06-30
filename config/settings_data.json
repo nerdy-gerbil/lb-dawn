@@ -246,8 +246,11 @@
       },
       "15683396631634586217": {
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": true,
+        "disabled": false,
         "settings": {
+          "greeting_message": "👋 Hi, please message us with any questions. We're happy to help!",
+          "background_color": "#FFFFFF",
+          "font_color": "#000000",
           "button_color": "#6a2c32",
           "secondary_color": "#ffffff",
           "ternary_color": "#6a6a6a",
@@ -255,7 +258,9 @@
           "button_text": "no_text",
           "button_horizontal_position": "bottom_right",
           "button_vertical_position": "lowest",
-          "greeting_message": "👋 Hi, please message us with any questions. We're happy to help!"
+          "agent_inherit_fonts": true,
+          "agent_font": "system_ui_n4",
+          "agent_border_radius": 16
         }
       }
     },
