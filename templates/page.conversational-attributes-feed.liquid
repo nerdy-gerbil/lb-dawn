@@ -1,0 +1,84 @@
+{% layout none %}<?xml version="1.0"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+  <channel>
+    <title>{{ shop.name }} Conversational Feed</title>
+    <link>{{ shop.url }}</link>
+    <description>Supplemental feed for Google Merchant Center AI Shopping</description>
+    {% paginate collections.all.products by 1000 %}
+      {% for product in collections.all.products %}
+        {% for variant in product.variants %}
+          <item>
+            <!-- ID must match primary feed ID. E.g., shopify_[Country]_[ProductID]_[VariantID] -->
+            <g:id>shopify_US_{{ product.id }}_{{ variant.id }}</g:id>
+            
+            <!-- 1. Question and Answer (Parallel Lists) -->
+            {% if product.metafields.custom.faq_questions.value != blank %}
+              {% for question in product.metafields.custom.faq_questions.value %}
+                {% assign answer = product.metafields.custom.faq_answers.value[forloop.index0] %}
+                {% if answer != blank %}
+                  <g:question_and_answer>
+                    <g:question>{{ question | xml_escape }}</g:question>
+                    <g:answer>{{ answer | xml_escape }}</g:answer>
+                  </g:question_and_answer>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+
+            <!-- 2. Document Link (List of Files or URLs) -->
+            {% if product.metafields.custom.document_link.value != blank %}
+              {% assign doc_urls = "" %}
+              {% for doc in product.metafields.custom.document_link.value %}
+                {% if doc.url %}
+                  {% assign doc_urls = doc_urls | append: doc.url | append: "," %}
+                {% else %}
+                  {% assign doc_urls = doc_urls | append: doc | append: "," %}
+                {% endif %}
+              {% endfor %}
+              <g:document_link>{{ doc_urls | split: "," | compact | join: "," }}</g:document_link>
+            {% endif %}
+
+            <!-- 3. Related Product (Accessory: Product Picker list) -->
+            {% if product.metafields.custom.related_accessories.value != blank %}
+              {% for rel_product in product.metafields.custom.related_accessories.value %}
+                <g:related_product>
+                  <g:relationship_type>accessory</g:relationship_type>
+                  <g:identifier_type>id</g:identifier_type>
+                  <g:identifier>shopify_US_{{ rel_product.id }}_{{ rel_product.first_available_variant.id | default: rel_product.variants.first.id }}</g:identifier>
+                </g:related_product>
+              {% endfor %}
+            {% endif %}
+
+            <!-- 4. Item Group Title -->
+            {% if product.metafields.custom.item_group_title.value != blank %}
+              <g:item_group_title>{{ product.metafields.custom.item_group_title.value | xml_escape }}</g:item_group_title>
+            {% endif %}
+
+            <!-- 5. Variant Option (Automated from native options) -->
+            {% for option in product.options %}
+              {% assign option_index = forloop.index %}
+              {% case option_index %}
+                {% when 1 %}
+                  {% assign option_value = variant.option1 %}
+                {% when 2 %}
+                  {% assign option_value = variant.option2 %}
+                {% when 3 %}
+                  {% assign option_value = variant.option3 %}
+              {% endcase %}
+              {% if option_value != blank %}
+                <g:variant_option>
+                  <g:name>{{ option | xml_escape }}</g:name>
+                  <g:value>{{ option_value | xml_escape }}</g:value>
+                </g:variant_option>
+              {% endif %}
+            {% endfor %}
+
+            <!-- 6. Popularity Rank -->
+            {% if product.metafields.custom.popularity_rank.value != blank %}
+              <g:popularity_rank>{{ product.metafields.custom.popularity_rank.value }}</g:popularity_rank>
+            {% endif %}
+          </item>
+        {% endfor %}
+      {% endfor %}
+    {% endpaginate %}
+  </channel>
+</rss>
