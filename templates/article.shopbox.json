@@ -43,13 +43,20 @@
         "content": {
           "type": "content",
           "settings": {}
+        },
+        "faq_gmwkdi": {
+          "type": "faq",
+          "settings": {
+            "heading": "Frequently Asked Questions"
+          }
         }
       },
       "block_order": [
         "featured_image",
         "title",
         "share",
-        "content"
+        "content",
+        "faq_gmwkdi"
       ],
       "custom_css": [
         "header {margin-top: 0;}"
