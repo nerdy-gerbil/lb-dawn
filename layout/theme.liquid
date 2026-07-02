@@ -449,16 +449,16 @@
     {{
       'component-cart-items.css'
       | asset_url
-      | stylesheet_tag: preload: true
+      | stylesheet_tag
       | replace: 'media="all"', 'media="print" onload="this.media=`all`"'
     }}
 
     {%- if settings.cart_type == 'drawer' -%}
-      {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag: preload: true | replace: 'media="all"', 'media="print" onload="this.media=`all`"' }}
-      {{ 'component-cart.css' | asset_url | stylesheet_tag: preload: true | replace: 'media="all"', 'media="print" onload="this.media=`all`"' }}
-      {{ 'component-totals.css' | asset_url | stylesheet_tag: preload: true | replace: 'media="all"', 'media="print" onload="this.media=`all`"' }}
-      {{ 'component-price.css' | asset_url | stylesheet_tag: preload: true | replace: 'media="all"', 'media="print" onload="this.media=`all`"' }}
-      {{ 'component-discounts.css' | asset_url | stylesheet_tag: preload: true | replace: 'media="all"', 'media="print" onload="this.media=`all`"' }}
+      {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag | replace: 'media="all"', 'media="print" onload="this.media=`all`"' }}
+      {{ 'component-cart.css' | asset_url | stylesheet_tag | replace: 'media="all"', 'media="print" onload="this.media=`all`"' }}
+      {{ 'component-totals.css' | asset_url | stylesheet_tag | replace: 'media="all"', 'media="print" onload="this.media=`all`"' }}
+      {{ 'component-price.css' | asset_url | stylesheet_tag | replace: 'media="all"', 'media="print" onload="this.media=`all`"' }}
+      {{ 'component-discounts.css' | asset_url | stylesheet_tag | replace: 'media="all"', 'media="print" onload="this.media=`all`"' }}
     {%- endif -%}
     {{ 'custom.min.css' | asset_url | stylesheet_tag: preload: true }}
 
@@ -472,7 +472,7 @@
     {% endcomment %}
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
-      {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
+      {{ 'component-localization-form.css' | asset_url | stylesheet_tag | replace: 'media="all"', 'media="print" onload="this.media=`all`"' }}
       <script src="{{ 'localization-form.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
