@@ -9,15 +9,26 @@
         {% for variant in product.variants %}
           <item>
             <!-- ID must match primary feed ID. E.g., shopify_[Country]_[ProductID]_[VariantID] -->
-            <g:id>shopify_US_{{ product.id }}_{{ variant.id }}</g:id>
+            <g:id>{{ variant.sku | xml_escape | default: variant.id }}</g:id>
             
-            <!-- 1. Question and Answer (Parallel Lists) -->
+            <!-- 1. Question and Answer (Supports List of Strings or Newline-separated Text) -->
             {% if product.metafields.custom.faq_questions.value != blank %}
-              {% for question in product.metafields.custom.faq_questions.value %}
-                {% assign answer = product.metafields.custom.faq_answers.value[forloop.index0] %}
-                {% if answer != blank %}
+              {% if product.metafields.custom.faq_questions.type contains 'list' %}
+                {% assign questions = product.metafields.custom.faq_questions.value %}
+                {% assign answers = product.metafields.custom.faq_answers.value %}
+              {% else %}
+                {% capture newline %}
+{% endcapture %}
+                {% assign questions = product.metafields.custom.faq_questions.value | split: newline %}
+                {% assign answers = product.metafields.custom.faq_answers.value | split: newline %}
+              {% endif %}
+
+              {% for question in questions %}
+                {% assign clean_question = question | strip %}
+                {% assign answer = answers[forloop.index0] | strip %}
+                {% if clean_question != blank and answer != blank %}
                   <g:question_and_answer>
-                    <g:question>{{ question | xml_escape }}</g:question>
+                    <g:question>{{ clean_question | xml_escape }}</g:question>
                     <g:answer>{{ answer | xml_escape }}</g:answer>
                   </g:question_and_answer>
                 {% endif %}
@@ -40,10 +51,11 @@
             <!-- 3. Related Product (Accessory: Product Picker list) -->
             {% if product.metafields.custom.related_accessories.value != blank %}
               {% for rel_product in product.metafields.custom.related_accessories.value %}
+                {% assign rel_variant = rel_product.first_available_variant | default: rel_product.variants.first %}
                 <g:related_product>
                   <g:relationship_type>accessory</g:relationship_type>
                   <g:identifier_type>id</g:identifier_type>
-                  <g:identifier>shopify_US_{{ rel_product.id }}_{{ rel_product.first_available_variant.id | default: rel_product.variants.first.id }}</g:identifier>
+                  <g:identifier>{{ rel_variant.sku | xml_escape | default: rel_variant.id }}</g:identifier>
                 </g:related_product>
               {% endfor %}
             {% endif %}
