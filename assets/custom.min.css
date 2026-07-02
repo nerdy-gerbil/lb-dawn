@@ -355,7 +355,7 @@ variant-selects {
 
 /* Homepage CLS Fix */
 @media screen and (max-width: 749px) {
-  [id$='__f7d8c553-77be-4f43-8945-88a9f4e1bdcc'] {
+  section[id$='__f7d8c553-77be-4f43-8945-88a9f4e1bdcc'] {
     min-height: 160vw;
     max-height: 160vw;
   }
