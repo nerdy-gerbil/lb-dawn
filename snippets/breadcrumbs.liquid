@@ -1,4 +1,4 @@
-{% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
+{% comment %} {% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
   <nav
     class="breadcrumb{% if template == 'collection' %} color-background-2 gradient{% else %} page-width{% endif %}"
     role="navigation"
@@ -43,6 +43,6 @@
       <span>{{ page_title }}</span>
     {% endif %}
   </nav>
-{% endunless %}
+{% endunless %} {% endcomment %}
 
 {% render 'custom-schema-breadcrumbs' %}
