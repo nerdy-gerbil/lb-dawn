@@ -33,13 +33,13 @@
         "image": "shopify://shop_images/General_Category_Banner.png",
         "image_overlay_opacity": 40,
         "image_height": "small",
-        "desktop_content_position": "bottom-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "color_scheme": "accent-1",
         "image_behavior": "none",
-        "mobile_content_alignment": "center",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "accent-1",
         "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
         "show_text_below": false
       }
     },
@@ -51,6 +51,21 @@
       "settings": {
         "padding_top": 24,
         "padding_bottom": 0
+      }
+    },
+    "17833454217ab2a5e5": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_reviews_featured_reviews_carousel_VaFHEJ": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/featured-reviews-carousel/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "klaviyo_reviews_featured_reviews_carousel_VaFHEJ"
+      ],
+      "settings": {
+        "include_margins": true
       }
     },
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b": {
@@ -107,6 +122,7 @@
   "order": [
     "c6cfd15d-cf95-4ed8-b5ff-7025230e9c77",
     "main",
+    "17833454217ab2a5e5",
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
     "a6a19d7e-1890-4758-b926-ca82274ab64b"
   ]
