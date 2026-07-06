@@ -246,11 +246,11 @@
       },
       "15683396631634586217": {
         "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "greeting_message": "👋 Hi, please message us with any questions. We're happy to help!",
-          "background_color": "#6A2C32",
-          "font_color": "#FFFFFF",
+          "background_color": "#6a2c32",
+          "font_color": "#ffffff",
           "button_color": "#6a2c32",
           "secondary_color": "#ffffff",
           "ternary_color": "#6a6a6a",
