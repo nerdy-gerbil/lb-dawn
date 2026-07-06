@@ -198,55 +198,6 @@
         "padding_bottom": 0
       }
     },
-    "image_with_text_6pkNtr": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_GbcyGm": {
-          "type": "heading",
-          "settings": {
-            "heading": "Gold Vermeil",
-            "heading_size": "h1",
-            "heading_tag": "h3"
-          }
-        },
-        "text_iicg9N": {
-          "type": "text",
-          "settings": {
-            "text": "<p>For those who love the warmth of gold with exceptional value, our <strong>gold vermeil jewellery </strong>is the perfect choice. We use a thick layer of <strong>18-carat gold (3 microns thick) </strong>over <strong>solid sterling silver</strong>, offering a rich, long-lasting finish. Unlike gold-plated jewellery, gold vermeil contains no base metals like brass or copper, making it a superior choice for sensitive skin.<br/></p>",
-            "text_style": "body"
-          }
-        },
-        "button_BkdjfE": {
-          "type": "button",
-          "settings": {
-            "button_label": "Discover Gold Vermeil Jewellery",
-            "button_link": "https://www.lilyblanche.com/collections/gold-necklaces?sort_by=manual&filter.v.price.gte=&filter.v.price.lte=&filter.p.m.global.material=Sterling+silver+and+18+carat+yellow+gold&filter.p.m.global.material=18+carat+gold+vermeil",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_GbcyGm",
-        "text_iicg9N",
-        "button_BkdjfE"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "image": "shopify://shop_images/Model_Letter_L_Gold.webp",
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "image_behavior": "none",
-        "content_layout": "no-overlap",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
     "17811784467f177925": {
       "type": "_blocks",
       "settings": {}
@@ -289,6 +240,55 @@
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_6pkNtr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_GbcyGm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gold Vermeil",
+            "heading_size": "h1",
+            "heading_tag": "h3"
+          }
+        },
+        "text_iicg9N": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For those who love the warmth of gold with exceptional value, our <strong>gold vermeil jewellery </strong>is the perfect choice. We use a thick layer of <strong>18-carat gold (3 microns thick) </strong>over <strong>solid sterling silver</strong>, offering a rich, long-lasting finish. Unlike gold-plated jewellery, gold vermeil contains no base metals like brass or copper, making it a superior choice for sensitive skin.<br/></p>",
+            "text_style": "body"
+          }
+        },
+        "button_BkdjfE": {
+          "type": "button",
+          "settings": {
+            "button_label": "Discover Gold Vermeil Jewellery",
+            "button_link": "https://www.lilyblanche.com/collections/gold-necklaces?sort_by=manual&filter.v.price.gte=&filter.v.price.lte=&filter.p.m.global.material=Sterling+silver+and+18+carat+yellow+gold&filter.p.m.global.material=18+carat+gold+vermeil",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_GbcyGm",
+        "text_iicg9N",
+        "button_BkdjfE"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Model_Letter_L_Gold.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
         "image_behavior": "none",
         "content_layout": "no-overlap",
         "desktop_content_position": "top",
@@ -856,27 +856,54 @@
         "collapsible_row_Lgtx9C": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Are Lily Blanche lockets and necklaces hallmarked?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Yes. Every Lily Blanche locket and solid gold pieces are independently hallmarked by the Edinburgh Assay Office, one of the UK's four official assay offices. The hallmark is your legal guarantee of the metal's authenticity and purity and confirms that the piece meets the standards of the UK hallmarking act of 1973. </p>",
             "page": ""
           }
         },
         "collapsible_row_VjUjBK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Do natural gemstones contain flaws?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Natural gemstones always contain small inclusions and this is entirley normal. Gemmologists consider inclusions as a gemstone's unique fingerprint- proof of it's natural origin and authenticity. While inclusions in diamonds are often viewed negatively, inclusions in coloured gemstones such as emeralds, rubies and sapphires are frequently prized. Lily Blanche does not use lab-created stones. </p>",
             "page": ""
           }
         },
         "collapsible_row_a7fgDG": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "What materials are used in your men's jewellery collection?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Our men's jewellery collection is crafted using the same premium materials as our full range: solid 925 sterling silver, solid 375 and 18-carat gold vermeil. These materials are selected for their durability, hypoallergenic properties and suitability for everyday wear. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_UkzxWD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How should I clean gold vermeil and sterling silver jewellery?",
+            "icon": "check_mark",
+            "row_content": "<p>Gently polish your Lily Blanche jewellery with a soft, lint-free microfibre cloth after each wear. Avoid harsh chemicals, abrasive brushes or liquid dips, as these can damage the gold layer on the gold vermeil pieces. Always remove your jewellery before swimming, showering or applying perfumes and lotions. Store pieces in the Intercept anti-tarnish pouch that we provide free with all orders. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_g8yaYn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are your diamonds ethically sourced?",
+            "icon": "check_mark",
+            "row_content": "<p>Yes. All diamonds used in Lily Blanche jewellery are natural and conflict free, adhering strictly to the Kimberley Process Certification Scheme. We are committed to responsible sourcing and do not use lab-created stones. Our diamond pieces are accompanied by a certificate of authenticity. </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YUMbYn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the difference between 9-carat and 18-carat solid gold?",
+            "icon": "check_mark",
+            "row_content": "<p>9-carat gold contains 37.5% pure gold alloyed with stronger metals, making it highly durable for everyday wear. 18-carat gold contains 75% pure gold, offering a richer colour and higher intrinsic value, though it is slightly softer. Lily Blanche uses both carats, selecting the appropriate grade based on the design and intended use of the piece. </p>",
             "page": ""
           }
         }
@@ -888,7 +915,10 @@
         "collapsible_row_yTHLBU",
         "collapsible_row_Lgtx9C",
         "collapsible_row_VjUjBK",
-        "collapsible_row_a7fgDG"
+        "collapsible_row_a7fgDG",
+        "collapsible_row_UkzxWD",
+        "collapsible_row_g8yaYn",
+        "collapsible_row_YUMbYn"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
@@ -961,9 +991,9 @@
     "a6a19d7e-1890-4758-b926-ca82274ab64b",
     "blocks_g7hHfz",
     "image_with_text_ADYBic",
-    "image_with_text_6pkNtr",
     "17811784467f177925",
     "image_with_text_AJkzjF",
+    "image_with_text_6pkNtr",
     "rich_text_FtpPYC",
     "178118321054941693",
     "image_with_text_L9eVg7",
