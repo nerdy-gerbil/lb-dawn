@@ -22,7 +22,7 @@
   ============================================================
 {% endcomment %}
 
-{% if template.name == 'product' or request.path contains '/apps/frequently-asked-questions' %}
+{% if template.name == 'product' or request.path contains '/apps/' or content_for_layout contains 'faq-king' or content_for_layout contains 's-main-faq' %}
 
   {% comment %} ── 1. External CSS (replaces the <link> the app embed adds to <head>) ── {% endcomment %}
   <link
