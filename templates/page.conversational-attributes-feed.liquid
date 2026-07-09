@@ -53,12 +53,27 @@
                   {% for doc in docs_value %}
                     {% assign doc_url = doc.url | default: doc %}
                     {% if doc_url != blank %}
+                      {% assign first_two = doc_url | slice: 0, 2 %}
+                      {% assign first_one = doc_url | slice: 0, 1 %}
+                      {% if first_two == '//' %}
+                        {% assign doc_url = doc_url | prepend: 'https:' %}
+                      {% elsif first_one == '/' %}
+                        {% assign doc_url = doc_url | prepend: shop.url %}
+                      {% endif %}
                       {% assign doc_urls = doc_urls | append: doc_url | append: "," %}
                     {% endif %}
                   {% endfor %}
                   {{ doc_urls | split: "," | compact | join: "," }}
                 {% else %}
-                  {{ docs_value.url | default: docs_value }}
+                  {% assign doc_url = docs_value.url | default: docs_value %}
+                  {% assign first_two = doc_url | slice: 0, 2 %}
+                  {% assign first_one = doc_url | slice: 0, 1 %}
+                  {% if first_two == '//' %}
+                    {% assign doc_url = doc_url | prepend: 'https:' %}
+                  {% elsif first_one == '/' %}
+                    {% assign doc_url = doc_url | prepend: shop.url %}
+                  {% endif %}
+                  {{ doc_url }}
                 {% endif %}
               </g:document_link>
             {% endif %}
