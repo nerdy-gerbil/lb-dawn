@@ -174,11 +174,6 @@
         "disabled": false,
         "settings": {}
       },
-      "10405695140724852225": {
-        "type": "shopify://apps/trusted-faq/blocks/flyout-embed/3c13bf97-def2-4442-b06f-a64e813a2392",
-        "disabled": true,
-        "settings": {}
-      },
       "3448398801694942445": {
         "type": "shopify://apps/shopbox/blocks/scripts/8413d591-09e9-4e10-8ff1-c0374d8dd64a",
         "disabled": false,
@@ -262,6 +257,11 @@
           "css_selector": "#product-faq",
           "custom_css": ".faq-heading-title {\ndisplay:none;\n}\n.faq-container {\npadding: 0 !important;\n}\n.s-main-faq__main {\nmin-width: unset !important;\nmargin: 2rem 0 0 !important;\n}\n.faq-article-header {\nbackground-color: #e6dfd7 !important;\n}"
         }
+      },
+      "10405695140724852225": {
+        "type": "shopify://apps/trusted-faq/blocks/flyout-embed/3c13bf97-def2-4442-b06f-a64e813a2392",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
