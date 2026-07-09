@@ -22,7 +22,7 @@
   ============================================================
 {% endcomment %}
 
-{% if template.name == 'product' %}
+{% if template.name == 'product' or request.path contains '/apps/frequently-asked-questions' %}
 
   {% comment %} ── 1. External CSS (replaces the <link> the app embed adds to <head>) ── {% endcomment %}
   <link
@@ -38,7 +38,9 @@
     window.Shopify.FaqKing = {
       'css_selector': '#product-faq',
       'load_faq_microdata': 'false',
-      'locale': null,
+      'locale': null
+      {% if product %}
+      ,
       'product': {
         'id': {{ product.id }},
         'collection_ids': '{% for c in product.collections %}{{ c.id }}{% unless forloop.last %},{% endunless %}{% endfor %}',
@@ -46,6 +48,7 @@
         'tags': {{ product.tags | json }},
         'type': {{ product.type | json }}
       }
+      {% endif %}
     };
   </script>
 
