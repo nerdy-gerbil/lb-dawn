@@ -55,11 +55,18 @@
             if block.settings.image.aspect_ratio > highest_ratio
               assign highest_ratio = block.settings.image.aspect_ratio
             endif
+            if block.settings.video.aspect_ratio > highest_ratio
+              assign highest_ratio = block.settings.video.aspect_ratio
+            endif
           endfor
+          if highest_ratio == 0
+            assign highest_ratio = 1
+          endif
         -%}
         {%- for block in section.blocks -%}
           {%- assign empty_column = '' -%}
           {%- if block.settings.image == blank
+            and block.settings.video == blank
             and block.settings.title == blank
             and block.settings.text == blank
             and block.settings.link_label == blank
@@ -77,7 +84,7 @@
             {% endif %}
           >
             <div class="multicolumn-card content-container">
-              {%- if block.settings.image != blank -%}
+              {%- if block.settings.image != blank or block.settings.video != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
                 {% endif %}
@@ -85,37 +92,54 @@
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
                     {% if section.settings.image_ratio == 'adapt' %}
-                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                      {%- if block.settings.video != blank -%}
+                        style="padding-bottom: {{ 1 | divided_by: block.settings.video.aspect_ratio | times: 100 }}%;"
+                      {%- else -%}
+                        style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
+                      {%- endif -%}
                     {% endif %}
                   >
-                    {%- liquid
-                      assign number_of_columns = section.settings.columns_desktop
-                      assign number_of_columns_mobile = section.settings.columns_mobile
-                      assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
-                      assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
-                      if section.settings.image_width == 'half'
-                        assign image_width = 0.5
-                      elsif section.settings.image_width == 'third'
-                        assign image_width = 0.33
-                      else
-                        assign image_width = 1
-                      endif
-                    -%}
-                    {% capture sizes %}
-                      (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
-                      (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
-                      (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
-                      calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
-                    {% endcapture %}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3200
-                      | image_tag:
-                        widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
-                        sizes: sizes,
-                        class: 'multicolumn-card__image'
-                    }}
+                    {%- if block.settings.video != blank -%}
+                      {{
+                        block.settings.video
+                        | video_tag:
+                          autoplay: true,
+                          loop: true,
+                          muted: true,
+                          playsinline: true,
+                          controls: false,
+                          class: 'multicolumn-card__image'
+                      }}
+                    {%- else -%}
+                      {%- liquid
+                        assign number_of_columns = section.settings.columns_desktop
+                        assign number_of_columns_mobile = section.settings.columns_mobile
+                        assign grid_space_desktop = number_of_columns | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                        assign grid_space_tablet = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | plus: 100 | append: 'px'
+                        assign grid_space_mobile = number_of_columns_mobile | minus: 1 | times: settings.spacing_grid_horizontal | divided_by: 2 | plus: 30 | append: 'px'
+                        if section.settings.image_width == 'half'
+                          assign image_width = 0.5
+                        elsif section.settings.image_width == 'third'
+                          assign image_width = 0.33
+                        else
+                          assign image_width = 1
+                        endif
+                      -%}
+                      {% capture sizes %}
+                        (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width }}px - {{ grid_space_desktop }}) * {{ image_width }} /  {{ number_of_columns }}),
+                        (min-width: 990px) calc((100vw - {{ grid_space_desktop }}) * {{ image_width }} / {{ number_of_columns }}),
+                        (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
+                        calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
+                      {% endcapture %}
+                      {{
+                        block.settings.image
+                        | image_url: width: 3200
+                        | image_tag:
+                          widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
+                          sizes: sizes,
+                          class: 'multicolumn-card__image'
+                      }}
+                    {%- endif -%}
                   </div>
                 </div>
               {%- endif -%}
@@ -425,6 +449,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
         },
         {
           "type": "inline_richtext",
