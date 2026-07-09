@@ -348,7 +348,7 @@
           "settings": {
             "video": "shopify://files/videos/Locket-Transparent-1- 400.mp4",
             "title": "",
-            "text": "<p><br/><br/></p>",
+            "text": "<p></p><p></p>",
             "link_label": "",
             "link": ""
           }
@@ -358,7 +358,7 @@
           "settings": {
             "video": "shopify://files/videos/Locket-Transparent-5 C9f98a70-9392-4421-9F71-4998963Dfd6a.mp4",
             "title": "",
-            "text": "",
+            "text": "<p></p><p></p>",
             "link_label": "",
             "link": ""
           }
@@ -368,7 +368,7 @@
           "settings": {
             "video": "shopify://files/videos/Locket-Transparent-6.mp4",
             "title": "",
-            "text": "",
+            "text": "<p></p><p></p>",
             "link_label": "",
             "link": ""
           }
@@ -378,7 +378,7 @@
           "settings": {
             "image": "shopify://shop_images/locket-transparent-4-_400.gif",
             "title": "",
-            "text": "",
+            "text": "<p></p><p></p>",
             "link_label": "",
             "link": ""
           }
@@ -400,7 +400,7 @@
         "button_link": "shopify://collections/personalised",
         "columns_desktop": 4,
         "column_alignment": "left",
-        "background_style": "primary",
+        "background_style": "none",
         "color_scheme": "scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
