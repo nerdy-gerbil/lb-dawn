@@ -270,7 +270,7 @@
       ],
       "name": "Product FAQs",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\" style=\"display: flex\n; justify-content: center; align-items: center;\"><h2 style=\"justify-self: start;\">Frequently Asked Questions</h2>\n    <div id=\"product-faq\"></div>\n</div>",
+        "custom_liquid": "<div class=\"page-width\" style=\"display: flex\n; flex-direction: column; justify-content: center; align-items: center;\"><h2 style=\"justify-self: start;\">Frequently Asked Questions</h2>\n    <div id=\"product-faq\"></div>\n</div>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
