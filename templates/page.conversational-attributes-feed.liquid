@@ -35,30 +35,68 @@
               {% endfor %}
             {% endif %}
 
-            <!-- 2. Document Link (List of Files or URLs) -->
+            <!-- 2. Document Link (List of Files/URLs or Single File/URL) -->
+            {% assign docs_value = blank %}
+            {% assign docs_type = blank %}
             {% if product.metafields.custom.document_link.value != blank %}
-              {% assign doc_urls = "" %}
-              {% for doc in product.metafields.custom.document_link.value %}
-                {% if doc.url %}
-                  {% assign doc_urls = doc_urls | append: doc.url | append: "," %}
-                {% else %}
-                  {% assign doc_urls = doc_urls | append: doc | append: "," %}
-                {% endif %}
-              {% endfor %}
-              <g:document_link>{{ doc_urls | split: "," | compact | join: "," }}</g:document_link>
+              {% assign docs_value = product.metafields.custom.document_link.value %}
+              {% assign docs_type = product.metafields.custom.document_link.type %}
+            {% elsif product.metafields.custom.document_links.value != blank %}
+              {% assign docs_value = product.metafields.custom.document_links.value %}
+              {% assign docs_type = product.metafields.custom.document_links.type %}
             {% endif %}
 
-            <!-- 3. Related Product (Accessory: Product Picker list) -->
-            {% if product.metafields.custom.related_accessories.value != blank %}
-              {% for rel_product in product.metafields.custom.related_accessories.value %}
-                {% assign rel_variant = rel_product.first_available_variant | default: rel_product.variants.first %}
-                <g:related_product>
-                  <g:relationship_type>accessory</g:relationship_type>
-                  <g:identifier_type>id</g:identifier_type>
-                  <g:identifier>{{ rel_variant.sku | xml_escape | default: rel_variant.id }}</g:identifier>
-                </g:related_product>
-              {% endfor %}
+            {% if docs_value != blank %}
+              <g:document_link>
+                {% if docs_type contains 'list' %}
+                  {% assign doc_urls = "" %}
+                  {% for doc in docs_value %}
+                    {% assign doc_url = doc.url | default: doc %}
+                    {% if doc_url != blank %}
+                      {% assign doc_urls = doc_urls | append: doc_url | append: "," %}
+                    {% endif %}
+                  {% endfor %}
+                  {{ doc_urls | split: "," | compact | join: "," }}
+                {% else %}
+                  {{ docs_value.url | default: docs_value }}
+                {% endif %}
+              </g:document_link>
             {% endif %}
+
+            <!-- 3. Related / Complementary Products (Handles lists or single product references) -->
+            {% assign metafield_sources = "shopify--discovery--product_recommendation.complementary_products,custom.related_accessories,custom.related_products,custom.complimentary_products,custom.complementary_products" | split: "," %}
+            {% for source in metafield_sources %}
+              {% assign parts = source | split: "." %}
+              {% assign ns = parts[0] %}
+              {% assign key = parts[1] %}
+              {% assign value = product.metafields[ns][key].value %}
+              
+              {% if value != blank %}
+                {% if product.metafields[ns][key].type contains 'list' %}
+                  {% for p in value %}
+                    {% assign rel_variant = p.first_available_variant | default: p.variants.first %}
+                    {% assign rel_id = rel_variant.sku | default: rel_variant.id %}
+                    {% if rel_id != blank %}
+                      <g:related_product>
+                        <g:relationship_type>accessory</g:relationship_type>
+                        <g:identifier_type>id</g:identifier_type>
+                        <g:identifier>{{ rel_id | xml_escape }}</g:identifier>
+                      </g:related_product>
+                    {% endif %}
+                  {% endfor %}
+                {% else %}
+                  {% assign rel_variant = value.first_available_variant | default: value.variants.first %}
+                  {% assign rel_id = rel_variant.sku | default: rel_variant.id %}
+                  {% if rel_id != blank %}
+                    <g:related_product>
+                      <g:relationship_type>accessory</g:relationship_type>
+                      <g:identifier_type>id</g:identifier_type>
+                      <g:identifier>{{ rel_id | xml_escape }}</g:identifier>
+                    </g:related_product>
+                  {% endif %}
+                {% endif %}
+              {% endif %}
+            {% endfor %}
 
             <!-- 4. Item Group Title -->
             {% if product.metafields.custom.item_group_title.value != blank %}
