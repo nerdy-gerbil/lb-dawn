@@ -482,3 +482,8 @@ tr.cart-item:has(a[href^="/products/engrave-my-item"]) {
 #klaviyo-featured-reviews-carousel .pl-swatches-collection {
   display: none !important;
 }
+
+/* PDP duplicate ratings container */
+.rating-wrapper {
+  display: none !important;
+}
