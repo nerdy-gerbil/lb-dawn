@@ -487,3 +487,9 @@ tr.cart-item:has(a[href^="/products/engrave-my-item"]) {
 .rating-wrapper {
   display: none !important;
 }
+
+/* FAQ title on PDP */
+.faq-container::before {
+  content: "Frequently Asked Questions";
+  font-size: 24px;
+}
