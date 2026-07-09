@@ -149,8 +149,7 @@
         "8c2e6059-a89c-474e-a145-65a34977229f"
       ],
       "custom_css": [
-        "@media screen and (min-width: 750px) {.product__modal-opener--image {max-height: 60vh; } .product__modal-opener--image img {object-fit: contain; max-height: 60vh; }}",
-        ".rating-wrapper {display: none;}"
+        "@media screen and (min-width: 750px) {.product__modal-opener--image {max-height: 60vh; } .product__modal-opener--image img {object-fit: contain; max-height: 60vh; }}"
       ],
       "settings": {
         "enable_sticky_info": true,
