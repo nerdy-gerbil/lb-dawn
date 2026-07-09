@@ -265,6 +265,7 @@
       "type": "custom-liquid",
       "custom_css": [
         ".faq-container {margin-bottom: 0 !important;}",
+        ".faq-container +.faq-container {display: none;}",
         ".s-main-faq__main {padding: 10px 0;}",
         "@media (max-width: 749px) {.faq-container {margin-bottom: -24px !important; }}"
       ],
