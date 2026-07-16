@@ -17,12 +17,12 @@
     </script>
     {% comment %} Added by TAPITA SEO SCHEMA {% endcomment %}
     {% if content_for_header contains 'tapita-seo-script-tags' %}
-      {% include 'tapita-seo-schema' %}
+      {% render 'tapita-seo-schema' %}
     {% endif %}
     {% comment %} /Added by TAPITA SEO SCHEMA {% endcomment %}
 
     {% comment %} Custom SEO Schema Markup {% endcomment %}
-    {% include 'custom-schema-business' %}
+    {% render 'custom-schema-business' %}
     {%- if template.name == 'page' and page.handle == 'ring-sizes' -%}
       {% render 'custom-schema-faq-ring-sizes' %}
     {%- endif -%}
@@ -643,10 +643,10 @@
     {% comment %} END: Additional Checkout buttons for Upcart Cart Drawer {% endcomment %}
     {% if content_for_header contains 'tapita-seo-script-tags' %}
       {%- capture tapita-seo-snippets -%}
-    {% include 'tapita-page-speed-status' %}
+    {% render 'tapita-page-speed-status' %}
     {%- if tapitaPageSpeedStatus -%}
     {% # theme-check-disable MissingTemplate %}
-    {% include 'tapita-splash-img' %}
+    {% render 'tapita-splash-img' %}
     {% # theme-check-enable MissingTemplate %}
     {%- endif -%}
     {%- endcapture -%}

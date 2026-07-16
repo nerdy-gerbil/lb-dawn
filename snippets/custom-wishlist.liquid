@@ -18,7 +18,7 @@
 function toggleWishlist() {
     const pdpData = {
         productTitle: "{{ product.title }}",
-        productImg: "{{ product.featured_image | img_url: '' }}",
+        productImg: "{{ product.featured_image | image_url: width: 240 }}",
         productPrice: "{{ product.price | money | remove_first: '' }}",
         productUrl: "{{ product.url }}"
     };

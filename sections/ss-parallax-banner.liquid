@@ -163,7 +163,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: {{ overlay_color | hex_to_rgba: overlay }};
+    background-color: {{ overlay_color | color_modify: 'alpha', overlay }};
     z-index: 1;
   }
 
@@ -495,7 +495,7 @@
     {% if block.settings.button_shadow %}
       <style>
         .banner-button-{{ block.id }} {
-          box-shadow: 0 8px 16px 2px {{ block.settings.button_shadow_color | hex_to_rgba: 0.33 }};
+          box-shadow: 0 8px 16px 2px {{ block.settings.button_shadow_color | color_modify: 'alpha', 0.33 }};
         }
       </style>
     {% endif %}

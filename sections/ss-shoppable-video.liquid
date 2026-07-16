@@ -314,7 +314,7 @@ For inquiries or permissions, contact daniel@section.store
     left: 0;
     top: 0;
     cursor: pointer;
-    background-color: {{ video_overlay_color | hex_to_rgba: video_overlay }};
+    background-color: {{ video_overlay_color | color_modify: 'alpha', video_overlay }};
   }
 
   .video-top-{{ section.id }} video,
@@ -571,7 +571,7 @@ For inquiries or permissions, contact daniel@section.store
     top: 10px !important;
     right: 10px !important;
     padding: 6px;
-    background-color: {{ close_bg_color | hex_to_rgba: 0.2 }};
+    background-color: {{ close_bg_color | color_modify: 'alpha', 0.2 }};
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
     border-radius: {{ close_radius }}px;
@@ -602,7 +602,7 @@ For inquiries or permissions, contact daniel@section.store
     top: 50%;
     transform: translateY(-50%);
     padding: 6px;
-    background-color: {{ buttons_bg_color | hex_to_rgba: 0.2 }};
+    background-color: {{ buttons_bg_color | color_modify: 'alpha', 0.2 }};
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
     border-radius: {{ buttons_radius }}px;
@@ -1091,7 +1091,7 @@ For inquiries or permissions, contact daniel@section.store
 {% if card_shadow %}
   <style>
     .video-slide-{{ section.id }} {
-      box-shadow: 0px 0px 10px {{ card_shadow_color | hex_to_rgba: 0.25 }};
+      box-shadow: 0px 0px 10px {{ card_shadow_color | color_modify: 'alpha', 0.25 }};
     }
 
     .video-slider-{{ section.id }} {
