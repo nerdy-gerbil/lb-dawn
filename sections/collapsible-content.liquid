@@ -74,7 +74,7 @@
                 class="accordion{% if section.settings.layout == 'row' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}"
                 {{ block.shopify_attributes }}
               >
-                {%- if section.settings.always_open == true -%}
+                {%- if section.settings.uncollapse_prose == true -%}
                   <div class="accordion__title-always-open h4" style="margin-top: 1.5rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 1rem;">
                     {% render 'icon-accordion', icon: block.settings.icon %}
                     <div class="inline-richtext">
@@ -231,7 +231,7 @@
     },
     {
       "type": "checkbox",
-      "id": "always_open",
+      "id": "uncollapse_prose",
       "default": false,
       "label": "Render rows as always open (uncollapsed prose)"
     },
