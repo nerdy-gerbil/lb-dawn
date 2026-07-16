@@ -30,12 +30,12 @@
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "OnlineStore",
+    "@type": ["Organization", "OnlineStore"],
     "additionalType": "JewelryStore",
     "url": "{{ shop.secure_url }}",
     "name": "{{ shop.name }}",
-    "logo": "https:{{ shop.brand.square_logo | image_url }}",
-    "image": "https:{{ shop.brand.logo | image_url }}",
+    "logo": "https:{% if shop.brand.square_logo %}{{ shop.brand.square_logo | image_url }}{% else %}{{ settings.logo | image_url }}{% endif %}",
+    "image": "https:{% if shop.brand.logo %}{{ shop.brand.logo | image_url }}{% else %}{{ settings.logo | image_url }}{% endif %}",
     "legalName": "WOW (SCOTLAND) LIMITED",
     "foundingDate": "2016",
     "founder": {
@@ -60,7 +60,8 @@
       "https://twitter.com/lilyblanche_",
       "https://www.youtube.com/channel/UCFj3VFS7HQYXD5n4LwCIcMQ",
       "https://www.tiktok.com/@lily_blanche_jewellery",
-      "https://www.pinterest.co.uk/lilyblanche/"
+      "https://www.pinterest.co.uk/lilyblanche/",
+      "https://uk.trustpilot.com/review/www.lilyblanche.com"
     ],
     "contactPoint": [
       {

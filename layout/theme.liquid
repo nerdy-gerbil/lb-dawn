@@ -60,11 +60,15 @@
     {%- endunless -%}
 
     <title>
-      {%- assign clean_title = page_title | replace: ' | Lily Blanche', '' | replace: ' - Lily Blanche', '' | replace: ' – Lily Blanche', '' -%}
-      {{ clean_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      &ndash; {{ shop.name }}
+      {%- if template.name == 'index' -%}
+        Lily Blanche | Best Personalised Jewellery & Photo Lockets UK 2026
+      {%- else -%}
+        {%- assign clean_title = page_title | replace: ' | Lily Blanche', '' | replace: ' - Lily Blanche', '' | replace: ' – Lily Blanche', '' -%}
+        {{ clean_title }}
+        {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+        {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+        &ndash; {{ shop.name }}
+      {%- endif -%}
     </title>
 
     {% if page_description %}
