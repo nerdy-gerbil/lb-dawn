@@ -175,7 +175,10 @@
           "settings": {
             "button_label": "Shop Personalised Lockets",
             "button_link": "shopify://collections/lockets",
-            "button_style_secondary": false
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
@@ -693,7 +696,8 @@
           "type": "heading",
           "settings": {
             "heading": "MEN'S JEWELLERY",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "heading_tag": "h2"
           }
         },
         "buttons_kh9HiP": {
@@ -904,7 +908,7 @@
       "custom_css": [],
       "settings": {
         "caption": "",
-        "heading": "Capture Precious Memories with personalised jewellery by Lily Blanche",
+        "heading": "Capture Precious Memories With Personalised Jewellery By Lily Blanche",
         "heading_size": "h2",
         "heading_alignment": "left",
         "layout": "none",
