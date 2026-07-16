@@ -7,6 +7,12 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding .collapsible-content__grid-item {
+      display: none !important;
+    }
+  }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -112,6 +118,14 @@
                 {%- endif -%}
               </div>
             {%- endfor -%}
+            {%- if section.settings.button_label != blank -%}
+              <div class="collapsible-content__link" style="margin-top: 2rem; text-align: left;">
+                <a href="{{ section.settings.button_link | default: '#' }}" class="link animate-arrow" style="display: inline-flex; align-items: center; text-decoration: underline; font-weight: bold;">
+                  {{ section.settings.button_label | escape }}
+                  <span class="svg-wrapper" style="margin-left: 0.5rem; display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px;">{{ 'icon-arrow.svg' | inline_asset_content }}</span>
+                </a>
+              </div>
+            {%- endif -%}
           </div>
         </div>
       </div>
@@ -279,6 +293,16 @@
       ],
       "default": "image_second",
       "label": "t:sections.collapsible_content.settings.desktop_layout.label"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
     },
     {
       "type": "header",

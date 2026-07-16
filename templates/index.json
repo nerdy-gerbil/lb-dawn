@@ -528,36 +528,32 @@
         "template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Free Jewellery Care Kit Gift Worth £20 With All Orders",
-            "icon": "box",
-            "row_content": "<p>Our gift to you is a free jewellery care kit comprising a velvet storage pouch made for us in the USA and incorporating revolutionary anti-tarnish Intercept®technology in the form of patented polymars woven into the lining of the pouch. <br/></p><p>You will also receive a polish cloth made by Town Talk, the UK’s leading silver and goldware cleaning company, and a handy ring sizer to keep in your jewellery box as your ring size changes with time.</p>",
+            "heading": "Free Care Kit",
+            "row_content": "<p>A free £20 jewellery care kit — anti-tarnish pouch, polish cloth & ring sizer — with every order.</p>",
             "page": ""
           }
         },
         "template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Complimentary Luxury Gift Wrap On All Orders",
-            "icon": "heart",
-            "row_content": "<p>Add a rope-handled giftbag tied with grosgrain ribbon to create a luxurious gift made with love. </p><p>Add a gift message to your order. We’ll print it on a little card and can send direct to the recipient for hassle-free gifting. </p><p>Available free of charge with all orders.</p>",
+            "heading": "Gift Wrap",
+            "row_content": "<p>Complimentary luxury gift wrap and personalised message card on every order.</p>",
             "page": ""
           }
         },
         "5fdf3d4b-66ed-4795-a0b2-7e7f38ff7102": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Free Photo Service for Lockets",
-            "icon": "dryer",
-            "row_content": "<p>Bring your locket to life with our personalisation service. Add photos to your locket and engraving if applicable. Our photo service is <strong>free </strong>today. Normally from £15 to £25. Time-limited offer.</p>",
+            "heading": "Photo Service",
+            "row_content": "<p>Free professional photo installation for all lockets — normally £15–£25.</p>",
             "page": ""
           }
         },
         "template--18077560832318__26e994ac-6679-4cf0-b3d2-a430f185d048-1678112520bcf6ced5-0": {
           "type": "collapsible_row",
           "settings": {
-            "heading": " Free UK Delivery On Orders Over £125",
-            "icon": "truck",
-            "row_content": "<p>Get it fully tracked straight to your door with our secure free-shipping option. </p><p>We’ll send you tracking details so you can see where it is on its journey. Available free of charge on orders over £125</p>",
+            "heading": "Delivery",
+            "row_content": "<p>Free tracked UK delivery on all orders over £125.</p>",
             "page": ""
           }
         }
@@ -581,6 +577,8 @@
         "image": "shopify://shop_images/spring_packaging_block-2.webp",
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
+        "button_label": "Learn more about our promise",
+        "button_link": "shopify://pages/our-promise",
         "padding_top": 32,
         "padding_bottom": 24
       }
