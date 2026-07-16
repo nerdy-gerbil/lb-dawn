@@ -43,12 +43,75 @@
       </div>
     {%- endif -%}
   </div>
+
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'faq' -%}
+        {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+        {%- liquid
+          assign has_faq_content = false
+          for i in (1..9)
+            assign q_key = "faq_question_" | append: i
+            assign a_key = "faq_answer_" | append: i
+            assign q = collection.metafields.custom[q_key]
+            assign a = collection.metafields.custom[a_key]
+            if q != blank and a != blank
+              assign has_faq_content = true
+              break
+            endif
+          endfor
+        -%}
+        {%- if has_faq_content -%}
+          <div class="faq-widget page-width" {{ block.shopify_attributes }}>
+            {%- if block.settings.heading != blank -%}
+              <h2 class="faq-widget__heading h3 inline-richtext">{{ block.settings.heading }}</h2>
+            {%- endif -%}
+            {%- for i in (1..9) -%}
+              {%- assign q_key = "faq_question_" | append: i -%}
+              {%- assign a_key = "faq_answer_" | append: i -%}
+              {%- assign q = collection.metafields.custom[q_key] -%}
+              {%- assign a = collection.metafields.custom[a_key] -%}
+              {%- if q != blank and a != blank -%}
+                <div class="accordion">
+                  <details id="Details-faq-{{ i }}-{{ section.id }}">
+                    <summary id="Summary-faq-{{ i }}-{{ section.id }}">
+                      <div class="accordion__title inline-richtext h4">
+                        {{ q }}
+                      </div>
+                      {{- 'icon-caret.svg' | inline_asset_content -}}
+                    </summary>
+                    <div class="accordion__content rte" id="CollapsibleAccordion-faq-{{ i }}-{{ section.id }}" role="region" aria-labelledby="Summary-faq-{{ i }}-{{ section.id }}">
+                      {{ a | metafield_tag }}
+                    </div>
+                  </details>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+    {%- endcase -%}
+  {%- endfor -%}
 </div>
 
 {% schema %}
 {
   "name": "t:sections.main-collection-banner.name",
   "class": "section",
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQs Accordion",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Frequently Asked Questions",
+          "label": "Heading"
+        }
+      ]
+    }
+  ],
   "settings": [
     {
       "type": "paragraph",

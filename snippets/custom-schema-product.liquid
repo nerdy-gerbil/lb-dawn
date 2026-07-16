@@ -69,3 +69,46 @@
     ]
   }
 </script>
+
+{%- liquid
+  assign has_faq = false
+  for i in (1..9)
+    assign q_key = "faq_question_" | append: i
+    assign q = product.metafields.custom[q_key]
+    if q != blank
+      assign has_faq = true
+      break
+    endif
+  endfor
+-%}
+
+{%- if has_faq -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- assign comma = false -%}
+    {%- for i in (1..9) -%}
+      {%- assign q_key = "faq_question_" | append: i -%}
+      {%- assign a_key = "faq_answer_" | append: i -%}
+      {%- assign q = product.metafields.custom[q_key] -%}
+      {%- assign a = product.metafields.custom[a_key] -%}
+      {%- if q != blank and a != blank -%}
+        {%- if comma -%},{%- endif -%}
+        {
+          "@type": "Question",
+          "name": {{ q | strip_html | json }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ a | metafield_tag | strip_html | json }}
+          }
+        }
+        {%- assign comma = true -%}
+      {%- endif -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
