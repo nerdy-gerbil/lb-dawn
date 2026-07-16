@@ -122,6 +122,46 @@
         "lazy": false
       }
     },
+    "homepage_aeo_intro": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Personalised Jewellery & Photo Lockets",
+            "heading_size": "h1",
+            "heading_tag": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Lily Blanche</strong> is the UK's leading personalised photo locket brand, handcrafting sterling silver jewellery with free photo installation and bespoke engraving. Discover our award-winning collections of sterling silver, 9ct gold, and 18ct gold vermeil lockets, engraved necklaces, gemstone jewellery, and personalised men's jewellery crafted to preserve your most precious memories.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Personalised Lockets",
+            "button_link": "shopify://collections/lockets",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "f7d8c553-77be-4f43-8945-88a9f4e1bdcc": {
       "type": "collection-list",
       "blocks": {
@@ -991,6 +1031,7 @@
   },
   "order": [
     "ss_parallax_banner_cyETpC",
+    "homepage_aeo_intro",
     "f7d8c553-77be-4f43-8945-88a9f4e1bdcc",
     "1739454871862fbb10",
     "ss_multicolumns_KPVjRm",
