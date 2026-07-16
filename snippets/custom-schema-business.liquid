@@ -86,8 +86,8 @@
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "{{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.rating_value }}",
-      "reviewCount": "{{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.review_count }}"
+      "ratingValue": "{% if metaobjects.aggregate_rating.aggregate-rating-trustpilot.rating_value != blank %}{{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.rating_value }}{% else %}4.7{% endif %}",
+      "reviewCount": "{% if metaobjects.aggregate_rating.aggregate-rating-trustpilot.review_count != blank %}{{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.review_count }}{% else %}1600{% endif %}"
     },
     "award": "Google Top Quality Store"
   }

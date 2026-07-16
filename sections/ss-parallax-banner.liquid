@@ -412,6 +412,7 @@
       {{ block.settings.button_font | font_face: font_display: 'swap' }}
 
       .banner-button-{{ block.id }} {
+        margin: 8px !important;
         margin-top: {{ block.settings.button_mt | times: 0.75 | round: 0 }}px !important;
         font-size: {{ block.settings.button_size_mobile }}px;
         font-weight: 700;

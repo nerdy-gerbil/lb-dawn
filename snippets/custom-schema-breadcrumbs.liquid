@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "name": "{{ page_title | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&' | replace: '&#39;', "'" }}",
+    "name": "{% if template == 'index' %}Lily Blanche | Best Personalised Jewellery & Photo Lockets UK 2026{% else %}{{ page_title | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&' | replace: '&#39;', "'" }}{% endif %}",
     "itemListElement": [{
       "@type": "ListItem",
       "position": 1,

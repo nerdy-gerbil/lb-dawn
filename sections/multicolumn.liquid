@@ -172,16 +172,46 @@
       </ul>
 
       {%- if show_mobile_slider -%}
-        <div class="slider-buttons large-up-hide">
+        <div class="slider-buttons large-up-hide" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
           <button
             type="button"
             class="slider-button slider-button--prev"
             name="previous"
             aria-label="{{ 'general.slider.previous_slide' | t }}"
+            style="width: 44px; height: 44px; min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; background: transparent; border: none; cursor: pointer; padding: 0;"
           >
-            <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+            <span class="svg-wrapper" style="display: flex; align-items: center; justify-content: center;">{{ 'icon-caret.svg' | inline_asset_content }}</span>
           </button>
-          <div class="slider-counter caption">
+          <div class="slider-dots-{{ section.id }}" style="display: flex; gap: 6px; align-items: center; margin: 0 10px;">
+            {%- for block in section.blocks -%}
+              <span class="slider-dot-indicator-{{ section.id }} {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index }}" style="width: 8px; height: 8px; border-radius: 50%; background-color: #ccc; transition: background-color 0.2s;"></span>
+            {%- endfor -%}
+          </div>
+          <style>
+            .slider-dot-indicator-{{ section.id }}.active {
+              background-color: #121212 !important;
+            }
+          </style>
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              const slider = document.getElementById('Slider-{{ section.id }}');
+              const comp = slider ? slider.closest('slider-component') : null;
+              if (comp) {
+                comp.addEventListener('slideChanged', (e) => {
+                  const dots = comp.querySelectorAll('.slider-dot-indicator-{{ section.id }}');
+                  const current = e.detail.currentPage;
+                  dots.forEach((dot, idx) => {
+                    if (idx + 1 === current) {
+                      dot.classList.add('active');
+                    } else {
+                      dot.classList.remove('active');
+                    }
+                  });
+                });
+              }
+            });
+          </script>
+          <div class="slider-counter caption" style="display: none;">
             <span class="slider-counter--current">1</span>
             <span aria-hidden="true"> / </span>
             <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
@@ -192,8 +222,9 @@
             class="slider-button slider-button--next"
             name="next"
             aria-label="{{ 'general.slider.next_slide' | t }}"
+            style="width: 44px; height: 44px; min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; background: transparent; border: none; cursor: pointer; padding: 0;"
           >
-            <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+            <span class="svg-wrapper" style="display: flex; align-items: center; justify-content: center;">{{ 'icon-caret.svg' | inline_asset_content }}</span>
           </button>
         </div>
       {%- endif -%}

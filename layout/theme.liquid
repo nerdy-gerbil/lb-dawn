@@ -40,6 +40,10 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
+    {%- if template.name == 'index' -%}
+      {%- assign page_description = "Lily Blanche is the UK's leading personalised photo locket brand, handcrafting sterling silver, gold and vermeil locket necklaces. Rated 4.7/5 on Trustpilot. Shop our best-selling personalised lockets and men's jewellery collections in the UK for 2026." -%}
+    {%- endif -%}
+
     {% comment %} BEGIN Preload essential assets {% endcomment %}
     {% comment %} <link
       rel="modulepreload"
