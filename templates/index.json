@@ -136,7 +136,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Lily Blanche</strong> is the UK's leading personalised photo locket brand, handcrafting sterling silver jewellery with free photo installation and bespoke engraving. Rated 4.7 out of 5 on Trustpilot based on over 1,600 verified reviews, discover our award-winning collections of sterling silver, 9ct gold, and 18ct gold vermeil lockets, engraved necklaces, gemstone jewellery, and personalised men's jewellery crafted to preserve your most precious memories.</p>"
+            "text": "<p>For too long, the moments that matter most - the first photo of a baby, a grandmother's face, a partner's smile - were locked away in phones. Lily Blanche set out to change that. We're the UK's leading personalised photo locket brand, handcrafting sterling silver and gold jewellery with free photo installation and engraving — rated 4.7/5 on Trustpilot from over 1,600 verified reviews. Creating meaningful fine jewellery for men and women.<br/><br/></p>"
           }
         },
         "button": {
@@ -529,6 +529,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Free Care Kit",
+            "icon": "check_mark",
             "row_content": "<p>A free £20 jewellery care kit — anti-tarnish pouch, polish cloth & ring sizer — with every order.</p>",
             "page": ""
           }
@@ -537,6 +538,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Gift Wrap",
+            "icon": "check_mark",
             "row_content": "<p>Complimentary luxury gift wrap and personalised message card on every order.</p>",
             "page": ""
           }
@@ -545,6 +547,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Photo Service",
+            "icon": "check_mark",
             "row_content": "<p>Free professional photo installation for all lockets — normally £15–£25.</p>",
             "page": ""
           }
@@ -553,6 +556,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Delivery",
+            "icon": "check_mark",
             "row_content": "<p>Free tracked UK delivery on all orders over £125.</p>",
             "page": ""
           }
@@ -885,6 +889,8 @@
         "uncollapse_prose": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
+        "button_label": "",
+        "button_link": "",
         "padding_top": 32,
         "padding_bottom": 32
       }
