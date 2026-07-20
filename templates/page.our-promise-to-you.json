@@ -9,40 +9,6 @@
  */
 {
   "sections": {
-    "c6cfd15d-cf95-4ed8-b5ff-7025230e9c77": {
-      "type": "image-banner",
-      "blocks": {
-        "template--18473594880318__c6cfd15d-cf95-4ed8-b5ff-7025230e9c77-1684233844019a459f-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ page.title }}",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "template--18473594880318__c6cfd15d-cf95-4ed8-b5ff-7025230e9c77-1684233844019a459f-0"
-      ],
-      "custom_css": [
-        "@media screen and (max-width: 749px) {.banner, .banner__content {min-height: 10vh; max-height: 20vh; }}",
-        "@media screen and (min-width: 750px) {.banner {min-height: 10vh; }}"
-      ],
-      "settings": {
-        "show_on_device": "all-devices",
-        "fetch_priority": false,
-        "image": "shopify://shop_images/General_Category_Banner.png",
-        "image_overlay_opacity": 40,
-        "image_height": "small",
-        "desktop_content_position": "bottom-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
-        "color_scheme": "accent-1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
-      }
-    },
     "main": {
       "type": "main-page",
       "custom_css": [
@@ -52,6 +18,344 @@
         "padding_top": 24,
         "padding_bottom": 0
       }
+    },
+    "rich_text_pa3CVL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RcFaNj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Promise",
+            "heading_size": "h0",
+            "heading_tag": "h2"
+          }
+        },
+        "text_YPpynC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Lily Blanche, we believe jewellery is the most precious way to keep your favourite memories close to your heart and is a symbol of love</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RcFaNj",
+        "text_YPpynC"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_qqXpRd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Pn6BY6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Commitment to Excellence",
+            "heading_size": "h1",
+            "heading_tag": "h3"
+          }
+        },
+        "text_ftwgeF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Named after our founder Gillian Crawford's grandmother, Lily Blanche is built on a foundation of creativity and meticulous craftsmanship. Every single piece that we create is designed to tell a story-your story- with profound sentiment. We are dedicated to creating the heirlooms of tomorrow from the conversation of pieces today, ensuring that our jewellery becomes a precious part of your legacy. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Pn6BY6",
+        "text_ftwgeF"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_ycmQj4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_VFfEkW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Commitment to Quality & Craftsmanship",
+            "heading_size": "h1",
+            "heading_tag": "h3"
+          }
+        },
+        "text_BKxdgU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are dedicated to creating jewellery that stands the test of time. Our commitment to quality is evident in every detail of our design and manufacturing process. We exclusively use the finest materials and work with master craftspeople to ensure exceptional results. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_VFfEkW",
+        "text_BKxdgU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "multirow_fq6Nnj": {
+      "type": "multirow",
+      "blocks": {
+        "row_kPUCgX": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/mens_jewellery_hanging_large_mobile.webp",
+            "caption": "",
+            "heading": "Precious Metals of the Highest Standard",
+            "text": "<p>We exclusively use high-quality 9-carat and 18 carat gold and 92.5% pure Sterling Silver. Our gold vermeil jewellery features a thick layer of 18-carat gold (3 microns thick) over solid sterling silver, exceeding the industry standard and offering a superior, hypoallergenic alternative to gold plated pieces. This commitment to precious metals ensures that your jewellery retains its value and beauty for years to come.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_3zy8cK": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Lily_Blanche_Silver_hallmark.jpg",
+            "caption": "",
+            "heading": "Hallmarking & Authenticity Guarantee",
+            "text": "<p>Every locket and solid gold Lily Blanche piece is hallmarked at the Edinburgh Assay Office, a government agency, guaranteeing the metals authenticity and purity. The hallmark is your guarantee of quality and protects you from inferior pieces. The Edinburgh Assay Office's rigorous testing ensures that every piece meets the highest standards of precious metal contents and craftsmanship. </p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_wJxi8P": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/peridot_stud_earrings.webp",
+            "caption": "",
+            "heading": "Ethically Sourced Gemstones",
+            "text": "<p>We carefully select natural, ethically sourced gemstones that adhere to the Kimberly process for diamonds to ensure that they are conflict free. Our expert lapidarists cut each gemstone by hand to maximise their natural beauty. We are committed to transparency and we do not use any lab grown stones, ensuring that every gemstone that we use is natural. </p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        },
+        "row_HrKRAE": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/diamond_heartLockets.webp",
+            "caption": "",
+            "heading": "Handcrafted Excellence",
+            "text": "<p>Our jewellery is meticulously handcrafted by master goldsmiths, ensuring each piece is designed to last and stand the test of time. Our artisans bring generations of experience and passion to each piece that they create, combining traditional techniques with modern designs. </p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_kPUCgX",
+        "row_3zy8cK",
+        "row_wJxi8P",
+        "row_HrKRAE"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_FTfnqC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ykVAkn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Personalisation & Sentiment: Your Story, Our Passion",
+            "heading_size": "h1",
+            "heading_tag": "h3"
+          }
+        },
+        "text_D3UkCU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lily Blanche specialises in personalised jewellery and photo lockets, allowing you to keep precious memories close. We understand the significance of each piece and we offer a range of services to make each Lily Blanche order unforgettable. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ykVAkn",
+        "text_D3UkCU"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "multicolumn_9AtArN": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_t3NTbD": {
+          "type": "column",
+          "settings": {
+            "title": "Free Photo Service",
+            "text": "<p>We offer a complimentary photo service with all of our lockets, ensuring that your memories are perfectly preserved within your chosen piece. Our personalisation experts ensure optimal image quality and placement.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_BAxhgj": {
+          "type": "column",
+          "settings": {
+            "title": "Bespoke Engraving",
+            "text": "<p>Personalise your jewellery with a meaningful engraving to make your jewellery unique to you. From initials to dates to special memories our team will bring your vision to life.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GEHip6": {
+          "type": "column",
+          "settings": {
+            "title": "Complimentary Gift Wrap",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_t3NTbD",
+        "column_BAxhgj",
+        "column_GEHip6"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_6wDLVU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_yLYayx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ethical & Sustainable Practices: A Lighter Footprint",
+            "heading_size": "h1",
+            "heading_tag": "h3"
+          }
+        },
+        "text_3VK4cF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are deeply committed to minimizing our environmental impact and fostering a responsible business. Our sustainability plan outlines our dedication to creating jewellery that is beautiful both in design and in its impact on our planet.</p><p></p><h3><strong>Net Zero Commitment by 2050</strong></h3><p>Wow (Scotland) Ltd, the parent company of Lily Blanche, is committed to achieving net zero status by 2050. We are actively working to ensure our footprint is as light as possible while still creating jobs, growing the economy, and servicing our customers with excellence.</p><p></p><h3><strong>Love Local & Ethical Supply Chain</strong></h3><p>We prioritize working with UK suppliers and maintain personal relationships throughout our supply chain, from printers to gem-cutters, emphasizing ethical business practices. We also carry out repairs locally to reduce our carbon footprint. By keeping our operations close to home, we support the local economy while minimizing transportation emissions.</p><h3><strong>Sustainable Packaging Solutions</strong></h3><p>Our packaging boxes are sourced from a UK supplier and are fully biodegradable, reusable, and recyclable, made from 75% recycled material. We offer a \"go paperless\" option at checkout to further reduce waste. Our packaging supplier uses only ethically sourced raw materials, and their pulp and board suppliers are FSC accredited with re-afforestation programmes.</p><h3><strong>Carbon Offsetting & Green Partnerships</strong></h3><p>We partner with More Trees to help offset our carbon footprint and utilize delivery partners like Royal Mail, who are leading the way in the move to net zero with all-electric vehicle hubs. We are committed to making sustainable choices at every stage of our business operations.</p>"
+          }
+        },
+        "button_Pi7i6G": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read More About Our Sustainability Promise Here",
+            "button_link": "https://www.lilyblanche.com/pages/sustainability-plan",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_yLYayx",
+        "text_3VK4cF",
+        "button_Pi7i6G"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "178455960055b0f7bd": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_1f596ad_MXMfPP": {
+          "type": "ai_gen_block_1f596ad",
+          "settings": {
+            "column_1_header": "Promise Category",
+            "column_2_header": "Key Commitments",
+            "row_1_col_1": "Quality & Craftsmanship",
+            "row_1_col_2": "100% precious metals (Solid Gold, Sterling Silver, Gold Vermeil), Edinburgh Assay Office hallmarking, ethically sourced natural gemstones, handcrafted by master artisans.",
+            "row_2_col_1": "Personalisation",
+            "row_2_col_2": "Free photo service with lockets, bespoke engraving, dedicated customer support for customisation, Memory Keeper Lockets®.",
+            "row_3_col_1": "Sustainability",
+            "row_3_col_2": "Net zero by 2050, biodegradable/reusable packaging (75% recycled), carbon offsetting, local UK suppliers, green delivery partnerships.",
+            "row_4_col_1": "Social Responsibility",
+            "row_4_col_2": "Scottish Business Pledge signatory (Living Wage), support for Social Bite (homelessness), mentoring female entrepreneurs, local community engagement.",
+            "row_5_col_1": "Customer Experience",
+            "row_5_col_2": "Transparent pricing, secure data handling, luxurious packaging, fast and reliable shipping, personalized care, 4.7/5 Trustpilot rating.",
+            "desktop_width_percent": 85,
+            "first_column_width": 30,
+            "cell_padding": 16,
+            "background_color": "#ffffff",
+            "header_background_color": "#E1D1D2",
+            "header_text_color": "#000000",
+            "body_text_color": "#121212",
+            "border_color": "#e6dfd7",
+            "row_stripe_color": "#f9f7f5",
+            "header_font_size": 16,
+            "body_font_size": 14,
+            "border_radius": 0,
+            "table_border_thickness": 1
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_1f596ad_MXMfPP"
+      ],
+      "settings": {}
     },
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b": {
       "type": "newsletter",
@@ -105,8 +409,15 @@
     }
   },
   "order": [
-    "c6cfd15d-cf95-4ed8-b5ff-7025230e9c77",
     "main",
+    "rich_text_pa3CVL",
+    "rich_text_qqXpRd",
+    "rich_text_ycmQj4",
+    "multirow_fq6Nnj",
+    "rich_text_FTfnqC",
+    "multicolumn_9AtArN",
+    "rich_text_6wDLVU",
+    "178455960055b0f7bd",
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
     "a6a19d7e-1890-4758-b926-ca82274ab64b"
   ]
