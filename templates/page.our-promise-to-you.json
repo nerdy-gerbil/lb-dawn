@@ -317,6 +317,31 @@
         "padding_bottom": 52
       }
     },
+    "rich_text_CVY4nb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_D9WbpM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Promises at a Glance",
+            "heading_size": "h1",
+            "heading_tag": "h3"
+          }
+        }
+      },
+      "block_order": [
+        "heading_D9WbpM"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 24
+      }
+    },
     "178455960055b0f7bd": {
       "type": "_blocks",
       "blocks": {
@@ -417,6 +442,7 @@
     "rich_text_FTfnqC",
     "multicolumn_9AtArN",
     "rich_text_6wDLVU",
+    "rich_text_CVY4nb",
     "178455960055b0f7bd",
     "138c49d2-7ccc-466a-a9a9-18275e1ed23b",
     "a6a19d7e-1890-4758-b926-ca82274ab64b"
