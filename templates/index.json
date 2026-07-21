@@ -582,7 +582,7 @@
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
         "button_label": "Learn more about our promise",
-        "button_link": "shopify://pages/our-promise",
+        "button_link": "shopify://pages/our-promise-to-you",
         "padding_top": 32,
         "padding_bottom": 24
       }
