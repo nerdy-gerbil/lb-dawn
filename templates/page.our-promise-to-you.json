@@ -125,8 +125,8 @@
             "caption": "",
             "heading": "Precious Metals of the Highest Standard",
             "text": "<p>We exclusively use high-quality 9-carat and 18 carat gold and 92.5% pure Sterling Silver. Our gold vermeil jewellery features a thick layer of 18-carat gold (3 microns thick) over solid sterling silver, exceeding the industry standard and offering a superior, hypoallergenic alternative to gold plated pieces. This commitment to precious metals ensures that your jewellery retains its value and beauty for years to come.</p>",
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "Read More About Our Materials",
+            "button_link": "shopify://pages/our-materials"
           }
         },
         "row_3zy8cK": {
@@ -136,8 +136,8 @@
             "caption": "",
             "heading": "Hallmarking & Authenticity Guarantee",
             "text": "<p>Every locket and solid gold Lily Blanche piece is hallmarked at the Edinburgh Assay Office, a government agency, guaranteeing the metals authenticity and purity. The hallmark is your guarantee of quality and protects you from inferior pieces. The Edinburgh Assay Office's rigorous testing ensures that every piece meets the highest standards of precious metal contents and craftsmanship. </p>",
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "Read More About Our Hallmark",
+            "button_link": "shopify://pages/our-hallmark"
           }
         },
         "row_wJxi8P": {
@@ -147,8 +147,8 @@
             "caption": "",
             "heading": "Ethically Sourced Gemstones",
             "text": "<p>We carefully select natural, ethically sourced gemstones that adhere to the Kimberly process for diamonds to ensure that they are conflict free. Our expert lapidarists cut each gemstone by hand to maximise their natural beauty. We are committed to transparency and we do not use any lab grown stones, ensuring that every gemstone that we use is natural. </p>",
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "Read More About Our Birthstones",
+            "button_link": "shopify://pages/birthstones-by-month"
           }
         },
         "row_HrKRAE": {
@@ -158,7 +158,7 @@
             "caption": "",
             "heading": "Handcrafted Excellence",
             "text": "<p>Our jewellery is meticulously handcrafted by master goldsmiths, ensuring each piece is designed to last and stand the test of time. Our artisans bring generations of experience and passion to each piece that they create, combining traditional techniques with modern designs. </p>",
-            "button_label": "Button label",
+            "button_label": "",
             "button_link": ""
           }
         }
@@ -224,7 +224,7 @@
         "column_t3NTbD": {
           "type": "column",
           "settings": {
-            "title": "Free Photo Service",
+            "title": "<strong>Free Photo Service</strong>",
             "text": "<p>We offer a complimentary photo service with all of our lockets, ensuring that your memories are perfectly preserved within your chosen piece. Our personalisation experts ensure optimal image quality and placement.</p>",
             "link_label": "",
             "link": ""
@@ -233,7 +233,7 @@
         "column_BAxhgj": {
           "type": "column",
           "settings": {
-            "title": "Bespoke Engraving",
+            "title": "<strong>Bespoke Engraving</strong>",
             "text": "<p>Personalise your jewellery with a meaningful engraving to make your jewellery unique to you. From initials to dates to special memories our team will bring your vision to life.</p>",
             "link_label": "",
             "link": ""
@@ -242,7 +242,7 @@
         "column_GEHip6": {
           "type": "column",
           "settings": {
-            "title": "Complimentary Gift Wrap",
+            "title": "<strong>Complimentary Gift Wrap</strong>",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
@@ -364,7 +364,7 @@
             "first_column_width": 30,
             "cell_padding": 16,
             "background_color": "#ffffff",
-            "header_background_color": "#E1D1D2",
+            "header_background_color": "#e1d1d2",
             "header_text_color": "#000000",
             "body_text_color": "#121212",
             "border_color": "#e6dfd7",
