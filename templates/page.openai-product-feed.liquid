@@ -1,0 +1,15 @@
+{% layout none %}id,title,description,link,image_link,price,availability,brand,condition,enable_search,enable_checkout
+{% paginate collections.all.products by 1000 %}
+{% for product in collections.all.products %}
+{% for variant in product.variants %}
+{% capture raw_id %}{{ variant.sku | default: variant.id }}{% endcapture %}
+{% capture raw_title %}{{ product.title | append: " - " | append: variant.title }}{% endcapture %}
+{% capture raw_desc %}{{ product.description | strip_html | strip_newlines | replace: '"', '""' }}{% endcapture %}
+{% capture raw_link %}{{ shop.url }}{{ variant.url }}{% endcapture %}
+{% capture raw_image %}{% if variant.image %}{{ variant.image | image_url: width: 1000 }}{% else %}{{ product.featured_image | image_url: width: 1000 }}{% endif %}{% endcapture %}
+{% capture raw_price %}{{ variant.price | money_without_currency }} {{ cart.currency.iso_code }}{% endcapture %}
+{% capture raw_avail %}{% if variant.available %}in_stock{% else %}out_of_stock{% endif %}{% endcapture %}
+"{{ raw_id | strip }}","{{ raw_title | replace: '"', '""' | strip }}","{{ raw_desc | strip }}","https:{{ raw_link | strip }}","https:{{ raw_image | strip }}","{{ raw_price | strip }}","{{ raw_avail | strip }}","Lily Blanche","new","true","true"
+{% endfor %}
+{% endfor %}
+{% endpaginate %}
