@@ -13,13 +13,31 @@ This guide explains how to generate an OpenAI-compliant Shopping Product Feed (C
 └─────────────────┘       └──────────────────────┘       └──────────────────────┘
 ```
 
-1. **Feed Generation**: Shopify Liquid template ([`templates/page.openai-product-feed.liquid`](file:///c:/workspace/lb-dawn/templates/page.openai-product-feed.liquid)) formats the catalog into uncompressed CSV schema.
-2. **Scheduled Trigger**: Vercel Cron Job triggers `/api/openai-feed` once daily at 03:00 UTC.
-3. **SFTP Sync**: Vercel function fetches CSV feed and uploads uncompressed file `/openai-product-feed.csv` to `sftp.commerce.openai.com:443`.
+1. **Liquid Template**: [`templates/page.openai-product-feed.liquid`](file:///c:/workspace/lb-dawn/templates/page.openai-product-feed.liquid) formats product catalog into uncompressed CSV.
+2. **Shopify Page**: Dedicated Shopify Page linked to `page.openai-product-feed` template to output raw CSV feed.
+3. **Scheduled Trigger**: Vercel Cron Job triggers `/api/openai-feed` daily at 03:00 UTC.
+4. **SFTP Sync**: Vercel function fetches CSV from Shopify page URL and uploads `/openai-product-feed.csv` to `sftp.commerce.openai.com:443`.
 
 ---
 
-## 2. OpenAI Product Feed Schema Checklist
+## 2. Shopify Page Creation & URL Setup
+
+You must create a dedicated Shopify Page in Admin so the Liquid template can render the live CSV catalog feed:
+
+### Steps in Shopify Admin:
+1. Go to **Shopify Admin → Online Store → Pages**.
+2. Click **Add page**.
+3. **Title**: `OpenAI Product Feed`
+4. **Theme template**: Select `openai-product-feed` from dropdown.
+5. **URL handle**: Ensure the page handle is `openai-product-feed`.
+6. Click **Save**.
+
+### Required Feed URL:
+- **Public Feed URL**: `https://www.lilyblanche.com/pages/openai-product-feed`
+
+---
+
+## 3. OpenAI Product Feed Schema Checklist
 
 Your product feed CSV includes the following required attributes:
 
@@ -39,7 +57,7 @@ Your product feed CSV includes the following required attributes:
 
 ---
 
-## 3. Vercel Cron Job Configuration (`vercel.json`)
+## 4. Vercel Cron Job Configuration (`vercel.json`)
 
 Configuration in `scripts/lb-conversational-attributes-feed/vercel.json`:
 
@@ -67,7 +85,7 @@ Configuration in `scripts/lb-conversational-attributes-feed/vercel.json`:
 
 ---
 
-## 4. Vercel Cron API Route (`api/openai-feed.js`)
+## 5. Vercel Cron API Route (`api/openai-feed.js`)
 
 Vercel function in `scripts/lb-conversational-attributes-feed/api/openai-feed.js`:
 
@@ -105,7 +123,7 @@ export default async function handler(req, res) {
 
     await sftp.connect(sftpConfig);
 
-    // Upload uncompressed CSV file
+    // Upload uncompressed CSV file to root
     await sftp.put(csvBuffer, '/openai-product-feed.csv');
 
     await sftp.end();
@@ -127,12 +145,13 @@ export default async function handler(req, res) {
 
 ---
 
-## 5. Vercel Environment Variables Setup
+## 6. Vercel Environment Variables Setup
 
-Configure the following environment variables in **Vercel Dashboard → Project Settings → Environment Variables**:
+Configure environment variables in **Vercel Dashboard → Project Settings → Environment Variables**:
 
 | Variable | Value |
 | :--- | :--- |
+| `SHOPIFY_OPENAI_FEED_URL` | `https://www.lilyblanche.com/pages/openai-product-feed` |
 | `OPENAI_SFTP_HOST` | `sftp.commerce.openai.com` |
 | `OPENAI_SFTP_PORT` | `443` |
 | `OPENAI_SFTP_USER` | `oaiproductfeedprod.fdbc409cd9193b488a8b211774110db66b476141` |
@@ -141,20 +160,20 @@ Configure the following environment variables in **Vercel Dashboard → Project 
 
 ---
 
-## 6. Deployment & Testing
+## 7. Deployment & Testing
 
-1. **Deploy to Vercel**:
+1. **Deploy Vercel Project**:
    ```bash
    cd scripts/lb-conversational-attributes-feed
    git add .
-   git commit -m "Update OpenAI feed endpoint and cron"
+   git commit -m "Update OpenAI feed setup"
    git push origin main
    ```
 2. **Manual Test Trigger**:
-   Call your endpoint via curl or browser:
+   Call endpoint via curl or browser:
    ```bash
    curl -X GET https://lb-conversational-attributes-feed.vercel.app/api/openai-feed
    ```
-3. **Verify Status**:
+3. **Verify Execution**:
    - Check Vercel **Functions Logs**.
    - Check OpenAI Ads Manager under **Tools → Feeds → Upload History**.
