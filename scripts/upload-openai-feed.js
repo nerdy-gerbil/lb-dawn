@@ -1,7 +1,7 @@
-import Client from 'ssh2-sftp-client';
-import fs from 'fs';
-import path from 'path';
-import 'dotenv/config';
+const Client = require('ssh2-sftp-client');
+const fs = require('fs');
+const path = require('path');
+require('dotenv/config');
 
 async function uploadFeed() {
   const sftp = new Client();
@@ -27,13 +27,19 @@ async function uploadFeed() {
     }
 
     const csvData = await response.text();
-    fs.writeFileSync(localCsvPath, csvData, 'utf-8');
-    console.log(`CSV feed saved locally (${csvData.length} bytes) -> ${localCsvPath}`);
+    const cleanLines = csvData
+      .split(/\r?\n/)
+      .map(l => l.trim())
+      .filter(l => l.length > 0);
+    const cleanCsv = cleanLines.join('\n') + '\n';
+
+    fs.writeFileSync(localCsvPath, cleanCsv, 'utf-8');
+    console.log(`CSV feed saved locally (${cleanCsv.length} bytes, ${cleanLines.length - 1} rows) -> ${localCsvPath}`);
 
     console.log(`Connecting to ${config.host}:${config.port}...`);
     await sftp.connect(config);
 
-    // Clean up old XML files from root
+    // Clean up old XML/legacy feed files from root if present
     try { await sftp.delete('/conversational-feed.xml'); } catch(e) {}
     try { await sftp.delete('/conversational-feed.xml.gz'); } catch(e) {}
     try { await sftp.delete('/feed.csv'); } catch(e) {}
@@ -46,7 +52,7 @@ async function uploadFeed() {
   } catch (err) {
     console.error('SFTP Upload Error:', err.message);
   } finally {
-    await sftp.end();
+    try { await sftp.end(); } catch (e) {}
     console.log('SFTP connection closed.');
   }
 }
