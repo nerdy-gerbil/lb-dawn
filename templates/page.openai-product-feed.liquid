@@ -5,11 +5,12 @@
 {% capture raw_id %}{{ variant.sku | default: variant.id }}{% endcapture %}
 {% capture raw_title %}{{ product.title | append: " - " | append: variant.title }}{% endcapture %}
 {% capture raw_desc %}{{ product.description | strip_html | strip_newlines | replace: '"', '""' }}{% endcapture %}
-{% capture raw_link %}{{ shop.url }}{{ variant.url }}{% endcapture %}
+{% capture raw_link %}{% if variant.url contains 'http' %}{{ variant.url }}{% else %}https://www.lilyblanche.com{{ variant.url }}{% endif %}{% endcapture %}
 {% capture raw_image %}{% if variant.image %}{{ variant.image | image_url: width: 1000 }}{% else %}{{ product.featured_image | image_url: width: 1000 }}{% endif %}{% endcapture %}
+{% capture raw_image_full %}{% if raw_image contains 'http' %}{{ raw_image }}{% else %}https:{{ raw_image }}{% endif %}{% endcapture %}
 {% capture raw_price %}{{ variant.price | money_without_currency }} GBP{% endcapture %}
 {% capture raw_avail %}{% if variant.available %}in_stock{% else %}out_of_stock{% endif %}{% endcapture %}
-"{{ raw_id | strip }}","{{ raw_title | replace: '"', '""' | strip }}","{{ raw_desc | strip }}","https:{{ raw_link | strip }}","https:{{ raw_image | strip }}","{{ raw_price | strip }}","{{ raw_avail | strip }}","Lily Blanche","Lily Blanche","new","true","true"
+"{{ raw_id | strip }}","{{ raw_title | replace: '"', '""' | strip }}","{{ raw_desc | strip }}","{{ raw_link | strip }}","{{ raw_image_full | strip }}","{{ raw_price | strip }}","{{ raw_avail | strip }}","Lily Blanche","Lily Blanche","new","true","true"
 {% endfor %}
 {% endfor %}
 {% endpaginate %}
