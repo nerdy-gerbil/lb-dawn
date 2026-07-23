@@ -13,21 +13,30 @@ async function uploadFeed() {
     password: process.env.OPENAI_SFTP_PASSWORD || 'TONvnxOBrcLsxG1wfNgsBOfm/+gmJIqF',
   };
 
-  const xmlPath = path.resolve('conversational-feed.xml');
-
-  if (!fs.existsSync(xmlPath)) {
-    console.error(`Local XML file not found: ${xmlPath}`);
-    process.exit(1);
-  }
+  const feedUrl = process.env.SHOPIFY_OPENAI_FEED_URL || "https://www.lilyblanche.com/pages/openai-product-feed";
+  const localCsvPath = path.resolve('openai-product-feed.csv');
 
   try {
+    console.log(`Fetching CSV feed from ${feedUrl}...`);
+    const response = await fetch(feedUrl, {
+      headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) OpenAI-Feed-Generator/1.0" }
+    });
+
+    if (!response.ok) {
+      throw new Error(`Shopify Feed fetch failed: ${response.status} ${response.statusText}`);
+    }
+
+    const csvData = await response.text();
+    fs.writeFileSync(localCsvPath, csvData, 'utf-8');
+    console.log(`CSV feed saved locally (${csvData.length} bytes) -> ${localCsvPath}`);
+
     console.log(`Connecting to ${config.host}:${config.port}...`);
     await sftp.connect(config);
 
-    console.log('Uploading uncompressed conversational-feed.xml...');
-    await sftp.fastPut(xmlPath, '/conversational-feed.xml');
+    console.log('Uploading openai-product-feed.csv to SFTP root...');
+    await sftp.fastPut(localCsvPath, '/openai-product-feed.csv');
 
-    console.log('Feed upload completed successfully!');
+    console.log('CSV Feed upload completed successfully!');
   } catch (err) {
     console.error('SFTP Upload Error:', err.message);
   } finally {
