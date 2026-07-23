@@ -33,12 +33,16 @@ async function uploadFeed() {
     console.log(`Connecting to ${config.host}:${config.port}...`);
     await sftp.connect(config);
 
-    console.log('Uploading feed files to SFTP root...');
-    await sftp.fastPut(localCsvPath, '/openai-product-feed.csv');
-    await sftp.fastPut(localCsvPath, '/feed.csv');
-    await sftp.fastPut(localCsvPath, '/products.csv');
+    // Clean up old XML files from root
+    try { await sftp.delete('/conversational-feed.xml'); } catch(e) {}
+    try { await sftp.delete('/conversational-feed.xml.gz'); } catch(e) {}
+    try { await sftp.delete('/feed.csv'); } catch(e) {}
+    try { await sftp.delete('/products.csv'); } catch(e) {}
 
-    console.log('CSV Feed uploads completed successfully!');
+    console.log('Uploading openai-product-feed.csv to SFTP root...');
+    await sftp.fastPut(localCsvPath, '/openai-product-feed.csv');
+
+    console.log('CSV Feed upload completed successfully!');
   } catch (err) {
     console.error('SFTP Upload Error:', err.message);
   } finally {
