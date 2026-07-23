@@ -1,11 +1,10 @@
-{% layout none %}"item_id","title","description","url","image_link","price","availability","brand","seller_name","condition","enable_search","enable_checkout"
+{% layout none %}item_id,title,description,url,image_link,price,availability,brand,seller_name,condition,enable_search,enable_checkout
 {% paginate collections.all.products by 250 %}
 {% for product in collections.all.products %}
 {% for variant in product.variants %}
 {% capture raw_id %}{{ variant.sku | default: variant.id }}{% endcapture %}
 {% capture raw_title %}{{ product.title | append: " - " | append: variant.title }}{% endcapture %}
-{% capture raw_desc %}{{ product.description | strip_html | replace: '"', '""' | replace: '\', '\\' | replace: '
-', ' ' | replace: '	', ' ' }}{% endcapture %}
+{% capture raw_desc %}{{ product.description | strip_html | strip_newlines | replace: '"', '""' | replace: '\', '\\' | replace: '	', ' ' }}{% endcapture %}
 {% capture raw_link %}{% if variant.url contains 'http' %}{{ variant.url }}{% else %}https://www.lilyblanche.com{{ variant.url }}{% endif %}{% endcapture %}
 {% capture raw_image %}{% if variant.image %}{{ variant.image | image_url: width: 1000 }}{% else %}{{ product.featured_image | image_url: width: 1000 }}{% endif %}{% endcapture %}
 {% capture raw_image_full %}{% if raw_image contains 'http' %}{{ raw_image }}{% else %}https:{{ raw_image }}{% endif %}{% endcapture %}
