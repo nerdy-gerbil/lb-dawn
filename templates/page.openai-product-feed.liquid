@@ -1,4 +1,4 @@
-{% layout none %}item_id,title,description,url,image_link,price,availability,brand,seller_name,condition,enable_search,enable_checkout
+{% layout none %}"item_id","title","description","url","image_link","price","availability","brand","seller_name","condition","enable_search","enable_checkout"
 {% paginate collections.all.products by 250 %}
 {% for product in collections.all.products %}
 {% for variant in product.variants %}
