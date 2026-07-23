@@ -1,6 +1,6 @@
 # Vercel Daily OpenAI Shopping Feed & SFTP Setup Guide
 
-This guide explains how to generate an OpenAI-compliant Shopping Product Feed from Shopify and automate daily uploads to OpenAI Commerce SFTP using Vercel Serverless Functions and Vercel Cron Jobs.
+This guide explains how to generate an OpenAI-compliant Shopping Product Feed (CSV) from Shopify and automate daily uploads to OpenAI Commerce SFTP using Vercel Serverless Functions and Vercel Cron Jobs.
 
 ---
 
@@ -13,15 +13,15 @@ This guide explains how to generate an OpenAI-compliant Shopping Product Feed fr
 └─────────────────┘       └──────────────────────┘       └──────────────────────┘
 ```
 
-1. **Feed Generation**: Shopify Liquid template or GraphQL query formats product catalog according to OpenAI Product Feed Specification.
-2. **Scheduled Trigger**: Vercel Cron Job triggers `/api/cron-upload` once daily.
-3. **SFTP Sync**: Vercel function fetches feed, compresses it (`.xml.gz`), and uploads to `sftp.commerce.openai.com`.
+1. **Feed Generation**: Shopify Liquid template ([`templates/page.openai-product-feed.liquid`](file:///c:/workspace/lb-dawn/templates/page.openai-product-feed.liquid)) formats the catalog into uncompressed CSV schema.
+2. **Scheduled Trigger**: Vercel Cron Job triggers `/api/openai-feed` once daily at 03:00 UTC.
+3. **SFTP Sync**: Vercel function fetches CSV feed and uploads uncompressed file `/openai-product-feed.csv` to `sftp.commerce.openai.com:443`.
 
 ---
 
 ## 2. OpenAI Product Feed Schema Checklist
 
-Your product feed file must include the following minimum attributes:
+Your product feed CSV includes the following required attributes:
 
 | Header Attribute | Description | Example |
 | :--- | :--- | :--- |
@@ -30,7 +30,7 @@ Your product feed file must include the following minimum attributes:
 | `description` | Plain text product summary (no HTML tags) | `Solid sterling silver locket...` |
 | `link` | Canonical URL to product page | `https://www.lilyblanche.com/products/...` |
 | `image_link` | Primary product image URL | `https://cdn.shopify.com/s/files/...` |
-| `price` | Numerical price with currency code | `120.00 GBP` |
+| `price` | Price value with ISO currency code | `120.00 GBP` |
 | `availability` | `in_stock` \| `out_of_stock` \| `preorder` | `in_stock` |
 | `brand` | Store / brand name | `Lily Blanche` |
 | `condition` | `new` \| `refurbished` \| `used` | `new` |
@@ -41,7 +41,7 @@ Your product feed file must include the following minimum attributes:
 
 ## 3. Vercel Cron Job Configuration (`vercel.json`)
 
-Add the schedule definition in `scripts/lb-conversational-attributes-feed/vercel.json`:
+Configuration in `scripts/lb-conversational-attributes-feed/vercel.json`:
 
 ```json
 {
@@ -50,11 +50,15 @@ Add the schedule definition in `scripts/lb-conversational-attributes-feed/vercel
     {
       "source": "/feed",
       "destination": "/api/feed"
+    },
+    {
+      "source": "/openai-feed",
+      "destination": "/api/openai-feed"
     }
   ],
   "crons": [
     {
-      "path": "/api/cron-upload",
+      "path": "/api/openai-feed",
       "schedule": "0 3 * * *"
     }
   ]
@@ -63,54 +67,59 @@ Add the schedule definition in `scripts/lb-conversational-attributes-feed/vercel
 
 ---
 
-## 4. Vercel Cron API Route (`api/cron-upload.js`)
+## 4. Vercel Cron API Route (`api/openai-feed.js`)
 
-Create `/api/cron-upload.js` in your Vercel project repository:
+Vercel function in `scripts/lb-conversational-attributes-feed/api/openai-feed.js`:
 
 ```javascript
 import Client from 'ssh2-sftp-client';
-import zlib from 'zlib';
 
 export default async function handler(req, res) {
-  // Verify Cron authorization header if set
   if (process.env.CRON_SECRET && req.headers.authorization !== `Bearer ${process.env.CRON_SECRET}`) {
-    return res.status(401).end('Unauthorized');
+    return res.status(401).json({ error: 'Unauthorized' });
   }
 
-  const feedUrl = "https://www.lilyblanche.com/pages/conversational-attributes-feed";
+  const shopifyFeedUrl = process.env.SHOPIFY_OPENAI_FEED_URL || "https://www.lilyblanche.com/pages/openai-product-feed";
   const sftp = new Client();
 
   try {
-    // 1. Fetch live product feed from Shopify
-    const response = await fetch(feedUrl, {
-      headers: { "User-Agent": "Mozilla/5.0 (Vercel Cron OpenAI Feed Sync)" }
+    const response = await fetch(shopifyFeedUrl, {
+      headers: { 
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) OpenAI-Feed-Generator/1.0" 
+      }
     });
+
     if (!response.ok) {
-      throw new Error(`Failed to fetch feed: ${response.statusText}`);
+      throw new Error(`Shopify Feed fetch failed: ${response.status} ${response.statusText}`);
     }
 
-    const xmlData = await response.text();
-    const xmlBuffer = Buffer.from(xmlData, 'utf-8');
-    const gzBuffer = zlib.gzipSync(xmlBuffer);
+    const csvData = await response.text();
+    const csvBuffer = Buffer.from(csvData, 'utf-8');
 
-    // 2. Connect to OpenAI SFTP
-    await sftp.connect({
+    const sftpConfig = {
       host: process.env.OPENAI_SFTP_HOST || 'sftp.commerce.openai.com',
       port: parseInt(process.env.OPENAI_SFTP_PORT || '443', 10),
       username: process.env.OPENAI_SFTP_USER,
       password: process.env.OPENAI_SFTP_PASSWORD,
-    });
+    };
 
-    // 3. Upload feeds (uncompressed XML & compressed XML.GZ)
-    await sftp.put(xmlBuffer, '/conversational-feed.xml');
-    await sftp.put(gzBuffer, '/conversational-feed.xml.gz');
+    await sftp.connect(sftpConfig);
+
+    // Upload uncompressed CSV file
+    await sftp.put(csvBuffer, '/openai-product-feed.csv');
 
     await sftp.end();
-    return res.status(200).json({ success: true, message: "OpenAI Feed synced successfully" });
+    return res.status(200).json({
+      success: true,
+      message: 'Uncompressed OpenAI CSV Shopping Feed uploaded to SFTP successfully',
+      csvSizeBytes: csvBuffer.length,
+      timestamp: new Date().toISOString()
+    });
 
   } catch (err) {
-    if (sftp) await sftp.end();
-    console.error("Cron SFTP Error:", err.message);
+    if (sftp) {
+      try { await sftp.end(); } catch (e) {}
+    }
     return res.status(500).json({ success: false, error: err.message });
   }
 }
@@ -122,27 +131,29 @@ export default async function handler(req, res) {
 
 Configure the following environment variables in **Vercel Dashboard → Project Settings → Environment Variables**:
 
-| Variable | Value / Description |
+| Variable | Value |
 | :--- | :--- |
 | `OPENAI_SFTP_HOST` | `sftp.commerce.openai.com` |
 | `OPENAI_SFTP_PORT` | `443` |
 | `OPENAI_SFTP_USER` | `oaiproductfeedprod.fdbc409cd9193b488a8b211774110db66b476141` |
 | `OPENAI_SFTP_PASSWORD` | `TONvnxOBrcLsxG1wfNgsBOfm/+gmJIqF` |
-| `CRON_SECRET` | *(Optional random secret string for API security)* |
+| `CRON_SECRET` | *(Optional random secret string)* |
 
 ---
 
-## 6. Testing & Deployment
+## 6. Deployment & Testing
 
 1. **Deploy to Vercel**:
    ```bash
    cd scripts/lb-conversational-attributes-feed
-   vercel --prod
+   git add .
+   git commit -m "Update OpenAI feed endpoint and cron"
+   git push origin main
    ```
 2. **Manual Test Trigger**:
    Call your endpoint via curl or browser:
    ```bash
-   curl -X GET https://your-vercel-domain.vercel.app/api/cron-upload
+   curl -X GET https://lb-conversational-attributes-feed.vercel.app/api/openai-feed
    ```
 3. **Verify Status**:
    - Check Vercel **Functions Logs**.
