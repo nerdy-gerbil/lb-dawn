@@ -83,12 +83,12 @@
         "parallax_mobile": false,
         "position_x_desktop": 50,
         "position_y_desktop": 50,
-        "position_x_mobile": 55,
-        "position_y_mobile": 50,
+        "position_x_mobile": 0,
+        "position_y_mobile": 83,
         "banner_height": "fixed_height",
-        "banner_height_mobile": "adapt_first",
+        "banner_height_mobile": "fixed_height",
         "banner_fixed_height": 100,
-        "banner_fixed_height_mobile": 70,
+        "banner_fixed_height_mobile": 45,
         "image": "shopify://shop_images/Compass_Locket_Banner_Desktop.webp",
         "image_mobile": "shopify://shop_images/Compass_Locket_Banner_Mobile.webp",
         "overlay": 0,
@@ -930,6 +930,110 @@
         "padding_bottom": 0
       }
     },
+    "shopping_faq_section": {
+      "type": "collapsible-content",
+      "blocks": {
+        "shopping_row_1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How quickly can my jewellery be delivered?",
+            "icon": "question_mark",
+            "row_content": "<p>If you are based in the UK, Lily Blanche offers three tracked delivery services. Standard UK delivery takes 2-4 working days. First class delivery takes 1- 2 working days. We also offer a next-working-day express delivery service for orders placed before noon. All orders are fully tracked to your door and you will receive a tracking number for your order in your shipping confirmation email. We use Royal Mail and DPD as our UK couriers.<br />If you have selected our photo insertion or complimentary engraving service, express delivery will arrive the working day after your photos or engraving details are confirmed. We are always happy to meet a deadline, so please contact us if your order is for a specific occasion. You can view all shipping options at <a href=\"https://www.lilyblanche.com/policies/shipping-policy.\">https://www.lilyblanche.com/policies/shipping-policy.</a></p>",
+            "page": ""
+          }
+        },
+        "shopping_row_2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I order from outside the UK?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, you can order Lily Blanche jewellery from outside the UK. You can place your order on the Lily Blanche website in US dollars, euros, or sterling, though please note that all final payments are processed in sterling. Simply click on the currency selector tab on our website to switch your preferred currency.</p> <p>To see overseas delivery options please click<a href=\"https://www.lilyblanche.com/policies/shipping-policy\" target=\"_blank\" rel=\"noopener\"> here&nbsp; </a></p> <p>We do not ship to every country in the world so please contact us if the country you want to ship to is not listed.&nbsp;</p>",
+            "page": ""
+          }
+        },
+        "shopping_row_3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you deliver outside the UK?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, we ship Lily Blanche jewellery to most overseas destinations including Europe, the USA, and the Rest of the World using tracked services including DHL and Royal Mail International. The shipping fee and final price will be calculated automatically when you enter your shipping address at checkout. Please note that some international orders are sent Delivery Duty Unpaid (DDU ), meaning you may be responsible for local customs or import duties in your jurisdiction.</p> <p>You can read more about Lily Blanche's international shipping policy at <a href=\"https://www.lilyblanche.com/policies/shipping-policy\">https://www.lilyblanche.com/policies/shipping-policy</a></p>",
+            "page": ""
+          }
+        },
+        "shopping_row_4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are your delivery charges?",
+            "icon": "question_mark",
+            "row_content": "<p>Lily Blanche offers free standard UK shipping on jewellery orders over &pound;125. For UK orders under &pound;125, standard tracked delivery is &pound;4.50. We also offer UK First Class Tracked Delivery for &pound;6.50 and Next Working Day Express Delivery for &pound;9.50. International shipping rates vary by destination and are calculated at checkout. You can read more about our shipping policies at <a href=\"https://www.lilyblanche.com/policies/shipping-policy\">https://www.lilyblanche.com/policies/shipping-policy</a></p>",
+            "page": ""
+          }
+        },
+        "shopping_row_5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is my order?",
+            "icon": "question_mark",
+            "row_content": "<p>When your Lily Blanche order is dispatched, you will receive a shipping confirmation email containing a unique tracking number. You can use this number to track your parcel's progress online. If you cannot find this email, please check your spam or junk folder. Please allow up to five working days for standard UK delivery and up to 14 days for orders to mainland Europe or the USA. If you have any concerns about your delivery, please contact our customer service team by email, or live chat. We'll be happy to help.</p>",
+            "page": ""
+          }
+        },
+        "shopping_row_6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can you deliver to my workplace?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, Lily Blanche can deliver to your jewellery order directly to your workplace. Please note that some Lily Blanche orders require a signature upon delivery. Please ensure your workplace is able to accept deliveries prior to arranging this. To arrange a delivery to your workplace, simply enter your workplace address in the shipping address section at checkout, while ensuring your billing address matches the address registered to your payment method.</p>",
+            "page": ""
+          }
+        },
+        "shopping_row_7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I want to surprise my loved one. Can you help me keep it secret?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, we can help you keep your Lily Blanche jewellery gift a secret. Your order will arrive in a box protected by an anonymous grey wrapper to conceal the contents from the elements and the recipient. There is no Lily Blanche branding on the outer packaging, though we are required to include a return address on the shipping label.</p>",
+            "page": ""
+          }
+        },
+        "shopping_row_8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I need my order for a specific occasion. Can you help?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes, we are always happy to prioritise a Lily Blanche order to ensure it reaches the recipient in time for a special occasion, such as an anniversary or birthday. If you need your order urgently, please choose the express delivery option at checkout or contact our studio directly so we can advise on the best delivery method. You can <a href=\"mailto:hello@lilyblanche.com\">email us here</a></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "shopping_row_1",
+        "shopping_row_2",
+        "shopping_row_3",
+        "shopping_row_4",
+        "shopping_row_5",
+        "shopping_row_6",
+        "shopping_row_7",
+        "shopping_row_8"
+      ],
+      "settings": {
+        "caption": "Frequently Asked Questions",
+        "heading": "Shopping FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "uncollapse_prose": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "button_label": "",
+        "button_link": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "navigation_1_r6QW6H": {
       "type": "navigation-1",
       "blocks": {
@@ -1039,99 +1143,6 @@
         "link-line-height": 1.6
       }
     },
-    "shopping_faq_section": {
-      "type": "collapsible-content",
-      "blocks": {
-        "shopping_row_1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How quickly can my jewellery be delivered?",
-            "icon": "question_mark",
-            "row_content": "<p>If you are based in the UK, Lily Blanche offers three tracked delivery services. Standard UK delivery takes 2-4 working days. First class delivery takes 1- 2 working days. We also offer a next-working-day express delivery service for orders placed before noon. All orders are fully tracked to your door and you will receive a tracking number for your order in your shipping confirmation email. We use Royal Mail and DPD as our UK couriers.<br />If you have selected our photo insertion or complimentary engraving service, express delivery will arrive the working day after your photos or engraving details are confirmed. We are always happy to meet a deadline, so please contact us if your order is for a specific occasion. You can view all shipping options at <a href=\"https://www.lilyblanche.com/policies/shipping-policy.\">https://www.lilyblanche.com/policies/shipping-policy.</a></p>",
-            "page": ""
-          }
-        },
-        "shopping_row_2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can I order from outside the UK?",
-            "icon": "question_mark",
-            "row_content": "<p>Yes, you can order Lily Blanche jewellery from outside the UK. You can place your order on the Lily Blanche website in US dollars, euros, or sterling, though please note that all final payments are processed in sterling. Simply click on the currency selector tab on our website to switch your preferred currency.</p> <p>To see overseas delivery options please click<a href=\"https://www.lilyblanche.com/policies/shipping-policy\" target=\"_blank\" rel=\"noopener\"> here&nbsp; </a></p> <p>We do not ship to every country in the world so please contact us if the country you want to ship to is not listed.&nbsp;</p>",
-            "page": ""
-          }
-        },
-        "shopping_row_3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Do you deliver outside the UK?",
-            "icon": "question_mark",
-            "row_content": "<p>Yes, we ship Lily Blanche jewellery to most overseas destinations including Europe, the USA, and the Rest of the World using tracked services including DHL and Royal Mail International. The shipping fee and final price will be calculated automatically when you enter your shipping address at checkout. Please note that some international orders are sent Delivery Duty Unpaid (DDU ), meaning you may be responsible for local customs or import duties in your jurisdiction.</p> <p>You can read more about Lily Blanche's international shipping policy at <a href=\"https://www.lilyblanche.com/policies/shipping-policy\">https://www.lilyblanche.com/policies/shipping-policy</a></p>",
-            "page": ""
-          }
-        },
-        "shopping_row_4": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What are your delivery charges?",
-            "icon": "question_mark",
-            "row_content": "<p>Lily Blanche offers free standard UK shipping on jewellery orders over &pound;125. For UK orders under &pound;125, standard tracked delivery is &pound;4.50. We also offer UK First Class Tracked Delivery for &pound;6.50 and Next Working Day Express Delivery for &pound;9.50. International shipping rates vary by destination and are calculated at checkout. You can read more about our shipping policies at <a href=\"https://www.lilyblanche.com/policies/shipping-policy\">https://www.lilyblanche.com/policies/shipping-policy</a></p>",
-            "page": ""
-          }
-        },
-        "shopping_row_5": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Where is my order?",
-            "icon": "question_mark",
-            "row_content": "<p>When your Lily Blanche order is dispatched, you will receive a shipping confirmation email containing a unique tracking number. You can use this number to track your parcel's progress online. If you cannot find this email, please check your spam or junk folder. Please allow up to five working days for standard UK delivery and up to 14 days for orders to mainland Europe or the USA. If you have any concerns about your delivery, please contact our customer service team by email, or live chat. We'll be happy to help.</p>",
-            "page": ""
-          }
-        },
-        "shopping_row_6": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can you deliver to my workplace?",
-            "icon": "question_mark",
-            "row_content": "<p>Yes, Lily Blanche can deliver to your jewellery order directly to your workplace. Please note that some Lily Blanche orders require a signature upon delivery. Please ensure your workplace is able to accept deliveries prior to arranging this. To arrange a delivery to your workplace, simply enter your workplace address in the shipping address section at checkout, while ensuring your billing address matches the address registered to your payment method.</p>",
-            "page": ""
-          }
-        },
-        "shopping_row_7": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "I want to surprise my loved one. Can you help me keep it secret?",
-            "icon": "question_mark",
-            "row_content": "<p>Yes, we can help you keep your Lily Blanche jewellery gift a secret. Your order will arrive in a box protected by an anonymous grey wrapper to conceal the contents from the elements and the recipient. There is no Lily Blanche branding on the outer packaging, though we are required to include a return address on the shipping label.</p>",
-            "page": ""
-          }
-        },
-        "shopping_row_8": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "I need my order for a specific occasion. Can you help?",
-            "icon": "question_mark",
-            "row_content": "<p>Yes, we are always happy to prioritise a Lily Blanche order to ensure it reaches the recipient in time for a special occasion, such as an anniversary or birthday. If you need your order urgently, please choose the express delivery option at checkout or contact our studio directly so we can advise on the best delivery method. You can <a href=\"mailto:hello@lilyblanche.com\">email us here</a></p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "shopping_row_1",
-        "shopping_row_2",
-        "shopping_row_3",
-        "shopping_row_4",
-        "shopping_row_5",
-        "shopping_row_6",
-        "shopping_row_7",
-        "shopping_row_8"
-      ],
-      "settings": {
-        "caption": "Frequently Asked Questions",
-        "heading": "Shopping FAQs",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "faq_shopping": {
       "type": "collapsible-content",
       "blocks": {
@@ -1222,7 +1233,16 @@
         "caption": "Frequently Asked Questions",
         "heading": "Shopping FAQs",
         "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
         "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "uncollapse_prose": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "button_label": "",
+        "button_link": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
