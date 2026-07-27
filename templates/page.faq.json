@@ -1,0 +1,133 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-faq",
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "category_1": {
+          "type": "category",
+          "settings": {
+            "title": "Shopping",
+            "q_1": "How quickly can my jewellery be delivered?",
+            "a_1": "<p>If you are based in the UK, Lily Blanche offers three tracked delivery services. Standard UK delivery takes 2-4 working days. First class delivery takes 1- 2 working days. We also offer a next-working-day express delivery service for orders placed before noon. All orders are fully tracked to your door and you will receive a tracking number for your order in your shipping confirmation email. We use Royal Mail and DPD as our UK couriers.<br />If you have selected our photo insertion or complimentary engraving service, express delivery will arrive the working day after your photos or engraving details are confirmed. We are always happy to meet a deadline, so please contact us if your order is for a specific occasion. You can view all shipping options at <a href=\"https://www.lilyblanche.com/policies/shipping-policy.\">https://www.lilyblanche.com/policies/shipping-policy.</a></p>",
+            "q_2": "Can I order from outside the UK?",
+            "a_2": "<p>Yes, you can order Lily Blanche jewellery from outside the UK. You can place your order on the Lily Blanche website in US dollars, euros, or sterling, though please note that all final payments are processed in sterling. Simply click on the currency selector tab on our website to switch your preferred currency.</p> <p>To see overseas delivery options please click<a href=\"https://www.lilyblanche.com/policies/shipping-policy\" target=\"_blank\" rel=\"noopener\"> here&nbsp; </a></p> <p>We do not ship to every country in the world so please contact us if the country you want to ship to is not listed.&nbsp;</p>",
+            "q_3": "Do you deliver outside the UK?",
+            "a_3": "<p>Yes, we ship Lily Blanche jewellery to most overseas destinations including Europe, the USA, and the Rest of the World using tracked services including DHL and Royal Mail International. The shipping fee and final price will be calculated automatically when you enter your shipping address at checkout. Please note that some international orders are sent Delivery Duty Unpaid (DDU ), meaning you may be responsible for local customs or import duties in your jurisdiction.</p> <p>You can read more about Lily Blanche's international shipping policy at <a href=\"https://www.lilyblanche.com/policies/shipping-policy\">https://www.lilyblanche.com/policies/shipping-policy</a></p>",
+            "q_4": "What are your delivery charges?",
+            "a_4": "<p>Lily Blanche offers free standard UK shipping on jewellery orders over &pound;125. For UK orders under &pound;125, standard tracked delivery is &pound;4.50. We also offer UK First Class Tracked Delivery for &pound;6.50 and Next Working Day Express Delivery for &pound;9.50. International shipping rates vary by destination and are calculated at checkout. You can read more about our shipping policies at <a href=\"https://www.lilyblanche.com/policies/shipping-policy\">https://www.lilyblanche.com/policies/shipping-policy</a></p>",
+            "q_5": "Where is my order?",
+            "a_5": "<p>When your Lily Blanche order is dispatched, you will receive a shipping confirmation email containing a unique tracking number. You can use this number to track your parcel's progress online. If you cannot find this email, please check your spam or junk folder. Please allow up to five working days for standard UK delivery and up to 14 days for orders to mainland Europe or the USA. If you have any concerns about your delivery, please contact our customer service team by email, or live chat. We'll be happy to help.</p>",
+            "q_6": "Can you deliver to my workplace?",
+            "a_6": "<p>Yes, Lily Blanche can deliver to your jewellery order directly to your workplace. Please note that some Lily Blanche orders require a signature upon delivery. Please ensure your workplace is able to accept deliveries prior to arranging this. To arrange a delivery to your workplace, simply enter your workplace address in the shipping address section at checkout, while ensuring your billing address matches the address registered to your payment method.</p>",
+            "q_7": "I want to surprise my loved one. Can you help me keep it secret?",
+            "a_7": "<p>Yes, we can help you keep your Lily Blanche jewellery gift a secret. Your order will arrive in a box protected by an anonymous grey wrapper to conceal the contents from the elements and the recipient. There is no Lily Blanche branding on the outer packaging, though we are required to include a return address on the shipping label.</p>",
+            "q_8": "I need my order for a specific occasion. Can you help?",
+            "a_8": "<p>Yes, we are always happy to prioritise a Lily Blanche order to ensure it reaches the recipient in time for a special occasion, such as an anniversary or birthday. If you need your order urgently, please choose the express delivery option at checkout or contact our studio directly so we can advise on the best delivery method. You can <a href=\"mailto:hello@lilyblanche.com\">email us here</a></p>"
+          }
+        },
+        "category_2": {
+          "type": "category",
+          "settings": {
+            "title": "Payment",
+            "q_1": "What payment methods do you accept?",
+            "a_1": "<p>The Lily Blanche website accepts all major credit cards, including Mastercard, Visa, Visa Debit, and American Express. You can also pay securely using PayPal, PayPal Express, Google Pay, Amazon Pay, and Apple Pay. Additionally, we offer flexible finance options through Klarna, Clearpay, and PayPal Credit. The website has a secure payment system and no finaicla details are seen or stored. This is to ensure our customer's security.&nbsp;</p>",
+            "q_2": "Can I split my payments?",
+            "a_2": "<p>Yes, you can spread your Lily Blanche payments if you have an account with Klarna, Clearpay or PayPal. Lily Blanche works with the Buy Now Pay Later services Klarna and Clearpay to help you spread the cost of your jewellery. The decision to accept customers for credit is entirely the responsibility of the payment providers. Lily Blanche has no part in that decision. <br />Klarna allows you to split your purchase into three interest-free payments over three months, or pay in full up to 30 days later. Clearpay allows you to spread payments over four instalments. We also accept PayPal Credit, which offers four interest-free instalments on Lily Blanche orders over &pound;99.</p>",
+            "q_3": "Do you offer credit?",
+            "a_3": "<p>Yes. lily Blanche works with Klarna, Clearpay or PayPal Credit as our preferred finance providers. Klarna is available directly at the Lily Blanche checkout, allowing you to pay in full within 30 days or split your payments into three interest-free instalments over 90 days. Alternatively, you can receive four months of interest-free credit with PayPal Credit on orders over &pound;99. Please not customers must have an account with the payment provider chosen before they can use these credit services on the Lily Blanche website.</p>",
+            "q_4": "How can I get PayPal credit?",
+            "a_4": "<p>To apply for PayPal Credit, please ensure you have a working PayPal account. Signing up for a PayPal account is free and easy. You can then fill in the form for PayPal credit. PayPal then runs a credit check and if approved, you&rsquo;ll have a credit limit linked to your PayPal account as soon as you accept your Credit Agreement. Please note Lily Blanche plays no role in any decisions around PayPal credit.&nbsp;</p>",
+            "q_5": "Is VAT charged online?",
+            "a_5": "<p>VAT is included in the prices quoted on the Lily Blanche website If you are buying from and shipping to an area outside of the UK, the Lily Blanche website should automatically deduct VAT when the shipping address is entered at the checkout stage. While you will not be charged UK VAT, you may have to pay any local VAT or local taxes in your jurisdiction. Lily Blanche is not liable for these charges. If you need more information, please see our <a href=\"https://www.lilyblanche.com/policies/terms-of-service\" target=\"_blank\" rel=\"noopener\">https://www.lilyblanche.com/policies/terms-of-service</a>.</p>"
+          }
+        },
+        "category_3": {
+          "type": "category",
+          "settings": {
+            "title": "Jewellery",
+            "q_1": "Can I see the jewellery before I buy?",
+            "a_1": "<p>You can see a list of Lily Blanche stockists <a href=\"https://stockists/\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>. Please call ahead before visiting to ensure they have the items you wish to see in stock. Please note that we offer a no quibble, money-back guarantee on all UK orders online at <a href=\"https://www.lilyblanche.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Lily Blanche</a>. You can shop with confidence online, as we offer a no-quibble, 30-day money-back guarantee on all UK orders for non-engraved and non-bespoke items.&nbsp;</p>",
+            "q_2": "Do you have a showroom?",
+            "a_2": "<p>The Lily Blanche studio is based in Stirling, Scotland but we do not have a showroom or a shop. We are currently unable to welcome visitors to our studio for insurance reasons. Please visit the<a href=\"https://www.lilyblanche.com/\"> Lily Blanche website</a> to see our all of our jewellery collections for men and women.</p>",
+            "q_3": "How can I find my ring size?",
+            "a_3": "<p>Your ring size can fluctuate depending on temperature and time of day. To help you find the perfect fit, Lily Blanche includes a free ring sizer with all of our orders, as part of our free jewelelry care kit. Please keep it in your jewellery box as it will come in handy. You can also view our comprehensive ring size guide at <a href=\"https://www.lilyblanche.com/pages/ring-sizes\">https://www.lilyblanche.com/pages/ring-sizes</a> for further assistance.</p>",
+            "q_4": "Can I add engraving to my item?",
+            "a_4": "<p>Yes, many Lily Blanche jewellery items include an engraving service, including our Memory Keeper Lockets, Memory Keeper Bracelets, our Two Photo and Four Photo Lockets and many of our Men's necklaces, including St Christopher necklaces and Cross necklaces. A name, date, or short message can be engraved by our highly trained studio team in Stirling. Simply use the personalisation tool on the product page to enter your text at checkout. Lily Blanche engraving is carried out inhouse in our studio by our highly trained engravers. Please use the personalisation tool on the product page to enter your engraving. Please check your engraving carefully for spelling. Please note that engraved pieces are non-returnable. This does not affect your statutory rights. You can read more about our personalisation and engraving service at <a href=\"https://www.lilyblanche.com/pages/personalisation\">https://www.lilyblanche.com/pages/personalisation</a></p>",
+            "q_5": "Will engraving detract from the value of my jewellery?",
+            "a_5": "<p>On the contrary, an engraved piece can enhance the sentimental and historical value of an item over time. Engraving helps to tell the unique story of the jewellery, adding provenance and interest for future generations.</p>",
+            "q_6": "Can I change the photos in my locket?",
+            "a_6": "<p>Yes, the photos in your Lily Blanche locket can be changed. We can assist you with this process, or you can do it yourself at home. If you purchase our Memory Keeper Locket photo service, we provide two sets of perfectly sized photos. Please contact us for further guidance on updating your locket's photographs. You can <a href=\"mailto:hello@lilyblanche.com\">email us at hello@lilyblanche.com</a></p>",
+            "q_7": "Is a gift service available?",
+            "a_7": "<p>Yes, Lily Blanche offers a complimentary gifting service. Simply select the gift message option at checkout and enter your message, which we will print on a bespoke Lily Blanche gift card. The jewellery will be dispatched in a branded, ribbon-tied gift box with a free Lily Blanche Jewellery Care Kit and a free ribbon-tied gift bag. Please add these free gifts in the checkout. Your gift will arrive nestled in scented tissue paper. No invoice will be included in the parcel. Lily Blanche can dispatch directly tothe recipient. Please add the recipients name and shipping address at the checkout, ensuring that the billing address match the payment method chosen.</p>"
+          }
+        },
+        "category_4": {
+          "type": "category",
+          "settings": {
+            "title": "Account",
+            "q_1": "How do I register for a Lily Blanche account?",
+            "a_1": "<p>You can sign up for an account when you are in the process of purchasing a piece of jewellery or you can sign up for an account at any time <a href=\"https://account/login\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
+            "q_2": "What are the benefits of a Lily Blanche account?",
+            "a_2": "<p>Creating an account speeds up the checkout process. You can also keep track of your orders through your account, but you need to set up the account before, or at the time, you place your order to be able to track it. An account also allows you to share your Lily Blanche wish-list, sign up for our newsletter and receive special orders and drop a hint to friends and family.</p>",
+            "q_3": "How do I become a Lily Blanche VIP?",
+            "a_3": "<p>You can become a lily Blanche VIP and receive our current discount codes when you sign up to our newsletter.</p>",
+            "q_4": "How do I use my VIP discount code?",
+            "a_4": "<p>Your VIP discount code can be used on the <a href=\"https://www.lilyblanche.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Lily Blanche website</a>. Please insert your code in the box at checkout process and press the &ldquo;apply&rdquo; button.</p>"
+          }
+        },
+        "category_5": {
+          "type": "category",
+          "settings": {
+            "title": "Services",
+            "q_1": "Can I add photos to my locket?",
+            "a_1": "<p>Yes. We have a photo service for all of the lockets to which photos can be added. Please choose the &ldquo;personalise&rdquo; option on the product page when you are ordering your locket if you would like us to fill it for you.</p> <p>&nbsp;</p> <p>You can upload your photos and edit them on the app or or you can email the personalisation team and they will do this for you. The photographs will be printed using a photographic printer and inks on a premium quality photographic paper and cut to fit. We are able to work with many forms of photographs, including original prints. We are always happy to liaise with you over your choice or photographs.</p>",
+            "q_2": "Can I change the photos in my locket?",
+            "a_2": "<p>Yes. The photos in your locket can be easily changed. Please <a href=\"mailto:media@lilyblanche.com\" target=\"_blank\" rel=\"noopener noreferrer\">email us</a> for more details.</p>",
+            "q_3": "How does the photo service work?",
+            "a_3": "<p>Please order your locket and choose the &ldquo;personalise&rdquo; option. You can upload your photos and edit them using the personalisation app. For more details on how this works. Please watch the <a href=\"https://pages/personalisation/\" target=\"_blank\" rel=\"noopener noreferrer\">personalisation video</a>.</p>",
+            "q_4": "What photos work best in the lockets?",
+            "a_4": "<p>We are getting very good results with our photo service and can work with lots of different types of images. It is very rare for us to get a photo we cannot work with. You can read more about choosing the photos for your locket <a href=\"https://blog/how-to-choose-photos-for-a-locket\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
+            "q_5": "Can I size the photos myself?",
+            "a_5": "<p>Yes. Please see the videos on our <a href=\"https://www.youtube.com/c/LilyBlancheJewellery\" target=\"_blank\" rel=\"noopener noreferrer\">YouTube Channel</a> for more information.</p>",
+            "q_6": "The locket is a gift. Can the recipient order photos?",
+            "a_6": "<p>Yes. This is possible. Please <a href=\"mailto:media@lilyblanche.com\" target=\"_blank\" rel=\"noopener noreferrer\">let us know</a> if the recipient intends to choose photos for the locket.</p>",
+            "q_7": "Can I order photos on their own?",
+            "a_7": "<p>You can order photos for the Memory Keeper Lockets as a stand-alone service <a href=\"https://fill-my-locket/\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>. Photos for other lockets should be ordered at the time of purchase.</p>"
+          }
+        },
+        "category_6": {
+          "type": "category",
+          "settings": {
+            "title": "Materials",
+            "q_1": "What is your jewellery made of?",
+            "a_1": "<p>Our jewellery is made of sterling silver, 18 carat gold, rose gold or white gold vermeil. All pearls are real, cultured, freshwater pearls and all stones are real gemstones, unless otherwise stated. Your can read more about <a href=\"https://pages/our-materials\" target=\"_blank\" rel=\"noopener noreferrer\">our materials here</a>.</p>",
+            "q_2": "What is vermeil?",
+            "a_2": "<p>When we use gold in our jewellery, it is 18 carat gold vermeil. Vermeil is an ancient French metalwork technique. With vermeil, a very thick coating of gold - many times the thickness of regular gold plate - is applied to another precious metal, in this case sterling silver. Vermeil jewellery differs from plated jewellery because the piece is made wholly of precious metal and because of the high carat and quantity of gold used.</p> <p>&nbsp;</p> <p>Like most modern jewellers we use vermeil in our jewellery to give us flexibility in our designs and to allow us to make precious pieces using high quality materials which are still affordable. Gold is a soft metal. Vermeil gives it strength. The gold price is currently over &pound;1300 an ounce. Some of our lockets use more than an ounce of precious metal. Vermeil ensures our jewellery remains both high quality, durably and affordable.</p>",
+            "q_3": "What is a hallmark?",
+            "a_3": "<p>The official hallmark on your Lily Blanche jewellery is your guarantee of quality and authenticity. The Lily Blanche hallmark has been created for us by the Edinburgh Assay Office using the world-famous castle mark. Each hallmark tells the story of the jewellery through a series of icons:</p> <p>&nbsp;</p> <p>* The letters are our unique maker&rsquo;s mark. Only items from our company will be marked with these letters in this shape.</p> <p>* The numbers tell of the metals purity.</p> <p>* The Scottish lion rampant is the traditional fineness mark</p> <p>* The castle identifies the city of Edinburgh in which the piece is hallmarked.</p> <p>* The letter represents the year in which the piece was tested and marked. This changes every twelve months.</p>",
+            "q_4": "Is Lily Blanche jewellery hallmarked?",
+            "a_4": "<p>All of our Lily Blanche Lockets are hallmarked by the Edinburgh Assay Office. The Assay Office primarily tests and hallmarks precious metal. Edinburgh Assay office has been hallmarking precious metal items since 1457 You can read more about our hallmark <a href=\"https://pages/our-hallmark\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</p>",
+            "q_5": "I have a question that is not on the list. Can you answer it?",
+            "a_5": "<p>Yes. Please <a href=\"https://contact-us/\" target=\"_blank\" rel=\"noopener noreferrer\">contact us</a> on <a href=\"tel:+4401786271376\" target=\"_blank\" rel=\"noopener noreferrer\">+ 44 (0)1786 271376</a> or by <a href=\"mailto:hello@lilyblanche.com\" target=\"_blank\" rel=\"noopener noreferrer\">email</a> between the hours of 9am &ndash; 5pm, Monday to Friday.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "category_1",
+        "category_2",
+        "category_3",
+        "category_4",
+        "category_5",
+        "category_6"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

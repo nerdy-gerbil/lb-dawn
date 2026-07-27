@@ -1,0 +1,395 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .faq-page-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .faq-page-grid {
+      grid-template-columns: 240px 1fr;
+      gap: 3.5rem;
+    }
+  }
+
+  .faq-nav {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+  }
+
+  .faq-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .faq-nav__list {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }
+
+  .faq-nav__btn {
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-align: left;
+    transition: all 0.2s ease;
+    width: 100%;
+  }
+
+  .faq-nav__btn:hover {
+    background-color: var(--color-foreground-8, rgba(0,0,0,0.05));
+  }
+
+  .faq-nav__btn.active {
+    background-color: var(--color-foreground-8, rgba(0,0,0,0.08));
+    font-weight: 600;
+    border-color: var(--color-foreground, #000);
+  }
+
+  .faq-category-section {
+    display: none;
+    margin-bottom: 2rem;
+  }
+
+  .faq-category-section.active {
+    display: block;
+  }
+
+  .faq-category-heading {
+    border-bottom: 2px solid var(--color-foreground-20, rgba(0,0,0,0.1));
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-accordion {
+    border-bottom: 1px solid var(--color-foreground-10, rgba(0,0,0,0.08));
+    margin-bottom: 0;
+  }
+
+  .faq-accordion summary {
+    padding: 1.25rem 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  .faq-accordion__content {
+    padding-bottom: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+{%- endstyle -%}
+
+<div class="page-width section-{{ section.id }}-padding">
+  <h1 class="main-page-title page-title h0 center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {{ page.title | default: section.settings.title | escape }}
+  </h1>
+  {%- if page.content != blank -%}
+    <div class="rte center{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" style="margin-bottom: 3rem;">
+      {{ page.content }}
+    </div>
+  {%- endif -%}
+
+  <div class="faq-page-grid">
+    <aside class="faq-nav">
+      <ul class="faq-nav__list" role="tablist">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'category' -%}
+            <li role="presentation">
+              <button
+                type="button"
+                role="tab"
+                aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                aria-controls="faq-cat-{{ block.id }}"
+                class="faq-nav__btn{% if forloop.first %} active{% endif %}"
+                onclick="switchFaqTab('faq-cat-{{ block.id }}', this)"
+              >
+                {{ block.settings.title | escape }}
+              </button>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </aside>
+
+    <div class="faq-content-wrapper">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'category' -%}
+          <section
+            id="faq-cat-{{ block.id }}"
+            role="tabpanel"
+            class="faq-category-section{% if forloop.first %} active{% endif %}"
+            {{ block.shopify_attributes }}
+          >
+            <h2 class="faq-category-heading h2">{{ block.settings.title | escape }}</h2>
+            
+            {%- for i in (1..10) -%}
+              {%- assign q_key = "q_" | append: i -%}
+              {%- assign a_key = "a_" | append: i -%}
+              {%- assign q = block.settings[q_key] -%}
+              {%- assign a = block.settings[a_key] -%}
+              
+              {%- if q != blank and a != blank -%}
+                <div class="accordion faq-accordion">
+                  <details id="Details-faq-{{ block.id }}-{{ i }}">
+                    <summary id="Summary-faq-{{ block.id }}-{{ i }}">
+                      <div class="accordion__title inline-richtext h4">
+                        {{ q }}
+                      </div>
+                      {{- 'icon-caret.svg' | inline_asset_content -}}
+                    </summary>
+                    <div class="accordion__content rte faq-accordion__content" role="region" aria-labelledby="Summary-faq-{{ block.id }}-{{ i }}">
+                      {{ a }}
+                    </div>
+                  </details>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </section>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<script>
+  function switchFaqTab(targetId, btn) {
+    const section = btn.closest('.page-width');
+    if (!section) return;
+
+    // Toggle tab buttons
+    section.querySelectorAll('.faq-nav__btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+
+    // Toggle tab content panels
+    section.querySelectorAll('.faq-category-section').forEach(panel => {
+      panel.classList.remove('active');
+    });
+    const targetPanel = section.querySelector('#' + targetId);
+    if (targetPanel) {
+      targetPanel.classList.add('active');
+    }
+  }
+</script>
+
+{% comment %} ============================================================
+  JSON-LD FAQPage Schema Markup for Google Rich Snippets
+============================================================ {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- assign first_item = true -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'category' -%}
+        {%- for i in (1..10) -%}
+          {%- assign q_key = "q_" | append: i -%}
+          {%- assign a_key = "a_" | append: i -%}
+          {%- assign q = block.settings[q_key] -%}
+          {%- assign a = block.settings[a_key] -%}
+          {%- if q != blank and a != blank -%}
+            {%- unless first_item -%},{%- endunless -%}
+            {%- assign first_item = false -%}
+            {
+              "@type": "Question",
+              "name": {{ q | strip_html | json }},
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": {{ a | strip_html | json }}
+              }
+            }
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+
+{% schema %}
+{
+  "name": "FAQ Page",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Frequently Asked Questions",
+      "label": "Heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "FAQ Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Title",
+          "default": "Category"
+        },
+        {
+          "type": "text",
+          "id": "q_1",
+          "label": "Question 1"
+        },
+        {
+          "type": "richtext",
+          "id": "a_1",
+          "label": "Answer 1"
+        },
+        {
+          "type": "text",
+          "id": "q_2",
+          "label": "Question 2"
+        },
+        {
+          "type": "richtext",
+          "id": "a_2",
+          "label": "Answer 2"
+        },
+        {
+          "type": "text",
+          "id": "q_3",
+          "label": "Question 3"
+        },
+        {
+          "type": "richtext",
+          "id": "a_3",
+          "label": "Answer 3"
+        },
+        {
+          "type": "text",
+          "id": "q_4",
+          "label": "Question 4"
+        },
+        {
+          "type": "richtext",
+          "id": "a_4",
+          "label": "Answer 4"
+        },
+        {
+          "type": "text",
+          "id": "q_5",
+          "label": "Question 5"
+        },
+        {
+          "type": "richtext",
+          "id": "a_5",
+          "label": "Answer 5"
+        },
+        {
+          "type": "text",
+          "id": "q_6",
+          "label": "Question 6"
+        },
+        {
+          "type": "richtext",
+          "id": "a_6",
+          "label": "Answer 6"
+        },
+        {
+          "type": "text",
+          "id": "q_7",
+          "label": "Question 7"
+        },
+        {
+          "type": "richtext",
+          "id": "a_7",
+          "label": "Answer 7"
+        },
+        {
+          "type": "text",
+          "id": "q_8",
+          "label": "Question 8"
+        },
+        {
+          "type": "richtext",
+          "id": "a_8",
+          "label": "Answer 8"
+        },
+        {
+          "type": "text",
+          "id": "q_9",
+          "label": "Question 9"
+        },
+        {
+          "type": "richtext",
+          "id": "a_9",
+          "label": "Answer 9"
+        },
+        {
+          "type": "text",
+          "id": "q_10",
+          "label": "Question 10"
+        },
+        {
+          "type": "richtext",
+          "id": "a_10",
+          "label": "Answer 10"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Page"
+    }
+  ]
+}
+{% endschema %}
