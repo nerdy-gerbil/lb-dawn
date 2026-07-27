@@ -6,6 +6,18 @@
 <!-- End of Shoplift scripts -->
 
     <link rel="llms" href="/llms.txt">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.shopify.com">
+    {%- if template.name == 'product' and product.featured_media -%}
+      <link
+        rel="preload"
+        as="image"
+        href="{{ product.featured_media | image_url: width: 750 }}"
+        imagesrcset="{{ product.featured_media | image_url: width: 375 }} 375w, {{ product.featured_media | image_url: width: 550 }} 550w, {{ product.featured_media | image_url: width: 750 }} 750w, {{ product.featured_media | image_url: width: 1100 }} 1100w"
+        imagesizes="(min-width: 750px) 55vw, 100vw"
+        fetchpriority="high"
+      >
+    {%- endif -%}
     {% render 'shogun-optimizer' %}
 
 
@@ -524,42 +536,59 @@
       gtag('config', 'AW-938885664');
     </script>
 
-    <!-- Bing Base Tag -->
+    <!-- Non-critical analytics (Bing, Clarity, Ahrefs) deferred for main-thread performance -->
     <script>
-      (function (w, d, t, r, u) {
-        var f, n, i;
-        (w[u] = w[u] || []),
-          (f = function () {
-            var o = { ti: '187017799', enableAutoSpaTracking: true };
-            (o.q = w[u]), (w[u] = new UET(o)), w[u].push('pageLoad');
-          }),
-          (n = d.createElement(t)),
-          (n.src = r),
-          (n.async = 1),
-          (n.onload = n.onreadystatechange =
-            function () {
-              var s = this.readyState;
-              (s && s !== 'loaded' && s !== 'complete') || (f(), (n.onload = n.onreadystatechange = null));
-            }),
-          (i = d.getElementsByTagName(t)[0]),
-          i.parentNode.insertBefore(n, i);
-      })(window, document, 'script', '//bat.bing.com/bat.js', 'uetq');
-    </script>
+      function loadDeferredThirdPartyAnalytics() {
+        if (window._thirdPartyAnalyticsLoaded) return;
+        window._thirdPartyAnalyticsLoaded = true;
 
-    <!-- Microsoft Clarity -->
-    <script async type="text/javascript">
-      (function (c, l, a, r, i, t, y) {
-        c[a] =
-          c[a] ||
-          function () {
-            (c[a].q = c[a].q || []).push(arguments);
-          };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = 'https://www.clarity.ms/tag/' + i + '?ref=gtm2';
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
-      })(window, document, 'clarity', 'script', 'cf9vf3a4rr');
+        // Bing Base Tag
+        (function (w, d, t, r, u) {
+          var f, n, i;
+          (w[u] = w[u] || []),
+            (f = function () {
+              var o = { ti: '187017799', enableAutoSpaTracking: true };
+              (o.q = w[u]), (w[u] = new UET(o)), w[u].push('pageLoad');
+            }),
+            (n = d.createElement(t)),
+            (n.src = r),
+            (n.async = 1),
+            (n.onload = n.onreadystatechange =
+              function () {
+                var s = this.readyState;
+                (s && s !== 'loaded' && s !== 'complete') || (f(), (n.onload = n.onreadystatechange = null));
+              }),
+            (i = d.getElementsByTagName(t)[0]),
+            i.parentNode.insertBefore(n, i);
+        })(window, document, 'script', '//bat.bing.com/bat.js', 'uetq');
+
+        // Microsoft Clarity
+        (function (c, l, a, r, i, t, y) {
+          c[a] =
+            c[a] ||
+            function () {
+              (c[a].q = c[a].q || []).push(arguments);
+            };
+          t = l.createElement(r);
+          t.async = 1;
+          t.src = 'https://www.clarity.ms/tag/' + i + '?ref=gtm2';
+          y = l.getElementsByTagName(r)[0];
+          y.parentNode.insertBefore(t, y);
+        })(window, document, 'clarity', 'script', 'cf9vf3a4rr');
+
+        // Ahrefs User Monitoring
+        var ah = document.createElement('script');
+        ah.src = 'https://analytics.ahrefs.com/analytics.js';
+        ah.async = true;
+        ah.setAttribute('data-key', 'U49XC6ZS6FOUC+HMnEpk+Q');
+        document.head.appendChild(ah);
+      }
+
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadDeferredThirdPartyAnalytics, { timeout: 3000 });
+      } else {
+        window.addEventListener('load', loadDeferredThirdPartyAnalytics, { once: true });
+      }
     </script>
 
     {% render 'gsf-conversion-pixels' %}
@@ -573,8 +602,6 @@
       <link rel="alternate" hreflang="pt" href="{{ canonical_url }}">
       <link rel="alternate" hreflang="en" href="https://www.lilyblanche.com/">
     {% endif %}
-    {% comment %} AHrefs User Monitoring {% endcomment %}
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="U49XC6ZS6FOUC+HMnEpk+Q" async></script>
     {% comment %} BEGIN MerchantWidget Code {% endcomment %}
     {% if template contains 'product' %}
     <script
