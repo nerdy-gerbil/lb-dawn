@@ -1,4 +1,4 @@
-{% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
+{% unless template == 'index' or template == 'cart' or template == 'list-collections' or template contains 'price-top' %}
   <nav
     class="breadcrumb{% if template == 'collection' %} color-background-2 gradient{% else %} page-width{% endif %}"
     role="navigation"

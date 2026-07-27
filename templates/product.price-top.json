@@ -1,0 +1,176 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-price-top",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
+        "7c962e1a-8ceb-403d-a9f7-b87378d7f7ae": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "dc7dc56b-91f0-463b-b408-f8aaacac5197": {
+          "type": "custom_liquid",
+          "name": "Star Rating Fix",
+          "settings": {
+            "custom_liquid": "<script>\n  var reviewsStarWidget = waitForElm('.kl_reviews__star_rating_widget').then((elm) => {\n    var widgetClone = elm.cloneNode(true);\n    elm.style.display = 'none';\n    elm.parentNode.appendChild(widgetClone);\n    elm.remove();\n\n    document.querySelector('.kl_reviews__star_rating_widget').addEventListener('click', function (ev) {\n      ev.preventDefault();\n\n      const el = document.querySelector(\"span[data-pro-tab-id='97398']\");\n      if (el) {\n        const activeTab = document.querySelector(\".station-tabs-tab.is-active\");\n\n        activeTab.tabIndex = -1;\n        activeTab.ariaSelected = false;\n        activeTab.classList.remove(\"is-active\");\n        activeTab.closest(\".station-tabs-tabtitle\").nextElementSibling.classList.remove(\"is-active\");\n        activeTab.closest(\".station-tabs-tabtitle\").nextElementSibling.ariaHidden = true;\n\n        el.tabIndex = 0;\n        el.ariaSelected = true;\n        el.classList.add(\"is-active\");\n        el.closest(\".station-tabs-tabtitle\").nextElementSibling.classList.add(\"is-active\");\n        el.closest(\".station-tabs-tabtitle\").nextElementSibling.ariaHidden = false;\n      }\n\n      const header = document.querySelector('header');\n      const tabs = document.querySelector('.editor-notes');\n\n      const headerOffset = header.getBoundingClientRect().bottom + tabs.getBoundingClientRect().top;\n      // const offsetPos = tabs.getBoundingClientRect().top + window.pageYOffset - headerOffset;\n      window.scrollTo({ top: headerOffset, behavior: 'smooth' });\n\n      return false;\n    }, true);\n  });\n\n  function waitForElm(selector) {\n    return new Promise(resolve => {\n      if (document.querySelector(selector)) {\n        return resolve(document.querySelector(selector));\n      }\n\n      const observer = new MutationObserver(mutations => {\n        if (document.querySelector(selector)) {\n          observer.disconnect();\n          resolve(document.querySelector(selector));\n        }\n      });\n\n      observer.observe(document.body, {\n        childList: true,\n        subtree: true\n      });\n    });\n  }\n\n  // Relocate tabs fix\n  function checkRelocated() {\n    const tableRelocated = document.querySelector('.station-tabs .product-details-table');\n    const reviewsRelocated = document.querySelector('.station-tabs #klaviyo-reviews');\n    if (tableRelocated || reviewsRelocated) {\n      document.body.setAttribute('data-tabs-relocate', 'true');\n      return true;\n    }\n    return false;\n  }\n  if (!checkRelocated()) {\n    const tabsObserver = new MutationObserver((mutations, obs) => {\n      if (checkRelocated()) {\n        obs.disconnect();\n      }\n    });\n    tabsObserver.observe(document.body, {\n      childList: true,\n      subtree: true\n    });\n    setTimeout(() => {\n      tabsObserver.disconnect();\n      document.body.setAttribute('data-tabs-relocate', 'true');\n    }, 5000);\n  }\n</script>"
+          }
+        },
+        "2ce1235d-886c-49bf-b8ce-8d0976c79d42": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "uppercase",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_Wwgmp7": {
+          "type": "custom_liquid",
+          "name": "Wishlist",
+          "settings": {
+            "custom_liquid": "{% if settings.enable-wishlist %}\n                  <button onclick=\"toggleWishlist()\" class=\"wishlist_button\">\n                    <svg width=\"30px\" height=\"30px\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\n                      <rect x=\"0\" fill=\"none\" width=\"24\" height=\"24\"/>\n\n                      <g>\n\n                      <path d=\"M16.5 4.5c2.206 0 4 1.794 4 4 0 4.67-5.543 8.94-8.5 11.023C9.043 17.44 3.5 13.17 3.5 8.5c0-2.206 1.794-4 4-4 1.298 0 2.522.638 3.273 1.706L12 7.953l1.227-1.746c.75-1.07 1.975-1.707 3.273-1.707m0-1.5c-1.862 0-3.505.928-4.5 2.344C11.005 3.928 9.362 3 7.5 3 4.462 3 2 5.462 2 8.5c0 5.72 6.5 10.438 10 12.85 3.5-2.412 10-7.13 10-12.85C22 5.462 19.538 3 16.5 3z\"/>\n\n                      </g>\n                    </svg>\n                  </button>\n                {% endif %}"
+          }
+        },
+        "85c0012a-8985-47c8-94ab-60e489e9784f": {
+          "type": "custom_liquid",
+          "name": "Delivery Countdown",
+          "settings": {
+            "custom_liquid": "{% unless product.tags contains \"preorder\" %}\n{% if product.metafields.custom.show_timer != false %}\n<div id=\"shipping-countdown\" class=\"alertBox productAttributes-message countdownBox\">\n  <div style=\"border-radius:10px; background-color: #ddd; padding: 1rem;\">\n    <svg\n      xmlns=\" http://www.w3.org/2000/svg\"\n      xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n      aria-hidden=\"true\"\n      role=\"img\"\n      class=\"iconify iconify--carbon\"\n      width=\"1em\"\n      height=\"1em\"\n      preserveAspectRatio=\"xMidYMid meet\"\n      viewBox=\"0 0 32 32\"\n      data-icon=\"carbon:delivery-truck\"\n      data-inline=\"false\"\n    >\n      <path\n        d=\"M29.92 16.61l-3-7A1 1 0 0 0 26 9h-3V7a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v17a1 1 0 0 0 1 1h2.14a4 4 0 0 0 7.72 0h6.28a4 4 0 0 0 7.72 0H29a1 1 0 0 0 1-1v-7a1 1 0 0 0-.08-.39zM23 11h2.34l2.14 5H23zM9 26a2 2 0 1 1 2-2a2 2 0 0 1-2 2zm10.14-3h-6.28a4 4 0 0 0-7.72 0H4V8h17v12.56A4 4 0 0 0 19.14 23zM23 26a2 2 0 1 1 2-2a2 2 0 0 1-2 2zm5-3h-1.14A4 4 0 0 0 23 20v-2h5z\"\n        fill=\"currentColor\"></path>\n    </svg>\n    Get it on <b><span id=\"deliveryDate\">...</span></b> with <b><span id=\"shippingMethod\">...</span></b\n    >.\n  </div>\n</div>\n{% endif %}\n{% endunless %}"
+          }
+        },
+        "2d65ec9f-0f10-4229-8807-58b6cc8e1fae": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "settings": {
+            "data_key": "credit-promotion-auto-size",
+            "theme": "custom",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
+        "817985f5-d9b8-4816-a0e3-f277a78232d2": {
+          "type": "shopify://apps/clearpay-on-site-messaging/blocks/payments-messaging/5d763983-d3e6-4888-9966-4e1170b26ae9",
+          "settings": {
+            "text_align": "left",
+            "margin_top": 0,
+            "margin_bottom": 0,
+            "color": "",
+            "size": "xs",
+            "intro_text": "Pay in",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "compact-badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "learn-more-text",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 0,
+            "margin_bottom_mobile": 0,
+            "show_lower_limit": false,
+            "show_upper_limit": false,
+            "show_if_outside_limits": true,
+            "product": ""
+          }
+        },
+        "custom_liquid_mUePKW": {
+          "type": "custom_liquid",
+          "name": "Payment Icons",
+          "settings": {
+            "custom_liquid": "<div class=\"ultimate-badges\"></div>"
+          }
+        },
+        "custom_liquid_kJMn8a": {
+          "type": "custom_liquid",
+          "name": "Trustpilot Score",
+          "settings": {
+            "custom_liquid": "<div class=\"rating__custom\"><i class=\"rating__star filled\"></i><i class=\"rating__star filled\"></i><i class=\"rating__star filled\"></i><i class=\"rating__star filled\"></i><i class=\"rating__star filled\"></i><span class=\"rating__result\">Rated {{ metaobjects.aggregate_rating.aggregate-rating-trustpilot.rating_value }}/5</span></div>"
+          }
+        },
+        "8c2e6059-a89c-474e-a145-65a34977229f": {
+          "type": "custom_liquid",
+          "name": "KSPs",
+          "settings": {
+            "custom_liquid": "<ul class=\"icon-with-text custom-icon-with-text icon-with-text--vertical list-unstyled color-background-2\"><li class=\"icon-with-text__item\"><span class=\"h4 inline-richtext\">Free UK Delivery Over £125</span></li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "rating",
+        "7c962e1a-8ceb-403d-a9f7-b87378d7f7ae",
+        "dc7dc56b-91f0-463b-b408-f8aaacac5197",
+        "2ce1235d-886c-49bf-b8ce-8d0976c79d42",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "custom_liquid_Wwgmp7",
+        "85c0012a-8985-47c8-94ab-60e489e9784f",
+        "2d65ec9f-0f10-4229-8807-58b6cc8e1fae",
+        "817985f5-d9b8-4816-a0e3-f277a78232d2",
+        "custom_liquid_mUePKW",
+        "custom_liquid_kJMn8a",
+        "8c2e6059-a89c-474e-a145-65a34977229f"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 750px) {.product__modal-opener--image {max-height: 60vh; } .product__modal-opener--image img {object-fit: contain; max-height: 60vh; }}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-450c95d3-6cd7-44ae-8735-3c6b59a488c5",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "padding_top": 8,
+        "padding_bottom": 12
+      }
+    },
+    "9e94a8d6-9ec4-4254-ad00-e55181e475ca": {
+      "type": "custom-liquid",
+      "name": "Description Tabs",
+      "settings": {
+        "custom_liquid": "<div class=\"custom-section editor-notes\"><div class=\"product-tabs\">{{ product.description }}</div></div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9e94a8d6-9ec4-4254-ad00-e55181e475ca"
+  ]
+}
