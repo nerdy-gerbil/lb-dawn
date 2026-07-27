@@ -8,17 +8,20 @@
     <link rel="llms" href="/llms.txt">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.shopify.com">
-    {%- if template.name == 'product' and product.featured_media -%}
-      {%- assign pdp_hero_image = product.featured_media.preview_image | default: product.featured_media -%}
-      {%- if pdp_hero_image -%}
-        <link
-          rel="preload"
-          as="image"
-          href="{{ pdp_hero_image | image_url: width: 750 }}"
-          imagesrcset="{{ pdp_hero_image | image_url: width: 375 }} 375w, {{ pdp_hero_image | image_url: width: 550 }} 550w, {{ pdp_hero_image | image_url: width: 750 }} 750w, {{ pdp_hero_image | image_url: width: 1100 }} 1100w"
-          imagesizes="(min-width: 750px) 55vw, 100vw"
-          fetchpriority="high"
-        >
+    {%- if template.name == 'product' -%}
+      <link rel="preload" href="{{ 'section-main-product.css' | asset_url }}" as="style">
+      {%- if product.featured_media -%}
+        {%- assign pdp_hero_image = product.featured_media.preview_image | default: product.featured_media -%}
+        {%- if pdp_hero_image -%}
+          <link
+            rel="preload"
+            as="image"
+            href="{{ pdp_hero_image | image_url: width: 750 }}"
+            imagesrcset="{{ pdp_hero_image | image_url: width: 375 }} 375w, {{ pdp_hero_image | image_url: width: 550 }} 550w, {{ pdp_hero_image | image_url: width: 750 }} 750w, {{ pdp_hero_image | image_url: width: 1100 }} 1100w"
+            imagesizes="(min-width: 750px) 55vw, 100vw"
+            fetchpriority="high"
+          >
+        {%- endif -%}
       {%- endif -%}
     {%- endif -%}
     {% render 'shogun-optimizer' %}
