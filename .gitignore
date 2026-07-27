@@ -28,3 +28,4 @@ docs
 .env
 reports
 conversational-feed.xml
+openai-product-feed.csv
