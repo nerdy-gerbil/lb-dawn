@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -233,6 +242,18 @@
         "padding_bottom": 12
       }
     },
+    "custom_faqs": {
+      "type": "custom-faqs",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "narrow_layout": true,
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -256,7 +277,7 @@
       "type": "custom-liquid",
       "custom_css": [
         ".faq-container {margin-bottom: 0 !important;}",
-        ".faq-container +.faq-container {display: none;}",
+        ".faq-container + .faq-container {display: none;}",
         ".s-main-faq__main {padding: 10px 0;}",
         "@media (max-width: 749px) {.faq-container {margin-bottom: -24px !important; }}"
       ],
@@ -350,10 +371,10 @@
         "item_WJUzzi": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/Campaigns Campaign-13852.mp4",
+            "video": "shopify://files/videos/Campaigns Campaign-13852_5266bca3-18d4-4904-bade-b9649be0ec3b.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "poster": "shopify://shop_images/vlcsnap-2025-11-20-13h08m26s972.png",
-            "autoplay": true,
+            "autoplay": false,
             "product": "large-gold-diamond-heart-locket-necklace",
             "use_variants": true,
             "modal_heading": "<h4>Large Gold Diamond Heart Locket + Photos</h4>",
@@ -363,7 +384,7 @@
         "item_z4P6AX": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/Men's Dog Tag Gold Necklace.mp4",
+            "video": "shopify://files/videos/Men's Dog Tag Gold Necklace_ac68b153-8f74-4bdf-9035-b776360b1ec8.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "poster": "shopify://shop_images/man_wearing_gold_dog_tag_necklace.jpg",
             "autoplay": true,
@@ -376,10 +397,10 @@
         "item_rT4TDr": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/Large2photoHeartlocket_3670013e-b212-4e15-b0bf-a957b7dee2ab.mp4",
+            "video": "shopify://files/videos/Large2photoheartlocket 3670013E-B212-4E15-B0bf-A957b7dee2ab.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "poster": "shopify://shop_images/vlcsnap-2026-05-28-14h09m49s257.png",
-            "autoplay": true,
+            "autoplay": false,
             "product": "large-2-photo-heart-locket-gold",
             "use_variants": true,
             "modal_heading": "<h4>2 Photo Diamond Heart Locket</h4>",
@@ -389,7 +410,7 @@
         "item_6nbAne": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/green amethyst gold ring.mp4",
+            "video": "shopify://files/videos/Green Amethyst Gold Ring_05817fbb-11e1-45b8-916c-f30d5b5f1a0f.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "poster": "shopify://shop_images/green_amethyst_ring.jpg",
             "autoplay": true,
@@ -402,7 +423,7 @@
         "item_gpbwHb": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/mensgoldcrossnecklace.mp4",
+            "video": "shopify://files/videos/Mensgoldcrossnecklace_e7221f3f-1f03-4a2d-b61b-d56ef8dc7c84.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "poster": "shopify://shop_images/gold_cross.jpg",
             "autoplay": true,
@@ -652,21 +673,12 @@
         "container_color_scheme": "background-2",
         "color_scheme": "background-1",
         "open_first_collapsible_row": false,
+        "uncollapse_prose": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
+        "button_label": "",
+        "button_link": "",
         "padding_top": 0,
-        "padding_bottom": 36
-      }
-    },
-    "custom_faqs": {
-      "type": "custom-faqs",
-      "settings": {
-        "heading": "Frequently Asked Questions",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "narrow_layout": true,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
         "padding_bottom": 36
       }
     }
