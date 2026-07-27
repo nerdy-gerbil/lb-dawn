@@ -86,6 +86,11 @@
   assign position_y_desktop = section.settings.position_y_desktop
   assign position_x_mobile = section.settings.position_x_mobile
   assign position_y_mobile = section.settings.position_y_mobile
+
+  assign pos_x_mob_translate = position_x_mobile | minus: 50 | times: 0.5 | minus: 50
+  assign pos_y_mob_translate = position_y_mobile | minus: 50 | times: 0.5 | minus: 50
+  assign pos_x_desk_translate = position_x_desktop | minus: 50 | times: 0.5 | minus: 50
+  assign pos_y_desk_translate = position_y_desktop | minus: 50 | times: 0.5 | minus: 50
 -%}
 
 {%- style -%}
@@ -135,25 +140,46 @@
   .banner-image-mobile-{{ section.id }},
   .banner-image-desktop-{{ section.id }} {
     height: 100%;
+    position: relative;
+    overflow: hidden;
   }
 
   .banner-image-mobile-{{ section.id }} {
-    min-height: 70vh;
-    max-height: 70vh;
-    object-position: {{ position_x_mobile }}% {{ position_y_mobile }}%;
+    display: block;
   }
 
   .banner-image-desktop-{{ section.id }} {
     display: none;
-    object-position: {{ position_x_desktop }}% {{ position_y_desktop }}%;
   }
 
-  .banner-image-mobile-{{ section.id }} img {
-    object-position: {{ position_x_mobile }}% {{ position_y_mobile }}%;
+  .banner-image-mobile-{{ section.id }} img,
+  .banner-image-mobile-{{ section.id }} svg {
+    position: absolute !important;
+    top: {{ position_y_mobile }}% !important;
+    left: {{ position_x_mobile }}% !important;
+    width: 150% !important;
+    height: 150% !important;
+    min-width: 150% !important;
+    min-height: 150% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    transform: translate(-{{ position_x_mobile }}%, -{{ position_y_mobile }}%) !important;
   }
 
-  .banner-image-desktop-{{ section.id }} img {
-    object-position: {{ position_x_desktop }}% {{ position_y_desktop }}%;
+  .banner-image-desktop-{{ section.id }} img,
+  .banner-image-desktop-{{ section.id }} svg {
+    position: absolute !important;
+    top: {{ position_y_desktop }}% !important;
+    left: {{ position_x_desktop }}% !important;
+    width: 150% !important;
+    height: 150% !important;
+    min-width: 150% !important;
+    min-height: 150% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    transform: translate(-{{ position_x_desktop }}%, -{{ position_y_desktop }}%) !important;
   }
 
   .banner-image-{{ section.id }}:after {
