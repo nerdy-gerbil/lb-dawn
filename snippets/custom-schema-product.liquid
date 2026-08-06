@@ -61,7 +61,11 @@
         "@id": "{{ policy_id }}",
         "@type": "MerchantReturnPolicy",
         "name": {{ return_policy_name | json }},
-        "returnPolicyCategory": "{{ category }}"
+        "returnPolicyCategory": "{{ category }}",
+        "applicableCountry": "GB",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/SellerDoesNotPayReturnShipping"
       }
       {% endcapture %}
       {{ return_json_clean | strip_newlines | replace: '  ', '' }}
