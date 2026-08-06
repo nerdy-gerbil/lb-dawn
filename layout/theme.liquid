@@ -92,7 +92,7 @@
         {{ clean_title }}
         {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
         {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-        &ndash; {{ shop.name }}
+        {%- if clean_title != shop.name and clean_title.size <= 45 -%} &ndash; {{ shop.name }}{%- endif -%}
       {%- endif -%}
     </title>
 
@@ -120,7 +120,7 @@
     {% comment %}
       Conditional robots meta tags: don't let crawlers index search, customer or 404 pages
     {% endcomment %}
-    {% if template contains 'search' or template contains '404' or template contains 'wishlist' or page.handle == 'thanks-for-letting-us-know' %}
+    {% if template contains 'search' or template contains '404' or template contains 'wishlist' or page.handle == 'thanks-for-letting-us-know' or page.handle contains 'openai' or page.handle contains 'feed' %}
       <meta name="robots" content="noindex, follow">
     {% elsif template contains 'customers' %}
       <meta name="robots" content="noindex, nofollow">
