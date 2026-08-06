@@ -32,7 +32,6 @@
     "@context": "https://schema.org",
     "@type": ["Organization", "OnlineStore"],
     "additionalType": "JewelryStore",
-    "dateModified": "{{ 'now' | date: '%Y-%m-%dT%H:%M:%S' }}",
     "url": "{{ shop.secure_url }}",
     "name": "{{ shop.name }}",
     "logo": "https:{% if shop.brand.square_logo %}{{ shop.brand.square_logo | image_url }}{% else %}{{ settings.logo | image_url }}{% endif %}",

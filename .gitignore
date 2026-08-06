@@ -30,4 +30,7 @@ reports
 conversational-feed.xml
 openai-product-feed.csv
 apps
-
+config/check-ahrefs_latest.json
+config/check-gsc_latest.json
+config/check-merchant_latest.json
+config/check-theme_latest.json
